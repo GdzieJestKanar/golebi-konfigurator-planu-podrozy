@@ -12,59 +12,136 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pl_PL">
 <meta property="og:site_name" content="Gołębie Latają">
-<meta property="og:image" content="https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/Venice_-_St._Marc%27s_Basilica_01.jpg/1280px-Venice_-_St._Marc%27s_Basilica_01.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail">
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Ponte_di_Rialto_Venice_1.jpg/1280px-Ponte_di_Rialto_Venice_1.jpg">
 <link rel="icon" type="image/svg+xml" href="/img/golab-sygnet.svg">
-<link rel="preload" href="/fonty/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/fonty/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
-<style>@font-face{font-family:"Fraunces";font-style:normal;font-weight:700;font-display:swap;src:url(/fonty/fraunces-latin-700-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
-@font-face{font-family:"Fraunces";font-style:normal;font-weight:700;font-display:swap;src:url(/fonty/fraunces-latin-ext-700-normal.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
-@font-face{font-family:"IBM Plex Sans";font-style:normal;font-weight:400;font-display:swap;src:url(/fonty/ibm-plex-sans-latin-400-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
-@font-face{font-family:"IBM Plex Sans";font-style:normal;font-weight:400;font-display:swap;src:url(/fonty/ibm-plex-sans-latin-ext-400-normal.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
-@font-face{font-family:"IBM Plex Sans";font-style:normal;font-weight:600;font-display:swap;src:url(/fonty/ibm-plex-sans-latin-600-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
-@font-face{font-family:"IBM Plex Sans";font-style:normal;font-weight:600;font-display:swap;src:url(/fonty/ibm-plex-sans-latin-ext-600-normal.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
-@font-face{font-family:"IBM Plex Mono";font-style:normal;font-weight:400;font-display:swap;src:url(/fonty/ibm-plex-mono-latin-400-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
-@font-face{font-family:"IBM Plex Mono";font-style:normal;font-weight:400;font-display:swap;src:url(/fonty/ibm-plex-mono-latin-ext-400-normal.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
-:root{--paper:#F6F0E2;--paper-deep:#EFE6D0;--ink:#23262C;--red:#C8371F;--navy:#1E3A6D;--white:#FDFBF5;--muted:#5a5d63}
-*{box-sizing:border-box}body{margin:0;font-family:"IBM Plex Sans",system-ui,sans-serif;font-size:17px;line-height:1.6;color:var(--ink);background:var(--paper)}
+<link rel="preload" href="/fonty/nunito-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonty/young-serif-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>@font-face{font-family:"Young Serif";font-style:normal;font-weight:400;font-display:swap;src:url(/fonty/young-serif-latin-400-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Young Serif";font-style:normal;font-weight:400;font-display:swap;src:url(/fonty/young-serif-latin-ext-400-normal.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Nunito";font-style:normal;font-weight:200 1000;font-display:swap;src:url(/fonty/nunito-latin-wght-normal.woff2) format("woff2-variations");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Nunito";font-style:normal;font-weight:200 1000;font-display:swap;src:url(/fonty/nunito-latin-ext-wght-normal.woff2) format("woff2-variations");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Caveat";font-style:normal;font-weight:400 700;font-display:swap;src:url(/fonty/caveat-latin-wght-normal.woff2) format("woff2-variations");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Caveat";font-style:normal;font-weight:400 700;font-display:swap;src:url(/fonty/caveat-latin-ext-wght-normal.woff2) format("woff2-variations");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"IBM Plex Mono";font-style:normal;font-weight:500;font-display:swap;src:url(/fonty/ibm-plex-mono-latin-500-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"IBM Plex Mono";font-style:normal;font-weight:500;font-display:swap;src:url(/fonty/ibm-plex-mono-latin-ext-500-normal.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+:root{--paper:#F7F1E4;--paper-deep:#EFE6D1;--cream:#FBF6EA;--white:#FFFDF8;--ink:#2A2C31;--ink-soft:#5E626A;--line:#DDD5C4;--red:#D0402A;--navy:#1F3B6E;--navy-soft:#E6ECF5;--niebo:#DCEAF3;--zielen:#276A4D;--zielen-soft:#E3F1EA;--muted:#5E626A;
+--serif:"Young Serif",Georgia,"Times New Roman",serif;--sans:Nunito,"Segoe UI",system-ui,-apple-system,sans-serif;--hand:Caveat,"Segoe Print","Bradley Hand",cursive;--mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;--tekst:66ch}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--sans);font-weight:500;font-size:1.125rem;line-height:1.65;color:var(--ink);background:var(--paper);font-variant-numeric:lining-nums}
+a{color:var(--navy);text-decoration-thickness:1px;text-underline-offset:.18em}a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:2px solid var(--navy);outline-offset:2px;border-radius:4px}
 .pasek{height:8px;background:repeating-linear-gradient(135deg,var(--red) 0 14px,var(--white) 14px 22px,var(--navy) 22px 36px,var(--white) 36px 44px)}
-main,header,footer{max-width:860px;margin:0 auto;padding:12px 16px}h1,h2,h3{font-family:Fraunces,Georgia,serif;color:var(--navy);line-height:1.2}
-h1{font-size:2.3rem;margin:.2em 0}h2{font-size:1.5rem;margin:.2em 0 .5em}h3{font-size:1.15rem;margin:1em 0 .3em}
-.eyebrow{font-family:"IBM Plex Mono",monospace;letter-spacing:.12em;text-transform:uppercase;font-size:.8rem;color:var(--navy);margin:0}
-nav.gora{display:flex;flex-wrap:wrap;gap:4px 16px;align-items:baseline}nav.gora a{text-decoration:none;font-weight:600;font-size:.95rem}
-nav.gora a.logo{font-family:Fraunces,Georgia,serif;font-size:1.25rem;color:var(--red);margin-right:auto}
-.okruszki{font-size:.85rem;color:var(--muted);margin:8px 0 0}.okruszki a{color:var(--muted)}
-section{background:var(--white);border-radius:12px;padding:16px 20px;margin:16px 0}.lead{font-size:1.1rem}
-table{border-collapse:collapse;width:100%;font-size:.9rem}th,td{padding:4px 6px;text-align:left;border-bottom:1px solid var(--paper-deep)}
-.przewin{overflow-x:auto}
-dl.liczby{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px;margin:0}dl.liczby div{background:var(--paper);border-radius:8px;padding:8px 12px}
-dl.liczby dt{font-size:.8rem;color:var(--muted)}dl.liczby dd{margin:0;font-size:1.35rem;font-weight:600;color:var(--navy)}
-.partnerzy{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
-a.partner{display:inline-block;border:2px solid var(--navy);color:var(--navy);padding:8px 14px;border-radius:8px;text-decoration:none;font-weight:600;background:var(--white)}
-a.partner.glowny{background:var(--red);border-color:var(--red);color:var(--white)}
-.polecamy{border-left:4px solid var(--red);padding:4px 0 4px 12px;margin:12px 0}
-.przycisk{display:inline-block;background:var(--red);color:var(--white);padding:10px 18px;border-radius:8px;text-decoration:none;font-weight:600;margin:4px 8px 4px 0}
-.przycisk.jasny{background:var(--white);color:var(--navy)}a{color:var(--navy)}.cta{background:var(--navy);color:var(--white)}.cta h2{color:var(--white)}
+header,main,footer{max-width:1080px;margin:0 auto;padding:0 20px}
+header{padding-top:14px}
+nav.gora{display:flex;flex-wrap:wrap;gap:2px 18px;align-items:baseline}nav.gora .linki{display:flex;flex-wrap:wrap;gap:2px 18px}
+@media(max-width:640px){nav.gora .linki{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;width:100%;gap:18px;margin:0 -16px;padding:0 16px;mask-image:linear-gradient(90deg,#000 85%,transparent)}nav.gora .linki a{white-space:nowrap}}
+nav.gora a{text-decoration:none;font-weight:700;font-size:.95rem;color:var(--ink);padding:6px 0}nav.gora a:hover{color:var(--navy);text-decoration:underline}
+nav.gora a.logo{font-family:var(--serif);font-weight:400;font-size:1.45rem;color:var(--navy);margin-right:auto;letter-spacing:-.01em}
+nav.gora a.logo::before{content:"";display:inline-block;width:12px;height:12px;margin-right:8px;border-radius:50%;background:var(--red);vertical-align:.08em}
+.okruszki{font-size:.88rem;color:var(--ink-soft);margin:10px 0 0}.okruszki a{color:var(--ink-soft)}
+main{padding-top:8px;padding-bottom:24px}
+main>p,main>ul,main>ol,section>p,section>ul,section>ol,section>h2,section>h3,section>details,.wezsze{max-width:var(--tekst)}
+h1,h2,h3{font-family:var(--serif);font-weight:400;color:var(--ink);line-height:1.15;letter-spacing:-.01em;text-wrap:balance}
+h1{font-size:clamp(2.3rem,6vw,3.6rem);line-height:1.04;margin:.35em 0 .3em;color:var(--navy)}
+h2{font-size:clamp(1.55rem,3.2vw,1.95rem);margin:0 0 .55em}
+h3{font-size:1.28rem;margin:1.3em 0 .4em}
+p{margin:0 0 .9em}ul,ol{padding-left:1.25em;margin:0 0 1em}li{margin:.2em 0}li::marker{color:var(--navy)}
+strong{font-weight:800}
+.lead{font-size:clamp(1.18rem,2.2vw,1.32rem);line-height:1.55;font-weight:600;color:var(--ink);max-width:62ch}
+section{margin:44px 0;padding:0}
+section>h2{padding-top:18px;border-top:2px solid var(--ink)}
+section.karta,section.cta,section.druk{padding:24px 26px;border-radius:20px}
+section.karta{background:var(--white);border:1px solid var(--line)}section.karta>h2,section.cta>h2,section.druk>h2{border-top:0;padding-top:0}
+section.druk{background:var(--white);border:1.5px solid var(--ink);border-radius:6px;box-shadow:3px 3px 0 var(--ink)}
+section.tlo{background:var(--niebo);border-radius:20px;padding:24px 26px}section.tlo>h2{border-top:0;padding-top:0}
+.cta{background:var(--navy);color:var(--white)}.cta h2{color:var(--white)}.cta a{color:var(--white)}
 .cta a.przycisk{color:var(--white)}.cta a.przycisk.jasny{color:var(--navy)}
-ul.siatka{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:8px;padding:0;list-style:none;margin:8px 0}
-ul.siatka a{display:block;background:var(--paper);border-radius:8px;padding:8px 10px;text-decoration:none;height:100%}ul.siatka strong{display:block}ul.siatka span{font-size:.85rem;color:var(--muted)}
-table.mapa td,table.mapa th{text-align:center;padding:3px 2px;font-size:.8rem}table.mapa td:first-child,table.mapa th:first-child{text-align:left;white-space:nowrap}
-.o1{background:#f1dcd6}.o2{background:#eedcc7}.o3{background:#e4e5c6}.o4{background:#c5dcbf}.o5{background:#98c494}
-small,.drobne{font-size:.85rem;color:var(--muted)}html{scroll-behavior:smooth}section[id]{scroll-margin-top:64px}
-nav.spis{position:sticky;top:0;z-index:5;background:var(--paper);margin:8px -16px;padding:8px 16px;border-bottom:1px solid var(--paper-deep)}nav.spis .spis-tytul{display:none}
-nav.spis ol{display:flex;gap:8px;list-style:none;margin:0;padding:0;overflow-x:auto;scrollbar-width:none}
-nav.spis a{display:block;white-space:nowrap;padding:4px 12px;border:1px solid var(--paper-deep);border-radius:999px;background:var(--white);text-decoration:none;font-size:.9rem;font-weight:600}
+.hero{display:grid;grid-template-columns:1fr auto;gap:8px 28px;align-items:start}
+.hero.bez-stempla{grid-template-columns:1fr}dl.liczby.skrot{margin:6px 0 10px}dl.liczby.skrot dd{font-size:1.3rem}
+.hero h1{grid-column:1}.hero .stempel{grid-column:2;grid-row:1 / span 2;margin-top:22px}.hero .lead{grid-column:1}
+.stempel{display:inline-grid;place-items:center;align-content:center;width:132px;height:132px;border-radius:50%;border:5px double var(--red);color:var(--red);transform:rotate(-9deg);text-align:center;line-height:1.05;flex:none;background:transparent}
+.stempel b{display:block;font-family:var(--serif);font-weight:400;font-size:2.4rem;letter-spacing:-.02em}
+.stempel span{display:block;font-family:var(--mono);font-size:.7rem;letter-spacing:.02em}
+.stempel.slaby{color:var(--ink-soft);border-color:var(--ink-soft)}
+@media(max-width:640px){.hero{grid-template-columns:1fr auto;gap:4px 14px}.hero h1{font-size:clamp(2rem,9vw,2.4rem)}.hero .stempel{grid-column:2;grid-row:1;width:96px;height:96px;margin:14px 0 0;border-width:4px}.hero .lead{grid-column:1 / -1}.stempel b{font-size:1.65rem}.stempel span{font-size:.56rem}}
+.podpis{font-size:.92rem;color:var(--ink-soft);margin:-4px 0 18px}
+dl.liczby,dl.list-przewozowy{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin:0;background:var(--white);border:1.5px solid var(--ink);border-radius:6px;box-shadow:3px 3px 0 var(--ink);overflow:hidden}
+dl.liczby div{padding:12px 16px;border-right:1px dashed var(--line);border-bottom:1px dashed var(--line);margin:0 -1px -1px 0}
+dl.liczby dt{font-family:var(--mono);font-size:.76rem;color:var(--ink-soft);letter-spacing:.02em}
+dl.liczby dd{margin:2px 0 0;font-family:var(--serif);font-size:1.75rem;line-height:1.15;color:var(--navy)}
+section>dl.liczby{margin-bottom:18px}p+dl.liczby{margin-top:6px}
+.dalej{display:flex;flex-wrap:wrap;gap:8px 10px;margin:16px 0 0}.dalej a{display:inline-flex;align-items:center;min-height:42px;padding:8px 16px;border:1.5px solid var(--line);border-radius:999px;background:var(--white);text-decoration:none;font-weight:700;font-size:.95rem;color:var(--ink)}.dalej a:hover{border-color:var(--navy);color:var(--navy)}
+section.upal{background:#FBE4D8;border-radius:20px;padding:24px 26px}section.upal>h2{border-top:0;padding-top:0}
+ul.rady{padding-left:1.1em}ul.rady li{margin:0 0 8px;padding-left:4px}ul.rady li::marker{content:"☀ ";color:var(--red)}
+table.ceny{max-width:640px}table.ceny th[scope=row]{font-weight:700;color:var(--ink);font-size:1rem;border-bottom:1px solid var(--line)}table.ceny td strong{color:var(--navy);font-size:1.08rem}
+.kategorie{columns:2 300px;column-gap:40px;max-width:none;margin:8px 0 10px}.kat{break-inside:avoid;margin:0 0 22px}
+.kat h4{font-family:var(--sans);font-weight:800;font-size:1.02rem;color:var(--navy);margin:0 0 2px}
+ul.miejsca{list-style:none;padding:0;margin:0}ul.miejsca li{margin:0;padding:10px 0 12px;border-top:1px dashed var(--line)}
+ul.miejsca strong{display:block;font-family:var(--serif);font-weight:400;font-size:1.16rem;line-height:1.25;color:var(--ink)}
+ul.miejsca small{display:block;margin-top:1px}ul.miejsca p{margin:5px 0 0;max-width:none}
+.rok{display:grid;grid-template-columns:repeat(12,1fr);gap:6px;list-style:none;padding:0;margin:12px 0 6px}
+.rok li{margin:0}.rok a{display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 2px;border-radius:10px;text-decoration:none;color:var(--ink);font-size:.82rem;font-weight:700;line-height:1.2;min-height:44px}
+.rok a span{font-weight:500;font-size:.78rem}.rok a[aria-current]{outline:2.5px solid var(--navy);outline-offset:1px}
+@media(max-width:640px){.rok{grid-template-columns:repeat(6,1fr)}}
+.legenda{font-size:.85rem;color:var(--ink-soft);margin:0;max-width:none}
+.dwie{display:grid;grid-template-columns:1fr 1fr;gap:16px 28px}@media(max-width:700px){.dwie{grid-template-columns:1fr}}
+.dwie>div{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:16px 20px}.dwie h3{margin-top:0}
+ul.plusy li::marker{content:"+  ";color:var(--zielen);font-weight:800}ul.minusy li::marker{content:"−  ";color:var(--red);font-weight:800}
+ul.lista-rzeczy{list-style:none;padding:0;columns:2;column-gap:28px;max-width:none}ul.lista-rzeczy li{break-inside:avoid;padding-left:30px;position:relative;margin:0 0 8px}
+ul.lista-rzeczy li::before{content:"";position:absolute;left:0;top:.3em;width:16px;height:16px;border:2px solid var(--navy);border-radius:4px}
+@media(max-width:640px){ul.lista-rzeczy{columns:1}}
+.pocztowka{background:var(--white);border:1.5px solid var(--ink);border-radius:6px;box-shadow:3px 3px 0 var(--ink);padding:18px 22px 16px;margin:18px 0;max-width:62ch;transform:rotate(-.6deg);position:relative}
+.pocztowka::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;background:repeating-linear-gradient(135deg,var(--red) 0 10px,var(--white) 10px 16px,var(--navy) 16px 26px,var(--white) 26px 32px);border-radius:5px 5px 0 0}
+.pocztowka p,.reka{font-family:var(--hand);font-size:1.55rem;line-height:1.25;font-weight:500;margin:.25em 0}
+.pocztowka small{display:block;font-family:var(--sans);font-size:.85rem;color:var(--ink-soft);margin-top:6px}
+table{border-collapse:collapse;width:100%;font-size:.98rem;font-variant-numeric:tabular-nums lining-nums}
+th,td{padding:8px 10px;text-align:left;border-bottom:1px solid var(--line)}thead th{font-weight:800;font-size:.88rem;color:var(--ink-soft);border-bottom:2px solid var(--ink)}tbody th{font-weight:700;color:var(--ink)}
+tbody tr:nth-child(even){background:rgba(255,253,248,.7)}.przewin{overflow-x:auto;-webkit-overflow-scrolling:touch}
+table.mapa td,table.mapa th{text-align:center;padding:6px 3px;font-size:.84rem}table.mapa td:first-child,table.mapa th:first-child{text-align:left;white-space:nowrap}
+table.fakty th[scope=row]{width:34%;font-family:var(--mono);font-weight:500;font-size:.8rem;color:var(--ink-soft);border-bottom:1px dashed var(--line);vertical-align:top;padding-top:11px}table.fakty td{border-bottom:1px dashed var(--line)}
+.o1{background:#F3DED8}.o2{background:#F0E3CC}.o3{background:#E6E8C8}.o4{background:#C8E0C0}.o5{background:#9ACB98}
+.partnerzy{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0}
+a.partner{display:inline-flex;align-items:center;min-height:46px;border:1.5px solid var(--line);color:var(--ink);padding:10px 18px;border-radius:999px;text-decoration:none;font-weight:800;font-size:1rem;background:var(--white)}
+a.partner:hover{border-color:var(--navy);color:var(--navy)}
+a.partner.glowny{background:var(--red);border-color:var(--red);color:var(--white);box-shadow:0 8px 18px -8px rgba(208,64,42,.7)}
+.polecamy{border-left:4px solid var(--navy);padding:4px 0 4px 16px;margin:18px 0;max-width:var(--tekst)}.polecamy h3{margin-top:.2em}
+.przycisk{display:inline-flex;align-items:center;min-height:48px;background:var(--red);color:var(--white);padding:12px 22px;border-radius:16px;text-decoration:none;font-weight:800;margin:6px 10px 6px 0}
+.przycisk.jasny{background:var(--white);color:var(--navy)}
+ul.siatka{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;padding:0;list-style:none;margin:12px 0;max-width:none}
+ul.siatka li{margin:0}ul.siatka a{display:block;background:var(--white);border:1px solid var(--line);border-radius:14px;padding:12px 14px;text-decoration:none;height:100%;color:var(--ink)}
+ul.siatka a:hover{border-color:var(--navy)}ul.siatka strong{display:block;font-family:var(--serif);font-weight:400;font-size:1.12rem;color:var(--navy)}ul.siatka span{font-size:.88rem;color:var(--ink-soft)}
+small,.drobne{font-size:.88rem;color:var(--ink-soft)}.drobne{max-width:var(--tekst)}
+section[id]{scroll-margin-top:64px}
+nav.spis{position:sticky;top:0;z-index:5;background:var(--paper);margin:12px -20px 0;padding:10px 20px;border-bottom:1px solid var(--line)}nav.spis .spis-tytul{display:none}
+nav.spis ol{display:flex;gap:8px;list-style:none;margin:0;padding:0;overflow-x:auto;scrollbar-width:none}nav.spis li{margin:0}
+nav.spis a{display:block;white-space:nowrap;padding:6px 14px;border:1.5px solid var(--line);border-radius:999px;background:var(--white);text-decoration:none;font-size:.92rem;font-weight:700;color:var(--ink)}
 nav.spis a[aria-current]{background:var(--navy);border-color:var(--navy);color:var(--white)}
-@media(min-width:1320px){nav.spis{position:fixed;top:24px;left:calc(50% + 446px);width:220px;margin:0;padding:12px;border:0;border-radius:12px;background:var(--white)}
-nav.spis .spis-tytul{display:block;margin:0 0 6px 10px;font-family:"IBM Plex Mono",monospace;letter-spacing:.12em;text-transform:uppercase;font-size:.75rem;color:var(--ink)}
-nav.spis ol{flex-direction:column;gap:2px;overflow:visible}nav.spis a{border:0;border-radius:8px;background:none;font-weight:400;white-space:normal;padding:6px 10px}
-nav.spis a[aria-current]{background:var(--paper);color:var(--navy);font-weight:600}section[id]{scroll-margin-top:16px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}ul.kolumny{columns:2;padding-left:1.2em}
-details{margin:8px 0}summary{cursor:pointer;font-weight:600}
-figure.foto{margin:12px 0}figure.foto img{width:100%;height:auto;border-radius:12px;display:block;background:var(--paper-deep)}figure.foto figcaption{font-size:.8rem;color:var(--muted);margin-top:4px}
-blockquote.opinia{margin:12px 0;border-left:4px solid var(--red);padding:4px 0 4px 12px}blockquote.opinia p{margin:0 0 4px}.cta blockquote.opinia small{color:#dfe3ea}
-@media(max-width:560px){ul.kolumny{columns:1}h1{font-size:1.9rem}}</style>
+@media(min-width:1400px){nav.spis{position:fixed;top:24px;left:calc(50% + 560px);width:200px;margin:0;padding:14px;border:0;border-radius:16px;background:var(--white)}
+nav.spis .spis-tytul{display:block;margin:0 0 6px 10px;font-weight:800;font-size:.85rem;color:var(--ink-soft)}
+nav.spis ol{flex-direction:column;gap:2px;overflow:visible}nav.spis a{border:0;border-radius:10px;background:none;font-weight:600;white-space:normal;padding:6px 10px}
+nav.spis a[aria-current]{background:var(--paper);color:var(--navy);font-weight:800}section[id]{scroll-margin-top:16px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+ul.kolumny{columns:2;column-gap:28px;padding-left:1.2em;max-width:none}@media(max-width:600px){ul.kolumny{columns:1}}
+details{margin:0;border-bottom:1px solid var(--line);padding:10px 0}details:first-of-type{border-top:1px solid var(--line)}
+summary{cursor:pointer;font-weight:800;list-style:none;padding-right:28px;position:relative}summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:4px;top:-2px;font-size:1.4rem;color:var(--navy);font-weight:500}details[open] summary::after{content:"−"}
+details p{margin:.5em 0 0}
+figure.foto{margin:18px 0 8px}figure.foto img{width:100%;height:auto;max-height:520px;object-fit:cover;border-radius:20px;display:block;background:var(--paper-deep)}
+figure.foto figcaption{font-size:.8rem;color:var(--ink-soft);margin-top:6px}
+blockquote.opinia{margin:16px 0;padding:0;max-width:60ch}blockquote.opinia p{font-family:var(--hand);font-size:1.5rem;line-height:1.25;margin:0 0 4px}
+blockquote.opinia small{font-size:.88rem}.cta blockquote.opinia small{color:#DCE3EE}
+ul.wskazowki{list-style:none;padding:0;max-width:var(--tekst)}ul.wskazowki li{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:14px 18px;margin:0 0 12px}
+ul.wskazowki strong{display:block;font-family:var(--serif);font-weight:400;font-size:1.16rem}ul.wskazowki p{margin:4px 0 6px}
+.kat-wsk{display:inline-block;font-size:.8rem;font-weight:800;color:var(--navy);background:var(--navy-soft);border-radius:999px;padding:2px 10px;margin-bottom:6px}
+.sprawdzone{color:var(--zielen);font-weight:800;white-space:nowrap}.sprawdzone::before{content:"✓ "}
+.autorzy{margin-top:36px}
+footer{padding-top:22px;padding-bottom:24px;border-top:2px solid var(--ink);margin-top:12px}footer p{font-size:.9rem;color:var(--ink-soft);max-width:none}
+.stopka{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:18px 36px;margin-bottom:10px}@media(max-width:760px){.stopka{grid-template-columns:1fr 1fr}.stopka .o{grid-column:1 / -1}}
+.stopka .tytul{font-family:var(--serif);font-size:1.1rem;color:var(--ink);margin:0 0 6px}.stopka ul{list-style:none;padding:0;margin:0}.stopka li{margin:0 0 4px;font-size:.95rem}.stopka a{color:var(--ink)}
+@media(max-width:560px){body{font-size:1.06rem}header,main,footer{padding-left:16px;padding-right:16px}nav.spis{margin-left:-16px;margin-right:-16px;padding-left:16px;padding-right:16px}section.karta,section.cta,section.druk,section.tlo{padding:20px 18px}}
+@media print{.pasek,nav.spis,.partnerzy,.cta{display:none}}</style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Wenecja w sierpniu: pogoda, temperatura i ceny lotów","description":"Wenecja w sierpniu: 28°C w dzień, 20°C w nocy, 9 dni z opadem. Ocena gołębi 4/5, ceny lotów i co spakować.","inLanguage":"pl","dateModified":"2026-10-12","about":{"@type":"TouristDestination","name":"Wenecja","geo":{"@type":"GeoCoordinates","latitude":45.44,"longitude":12.316},"containedInPlace":{"@type":"Country","name":"Włochy"}},"author":[{"@type":"Person","name":"Michał Gołąb","url":"https://golebielataja.pl/o-nas/"},{"@type":"Person","name":"Paulina","url":"https://golebielataja.pl/o-nas/"}],"publisher":{"@id":"https://golebielataja.pl/#organization","@type":"Organization","name":"Gołębie Latają"}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Wenecja w sierpniu: jaka pogoda?","acceptedAnswer":{"@type":"Answer","text":"Około 28°C w dzień. Na plażę idealnie, na długie spacery w południe trochę za gorąco. Nocą temperatura spada do około 20°C. Deszcz trafia się średnio przez 9 dni w miesiącu, więc kurtka przeciwdeszczowa się przyda."}},{"@type":"Question","name":"Czy Wenecja w sierpniu to dobry pomysł?","acceptedAnswer":{"@type":"Answer","text":"To jeden z najlepszych terminów w roku na ten kierunek. Najlepsze miesiące tutaj: marzec, kwiecień, maj, czerwiec, lipiec, sierpień, wrzesień, październik. Sierpień jest wśród nich."}},{"@type":"Question","name":"Wenecja: ile trwa lot z Polski?","acceptedAnswer":{"@type":"Answer","text":"Z Warszawy około 2 h, jeśli lecisz bez przesiadki. Z innych lotnisk podobnie, z przesiadką dłużej."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Czy Wenecja w sierpniu to dobry pomysł?","acceptedAnswer":{"@type":"Answer","text":"To jeden z najlepszych terminów w roku na ten kierunek. Najlepsze miesiące tutaj: marzec, kwiecień, maj, czerwiec, lipiec, sierpień, wrzesień, październik. Sierpień jest wśród nich."}},{"@type":"Question","name":"Wenecja: kiedy najlepiej jechać?","acceptedAnswer":{"@type":"Answer","text":"Według ocen gołębi najlepiej wypadają marzec, kwiecień, maj, czerwiec, lipiec, sierpień, wrzesień i październik."}},{"@type":"Question","name":"Wenecja w sierpniu: czy dużo pada?","acceptedAnswer":{"@type":"Answer","text":"Średnio 9 dni z opadem i około 85 mm deszczu w całym miesiącu."}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Gołębie Latają","item":"https://golebielataja.pl/"},{"@type":"ListItem","position":2,"name":"Kierunki","item":"https://golebielataja.pl/kierunki/"},{"@type":"ListItem","position":3,"name":"Wenecja","item":"https://golebielataja.pl/kierunki/wenecja/"},{"@type":"ListItem","position":4,"name":"Sierpień","item":"https://golebielataja.pl/kierunki/wenecja/sierpien/"}]}</script>
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "dabf88d8ecff46b9af7a1518edc3f5ee"}'></script>
 <script data-goatcounter="https://golebielataja.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
@@ -75,6 +152,7 @@ blockquote.opinia{margin:12px 0;border-left:4px solid var(--red);padding:4px 0 4
 <header>
 <nav class="gora" aria-label="Menu">
 <a class="logo" href="/">Gołębie Latają</a>
+<span class="linki">
 <a href="/kierunki/">Kierunki</a>
 <a href="/gdzie-leciec/sierpien/">Gdzie lecieć</a>
 <a href="/dlugie-weekendy/">Długie weekendy</a>
@@ -82,166 +160,155 @@ blockquote.opinia{margin:12px 0;border-left:4px solid var(--red);padding:4px 0 4
 <a href="/kraje/">Kraje</a>
 <a href="/o-nas/">O nas</a>
 <a href="/">Plan w 48 h</a>
+</span>
 </nav>
 <nav class="okruszki" aria-label="Ścieżka"><a href="/">Gołębie Latają</a> › <a href="/kierunki/">Kierunki</a> › <a href="/kierunki/wenecja/">Wenecja</a> › <span>Sierpień</span></nav>
 </header>
 <main>
-<p class="eyebrow">Miasto · Włochy · sierpień</p>
+<div class="hero">
 <h1>Wenecja w sierpniu</h1>
-<figure class="foto"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/Venice_-_St._Marc%27s_Basilica_01.jpg/1280px-Venice_-_St._Marc%27s_Basilica_01.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="Bazylika św. Marka w Wenecji" width="1200" height="800" fetchpriority="high" decoding="async"><figcaption>Bazylika św. Marka w Wenecji · <a href="https://commons.wikimedia.org/wiki/File:Venice_-_St._Marc%27s_Basilica_01.jpg" rel="nofollow noopener">Nino Barbieri, CC BY-SA 2.5</a>, Wikimedia Commons</figcaption></figure>
-<p class="lead">To jeden z najlepszych terminów w roku na ten kierunek. Około 28°C w dzień. Na plażę idealnie, na długie spacery w południe trochę za gorąco. Nocą temperatura spada do około 20°C. Deszcz trafia się średnio przez 9 dni w miesiącu, więc kurtka przeciwdeszczowa się przyda. Słońca jest około 12 godzin dziennie. Krem z filtrem 50 to podstawa.</p>
-<p>Najlepsze miesiące tutaj: marzec, kwiecień, maj, czerwiec, lipiec, sierpień, wrzesień, październik. Sierpień jest wśród nich.</p>
+<div class="stempel" role="img" aria-label="Ocena gołębi na sierpień: 4 na 5"><span>sierpień</span><b>4/5</b><span>ocena gołębi</span></div>
+<p class="lead">To jeden z najlepszych terminów w roku na ten kierunek. Około 28°C w dzień. Na plażę w sam raz, na długie spacery w południe trochę za gorąco.</p>
+</div>
+<figure class="foto"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Ponte_di_Rialto_Venice_1.jpg/1280px-Ponte_di_Rialto_Venice_1.jpg" alt="Most Rialto" width="1280" height="850" fetchpriority="high" decoding="async"><figcaption>Most Rialto. Fot. <a href="https://commons.wikimedia.org/wiki/File:Ponte_di_Rialto_Venice_1.jpg" rel="nofollow noopener">kallerna, CC BY-SA 4.0</a>, Wikimedia Commons</figcaption></figure>
 <nav class="spis" aria-label="Spis treści">
 <p class="spis-tytul">Na tej stronie</p>
 <ol>
 <li><a href="#pogoda">Pogoda</a></li>
+<li><a href="#miesiace">Inne miesiące</a></li>
 <li><a href="#rezerwacje">Zarezerwuj</a></li>
 <li><a href="#rekomendacja">Rekomendacja gołębi</a></li>
-<li><a href="#co-zabrac">Co zabrać</a></li>
 <li><a href="#ceny">Ceny lotów</a></li>
-<li><a href="#dlugie-weekendy">Długie weekendy</a></li>
+<li><a href="#co-zabrac">Co zabrać</a></li>
 <li><a href="#podobne">Podobne kierunki</a></li>
+<li><a href="#dlugie-weekendy">Długie weekendy</a></li>
 <li><a href="#pytania">Pytania</a></li>
-<li><a href="#miesiace">Inne miesiące</a></li>
 </ol>
 </nav>
 <script src="/spis.js" defer></script>
 <section id="pogoda">
-<h2>Liczby na sierpień</h2>
+<h2>Co pokazuje termometr</h2>
 <dl class="liczby">
-<div><dt>Ocena gołębi</dt><dd>4/5</dd></div>
 <div><dt>W dzień</dt><dd>28°C</dd></div>
 <div><dt>W nocy</dt><dd>20°C</dd></div>
 <div><dt>Dni z opadem</dt><dd>9</dd></div>
 <div><dt>Opady</dt><dd>85 mm</dd></div>
-<div><dt>Słońce</dt><dd>12 h dziennie</dd></div>
+<div><dt>Słońce dziennie</dt><dd>12 h</dd></div>
 </dl>
-<p class="drobne">Ocenę liczymy pod zwiedzanie: najlepiej 18 do 26°C w dzień, mało dni z opadem i dużo słońca. <a href="/o-nas/#ocena">Jak liczymy ocenę</a></p>
-<p class="drobne">Średnie z lat 1995-2024. To klimat, nie prognoza: konkretny tydzień może być cieplejszy albo chłodniejszy.</p>
-<h3>Miesiąc wcześniej i później</h3>
-<ul class="siatka">
-<li><a href="/kierunki/wenecja/lipiec/"><strong>Lipiec</strong><span>Lipiec: 28°C, ocena 4/5</span></a></li>
-<li><a href="/kierunki/wenecja/wrzesien/"><strong>Wrzesień</strong><span>Wrzesień: 23°C, ocena 4/5</span></a></li>
-</ul>
+<p class="po-liczbach">Nocą temperatura spada do około 20°C. Deszcz trafia się średnio przez 9 dni w miesiącu, więc kurtka przeciwdeszczowa się przyda. Słońca jest około 12 godzin dziennie. Krem z filtrem 50 to podstawa.</p>
+<p class="drobne">Ocena pod zwiedzanie: najlepiej 18 do 26°C i mało deszczu. Średnie z lat 1995-2024. To klimat, a nie prognoza. <a href="/o-nas/#ocena">Jak liczymy ocenę</a></p>
 </section>
-<section id="rezerwacje">
+<section id="miesiace">
+<h2>Miesiąc po miesiącu</h2>
+<p>Najlepsze miesiące tutaj: marzec, kwiecień, maj, czerwiec, lipiec, sierpień, wrzesień, październik. Sierpień jest wśród nich.</p>
+<ol class="rok">
+<li><a class="o2" href="/kierunki/wenecja/styczen/" aria-label="Styczeń: 7°C, ocena 2 na 5">Sty<span>7°</span></a></li>
+<li><a class="o3" href="/kierunki/wenecja/luty/" aria-label="Luty: 9°C, ocena 3 na 5">Lut<span>9°</span></a></li>
+<li><a class="o4" href="/kierunki/wenecja/marzec/" aria-label="Marzec: 13°C, ocena 4 na 5">Mar<span>13°</span></a></li>
+<li><a class="o4" href="/kierunki/wenecja/kwiecien/" aria-label="Kwiecień: 16°C, ocena 4 na 5">Kwi<span>16°</span></a></li>
+<li><a class="o4" href="/kierunki/wenecja/maj/" aria-label="Maj: 21°C, ocena 4 na 5">Maj<span>21°</span></a></li>
+<li><a class="o5" href="/kierunki/wenecja/czerwiec/" aria-label="Czerwiec: 25°C, ocena 5 na 5">Cze<span>25°</span></a></li>
+<li><a class="o4" href="/kierunki/wenecja/lipiec/" aria-label="Lipiec: 28°C, ocena 4 na 5">Lip<span>28°</span></a></li>
+<li><a class="o4" href="/kierunki/wenecja/sierpien/" aria-current="page" aria-label="Sierpień: 28°C, ocena 4 na 5">Sie<span>28°</span></a></li>
+<li><a class="o4" href="/kierunki/wenecja/wrzesien/" aria-label="Wrzesień: 23°C, ocena 4 na 5">Wrz<span>23°</span></a></li>
+<li><a class="o4" href="/kierunki/wenecja/pazdziernik/" aria-label="Październik: 18°C, ocena 4 na 5">Paź<span>18°</span></a></li>
+<li><a class="o3" href="/kierunki/wenecja/listopad/" aria-label="Listopad: 13°C, ocena 3 na 5">Lis<span>13°</span></a></li>
+<li><a class="o2" href="/kierunki/wenecja/grudzien/" aria-label="Grudzień: 8°C, ocena 2 na 5">Gru<span>8°</span></a></li>
+</ol>
+<p class="legenda">Im bardziej zielono, tym lepsza pogoda na taki wyjazd. Każdy miesiąc ma swoją stronę.</p>
+<p class="dalej"><a href="/kierunki/wenecja/">Wenecja przez cały rok</a> <a href="/kraje/wlochy/">Dokumenty, waluta i gniazdka: Włochy</a></p>
+</section>
+<section id="rezerwacje" class="karta">
 <h2>Zarezerwuj sam</h2>
-<p>Lot, nocleg i auto rezerwujesz sam, każde osobno. W przyciskach lotu i noclegu jest przykładowy termin: 14 do 21 sierpnia 2027. Daty zmienisz po kliknięciu.</p>
+<p>Tu masz skróty do wyszukiwarek, z których sami korzystamy. Lot i nocleg otworzą się z przykładowym terminem 14 do 21 sierpnia 2027, daty zmienisz na miejscu.</p>
 <div class="partnerzy"><a class="partner glowny" href="https://www.aviasales.com/search/WAW1408VCE21082?marker=785120.mwenecja08" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-mwenecja08">Znajdź lot na te daty</a><a class="partner" href="https://www.booking.com/searchresults.pl.html?ss=Wenecja&amp;latitude=45.44&amp;longitude=12.316&amp;checkin=2027-08-14&amp;checkout=2027-08-21&amp;group_adults=2&amp;no_rooms=1" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-booking-mwenecja08">Szukaj noclegu</a><a class="partner" href="https://www.expedia.pl/Hotel-Search?destination=Wenecja&amp;startDate=2027-08-14&amp;endDate=2027-08-21&amp;adults=2" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-expedia-mwenecja08">Więcej noclegów</a><a class="partner" href="https://tp.media/r?campaign_id=172&amp;marker=785120&amp;p=4845&amp;trs=581099&amp;u=https%3A%2F%2Fwww.qeeq.com%2Fpl&amp;sub_id=mwenecja08" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-qeeq-mwenecja08">Wynajmij auto</a><a class="partner" href="https://tp.media/r?campaign_id=89&amp;marker=785120&amp;p=2074&amp;trs=581099&amp;u=https%3A%2F%2Fwww.tiqets.com%2Fpl%2Fsearch%3Fq%3DWenecja&amp;sub_id=mwenecja08" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-tiqets-mwenecja08">Bilety do atrakcji</a><a class="partner" href="https://www.getyourguide.pl/s/?q=Wenecja&amp;date_from=2027-08-14&amp;date_to=2027-08-21" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-getyourguide-mwenecja08">Wycieczki z przewodnikiem</a></div>
 
-<p class="drobne"><a class="partner" href="https://rankomat.pl/ubezpieczenia-turystyczne" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-rankomat-mwenecja08">Porównaj ubezpieczenia</a> Porównywarka polis. Nie układamy rankingu ubezpieczycieli, wybierasz sam.</p>
-<p class="drobne">Przyciski prowadzą do serwisów partnerów: Aviasales, Booking.com, Expedia, QEEQ, Tiqets, GetYourGuide, Rankomat. Rezerwujesz i płacisz u nich, gołębie nie widzą Twoich danych. To linki partnerskie. Jeśli coś zarezerwujesz, gołębie dostaną prowizję, a cena dla Ciebie się nie zmienia.</p>
+<p class="drobne"><a class="partner" href="https://rankomat.pl/ubezpieczenia-turystyczne" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-rankomat-mwenecja08">Porównaj ubezpieczenia</a> Ubezpieczenie podróżne porównasz w kilka minut.</p>
+<p class="drobne">To linki partnerskie do Aviasales, Booking.com, Expedia, QEEQ, Tiqets, GetYourGuide, Rankomat. Cena się nie zmienia, a prowizja utrzymuje te strony.</p>
 </section>
 <section id="rekomendacja" class="rekomendacja">
 <h2>Rekomendacja gołębi</h2>
 
-<h3>Tanio, lokalnie i nietypowo</h3>
-<p>Gdzie zjeść za grosze, gdzie przysiąść z widokiem i co zobaczyć poza przewodnikiem.</p>
-<h4>Tanie jedzenie</h4>
-<ul>
-<li><strong>Osteria All&#39;Arco</strong> <small>(San Polo, tanio)</small>: Mała osteria na bocznej uliczce w San Polo: cicchetti, polpette i sardynki w sosie saor. Bierz kilka przekąsek i kieliszek wina, wyjdziesz najedzony.</li>
-<li><strong>Cantina Do Mori</strong> <small>(San Polo, tanio)</small>: Stary bacaro przy Rialto: cicchetti i „ombre” przy ladzie, wszyscy stoją. Zamów kilka drobiazgów i szklankę wina.</li>
-<li><strong>Osteria al Squero</strong> <small>(Dorsoduro, tanio)</small>: Bacaro przy kanale naprzeciw warsztatu gondoli. Gorące crostini z lardo i smażone klopsiki, a do tego wino, wszystko za niewielkie pieniądze.</li>
-</ul>
-<h4>Smaki i trunki</h4>
-<ul>
-<li><strong>Ombra z baccalà mantecato</strong> <small>[ombra, bakala mantekato]</small> <small>(San Polo)</small>: „Ombra” to mały kieliszek wina, a baccalà mantecato to kremowa pasta z dorsza na grzance. Tak jada się w Wenecji po pracy.</li>
-<li><strong>Sarde in saor</strong> <small>[sarde in saor]</small>: Sardynki marynowane z cebulą w słodko-kwaśnej zalewie, wenecka klasyka z dawnych czasów rejsów. Zamów w bacaro, nie w restauracji z menu po polsku.</li>
-</ul>
-<h4>Miejscówki</h4>
-<ul>
-<li><strong>Cannaregio</strong> <small>(Cannaregio)</small>: Dzielnica, w której Wenecjanie jeszcze mieszkają: kanały bez tłumu, lokalne sklepy i osterie. Zejdź z głównej ulicy do stacji i błądź.</li>
-<li><strong>Cantine del Vino già Schiavi</strong> <small>(Dorsoduro)</small>: Stary bacaro nad kanałem koło Zattere, z dziesiątkami win na kieliszki i crostini z figami i pistacjami. Wieczorem pełno miejscowych.</li>
-<li><strong>Torcello</strong> <small>(Laguna)</small>: Cicha wyspa na lagunie z VII-wiecznymi kościołami i mozaikami. Po godzinie wiesz, czemu Wenecja kiedyś była stąd.</li>
-</ul>
-<h4>Nietypowe</h4>
-<ul>
-<li><strong>Zalana krypta San Zaccaria</strong> <small>(Castello)</small>: Krypta z grobami dożów, w której stoi woda, więc sklepienia odbijają się jak w lustrze. Kilka kroków od placu św. Marka, a niemal nikt tu nie zagląda.</li>
-<li><strong>Ponte de Chiodo</strong> <small>(Cannaregio)</small>: Jeden z dwóch ostatnich mostów w Wenecji bez poręczy, ukryty w Cannaregio. Zrób zdjęcie bez tłumu i uważaj na krok.</li>
-</ul>
-<h4>Patent</h4>
-<ul>
-<li><strong>Cicchetti przy ladzie</strong>: W bacaro stań przy ladzie i zamawiaj „ombra” plus cicchetti na sztuki. To tańsze i szybsze niż kolacja przy stoliku.</li>
-</ul>
-<h3>Od podróżników</h3>
-<p>Nikt jeszcze nie dodał wskazówki z wyjazdu. Możesz być pierwszy.</p>
-<p><a class="przycisk" href="/?sciezka=%2Fkierunki%2Fwenecja%2Fwskazowka">Byłeś tam? Dodaj wskazówkę w appce</a></p>
-</section>
-<section id="co-zabrac">
-<h2>Co spakować</h2>
-<ul>
-<li>przewiewne lniane i bawełniane ubrania, szorty i sandały</li>
-<li>krem z filtrem 50 i coś na głowę</li>
-<li>strój kąpielowy i szybkoschnący ręcznik</li>
-<li>kurtkę przeciwdeszczową albo parasol</li>
-<li>wygodne buty do chodzenia, bo zwiedza się tu pieszo</li>
-<li>powerbank (tylko w bagażu podręcznym)</li>
-</ul>
+<p>Wybraliśmy parę miejsc z naszej listy. Pełna lista jest na stronie kierunku.</p>
+<div class="kategorie">
+<div class="kat"><h4>Miejscówki</h4>
+<ul class="miejsca">
+<li><strong>Torcello</strong><small>Laguna</small><p>Cicha wyspa na lagunie z VII-wiecznymi kościołami i mozaikami. Po godzinie wiesz, czemu Wenecja kiedyś była stąd.</p></li>
+</ul></div>
+<div class="kat"><h4>Nietypowe</h4>
+<ul class="miejsca">
+<li><strong>Ponte de Chiodo</strong><small>Cannaregio</small><p>Jeden z dwóch ostatnich mostów w Wenecji bez poręczy, ukryty w Cannaregio. Zrób zdjęcie bez tłumu i uważaj na krok.</p></li>
+</ul></div>
+<div class="kat"><h4>Smaki i trunki</h4>
+<ul class="miejsca">
+<li><strong>Sarde in saor</strong><p>Sardynki marynowane z cebulą w słodko-kwaśnej zalewie, wenecka klasyka z dawnych czasów rejsów. Zamów w bacaro, nie w restauracji z menu po polsku.</p></li>
+</ul></div>
+</div>
+
+<p class="dalej"><a href="/kierunki/wenecja/#rekomendacja">Wszystkie wskazówki: Wenecja</a> <a href="/?sciezka=%2Fkierunki%2Fwenecja%2Fwskazowka">Byłeś tam? Dodaj wskazówkę</a></p>
 </section>
 <section id="ceny">
-<h2>Ceny lotów</h2>
+<h2>Ile kosztuje lot</h2>
 <p>Najtańsze loty na sierpień, które gołębie widziały w ostatnich 90 dniach (za osobę, w obie strony):</p>
-<ul>
-<li><a href="/tanie-loty/warszawa/">Warszawa</a>: od 321 zł <small>(NaN sierpnia 2027)</small></li>
-<li><a href="/tanie-loty/poznan/">Poznań</a>: od 623 zł <small>(NaN sierpnia 2027)</small></li>
-</ul>
+<div class="przewin"><table class="ceny">
+<thead><tr><th scope="col">Skąd</th><th scope="col">Od</th><th scope="col">Przykładowy wylot</th></tr></thead>
+<tbody>
+<tr><th scope="row"><a href="/tanie-loty/warszawa/">Warszawa</a></th><td><strong>od 321 zł</strong></td><td>NaN sierpnia 2027</td></tr>
+<tr><th scope="row"><a href="/tanie-loty/poznan/">Poznań</a></th><td><strong>od 623 zł</strong></td><td>NaN sierpnia 2027</td></tr>
+</tbody>
+</table></div>
 <p>Z Warszawy to 2 h w powietrzu, jeśli trafisz lot bez przesiadki.</p>
+</section>
+<section id="co-zabrac">
+<h2>Lista do spakowania</h2>
+<ul class="lista-rzeczy">
+<li>Przewiewne lniane i bawełniane ubrania, szorty i sandały</li>
+<li>Krem z filtrem 50 i coś na głowę</li>
+<li>Strój kąpielowy i szybkoschnący ręcznik</li>
+<li>Kurtkę przeciwdeszczową albo parasol</li>
+<li>Wygodne buty do chodzenia, bo zwiedza się tu pieszo</li>
+<li>Powerbank (tylko w bagażu podręcznym)</li>
+</ul>
+</section>
+<section id="podobne">
+<h2>Podobne kierunki w sierpniu</h2>
+<p>Gdzie w sierpniu jest równie dobrze albo lepiej, z podobnym charakterem:</p>
+<ul class="siatka">
+<li><a href="/kierunki/lizbona/sierpien/"><strong>Lizbona</strong><span>27°C, woda 19°C, ocena 5/5</span></a></li>
+<li><a href="/kierunki/porto/sierpien/"><strong>Porto</strong><span>26°C, ocena 5/5</span></a></li>
+<li><a href="/kierunki/malaga/sierpien/"><strong>Malaga</strong><span>29°C, woda 26°C, ocena 5/5</span></a></li>
+<li><a href="/kierunki/neapol/sierpien/"><strong>Neapol</strong><span>30°C, ocena 4/5</span></a></li>
+<li><a href="/kierunki/stambul/sierpien/"><strong>Stambuł</strong><span>29°C, ocena 4/5</span></a></li>
+<li><a href="/kierunki/walencja/sierpien/"><strong>Walencja</strong><span>31°C, woda 29°C, ocena 4/5</span></a></li>
+</ul>
+<p><a href="/gdzie-leciec/sierpien/">Gdzie polecieć w sierpniu: pełna lista</a></p>
 </section>
 <section id="dlugie-weekendy">
 <h2>Długi weekend w sierpniu</h2>
 <p>W sierpniu 2027 nie ma długiego weekendu. Najbliższe terminy znajdziesz na liście.</p>
 <p><a href="/dlugie-weekendy/2027/">Wszystkie długie weekendy</a></p>
 </section>
-<section id="podobne">
-<h2>Inne kierunki w sierpniu</h2>
-<p>Gdzie w sierpniu jest równie dobrze albo lepiej, z podobnym charakterem:</p>
-<ul class="siatka">
-<li><a href="/kierunki/lizbona/sierpien/"><strong>Lizbona</strong><span>27°C, woda 19°C · 5/5</span></a></li>
-<li><a href="/kierunki/porto/sierpien/"><strong>Porto</strong><span>26°C · 5/5</span></a></li>
-<li><a href="/kierunki/malaga/sierpien/"><strong>Malaga</strong><span>29°C, woda 26°C · 5/5</span></a></li>
-<li><a href="/kierunki/neapol/sierpien/"><strong>Neapol</strong><span>30°C · 4/5</span></a></li>
-<li><a href="/kierunki/stambul/sierpien/"><strong>Stambuł</strong><span>29°C · 4/5</span></a></li>
-<li><a href="/kierunki/walencja/sierpien/"><strong>Walencja</strong><span>31°C, woda 29°C · 4/5</span></a></li>
-</ul>
-<p><a href="/gdzie-leciec/sierpien/">Gdzie polecieć w sierpniu: pełna lista</a></p>
-</section>
 <section id="pytania">
 <h2>Pytania i odpowiedzi</h2>
-<details><summary>Wenecja w sierpniu: jaka pogoda?</summary><p>Około 28°C w dzień. Na plażę idealnie, na długie spacery w południe trochę za gorąco. Nocą temperatura spada do około 20°C. Deszcz trafia się średnio przez 9 dni w miesiącu, więc kurtka przeciwdeszczowa się przyda.</p></details>
 <details><summary>Czy Wenecja w sierpniu to dobry pomysł?</summary><p>To jeden z najlepszych terminów w roku na ten kierunek. Najlepsze miesiące tutaj: marzec, kwiecień, maj, czerwiec, lipiec, sierpień, wrzesień, październik. Sierpień jest wśród nich.</p></details>
-<details><summary>Wenecja: ile trwa lot z Polski?</summary><p>Z Warszawy około 2 h, jeśli lecisz bez przesiadki. Z innych lotnisk podobnie, z przesiadką dłużej.</p></details>
+<details><summary>Wenecja: kiedy najlepiej jechać?</summary><p>Według ocen gołębi najlepiej wypadają marzec, kwiecień, maj, czerwiec, lipiec, sierpień, wrzesień i październik.</p></details>
+<details><summary>Wenecja w sierpniu: czy dużo pada?</summary><p>Średnio 9 dni z opadem i około 85 mm deszczu w całym miesiącu.</p></details>
 </section>
 <section class="cta">
-<h2>Nie chcesz układać tego sam?</h2>
-<p>Wyślij gołębia. W 48 godzin dostajesz plan: loty, noclegi, trasę dzień po dniu i miejsca, do których warto zajrzeć. Prognozę na najbliższe dni i aktualne ceny sprawdzisz w aplikacji za darmo.</p>
-<blockquote class="opinia"><p>Zaplanowali dla nas dwutygodniową podróż do Japonii, która była jednocześnie naszą podróżą poślubną. Rada dotycząca wysyłania bagaży z hotelu do hotelu: absolutny strzał w dziesiątkę!</p><small>Alicja i Łukasz, podróż poślubna w Japonii</small></blockquote>
+<h2>Zostaw szukanie nam</h2>
+<p>Plany układamy ręcznie, we dwoje, nie automatem. Odpowiedź dostajesz w 48 godzin.</p>
+<blockquote class="opinia"><p>Potrzebowałem inspiracji na mototrip po Kaszubach i Pomorzu. Dostałem namiary, jakie punkty związane z II WŚ zwiedzić, gdzie rozbić namiot, gdzie zjeść i jakie jeziora zobaczyć.</p><small>Piotr, mototrip po Polsce</small></blockquote>
 <p><a class="przycisk" href="/">Zamów plan podróży</a></p>
-</section>
-<section id="miesiace">
-<h2>Wszystkie miesiące</h2>
-<ul class="siatka">
-<li><a href="/kierunki/wenecja/styczen/"><strong>Styczeń</strong><span>7°C · 2/5</span></a></li>
-<li><a href="/kierunki/wenecja/luty/"><strong>Luty</strong><span>9°C · 3/5</span></a></li>
-<li><a href="/kierunki/wenecja/marzec/"><strong>Marzec</strong><span>13°C · 4/5</span></a></li>
-<li><a href="/kierunki/wenecja/kwiecien/"><strong>Kwiecień</strong><span>16°C · 4/5</span></a></li>
-<li><a href="/kierunki/wenecja/maj/"><strong>Maj</strong><span>21°C · 4/5</span></a></li>
-<li><a href="/kierunki/wenecja/czerwiec/"><strong>Czerwiec</strong><span>25°C · 5/5</span></a></li>
-<li><a href="/kierunki/wenecja/lipiec/"><strong>Lipiec</strong><span>28°C · 4/5</span></a></li>
-<li><a href="/kierunki/wenecja/sierpien/"><strong>Sierpień</strong><span>28°C · 4/5</span></a></li>
-<li><a href="/kierunki/wenecja/wrzesien/"><strong>Wrzesień</strong><span>23°C · 4/5</span></a></li>
-<li><a href="/kierunki/wenecja/pazdziernik/"><strong>Październik</strong><span>18°C · 4/5</span></a></li>
-<li><a href="/kierunki/wenecja/listopad/"><strong>Listopad</strong><span>13°C · 3/5</span></a></li>
-<li><a href="/kierunki/wenecja/grudzien/"><strong>Grudzień</strong><span>8°C · 2/5</span></a></li>
-</ul>
-<p><a href="/kierunki/wenecja/">Wenecja</a> · <a href="/kraje/wlochy/">Włochy</a></p>
 </section>
 <p class="drobne">Klimat: Open-Meteo (ERA5), licencja CC BY 4.0, średnie z lat 1995-2024. Ceny lotów: wyszukiwania w aplikacji Gołębie Latają (Travelpayouts, Duffel), orientacyjne.</p>
 <p class="drobne autorzy">Przygotowali: <a href="/o-nas/">Michał i Paulina</a>, Gołębie Latają.</p>
 </main>
 <footer>
-<p class="drobne">Gołębie Latają układają plany podróży. Ty mówisz, czego chcesz, my szukamy, liczymy i piszemy. Plan w 48 godzin.</p>
-<p class="drobne">Kiedy wolne: <a href="/majowka/">Majówka</a> · <a href="/boze-cialo/">Boże Ciało</a> · <a href="/ferie-zimowe/">Ferie zimowe</a> · <a href="/sylwester-za-granica/">Sylwester za granicą</a> · <a href="/swieta-w-cieple/">Święta w cieple</a> · <a href="/wakacje-z-dziecmi/">Wakacje z dziećmi</a></p>
-<p class="drobne"><a href="/poradniki/">Poradniki</a> · <a href="/porownanie/">Porównania</a> · <a href="/tanie-loty/">Tanie loty</a> · <a href="/polityka-prywatnosci.html">Polityka prywatności</a> · <a href="/regulamin.html">Regulamin</a> · <a href="#zgoda" data-cookies="1">Ustawienia cookies</a> · <a href="mailto:lecimy@golebielataja.pl">lecimy@golebielataja.pl</a></p>
+<div class="stopka">
+<div class="o"><p class="tytul">Gołębie Latają</p><p>Gołębie Latają układają plany podróży. Ty mówisz, czego chcesz, my szukamy, liczymy i piszemy. Plan w 48 godzin.</p><p><a href="mailto:lecimy@golebielataja.pl">lecimy@golebielataja.pl</a></p></div>
+<div><p class="tytul">Kiedy wolne</p><ul><li><a href="/majowka/">Majówka</a></li><li><a href="/boze-cialo/">Boże Ciało</a></li><li><a href="/ferie-zimowe/">Ferie zimowe</a></li><li><a href="/sylwester-za-granica/">Sylwester za granicą</a></li><li><a href="/swieta-w-cieple/">Święta w cieple</a></li><li><a href="/wakacje-z-dziecmi/">Wakacje z dziećmi</a></li></ul></div>
+<div><p class="tytul">Przydatne</p><ul><li><a href="/poradniki/">Poradniki</a></li><li><a href="/porownanie/">Porównania</a></li><li><a href="/tanie-loty/">Tanie loty</a></li><li><a href="/polityka-prywatnosci.html">Polityka prywatności</a></li><li><a href="/regulamin.html">Regulamin</a></li><li><a href="#zgoda" data-cookies="1">Ustawienia cookies</a></li></ul></div>
+</div>
 <p class="drobne">Dane odświeżamy co tydzień. Stan na 12 października 2026.</p>
 </footer>
 <div class="pasek"></div>

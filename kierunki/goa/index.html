@@ -12,58 +12,135 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pl_PL">
 <meta property="og:site_name" content="Gołębie Latają">
-<meta property="og:image" content="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Church_of_St._Francis_Xavier%2C_old_goa.JPG/1280px-Church_of_St._Francis_Xavier%2C_old_goa.JPG?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail">
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Palolem_Beach_%285580920479%29.jpg/1280px-Palolem_Beach_%285580920479%29.jpg">
 <link rel="icon" type="image/svg+xml" href="/img/golab-sygnet.svg">
-<link rel="preload" href="/fonty/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/fonty/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
-<style>@font-face{font-family:"Fraunces";font-style:normal;font-weight:700;font-display:swap;src:url(/fonty/fraunces-latin-700-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
-@font-face{font-family:"Fraunces";font-style:normal;font-weight:700;font-display:swap;src:url(/fonty/fraunces-latin-ext-700-normal.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
-@font-face{font-family:"IBM Plex Sans";font-style:normal;font-weight:400;font-display:swap;src:url(/fonty/ibm-plex-sans-latin-400-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
-@font-face{font-family:"IBM Plex Sans";font-style:normal;font-weight:400;font-display:swap;src:url(/fonty/ibm-plex-sans-latin-ext-400-normal.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
-@font-face{font-family:"IBM Plex Sans";font-style:normal;font-weight:600;font-display:swap;src:url(/fonty/ibm-plex-sans-latin-600-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
-@font-face{font-family:"IBM Plex Sans";font-style:normal;font-weight:600;font-display:swap;src:url(/fonty/ibm-plex-sans-latin-ext-600-normal.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
-@font-face{font-family:"IBM Plex Mono";font-style:normal;font-weight:400;font-display:swap;src:url(/fonty/ibm-plex-mono-latin-400-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
-@font-face{font-family:"IBM Plex Mono";font-style:normal;font-weight:400;font-display:swap;src:url(/fonty/ibm-plex-mono-latin-ext-400-normal.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
-:root{--paper:#F6F0E2;--paper-deep:#EFE6D0;--ink:#23262C;--red:#C8371F;--navy:#1E3A6D;--white:#FDFBF5;--muted:#5a5d63}
-*{box-sizing:border-box}body{margin:0;font-family:"IBM Plex Sans",system-ui,sans-serif;font-size:17px;line-height:1.6;color:var(--ink);background:var(--paper)}
+<link rel="preload" href="/fonty/nunito-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonty/young-serif-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>@font-face{font-family:"Young Serif";font-style:normal;font-weight:400;font-display:swap;src:url(/fonty/young-serif-latin-400-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Young Serif";font-style:normal;font-weight:400;font-display:swap;src:url(/fonty/young-serif-latin-ext-400-normal.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Nunito";font-style:normal;font-weight:200 1000;font-display:swap;src:url(/fonty/nunito-latin-wght-normal.woff2) format("woff2-variations");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Nunito";font-style:normal;font-weight:200 1000;font-display:swap;src:url(/fonty/nunito-latin-ext-wght-normal.woff2) format("woff2-variations");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Caveat";font-style:normal;font-weight:400 700;font-display:swap;src:url(/fonty/caveat-latin-wght-normal.woff2) format("woff2-variations");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Caveat";font-style:normal;font-weight:400 700;font-display:swap;src:url(/fonty/caveat-latin-ext-wght-normal.woff2) format("woff2-variations");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"IBM Plex Mono";font-style:normal;font-weight:500;font-display:swap;src:url(/fonty/ibm-plex-mono-latin-500-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"IBM Plex Mono";font-style:normal;font-weight:500;font-display:swap;src:url(/fonty/ibm-plex-mono-latin-ext-500-normal.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+:root{--paper:#F7F1E4;--paper-deep:#EFE6D1;--cream:#FBF6EA;--white:#FFFDF8;--ink:#2A2C31;--ink-soft:#5E626A;--line:#DDD5C4;--red:#D0402A;--navy:#1F3B6E;--navy-soft:#E6ECF5;--niebo:#DCEAF3;--zielen:#276A4D;--zielen-soft:#E3F1EA;--muted:#5E626A;
+--serif:"Young Serif",Georgia,"Times New Roman",serif;--sans:Nunito,"Segoe UI",system-ui,-apple-system,sans-serif;--hand:Caveat,"Segoe Print","Bradley Hand",cursive;--mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;--tekst:66ch}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--sans);font-weight:500;font-size:1.125rem;line-height:1.65;color:var(--ink);background:var(--paper);font-variant-numeric:lining-nums}
+a{color:var(--navy);text-decoration-thickness:1px;text-underline-offset:.18em}a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:2px solid var(--navy);outline-offset:2px;border-radius:4px}
 .pasek{height:8px;background:repeating-linear-gradient(135deg,var(--red) 0 14px,var(--white) 14px 22px,var(--navy) 22px 36px,var(--white) 36px 44px)}
-main,header,footer{max-width:860px;margin:0 auto;padding:12px 16px}h1,h2,h3{font-family:Fraunces,Georgia,serif;color:var(--navy);line-height:1.2}
-h1{font-size:2.3rem;margin:.2em 0}h2{font-size:1.5rem;margin:.2em 0 .5em}h3{font-size:1.15rem;margin:1em 0 .3em}
-.eyebrow{font-family:"IBM Plex Mono",monospace;letter-spacing:.12em;text-transform:uppercase;font-size:.8rem;color:var(--navy);margin:0}
-nav.gora{display:flex;flex-wrap:wrap;gap:4px 16px;align-items:baseline}nav.gora a{text-decoration:none;font-weight:600;font-size:.95rem}
-nav.gora a.logo{font-family:Fraunces,Georgia,serif;font-size:1.25rem;color:var(--red);margin-right:auto}
-.okruszki{font-size:.85rem;color:var(--muted);margin:8px 0 0}.okruszki a{color:var(--muted)}
-section{background:var(--white);border-radius:12px;padding:16px 20px;margin:16px 0}.lead{font-size:1.1rem}
-table{border-collapse:collapse;width:100%;font-size:.9rem}th,td{padding:4px 6px;text-align:left;border-bottom:1px solid var(--paper-deep)}
-.przewin{overflow-x:auto}
-dl.liczby{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px;margin:0}dl.liczby div{background:var(--paper);border-radius:8px;padding:8px 12px}
-dl.liczby dt{font-size:.8rem;color:var(--muted)}dl.liczby dd{margin:0;font-size:1.35rem;font-weight:600;color:var(--navy)}
-.partnerzy{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
-a.partner{display:inline-block;border:2px solid var(--navy);color:var(--navy);padding:8px 14px;border-radius:8px;text-decoration:none;font-weight:600;background:var(--white)}
-a.partner.glowny{background:var(--red);border-color:var(--red);color:var(--white)}
-.polecamy{border-left:4px solid var(--red);padding:4px 0 4px 12px;margin:12px 0}
-.przycisk{display:inline-block;background:var(--red);color:var(--white);padding:10px 18px;border-radius:8px;text-decoration:none;font-weight:600;margin:4px 8px 4px 0}
-.przycisk.jasny{background:var(--white);color:var(--navy)}a{color:var(--navy)}.cta{background:var(--navy);color:var(--white)}.cta h2{color:var(--white)}
+header,main,footer{max-width:1080px;margin:0 auto;padding:0 20px}
+header{padding-top:14px}
+nav.gora{display:flex;flex-wrap:wrap;gap:2px 18px;align-items:baseline}nav.gora .linki{display:flex;flex-wrap:wrap;gap:2px 18px}
+@media(max-width:640px){nav.gora .linki{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;width:100%;gap:18px;margin:0 -16px;padding:0 16px;mask-image:linear-gradient(90deg,#000 85%,transparent)}nav.gora .linki a{white-space:nowrap}}
+nav.gora a{text-decoration:none;font-weight:700;font-size:.95rem;color:var(--ink);padding:6px 0}nav.gora a:hover{color:var(--navy);text-decoration:underline}
+nav.gora a.logo{font-family:var(--serif);font-weight:400;font-size:1.45rem;color:var(--navy);margin-right:auto;letter-spacing:-.01em}
+nav.gora a.logo::before{content:"";display:inline-block;width:12px;height:12px;margin-right:8px;border-radius:50%;background:var(--red);vertical-align:.08em}
+.okruszki{font-size:.88rem;color:var(--ink-soft);margin:10px 0 0}.okruszki a{color:var(--ink-soft)}
+main{padding-top:8px;padding-bottom:24px}
+main>p,main>ul,main>ol,section>p,section>ul,section>ol,section>h2,section>h3,section>details,.wezsze{max-width:var(--tekst)}
+h1,h2,h3{font-family:var(--serif);font-weight:400;color:var(--ink);line-height:1.15;letter-spacing:-.01em;text-wrap:balance}
+h1{font-size:clamp(2.3rem,6vw,3.6rem);line-height:1.04;margin:.35em 0 .3em;color:var(--navy)}
+h2{font-size:clamp(1.55rem,3.2vw,1.95rem);margin:0 0 .55em}
+h3{font-size:1.28rem;margin:1.3em 0 .4em}
+p{margin:0 0 .9em}ul,ol{padding-left:1.25em;margin:0 0 1em}li{margin:.2em 0}li::marker{color:var(--navy)}
+strong{font-weight:800}
+.lead{font-size:clamp(1.18rem,2.2vw,1.32rem);line-height:1.55;font-weight:600;color:var(--ink);max-width:62ch}
+section{margin:44px 0;padding:0}
+section>h2{padding-top:18px;border-top:2px solid var(--ink)}
+section.karta,section.cta,section.druk{padding:24px 26px;border-radius:20px}
+section.karta{background:var(--white);border:1px solid var(--line)}section.karta>h2,section.cta>h2,section.druk>h2{border-top:0;padding-top:0}
+section.druk{background:var(--white);border:1.5px solid var(--ink);border-radius:6px;box-shadow:3px 3px 0 var(--ink)}
+section.tlo{background:var(--niebo);border-radius:20px;padding:24px 26px}section.tlo>h2{border-top:0;padding-top:0}
+.cta{background:var(--navy);color:var(--white)}.cta h2{color:var(--white)}.cta a{color:var(--white)}
 .cta a.przycisk{color:var(--white)}.cta a.przycisk.jasny{color:var(--navy)}
-ul.siatka{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:8px;padding:0;list-style:none;margin:8px 0}
-ul.siatka a{display:block;background:var(--paper);border-radius:8px;padding:8px 10px;text-decoration:none;height:100%}ul.siatka strong{display:block}ul.siatka span{font-size:.85rem;color:var(--muted)}
-table.mapa td,table.mapa th{text-align:center;padding:3px 2px;font-size:.8rem}table.mapa td:first-child,table.mapa th:first-child{text-align:left;white-space:nowrap}
-.o1{background:#f1dcd6}.o2{background:#eedcc7}.o3{background:#e4e5c6}.o4{background:#c5dcbf}.o5{background:#98c494}
-small,.drobne{font-size:.85rem;color:var(--muted)}html{scroll-behavior:smooth}section[id]{scroll-margin-top:64px}
-nav.spis{position:sticky;top:0;z-index:5;background:var(--paper);margin:8px -16px;padding:8px 16px;border-bottom:1px solid var(--paper-deep)}nav.spis .spis-tytul{display:none}
-nav.spis ol{display:flex;gap:8px;list-style:none;margin:0;padding:0;overflow-x:auto;scrollbar-width:none}
-nav.spis a{display:block;white-space:nowrap;padding:4px 12px;border:1px solid var(--paper-deep);border-radius:999px;background:var(--white);text-decoration:none;font-size:.9rem;font-weight:600}
+.hero{display:grid;grid-template-columns:1fr auto;gap:8px 28px;align-items:start}
+.hero.bez-stempla{grid-template-columns:1fr}dl.liczby.skrot{margin:6px 0 10px}dl.liczby.skrot dd{font-size:1.3rem}
+.hero h1{grid-column:1}.hero .stempel{grid-column:2;grid-row:1 / span 2;margin-top:22px}.hero .lead{grid-column:1}
+.stempel{display:inline-grid;place-items:center;align-content:center;width:132px;height:132px;border-radius:50%;border:5px double var(--red);color:var(--red);transform:rotate(-9deg);text-align:center;line-height:1.05;flex:none;background:transparent}
+.stempel b{display:block;font-family:var(--serif);font-weight:400;font-size:2.4rem;letter-spacing:-.02em}
+.stempel span{display:block;font-family:var(--mono);font-size:.7rem;letter-spacing:.02em}
+.stempel.slaby{color:var(--ink-soft);border-color:var(--ink-soft)}
+@media(max-width:640px){.hero{grid-template-columns:1fr auto;gap:4px 14px}.hero h1{font-size:clamp(2rem,9vw,2.4rem)}.hero .stempel{grid-column:2;grid-row:1;width:96px;height:96px;margin:14px 0 0;border-width:4px}.hero .lead{grid-column:1 / -1}.stempel b{font-size:1.65rem}.stempel span{font-size:.56rem}}
+.podpis{font-size:.92rem;color:var(--ink-soft);margin:-4px 0 18px}
+dl.liczby,dl.list-przewozowy{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin:0;background:var(--white);border:1.5px solid var(--ink);border-radius:6px;box-shadow:3px 3px 0 var(--ink);overflow:hidden}
+dl.liczby div{padding:12px 16px;border-right:1px dashed var(--line);border-bottom:1px dashed var(--line);margin:0 -1px -1px 0}
+dl.liczby dt{font-family:var(--mono);font-size:.76rem;color:var(--ink-soft);letter-spacing:.02em}
+dl.liczby dd{margin:2px 0 0;font-family:var(--serif);font-size:1.75rem;line-height:1.15;color:var(--navy)}
+section>dl.liczby{margin-bottom:18px}p+dl.liczby{margin-top:6px}
+.dalej{display:flex;flex-wrap:wrap;gap:8px 10px;margin:16px 0 0}.dalej a{display:inline-flex;align-items:center;min-height:42px;padding:8px 16px;border:1.5px solid var(--line);border-radius:999px;background:var(--white);text-decoration:none;font-weight:700;font-size:.95rem;color:var(--ink)}.dalej a:hover{border-color:var(--navy);color:var(--navy)}
+section.upal{background:#FBE4D8;border-radius:20px;padding:24px 26px}section.upal>h2{border-top:0;padding-top:0}
+ul.rady{padding-left:1.1em}ul.rady li{margin:0 0 8px;padding-left:4px}ul.rady li::marker{content:"☀ ";color:var(--red)}
+table.ceny{max-width:640px}table.ceny th[scope=row]{font-weight:700;color:var(--ink);font-size:1rem;border-bottom:1px solid var(--line)}table.ceny td strong{color:var(--navy);font-size:1.08rem}
+.kategorie{columns:2 300px;column-gap:40px;max-width:none;margin:8px 0 10px}.kat{break-inside:avoid;margin:0 0 22px}
+.kat h4{font-family:var(--sans);font-weight:800;font-size:1.02rem;color:var(--navy);margin:0 0 2px}
+ul.miejsca{list-style:none;padding:0;margin:0}ul.miejsca li{margin:0;padding:10px 0 12px;border-top:1px dashed var(--line)}
+ul.miejsca strong{display:block;font-family:var(--serif);font-weight:400;font-size:1.16rem;line-height:1.25;color:var(--ink)}
+ul.miejsca small{display:block;margin-top:1px}ul.miejsca p{margin:5px 0 0;max-width:none}
+.rok{display:grid;grid-template-columns:repeat(12,1fr);gap:6px;list-style:none;padding:0;margin:12px 0 6px}
+.rok li{margin:0}.rok a{display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 2px;border-radius:10px;text-decoration:none;color:var(--ink);font-size:.82rem;font-weight:700;line-height:1.2;min-height:44px}
+.rok a span{font-weight:500;font-size:.78rem}.rok a[aria-current]{outline:2.5px solid var(--navy);outline-offset:1px}
+@media(max-width:640px){.rok{grid-template-columns:repeat(6,1fr)}}
+.legenda{font-size:.85rem;color:var(--ink-soft);margin:0;max-width:none}
+.dwie{display:grid;grid-template-columns:1fr 1fr;gap:16px 28px}@media(max-width:700px){.dwie{grid-template-columns:1fr}}
+.dwie>div{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:16px 20px}.dwie h3{margin-top:0}
+ul.plusy li::marker{content:"+  ";color:var(--zielen);font-weight:800}ul.minusy li::marker{content:"−  ";color:var(--red);font-weight:800}
+ul.lista-rzeczy{list-style:none;padding:0;columns:2;column-gap:28px;max-width:none}ul.lista-rzeczy li{break-inside:avoid;padding-left:30px;position:relative;margin:0 0 8px}
+ul.lista-rzeczy li::before{content:"";position:absolute;left:0;top:.3em;width:16px;height:16px;border:2px solid var(--navy);border-radius:4px}
+@media(max-width:640px){ul.lista-rzeczy{columns:1}}
+.pocztowka{background:var(--white);border:1.5px solid var(--ink);border-radius:6px;box-shadow:3px 3px 0 var(--ink);padding:18px 22px 16px;margin:18px 0;max-width:62ch;transform:rotate(-.6deg);position:relative}
+.pocztowka::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;background:repeating-linear-gradient(135deg,var(--red) 0 10px,var(--white) 10px 16px,var(--navy) 16px 26px,var(--white) 26px 32px);border-radius:5px 5px 0 0}
+.pocztowka p,.reka{font-family:var(--hand);font-size:1.55rem;line-height:1.25;font-weight:500;margin:.25em 0}
+.pocztowka small{display:block;font-family:var(--sans);font-size:.85rem;color:var(--ink-soft);margin-top:6px}
+table{border-collapse:collapse;width:100%;font-size:.98rem;font-variant-numeric:tabular-nums lining-nums}
+th,td{padding:8px 10px;text-align:left;border-bottom:1px solid var(--line)}thead th{font-weight:800;font-size:.88rem;color:var(--ink-soft);border-bottom:2px solid var(--ink)}tbody th{font-weight:700;color:var(--ink)}
+tbody tr:nth-child(even){background:rgba(255,253,248,.7)}.przewin{overflow-x:auto;-webkit-overflow-scrolling:touch}
+table.mapa td,table.mapa th{text-align:center;padding:6px 3px;font-size:.84rem}table.mapa td:first-child,table.mapa th:first-child{text-align:left;white-space:nowrap}
+table.fakty th[scope=row]{width:34%;font-family:var(--mono);font-weight:500;font-size:.8rem;color:var(--ink-soft);border-bottom:1px dashed var(--line);vertical-align:top;padding-top:11px}table.fakty td{border-bottom:1px dashed var(--line)}
+.o1{background:#F3DED8}.o2{background:#F0E3CC}.o3{background:#E6E8C8}.o4{background:#C8E0C0}.o5{background:#9ACB98}
+.partnerzy{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0}
+a.partner{display:inline-flex;align-items:center;min-height:46px;border:1.5px solid var(--line);color:var(--ink);padding:10px 18px;border-radius:999px;text-decoration:none;font-weight:800;font-size:1rem;background:var(--white)}
+a.partner:hover{border-color:var(--navy);color:var(--navy)}
+a.partner.glowny{background:var(--red);border-color:var(--red);color:var(--white);box-shadow:0 8px 18px -8px rgba(208,64,42,.7)}
+.polecamy{border-left:4px solid var(--navy);padding:4px 0 4px 16px;margin:18px 0;max-width:var(--tekst)}.polecamy h3{margin-top:.2em}
+.przycisk{display:inline-flex;align-items:center;min-height:48px;background:var(--red);color:var(--white);padding:12px 22px;border-radius:16px;text-decoration:none;font-weight:800;margin:6px 10px 6px 0}
+.przycisk.jasny{background:var(--white);color:var(--navy)}
+ul.siatka{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;padding:0;list-style:none;margin:12px 0;max-width:none}
+ul.siatka li{margin:0}ul.siatka a{display:block;background:var(--white);border:1px solid var(--line);border-radius:14px;padding:12px 14px;text-decoration:none;height:100%;color:var(--ink)}
+ul.siatka a:hover{border-color:var(--navy)}ul.siatka strong{display:block;font-family:var(--serif);font-weight:400;font-size:1.12rem;color:var(--navy)}ul.siatka span{font-size:.88rem;color:var(--ink-soft)}
+small,.drobne{font-size:.88rem;color:var(--ink-soft)}.drobne{max-width:var(--tekst)}
+section[id]{scroll-margin-top:64px}
+nav.spis{position:sticky;top:0;z-index:5;background:var(--paper);margin:12px -20px 0;padding:10px 20px;border-bottom:1px solid var(--line)}nav.spis .spis-tytul{display:none}
+nav.spis ol{display:flex;gap:8px;list-style:none;margin:0;padding:0;overflow-x:auto;scrollbar-width:none}nav.spis li{margin:0}
+nav.spis a{display:block;white-space:nowrap;padding:6px 14px;border:1.5px solid var(--line);border-radius:999px;background:var(--white);text-decoration:none;font-size:.92rem;font-weight:700;color:var(--ink)}
 nav.spis a[aria-current]{background:var(--navy);border-color:var(--navy);color:var(--white)}
-@media(min-width:1320px){nav.spis{position:fixed;top:24px;left:calc(50% + 446px);width:220px;margin:0;padding:12px;border:0;border-radius:12px;background:var(--white)}
-nav.spis .spis-tytul{display:block;margin:0 0 6px 10px;font-family:"IBM Plex Mono",monospace;letter-spacing:.12em;text-transform:uppercase;font-size:.75rem;color:var(--ink)}
-nav.spis ol{flex-direction:column;gap:2px;overflow:visible}nav.spis a{border:0;border-radius:8px;background:none;font-weight:400;white-space:normal;padding:6px 10px}
-nav.spis a[aria-current]{background:var(--paper);color:var(--navy);font-weight:600}section[id]{scroll-margin-top:16px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}ul.kolumny{columns:2;padding-left:1.2em}
-details{margin:8px 0}summary{cursor:pointer;font-weight:600}
-figure.foto{margin:12px 0}figure.foto img{width:100%;height:auto;border-radius:12px;display:block;background:var(--paper-deep)}figure.foto figcaption{font-size:.8rem;color:var(--muted);margin-top:4px}
-blockquote.opinia{margin:12px 0;border-left:4px solid var(--red);padding:4px 0 4px 12px}blockquote.opinia p{margin:0 0 4px}.cta blockquote.opinia small{color:#dfe3ea}
-@media(max-width:560px){ul.kolumny{columns:1}h1{font-size:1.9rem}}</style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TouristDestination","name":"Goa","description":"Goa (Indie): najlepsze miesiące na wyjazd, ceny lotów z Polski z ostatnich 90 dni, miejsca warte zobaczenia i formalności z polskim paszportem.","url":"https://golebielataja.pl/kierunki/goa/","geo":{"@type":"GeoCoordinates","latitude":15.54,"longitude":73.76},"containedInPlace":{"@type":"Country","name":"Indie"},"includesAttraction":[{"@type":"TouristAttraction","name":"Bazylika Bom Jesus","sameAs":"https://www.wikidata.org/wiki/Q391123"},{"@type":"TouristAttraction","name":"Katedra Sé w Starym Goa","sameAs":"https://www.wikidata.org/wiki/Q2942482"},{"@type":"TouristAttraction","name":"Church of Our Lady of the Rosary","sameAs":"https://www.wikidata.org/wiki/Q20047855"},{"@type":"TouristAttraction","name":"Vagator Beach","sameAs":"https://www.wikidata.org/wiki/Q3553247"},{"@type":"TouristAttraction","name":"Safa Masjid","sameAs":"https://www.wikidata.org/wiki/Q29052432"},{"@type":"TouristAttraction","name":"Goa State Museum","sameAs":"https://www.wikidata.org/wiki/Q5575115"},{"@type":"TouristAttraction","name":"Church of St. Francis of Assisi","sameAs":"https://www.wikidata.org/wiki/Q5117224"},{"@type":"TouristAttraction","name":"Shanta Durga Temple","sameAs":"https://www.wikidata.org/wiki/Q7489022"}]}</script>
+@media(min-width:1400px){nav.spis{position:fixed;top:24px;left:calc(50% + 560px);width:200px;margin:0;padding:14px;border:0;border-radius:16px;background:var(--white)}
+nav.spis .spis-tytul{display:block;margin:0 0 6px 10px;font-weight:800;font-size:.85rem;color:var(--ink-soft)}
+nav.spis ol{flex-direction:column;gap:2px;overflow:visible}nav.spis a{border:0;border-radius:10px;background:none;font-weight:600;white-space:normal;padding:6px 10px}
+nav.spis a[aria-current]{background:var(--paper);color:var(--navy);font-weight:800}section[id]{scroll-margin-top:16px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+ul.kolumny{columns:2;column-gap:28px;padding-left:1.2em;max-width:none}@media(max-width:600px){ul.kolumny{columns:1}}
+details{margin:0;border-bottom:1px solid var(--line);padding:10px 0}details:first-of-type{border-top:1px solid var(--line)}
+summary{cursor:pointer;font-weight:800;list-style:none;padding-right:28px;position:relative}summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:4px;top:-2px;font-size:1.4rem;color:var(--navy);font-weight:500}details[open] summary::after{content:"−"}
+details p{margin:.5em 0 0}
+figure.foto{margin:18px 0 8px}figure.foto img{width:100%;height:auto;max-height:520px;object-fit:cover;border-radius:20px;display:block;background:var(--paper-deep)}
+figure.foto figcaption{font-size:.8rem;color:var(--ink-soft);margin-top:6px}
+blockquote.opinia{margin:16px 0;padding:0;max-width:60ch}blockquote.opinia p{font-family:var(--hand);font-size:1.5rem;line-height:1.25;margin:0 0 4px}
+blockquote.opinia small{font-size:.88rem}.cta blockquote.opinia small{color:#DCE3EE}
+ul.wskazowki{list-style:none;padding:0;max-width:var(--tekst)}ul.wskazowki li{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:14px 18px;margin:0 0 12px}
+ul.wskazowki strong{display:block;font-family:var(--serif);font-weight:400;font-size:1.16rem}ul.wskazowki p{margin:4px 0 6px}
+.kat-wsk{display:inline-block;font-size:.8rem;font-weight:800;color:var(--navy);background:var(--navy-soft);border-radius:999px;padding:2px 10px;margin-bottom:6px}
+.sprawdzone{color:var(--zielen);font-weight:800;white-space:nowrap}.sprawdzone::before{content:"✓ "}
+.autorzy{margin-top:36px}
+footer{padding-top:22px;padding-bottom:24px;border-top:2px solid var(--ink);margin-top:12px}footer p{font-size:.9rem;color:var(--ink-soft);max-width:none}
+.stopka{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:18px 36px;margin-bottom:10px}@media(max-width:760px){.stopka{grid-template-columns:1fr 1fr}.stopka .o{grid-column:1 / -1}}
+.stopka .tytul{font-family:var(--serif);font-size:1.1rem;color:var(--ink);margin:0 0 6px}.stopka ul{list-style:none;padding:0;margin:0}.stopka li{margin:0 0 4px;font-size:.95rem}.stopka a{color:var(--ink)}
+@media(max-width:560px){body{font-size:1.06rem}header,main,footer{padding-left:16px;padding-right:16px}nav.spis{margin-left:-16px;margin-right:-16px;padding-left:16px;padding-right:16px}section.karta,section.cta,section.druk,section.tlo{padding:20px 18px}}
+@media print{.pasek,nav.spis,.partnerzy,.cta{display:none}}</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TouristDestination","name":"Goa","description":"Goa (Indie): najlepsze miesiące na wyjazd, ceny lotów z Polski z ostatnich 90 dni, miejsca warte zobaczenia i formalności z polskim paszportem.","url":"https://golebielataja.pl/kierunki/goa/","geo":{"@type":"GeoCoordinates","latitude":15.54,"longitude":73.76},"containedInPlace":{"@type":"Country","name":"Indie"},"includesAttraction":[{"@type":"TouristAttraction","name":"Bazylika Bom Jesus","sameAs":"https://www.wikidata.org/wiki/Q391123"},{"@type":"TouristAttraction","name":"Katedra Sé w Starym Goa","sameAs":"https://www.wikidata.org/wiki/Q2942482"},{"@type":"TouristAttraction","name":"Church of Our Lady of the Rosary","sameAs":"https://www.wikidata.org/wiki/Q20047855"},{"@type":"TouristAttraction","name":"Vagator Beach","sameAs":"https://www.wikidata.org/wiki/Q3553247"},{"@type":"TouristAttraction","name":"Goa State Museum","sameAs":"https://www.wikidata.org/wiki/Q5575115"},{"@type":"TouristAttraction","name":"Safa Masjid","sameAs":"https://www.wikidata.org/wiki/Q29052432"},{"@type":"TouristAttraction","name":"Church of St. Francis of Assisi","sameAs":"https://www.wikidata.org/wiki/Q5117224"},{"@type":"TouristAttraction","name":"Shanta Durga Temple","sameAs":"https://www.wikidata.org/wiki/Q7489022"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Gołębie Latają","item":"https://golebielataja.pl/"},{"@type":"ListItem","position":2,"name":"Kierunki","item":"https://golebielataja.pl/kierunki/"},{"@type":"ListItem","position":3,"name":"Goa","item":"https://golebielataja.pl/kierunki/goa/"}]}</script>
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "dabf88d8ecff46b9af7a1518edc3f5ee"}'></script>
 <script data-goatcounter="https://golebielataja.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
@@ -74,6 +151,7 @@ blockquote.opinia{margin:12px 0;border-left:4px solid var(--red);padding:4px 0 4
 <header>
 <nav class="gora" aria-label="Menu">
 <a class="logo" href="/">Gołębie Latają</a>
+<span class="linki">
 <a href="/kierunki/">Kierunki</a>
 <a href="/gdzie-leciec/pazdziernik/">Gdzie lecieć</a>
 <a href="/dlugie-weekendy/">Długie weekendy</a>
@@ -81,114 +159,130 @@ blockquote.opinia{margin:12px 0;border-left:4px solid var(--red);padding:4px 0 4
 <a href="/kraje/">Kraje</a>
 <a href="/o-nas/">O nas</a>
 <a href="/">Plan w 48 h</a>
+</span>
 </nav>
 <nav class="okruszki" aria-label="Ścieżka"><a href="/">Gołębie Latają</a> › <a href="/kierunki/">Kierunki</a> › <span>Goa</span></nav>
 </header>
 <main>
-<p class="eyebrow">Region · Indie · około 8,5 h lotu z Warszawy bez przesiadek</p>
+<div class="hero bez-stempla">
 <h1>Goa</h1>
-<figure class="foto"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Church_of_St._Francis_Xavier%2C_old_goa.JPG/1280px-Church_of_St._Francis_Xavier%2C_old_goa.JPG?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="Bazylika Bom Jesus" width="1200" height="800" fetchpriority="high" decoding="async"><figcaption>Bazylika Bom Jesus · <a href="https://commons.wikimedia.org/wiki/File:Church_of_St._Francis_Xavier,_old_goa.JPG" rel="nofollow noopener">Sandeepsea, CC BY-SA 3.0</a>, Wikimedia Commons</figcaption></figure>
+<p class="lead">Gołębie poleciałyby od listopada do kwietnia. W kwietniu termometr dochodzi do 33°C, a morze ma około 30°C. Z Warszawy lecisz około 8,5 h. Gdzie zjeść za grosze i co zobaczyć poza przewodnikiem, jest niżej.</p>
+</div>
+<figure class="foto"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Palolem_Beach_%285580920479%29.jpg/1280px-Palolem_Beach_%285580920479%29.jpg" alt="Plaża Palolem" width="1280" height="853" fetchpriority="high" decoding="async"><figcaption>Plaża Palolem. Fot. <a href="https://commons.wikimedia.org/wiki/File:Palolem_Beach_%285580920479%29.jpg" rel="nofollow noopener">Nico Crisafulli, CC BY 2.0</a>, Wikimedia Commons</figcaption></figure>
+<dl class="liczby skrot">
+<div><dt>Lot z Warszawy</dt><dd>8,5 h</dd></div>
+<div><dt>Najlepiej</dt><dd>od listopada do kwietnia</dd></div>
+<div><dt>Najcieplej</dt><dd>kwiecień, 33°C</dd></div>
+<div><dt>Najcieplejsza woda</dt><dd>kwiecień, 30°C</dd></div>
+<div><dt>Wjazd</dt><dd>e-wiza</dd></div>
+<div><dt>Waluta</dt><dd>INR</dd></div>
+<div><dt>Lot od</dt><dd>2330 zł</dd></div>
+</dl>
 <nav class="spis" aria-label="Spis treści">
 <p class="spis-tytul">Na tej stronie</p>
 <ol>
 <li><a href="#kiedy-leciec">Kiedy lecieć</a></li>
-<li><a href="#rezerwacje">Zarezerwuj</a></li>
-<li><a href="#ceny">Ceny lotów</a></li>
 <li><a href="#rekomendacja">Rekomendacja gołębi</a></li>
+<li><a href="#ceny">Ceny lotów</a></li>
+<li><a href="#rezerwacje">Zarezerwuj</a></li>
 <li><a href="#co-zobaczyc">Zabytki i muzea</a></li>
 <li><a href="#formalnosci">Formalności</a></li>
 </ol>
 </nav>
 <script src="/spis.js" defer></script>
 <section id="kiedy-leciec">
-<h2>Kiedy lecieć</h2>
-<p>Najlepsze miesiące: styczeń, luty, marzec, kwiecień, listopad, grudzień.</p>
+<h2>Pogoda przez cały rok</h2>
+<p>Im bardziej zielono, tym lepiej. Kliknij miesiąc, żeby zobaczyć szczegóły.</p>
+<ol class="rok">
+<li><a class="o4" href="/kierunki/goa/styczen/" aria-label="Styczeń: 30°C, ocena 4 na 5">Sty<span>30°</span></a></li>
+<li><a class="o4" href="/kierunki/goa/luty/" aria-label="Luty: 31°C, ocena 4 na 5">Lut<span>31°</span></a></li>
+<li><a class="o4" href="/kierunki/goa/marzec/" aria-label="Marzec: 32°C, ocena 4 na 5">Mar<span>32°</span></a></li>
+<li><a class="o4" href="/kierunki/goa/kwiecien/" aria-label="Kwiecień: 33°C, ocena 4 na 5">Kwi<span>33°</span></a></li>
+<li><a class="o1" href="/kierunki/goa/maj/" aria-label="Maj: 32°C, ocena 1 na 5">Maj<span>32°</span></a></li>
+<li><a class="o2" href="/kierunki/goa/czerwiec/" aria-label="Czerwiec: 29°C, ocena 2 na 5">Cze<span>29°</span></a></li>
+<li><a class="o2" href="/kierunki/goa/lipiec/" aria-label="Lipiec: 28°C, ocena 2 na 5">Lip<span>28°</span></a></li>
+<li><a class="o2" href="/kierunki/goa/sierpien/" aria-label="Sierpień: 28°C, ocena 2 na 5">Sie<span>28°</span></a></li>
+<li><a class="o2" href="/kierunki/goa/wrzesien/" aria-label="Wrzesień: 28°C, ocena 2 na 5">Wrz<span>28°</span></a></li>
+<li><a class="o2" href="/kierunki/goa/pazdziernik/" aria-label="Październik: 29°C, ocena 2 na 5">Paź<span>29°</span></a></li>
+<li><a class="o5" href="/kierunki/goa/listopad/" aria-label="Listopad: 30°C, ocena 5 na 5">Lis<span>30°</span></a></li>
+<li><a class="o4" href="/kierunki/goa/grudzien/" aria-label="Grudzień: 30°C, ocena 4 na 5">Gru<span>30°</span></a></li>
+</ol>
+<h3>Tabela miesiąc po miesiącu</h3>
 <div class="przewin"><table>
 <thead><tr><th>Miesiąc</th><th>W dzień</th><th>W nocy</th><th>Dni z opadem</th><th>Woda</th><th>Ocena</th></tr></thead>
 <tbody>
-<tr><td><a href="/kierunki/goa/styczen/">Styczeń</a></td><td>30°C</td><td>23°C</td><td>1</td><td>28°C</td><td>4 z 5</td></tr>
-<tr><td><a href="/kierunki/goa/luty/">Luty</a></td><td>31°C</td><td>24°C</td><td>0</td><td>28°C</td><td>4 z 5</td></tr>
-<tr><td><a href="/kierunki/goa/marzec/">Marzec</a></td><td>32°C</td><td>25°C</td><td>1</td><td>29°C</td><td>4 z 5</td></tr>
-<tr><td><a href="/kierunki/goa/kwiecien/">Kwiecień</a></td><td>33°C</td><td>27°C</td><td>4</td><td>30°C</td><td>4 z 5</td></tr>
-<tr><td><a href="/kierunki/goa/maj/">Maj</a></td><td>32°C</td><td>28°C</td><td>11</td><td>30°C</td><td>1 z 5</td></tr>
-<tr><td><a href="/kierunki/goa/czerwiec/">Czerwiec</a></td><td>29°C</td><td>27°C</td><td>27</td><td>30°C</td><td>2 z 5</td></tr>
-<tr><td><a href="/kierunki/goa/lipiec/">Lipiec</a></td><td>28°C</td><td>26°C</td><td>30</td><td>28°C</td><td>2 z 5</td></tr>
-<tr><td><a href="/kierunki/goa/sierpien/">Sierpień</a></td><td>28°C</td><td>26°C</td><td>29</td><td>28°C</td><td>2 z 5</td></tr>
-<tr><td><a href="/kierunki/goa/wrzesien/">Wrzesień</a></td><td>28°C</td><td>26°C</td><td>24</td><td>28°C</td><td>2 z 5</td></tr>
-<tr><td><a href="/kierunki/goa/pazdziernik/">Październik</a></td><td>29°C</td><td>25°C</td><td>16</td><td>29°C</td><td>2 z 5</td></tr>
-<tr><td><a href="/kierunki/goa/listopad/">Listopad</a></td><td>30°C</td><td>24°C</td><td>5</td><td>29°C</td><td>5 z 5</td></tr>
-<tr><td><a href="/kierunki/goa/grudzien/">Grudzień</a></td><td>30°C</td><td>23°C</td><td>1</td><td>29°C</td><td>4 z 5</td></tr>
+<tr><td><a href="/kierunki/goa/styczen/">Goa w styczniu</a></td><td>30°C</td><td>23°C</td><td>1</td><td>28°C</td><td class="o4">4 z 5</td></tr>
+<tr><td><a href="/kierunki/goa/luty/">Goa w lutym</a></td><td>31°C</td><td>24°C</td><td>0</td><td>28°C</td><td class="o4">4 z 5</td></tr>
+<tr><td><a href="/kierunki/goa/marzec/">Goa w marcu</a></td><td>32°C</td><td>25°C</td><td>1</td><td>29°C</td><td class="o4">4 z 5</td></tr>
+<tr><td><a href="/kierunki/goa/kwiecien/">Goa w kwietniu</a></td><td>33°C</td><td>27°C</td><td>4</td><td>30°C</td><td class="o4">4 z 5</td></tr>
+<tr><td><a href="/kierunki/goa/maj/">Goa w maju</a></td><td>32°C</td><td>28°C</td><td>11</td><td>30°C</td><td class="o1">1 z 5</td></tr>
+<tr><td><a href="/kierunki/goa/czerwiec/">Goa w czerwcu</a></td><td>29°C</td><td>27°C</td><td>27</td><td>30°C</td><td class="o2">2 z 5</td></tr>
+<tr><td><a href="/kierunki/goa/lipiec/">Goa w lipcu</a></td><td>28°C</td><td>26°C</td><td>30</td><td>28°C</td><td class="o2">2 z 5</td></tr>
+<tr><td><a href="/kierunki/goa/sierpien/">Goa w sierpniu</a></td><td>28°C</td><td>26°C</td><td>29</td><td>28°C</td><td class="o2">2 z 5</td></tr>
+<tr><td><a href="/kierunki/goa/wrzesien/">Goa we wrześniu</a></td><td>28°C</td><td>26°C</td><td>24</td><td>28°C</td><td class="o2">2 z 5</td></tr>
+<tr><td><a href="/kierunki/goa/pazdziernik/">Goa w październiku</a></td><td>29°C</td><td>25°C</td><td>16</td><td>29°C</td><td class="o2">2 z 5</td></tr>
+<tr><td><a href="/kierunki/goa/listopad/">Goa w listopadzie</a></td><td>30°C</td><td>24°C</td><td>5</td><td>29°C</td><td class="o5">5 z 5</td></tr>
+<tr><td><a href="/kierunki/goa/grudzien/">Goa w grudniu</a></td><td>30°C</td><td>23°C</td><td>1</td><td>29°C</td><td class="o4">4 z 5</td></tr>
 </tbody>
 </table></div>
-<h3>Miesiąc po miesiącu</h3>
-<p>Kliknij miesiąc, żeby zobaczyć szczegóły: temperatura, woda, deszcz, ceny lotów i co spakować.</p>
-<ul class="siatka">
-<li><a href="/kierunki/goa/styczen/"><strong>Goa w styczniu</strong><span>30°C · 4/5</span></a></li>
-<li><a href="/kierunki/goa/luty/"><strong>Goa w lutym</strong><span>31°C · 4/5</span></a></li>
-<li><a href="/kierunki/goa/marzec/"><strong>Goa w marcu</strong><span>32°C · 4/5</span></a></li>
-<li><a href="/kierunki/goa/kwiecien/"><strong>Goa w kwietniu</strong><span>33°C · 4/5</span></a></li>
-<li><a href="/kierunki/goa/maj/"><strong>Goa w maju</strong><span>32°C · 1/5</span></a></li>
-<li><a href="/kierunki/goa/czerwiec/"><strong>Goa w czerwcu</strong><span>29°C · 2/5</span></a></li>
-<li><a href="/kierunki/goa/lipiec/"><strong>Goa w lipcu</strong><span>28°C · 2/5</span></a></li>
-<li><a href="/kierunki/goa/sierpien/"><strong>Goa w sierpniu</strong><span>28°C · 2/5</span></a></li>
-<li><a href="/kierunki/goa/wrzesien/"><strong>Goa we wrześniu</strong><span>28°C · 2/5</span></a></li>
-<li><a href="/kierunki/goa/pazdziernik/"><strong>Goa w październiku</strong><span>29°C · 2/5</span></a></li>
-<li><a href="/kierunki/goa/listopad/"><strong>Goa w listopadzie</strong><span>30°C · 5/5</span></a></li>
-<li><a href="/kierunki/goa/grudzien/"><strong>Goa w grudniu</strong><span>30°C · 4/5</span></a></li>
-</ul>
-</section>
-<section id="rezerwacje">
-<h2>Zarezerwuj sam</h2>
-<p>Lot, nocleg i auto rezerwujesz sam, każde osobno.</p>
-<div class="partnerzy"><a class="partner glowny" href="https://www.aviasales.com/?origin_iata=WAW&amp;destination_iata=GOI&amp;marker=785120.kgoa" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-kgoa">Znajdź lot</a><a class="partner" href="https://www.booking.com/searchresults.pl.html?ss=Goa&amp;latitude=15.54&amp;longitude=73.76&amp;group_adults=2&amp;no_rooms=1" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-booking-kgoa">Szukaj noclegu</a><a class="partner" href="https://www.expedia.pl/Hotel-Search?destination=Goa&amp;adults=2" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-expedia-kgoa">Więcej noclegów</a><a class="partner" href="https://tp.media/r?campaign_id=89&amp;marker=785120&amp;p=2074&amp;trs=581099&amp;u=https%3A%2F%2Fwww.tiqets.com%2Fpl%2Fsearch%3Fq%3DGoa&amp;sub_id=kgoa" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-tiqets-kgoa">Bilety do atrakcji</a><a class="partner" href="https://www.getyourguide.pl/s/?q=Goa" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-getyourguide-kgoa">Wycieczki z przewodnikiem</a><a class="partner" href="https://tp.media/r?campaign_id=541&amp;marker=785120&amp;p=8310&amp;trs=581099&amp;u=https%3A%2F%2Fwww.airalo.com%2Fpl&amp;sub_id=kgoa" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-airalo-kgoa">Kup eSIM</a><a class="partner" href="https://tp.media/r?campaign_id=629&amp;marker=785120&amp;p=8979&amp;trs=581099&amp;u=https%3A%2F%2Fsaily.com%2Fpl%2F&amp;sub_id=kgoa" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-saily-kgoa">partnerzy.etykiety.saily</a></div>
-<p class="drobne">Poza UE roaming bywa drogi. eSIM kupisz przed wylotem i włączysz po lądowaniu. <a href="/poradniki/esim/indie/">eSIM: Indie, ceny i który wybrać</a></p><div class="polecamy"><h3>Tu przyda się auto</h3>
-<p>Region najlepiej zwiedzać na własnych kołach, od miasteczka do miasteczka. Polecamy porównywarkę wypożyczalni, z której sami korzystamy: wiele firm w jednym miejscu, do tego pełne ubezpieczenie AXA. Sprawdziliśmy je w praktyce: przy szkodzie sprawa została rozpatrzona szybko i na naszą korzyść.</p>
-<div class="partnerzy"><a class="partner glowny" href="https://tp.media/r?campaign_id=172&amp;marker=785120&amp;p=4845&amp;trs=581099&amp;u=https%3A%2F%2Fwww.qeeq.com%2Fpl&amp;sub_id=kgoa" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-qeeq-kgoa">Wynajmij auto</a></div><p><a href="/poradniki/wynajem-auta/goa/">Wynajem auta: Goa, na co uważać</a></p></div>
-<p class="drobne"><a class="partner" href="https://rankomat.pl/ubezpieczenia-turystyczne" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-rankomat-kgoa">Porównaj ubezpieczenia</a> Porównywarka polis. Nie układamy rankingu ubezpieczycieli, wybierasz sam.</p>
-<p class="drobne">Przyciski prowadzą do serwisów partnerów: Aviasales, Booking.com, Expedia, Tiqets, GetYourGuide, Airalo, Saily, QEEQ, Rankomat. Rezerwujesz i płacisz u nich, gołębie nie widzą Twoich danych. To linki partnerskie. Jeśli coś zarezerwujesz, gołębie dostaną prowizję, a cena dla Ciebie się nie zmienia.</p>
-</section>
-<section id="ceny">
-<h2>Najtańsze loty z Polski</h2>
-<p class="drobne">Najniższe ceny za osobę z ostatnich 90 dni, z wyszukiwań w aplikacji. Orientacyjne: ceny zmieniają się codziennie.</p>
-<ul>
-<li><strong>Wrocław</strong>: od 2330 zł <small>(wylot 15.10.2026)</small></li>
-<li><strong>Warszawa</strong>: od 2426 zł <small>(wylot 16.03.2027)</small></li>
-<li><strong>Gdańsk</strong>: od 3707 zł <small>(wylot 07.01.2027)</small></li>
-</ul>
 </section>
 <section id="rekomendacja" class="rekomendacja">
 <h2>Rekomendacja gołębi</h2>
 
 <h3>Tanio, lokalnie i nietypowo</h3>
 <p>Gdzie zjeść za grosze, gdzie przysiąść z widokiem i co zobaczyć poza przewodnikiem.</p>
-<h4>Tanie jedzenie</h4>
-<ul>
-<li><strong>Ritz Classic</strong> <small>(Panaji, tanio)</small>: Lokalna knajpa z goańskim thali i krabem w masali, wybierana przez mieszkańców Panaji. Zamów firmowe thali.</li>
-<li><strong>Konki Kanteen</strong> <small>(Altinho, Panaji, tanio)</small>: Prosty lokal z rybnym thali, smażonymi krewetkami i serradurą na deser. Dobry obiad w Panaji bez turystycznej oprawy.</li>
-<li><strong>Vinayak Family Restaurant</strong> <small>(Assagao, tanio)</small>: Rodzinny lokal w Assagao, znany ze złocistych smażonych krewetek i codziennych specjałów szefa. Weź to, co wpisane na tablicy.</li>
-</ul>
-<h4>Smaki i trunki</h4>
-<ul>
-<li><strong>Xacuti</strong> <small>[szakuti]</small> <small>(Raia, South Goa)</small>: Goański sos z kokosem i prażonymi przyprawami, w wersji wołowej u Fernando&#39;s Nostalgia w Raia. Pikantny i głęboki, nie dla ceniących łagodne smaki.</li>
-<li><strong>Sannas z chorizo</strong> <small>[sanas]</small> <small>(Panjim, Assagao)</small>: Parowane ryżowe bułeczki do maczania w ostrym chorizo chilli fry. Znajdziesz je w Mum&#39;s Kitchen.</li>
-</ul>
-<h4>Miejscówki</h4>
-<ul>
-<li><strong>Fontainhas</strong> <small>(Panaji)</small>: Kolorowa portugalska dzielnica Panaji z domkami, kapliczkami, kawiarniami i galeriami. Wpadnij rano, kiedy jest cicho.</li>
-<li><strong>Friday Mapusa Market</strong> <small>(Mapusa)</small>: Piątkowy targ z przyprawami, tekstyliami, suszoną rybą i goańską kiełbasą chouriço. Największy gwar i wybór właśnie w piątek.</li>
-</ul>
-<h4>Nietypowe</h4>
-<ul>
-<li><strong>Dr. Salim Ali Bird Sanctuary</strong> <small>(Chorao)</small>: Rezerwat ptaków w namorzynach na wyspie Chorao. Zamiast plaży masz ciszę, wodę i dzikie ptaki.</li>
-<li><strong>Jaskinie Rivona</strong> <small>(Rivona)</small>: Starożytne wykute w skale jaskinie i buddyjskie ślady wśród wiejskich plantacji południowego Goa. Bez tłumów.</li>
-</ul>
-<h4>Patent</h4>
-<ul>
-<li><strong>Prom na Divar Island</strong> <small>(Divar)</small>: Na spokojną wyspę Divar dopłyniesz promem z okolic Old Goa. Zostaw taksówkę, a po wyspie przejdź się wśród pól ryżowych i portugalskich domów.</li>
-</ul>
+<div class="kategorie">
+<div class="kat"><h4>Tanie jedzenie</h4>
+<ul class="miejsca">
+<li><strong>Ritz Classic</strong><small>Panaji, tanio</small><p>Lokalna knajpa z goańskim thali i krabem w masali, wybierana przez mieszkańców Panaji. Zamów firmowe thali.</p></li>
+<li><strong>Konki Kanteen</strong><small>Altinho, Panaji, tanio</small><p>Prosty lokal z rybnym thali, smażonymi krewetkami i serradurą na deser. Dobry obiad w Panaji bez turystycznej oprawy.</p></li>
+<li><strong>Vinayak Family Restaurant</strong><small>Assagao, tanio</small><p>Rodzinny lokal w Assagao, znany ze złocistych smażonych krewetek i codziennych specjałów szefa. Weź to, co wpisane na tablicy.</p></li>
+</ul></div>
+<div class="kat"><h4>Smaki i trunki</h4>
+<ul class="miejsca">
+<li><strong>Xacuti</strong><small>Raia, South Goa, czyt. szakuti</small><p>Goański sos z kokosem i prażonymi przyprawami, w wersji wołowej u Fernando&#39;s Nostalgia w Raia. Pikantny i głęboki, nie dla ceniących łagodne smaki.</p></li>
+<li><strong>Sannas z chorizo</strong><small>Panjim, Assagao, czyt. sanas</small><p>Parowane ryżowe bułeczki do maczania w ostrym chorizo chilli fry. Znajdziesz je w Mum&#39;s Kitchen.</p></li>
+</ul></div>
+<div class="kat"><h4>Miejscówki</h4>
+<ul class="miejsca">
+<li><strong>Fontainhas</strong><small>Panaji</small><p>Kolorowa portugalska dzielnica Panaji z domkami, kapliczkami, kawiarniami i galeriami. Wpadnij rano, kiedy jest cicho.</p></li>
+<li><strong>Friday Mapusa Market</strong><small>Mapusa</small><p>Piątkowy targ z przyprawami, tekstyliami, suszoną rybą i goańską kiełbasą chouriço. Największy gwar i wybór właśnie w piątek.</p></li>
+</ul></div>
+<div class="kat"><h4>Nietypowe</h4>
+<ul class="miejsca">
+<li><strong>Dr. Salim Ali Bird Sanctuary</strong><small>Chorao</small><p>Rezerwat ptaków w namorzynach na wyspie Chorao. Zamiast plaży masz ciszę, wodę i dzikie ptaki.</p></li>
+<li><strong>Jaskinie Rivona</strong><small>Rivona</small><p>Starożytne wykute w skale jaskinie i buddyjskie ślady wśród wiejskich plantacji południowego Goa. Bez tłumów.</p></li>
+</ul></div>
+<div class="kat"><h4>Patent</h4>
+<ul class="miejsca">
+<li><strong>Prom na Divar Island</strong><small>Divar</small><p>Na spokojną wyspę Divar dopłyniesz promem z okolic Old Goa. Zostaw taksówkę, a po wyspie przejdź się wśród pól ryżowych i portugalskich domów.</p></li>
+</ul></div>
+</div>
 <h3>Od podróżników</h3>
-<p>Nikt jeszcze nie dodał wskazówki z wyjazdu. Możesz być pierwszy.</p>
-<p><a class="przycisk" href="/?sciezka=%2Fkierunki%2Fgoa%2Fwskazowka">Byłeś tam? Dodaj wskazówkę w appce</a></p>
+<p>Wróciłeś stąd niedawno? Twoja wskazówka może być tu pierwsza.</p>
+<p><a class="przycisk" href="/?sciezka=%2Fkierunki%2Fgoa%2Fwskazowka">Byłeś tam? Dodaj wskazówkę</a></p>
+</section>
+<section id="ceny">
+<h2>Ceny lotów</h2>
+<p>Najniższe ceny za osobę z ostatnich 90 dni, z wyszukiwań w aplikacji. Orientacyjne: ceny zmieniają się codziennie.</p>
+<div class="przewin"><table class="ceny">
+<thead><tr><th scope="col">Skąd</th><th scope="col">Od</th><th scope="col">Przykładowy wylot</th></tr></thead>
+<tbody>
+<tr><th scope="row">Wrocław</th><td><strong>od 2330 zł</strong></td><td>15.10.2026</td></tr>
+<tr><th scope="row">Warszawa</th><td><strong>od 2426 zł</strong></td><td>16.03.2027</td></tr>
+<tr><th scope="row">Gdańsk</th><td><strong>od 3707 zł</strong></td><td>07.01.2027</td></tr>
+</tbody>
+</table></div>
+</section>
+<section id="rezerwacje" class="karta">
+<h2>Zarezerwuj sam</h2>
+<p>Lot, nocleg i auto rezerwujesz sam, każde osobno.</p>
+<div class="partnerzy"><a class="partner glowny" href="https://www.aviasales.com/?origin_iata=WAW&amp;destination_iata=GOI&amp;marker=785120.kgoa" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-kgoa">Znajdź lot</a><a class="partner" href="https://www.booking.com/searchresults.pl.html?ss=Goa&amp;latitude=15.54&amp;longitude=73.76&amp;group_adults=2&amp;no_rooms=1" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-booking-kgoa">Szukaj noclegu</a><a class="partner" href="https://www.expedia.pl/Hotel-Search?destination=Goa&amp;adults=2" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-expedia-kgoa">Więcej noclegów</a><a class="partner" href="https://tp.media/r?campaign_id=89&amp;marker=785120&amp;p=2074&amp;trs=581099&amp;u=https%3A%2F%2Fwww.tiqets.com%2Fpl%2Fsearch%3Fq%3DGoa&amp;sub_id=kgoa" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-tiqets-kgoa">Bilety do atrakcji</a><a class="partner" href="https://www.getyourguide.pl/s/?q=Goa" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-getyourguide-kgoa">Wycieczki z przewodnikiem</a><a class="partner" href="https://tp.media/r?campaign_id=541&amp;marker=785120&amp;p=8310&amp;trs=581099&amp;u=https%3A%2F%2Fwww.airalo.com%2Fpl&amp;sub_id=kgoa" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-airalo-kgoa">eSIM Airalo</a><a class="partner" href="https://tp.media/r?campaign_id=629&amp;marker=785120&amp;p=8979&amp;trs=581099&amp;u=https%3A%2F%2Fsaily.com%2Fpl%2F&amp;sub_id=kgoa" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-saily-kgoa">eSIM Saily</a></div>
+<p class="drobne">Poza UE roaming bywa drogi. eSIM kupisz przed wylotem i włączysz po lądowaniu. <a href="/poradniki/esim/indie/">eSIM: Indie, ceny i który wybrać</a></p><div class="polecamy"><h3>Tu przyda się auto</h3>
+<p>Region najlepiej zwiedzać na własnych kołach, od miasteczka do miasteczka. Sami rezerwujemy auta przez tę porównywarkę. Raz mieliśmy szkodę i sprawa poszła szybko, na naszą korzyść.</p>
+<div class="partnerzy"><a class="partner glowny" href="https://tp.media/r?campaign_id=172&amp;marker=785120&amp;p=4845&amp;trs=581099&amp;u=https%3A%2F%2Fwww.qeeq.com%2Fpl&amp;sub_id=kgoa" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-qeeq-kgoa">Wynajmij auto</a></div><p><a href="/poradniki/wynajem-auta/goa/">Wynajem auta: Goa, na co uważać</a></p></div>
+<p class="drobne"><a class="partner" href="https://rankomat.pl/ubezpieczenia-turystyczne" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-rankomat-kgoa">Porównaj ubezpieczenia</a> Porównaj polisy przed wyjazdem.</p>
+<p class="drobne">Przyciski prowadzą do partnerów (Aviasales, Booking.com, Expedia, Tiqets, GetYourGuide, Airalo, Saily, QEEQ, Rankomat). Płacisz u nich tyle samo, a my dostajemy małą prowizję.</p>
 </section>
 <section id="co-zobaczyc">
 <h2>Zabytki i muzea</h2>
@@ -197,15 +291,15 @@ blockquote.opinia{margin:12px 0;border-left:4px solid var(--red);padding:4px 0 4
 <li><a href="https://www.wikidata.org/wiki/Q2942482">Katedra Sé w Starym Goa</a> <small>Świątynia</small></li>
 <li><a href="https://www.wikidata.org/wiki/Q20047855">Church of Our Lady of the Rosary</a> <small>Świątynia</small></li>
 <li><a href="https://www.wikidata.org/wiki/Q3553247">Vagator Beach</a> <small>Plaża</small></li>
-<li><a href="https://www.wikidata.org/wiki/Q29052432">Safa Masjid</a> <small>Świątynia</small></li>
 <li><a href="https://www.wikidata.org/wiki/Q5575115">Goa State Museum</a> <small>Muzeum</small></li>
+<li><a href="https://www.wikidata.org/wiki/Q29052432">Safa Masjid</a> <small>Świątynia</small></li>
 <li><a href="https://www.wikidata.org/wiki/Q5117224">Church of St. Francis of Assisi</a> <small>Świątynia</small></li>
 <li><a href="https://www.wikidata.org/wiki/Q7489022">Shanta Durga Temple</a> <small>Świątynia</small></li>
 </ul>
 <p><a href="https://www.openstreetmap.org/?mlat=15.54&amp;mlon=73.76#map=11/15.54/73.76">Zobacz na mapie OpenStreetMap</a></p>
 </section>
 <section id="formalnosci">
-<h2>Formalności z polskim paszportem</h2>
+<h2>Formalności</h2>
 <ul>
 <li><strong>E-wiza przed wyjazdem</strong>.  </li>
 <li>Waluta: INR.</li>
@@ -213,28 +307,23 @@ blockquote.opinia{margin:12px 0;border-left:4px solid var(--red);padding:4px 0 4
 <li>Napiwki: Nieobowiązkowe, ale mile widziane: zaokrąglenie rachunku, drobne dla masażystów i przewodników.</li>
 
 </ul>
-<p><a href="/kraje/indie/">Więcej o kraju: Indie</a> · <a href="https://www.gov.pl/web/dyplomacja/informacje-dla-podrozujacych">Serwis MSZ „Polak za granicą”</a></p>
+<p class="dalej"><a href="/kraje/indie/">Więcej o kraju: Indie</a> <a href="https://www.gov.pl/web/dyplomacja/informacje-dla-podrozujacych">Serwis MSZ „Polak za granicą”</a></p>
 </section>
 <section class="cta">
-<h2>Nie chcesz układać tego sam?</h2>
-<p>Wyślij gołębia. W 48 godzin dostajesz plan: loty, noclegi, trasę dzień po dniu i miejsca, do których warto zajrzeć. Prognozę na najbliższe dni i aktualne ceny sprawdzisz w aplikacji za darmo.</p>
-<blockquote class="opinia"><p>Zależało mi na rodzinnych, tanich wakacjach all inclusive z basenami. Dostałam propozycje kierunków i najlepsze propozycje hotelowe, wszystko ekspresowo.</p><small>Paula z Otwocka, wakacje z rodziną</small></blockquote>
+<h2>Mało czasu na szukanie?</h2>
+<p>Opisz wyjazd w dwie minuty. Loty, noclegi i plan dnia po dniu bierzemy na siebie.</p>
+<blockquote class="opinia"><p>Potrzebowałem inspiracji na mototrip po Kaszubach i Pomorzu. Dostałem namiary, jakie punkty związane z II WŚ zwiedzić, gdzie rozbić namiot, gdzie zjeść i jakie jeziora zobaczyć.</p><small>Piotr, mototrip po Polsce</small></blockquote>
 <p><a class="przycisk" href="/">Zamów plan podróży</a><a class="przycisk jasny" href="/?sciezka=%2Fkierunki%2Fgoa">Otwórz w aplikacji</a></p>
 </section>
-<h2>Źródła i licencje</h2>
-<ul class="drobne">
-<li>Klimat: NASA POWER (MERRA-2) i NOAA OISST, dane publiczne, średnie z lat 1995-2024.</li>
-<li>Miejsca: Wikidata, licencja CC0.</li>
-<li>Mapa: © autorzy OpenStreetMap, licencja ODbL.</li>
-<li>Ceny lotów: Duffel i Aviasales (Travelpayouts), pomiary z wyszukiwań w aplikacji Gołębie Latają.</li>
-<li>Wjazd: stan na 25.09.2026. Rozstrzyga serwis MSZ.</li>
-</ul>
+<p class="drobne">Klimat: NASA POWER (MERRA-2) i NOAA OISST, dane publiczne, średnie z lat 1995-2024. Miejsca: Wikidata, licencja CC0. Mapa: © autorzy OpenStreetMap, licencja ODbL. Ceny lotów: Duffel i Aviasales (Travelpayouts), pomiary z wyszukiwań w aplikacji Gołębie Latają. Wjazd: stan na 25.09.2026. Rozstrzyga serwis MSZ.</p>
 <p class="drobne autorzy">Przygotowali: <a href="/o-nas/">Michał i Paulina</a>, Gołębie Latają.</p>
 </main>
 <footer>
-<p class="drobne">Gołębie Latają układają plany podróży. Ty mówisz, czego chcesz, my szukamy, liczymy i piszemy. Plan w 48 godzin.</p>
-<p class="drobne">Kiedy wolne: <a href="/majowka/">Majówka</a> · <a href="/boze-cialo/">Boże Ciało</a> · <a href="/ferie-zimowe/">Ferie zimowe</a> · <a href="/sylwester-za-granica/">Sylwester za granicą</a> · <a href="/swieta-w-cieple/">Święta w cieple</a> · <a href="/wakacje-z-dziecmi/">Wakacje z dziećmi</a></p>
-<p class="drobne"><a href="/poradniki/">Poradniki</a> · <a href="/porownanie/">Porównania</a> · <a href="/tanie-loty/">Tanie loty</a> · <a href="/polityka-prywatnosci.html">Polityka prywatności</a> · <a href="/regulamin.html">Regulamin</a> · <a href="#zgoda" data-cookies="1">Ustawienia cookies</a> · <a href="mailto:lecimy@golebielataja.pl">lecimy@golebielataja.pl</a></p>
+<div class="stopka">
+<div class="o"><p class="tytul">Gołębie Latają</p><p>Gołębie Latają układają plany podróży. Ty mówisz, czego chcesz, my szukamy, liczymy i piszemy. Plan w 48 godzin.</p><p><a href="mailto:lecimy@golebielataja.pl">lecimy@golebielataja.pl</a></p></div>
+<div><p class="tytul">Kiedy wolne</p><ul><li><a href="/majowka/">Majówka</a></li><li><a href="/boze-cialo/">Boże Ciało</a></li><li><a href="/ferie-zimowe/">Ferie zimowe</a></li><li><a href="/sylwester-za-granica/">Sylwester za granicą</a></li><li><a href="/swieta-w-cieple/">Święta w cieple</a></li><li><a href="/wakacje-z-dziecmi/">Wakacje z dziećmi</a></li></ul></div>
+<div><p class="tytul">Przydatne</p><ul><li><a href="/poradniki/">Poradniki</a></li><li><a href="/porownanie/">Porównania</a></li><li><a href="/tanie-loty/">Tanie loty</a></li><li><a href="/polityka-prywatnosci.html">Polityka prywatności</a></li><li><a href="/regulamin.html">Regulamin</a></li><li><a href="#zgoda" data-cookies="1">Ustawienia cookies</a></li></ul></div>
+</div>
 <p class="drobne">Dane odświeżamy co tydzień. Stan na 12 października 2026.</p>
 </footer>
 <div class="pasek"></div>

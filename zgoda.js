@@ -14,7 +14,7 @@
   function pokaz() {
     if (pasek) { pasek.hidden = false; return; }
     var st = document.createElement('style');
-    st.textContent = '.gl-zgoda{position:fixed;left:12px;right:12px;bottom:12px;max-width:760px;margin:0 auto;background:#FDFBF5;color:#23262C;border:2px solid #1E3A6D;border-radius:12px;padding:12px 16px;box-shadow:0 4px 20px rgba(0,0,0,.18);z-index:2147483000;font:15px/1.5 "IBM Plex Sans",system-ui,sans-serif}.gl-zgoda p{margin:0 0 8px}.gl-zgoda button{font:inherit;font-weight:600;border-radius:8px;padding:8px 14px;margin:0 8px 0 0;cursor:pointer;border:2px solid #1E3A6D;background:#FDFBF5;color:#1E3A6D}.gl-zgoda button.tak{background:#C8371F;border-color:#C8371F;color:#FDFBF5}.gl-zgoda a{color:#1E3A6D}';
+    st.textContent = '.gl-zgoda{position:fixed;left:12px;right:12px;bottom:12px;max-width:760px;margin:0 auto;background:#FFFDF8;color:#2A2C31;border:1.5px solid #2A2C31;border-radius:16px;padding:14px 18px;box-shadow:3px 3px 0 #2A2C31;z-index:2147483000;font:500 16px/1.5 Nunito,system-ui,sans-serif}.gl-zgoda p{margin:0 0 10px}.gl-zgoda button{font:inherit;font-weight:800;border-radius:14px;padding:9px 16px;margin:0 8px 0 0;cursor:pointer;border:1.5px solid #DDD5C4;background:#FFFDF8;color:#1F3B6E;min-height:44px}.gl-zgoda button.tak{background:#D0402A;border-color:#D0402A;color:#FFFDF8}.gl-zgoda a{color:#1F3B6E}';
     document.head.appendChild(st);
     pasek = document.createElement('div');
     pasek.className = 'gl-zgoda'; pasek.id = 'zgoda'; pasek.setAttribute('role', 'region'); pasek.setAttribute('aria-label', 'Cookies');
