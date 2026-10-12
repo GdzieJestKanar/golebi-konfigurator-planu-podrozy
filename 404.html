@@ -25,59 +25,44 @@
   location.replace(baza + "?sciezka=" + encodeURIComponent(reszta) + location.hash);
 })();
 </script>
-<title>Gołąb zabłądził · Gołębie Latają</title>
+<title>Gołąb zabłądził | Gołębie Latają</title>
 <link rel="icon" type="image/svg+xml" href="/img/golab-sygnet.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32.png">
-<meta name="theme-color" content="#F6F0E2">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,650&family=IBM+Plex+Sans:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap&subset=latin-ext" rel="stylesheet">
+<meta name="theme-color" content="#F7F1E4">
+<link rel="preload" href="/fonty/nunito-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonty/young-serif-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <style>
-:root{ --paper:#F6F0E2; --ink:#23262C; --red:#C8371F; --navy:#1E3A6D; --white:#FDFBF5; }
-*{ box-sizing:border-box; margin:0; padding:0; }
-html{ color-scheme:light only; background:var(--paper); }
-body{
-  font-family:"IBM Plex Sans", system-ui, sans-serif; font-size:17px; line-height:1.6;
-  color:var(--ink); background:var(--paper);
-  min-height:100vh; display:flex; flex-direction:column;
-}
-.strip{
-  height:14px; flex-shrink:0;
-  background:repeating-linear-gradient(-45deg,
-    var(--red) 0 12px, var(--paper) 12px 24px,
-    var(--navy) 24px 36px, var(--paper) 36px 48px);
-}
-main{ flex:1; display:grid; place-items:center; padding:48px 20px; text-align:center; }
-.box{ max-width:520px; }
-.code{
-  font-family:"IBM Plex Mono", monospace; font-size:14px; letter-spacing:.18em;
-  text-transform:uppercase; color:var(--red); margin-bottom:14px;
-}
-img.dove{ width:150px; margin:0 auto 26px; display:block; transform:rotate(-8deg); }
-h1{
-  font-family:"Fraunces", Georgia, serif; font-weight:650;
-  font-size:clamp(30px, 6vw, 42px); line-height:1.1; margin-bottom:14px;
-}
-p{ margin-bottom:26px; }
-.back{
-  display:inline-block;
-  font-family:"IBM Plex Mono", monospace; font-size:14px; letter-spacing:.05em;
-  background:var(--navy); color:var(--white); text-decoration:none;
-  border:2px solid var(--ink); border-radius:3px; padding:12px 24px;
-  box-shadow:3px 3px 0 var(--ink);
-}
-.back:hover{ transform:translate(-1px,-1px); box-shadow:4px 4px 0 var(--ink); }
+@font-face{font-family:"Young Serif";font-weight:400;font-display:swap;src:url(/fonty/young-serif-latin-400-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+2000-206F}
+@font-face{font-family:"Young Serif";font-weight:400;font-display:swap;src:url(/fonty/young-serif-latin-ext-400-normal.woff2) format("woff2");unicode-range:U+0100-02BA,U+1E00-1E9F}
+@font-face{font-family:"Nunito";font-weight:200 1000;font-display:swap;src:url(/fonty/nunito-latin-wght-normal.woff2) format("woff2-variations");unicode-range:U+0000-00FF,U+2000-206F}
+@font-face{font-family:"Nunito";font-weight:200 1000;font-display:swap;src:url(/fonty/nunito-latin-ext-wght-normal.woff2) format("woff2-variations");unicode-range:U+0100-02BA,U+1E00-1E9F}
+@font-face{font-family:"IBM Plex Mono";font-weight:500;font-display:swap;src:url(/fonty/ibm-plex-mono-latin-500-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+2000-206F}
+@font-face{font-family:"IBM Plex Mono";font-weight:500;font-display:swap;src:url(/fonty/ibm-plex-mono-latin-ext-500-normal.woff2) format("woff2");unicode-range:U+0100-02BA,U+1E00-1E9F}
+:root{--paper:#F7F1E4;--ink:#2A2C31;--ink-soft:#5E626A;--red:#D0402A;--navy:#1F3B6E;--white:#FFFDF8}
+*{box-sizing:border-box;margin:0;padding:0}
+html{color-scheme:light only;background:var(--paper)}
+body{font-family:Nunito,system-ui,sans-serif;font-weight:500;font-size:18px;line-height:1.6;color:var(--ink);background:var(--paper);min-height:100vh;display:flex;flex-direction:column}
+.strip{height:8px;flex-shrink:0;background:repeating-linear-gradient(135deg,var(--red) 0 14px,var(--white) 14px 22px,var(--navy) 22px 36px,var(--white) 36px 44px)}
+main{flex:1;display:grid;place-items:center;padding:48px 20px;text-align:center}
+.box{max-width:520px}
+.stempel{display:inline-grid;place-items:center;align-content:center;width:150px;height:150px;border-radius:50%;border:5px double var(--red);color:var(--red);transform:rotate(-9deg);margin:0 auto 28px;line-height:1.05}
+.stempel b{display:block;font-family:"Young Serif",Georgia,serif;font-weight:400;font-size:2.6rem}
+.stempel span{display:block;font-family:"IBM Plex Mono",monospace;font-size:.72rem}
+h1{font-family:"Young Serif",Georgia,serif;font-weight:400;color:var(--navy);font-size:clamp(2.1rem,6vw,3rem);line-height:1.08;margin-bottom:14px}
+p{margin-bottom:26px}
+.back{display:inline-block;font-weight:800;background:var(--red);color:var(--white);text-decoration:none;border-radius:16px;padding:12px 24px;min-height:48px}
+.back:hover{background:#B8361F}
+.back:focus-visible{outline:2px solid var(--navy);outline-offset:3px}
 </style>
 </head>
 <body>
 <div class="strip" aria-hidden="true"></div>
 <main>
   <div class="box">
-    <p class="code">Błąd doręczenia · 404</p>
-    <img class="dove" src="/img/golab-sygnet.svg" alt="" onerror="this.style.display='none'">
+    <div class="stempel" role="img" aria-label="Błąd 404, adresat nieznany"><span>zwrot do nadawcy</span><b>404</b><span>adresat nieznany</span></div>
     <h1>Gołąb zabłądził</h1>
-    <p>Strona, której szukasz, nie istnieje albo zmieniła adres. Ale spokojnie: lot trwa dalej, a plan czeka pod właściwym adresem.</p>
-    <a class="back" href="/">← Wróć na stronę główną</a>
+    <p>Strona, której szukasz, nie istnieje albo zmieniła adres. Lot trwa dalej, a plan czeka pod właściwym adresem.</p>
+    <a class="back" href="/">Wróć na stronę główną</a>
   </div>
 </main>
 <div class="strip" aria-hidden="true"></div>

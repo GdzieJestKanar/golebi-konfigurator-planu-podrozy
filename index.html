@@ -49,19 +49,29 @@
     <!-- The root element for your Expo app. -->
     <div id="root"><!-- N3 (plan naprawczy): treść strony głównej w HTML. wstaw-glowna.mjs wkłada ją do <div id="root">: robot i pierwszy
      rzut oka widzą stronę, a appka po załadowaniu podmienia zawartość root. Teksty ze starej strony głównej. -->
-<div class="gl-start" style="height:100%;overflow:auto;background:#F6F0E2;color:#23262C;font:17px/1.6 'IBM Plex Sans',system-ui,sans-serif">
+<div class="gl-start" style="height:100%;overflow:auto;background:#F7F1E4;color:#2A2C31;font:500 18px/1.65 Nunito,'Segoe UI',system-ui,sans-serif">
 <style>
-.gl-start a{color:#1E3A6D}.gl-start .w{max-width:860px;margin:0 auto;padding:12px 16px}
-.gl-start h1,.gl-start h2,.gl-start h3{font-family:Fraunces,Georgia,serif;color:#1E3A6D;line-height:1.2}
-.gl-start h1{font-size:2.3rem;margin:.3em 0}.gl-start h2{font-size:1.5rem;margin:.2em 0 .5em}
-.gl-start nav{display:flex;flex-wrap:wrap;gap:4px 16px;align-items:baseline}.gl-start nav a{text-decoration:none;font-weight:600;font-size:.95rem}
-.gl-start nav .logo{font-family:Fraunces,Georgia,serif;font-size:1.25rem;color:#C8371F;margin-right:auto}
-.gl-start section{background:#FDFBF5;border-radius:12px;padding:16px 20px;margin:16px 0}
-.gl-start .cta{display:inline-block;background:#C8371F;color:#FDFBF5;padding:10px 18px;border-radius:8px;text-decoration:none;font-weight:600;margin:4px 8px 4px 0}
-.gl-start .pakiety{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}.gl-start .pakiety div{background:#F6F0E2;border-radius:8px;padding:12px}
-.gl-start .cena{font-size:1.5rem;font-weight:600;color:#1E3A6D}.gl-start blockquote{margin:12px 0;border-left:4px solid #C8371F;padding:4px 0 4px 12px}
-.gl-start ul.siatka{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px;list-style:none;padding:0}
-.gl-start ul.siatka a{display:block;background:#F6F0E2;border-radius:8px;padding:8px 10px;text-decoration:none}.gl-start small{color:#5a5d63}
+@font-face{font-family:"Young Serif";font-weight:400;font-display:swap;src:url(/fonty/young-serif-latin-400-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+2000-206F}
+@font-face{font-family:"Young Serif";font-weight:400;font-display:swap;src:url(/fonty/young-serif-latin-ext-400-normal.woff2) format("woff2");unicode-range:U+0100-02BA,U+1E00-1E9F}
+@font-face{font-family:"Nunito";font-weight:200 1000;font-display:swap;src:url(/fonty/nunito-latin-wght-normal.woff2) format("woff2-variations");unicode-range:U+0000-00FF,U+2000-206F}
+@font-face{font-family:"Nunito";font-weight:200 1000;font-display:swap;src:url(/fonty/nunito-latin-ext-wght-normal.woff2) format("woff2-variations");unicode-range:U+0100-02BA,U+1E00-1E9F}
+@font-face{font-family:"Caveat";font-weight:400 700;font-display:swap;src:url(/fonty/caveat-latin-wght-normal.woff2) format("woff2-variations");unicode-range:U+0000-00FF,U+2000-206F}
+@font-face{font-family:"Caveat";font-weight:400 700;font-display:swap;src:url(/fonty/caveat-latin-ext-wght-normal.woff2) format("woff2-variations");unicode-range:U+0100-02BA,U+1E00-1E9F}
+.gl-start a{color:#1F3B6E;text-underline-offset:.18em}.gl-start .w{max-width:1000px;margin:0 auto;padding:14px 20px 28px}
+.gl-start h1,.gl-start h2,.gl-start h3{font-family:"Young Serif",Georgia,serif;font-weight:400;color:#2A2C31;line-height:1.12;text-wrap:balance}
+.gl-start h1{font-size:clamp(2.3rem,6vw,3.6rem);color:#1F3B6E;margin:.45em 0 .35em}.gl-start h2{font-size:clamp(1.5rem,3vw,1.9rem);margin:0 0 .5em}.gl-start h3{font-size:1.2rem;margin:0 0 .3em}
+.gl-start p,.gl-start ol{max-width:66ch}
+.gl-start nav{display:flex;flex-wrap:wrap;gap:4px 18px;align-items:baseline}.gl-start nav a{text-decoration:none;font-weight:700;font-size:.95rem;color:#2A2C31}
+.gl-start nav .logo{font-family:"Young Serif",Georgia,serif;font-weight:400;font-size:1.45rem;color:#1F3B6E;margin-right:auto}
+.gl-start section{margin:40px 0}.gl-start section>h2{padding-top:16px;border-top:2px solid #2A2C31}
+.gl-start .cta{display:inline-block;background:#D0402A;color:#FFFDF8;padding:12px 22px;border-radius:16px;text-decoration:none;font-weight:800;margin:4px 10px 4px 0}
+.gl-start ol li{margin:0 0 6px}
+.gl-start .pakiety{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}.gl-start .pakiety div{background:#FFFDF8;border:1px solid #DDD5C4;border-radius:20px;padding:18px 20px}
+.gl-start .cena{font-family:"Young Serif",Georgia,serif;font-size:1.9rem;color:#1F3B6E;margin:0 0 .3em}
+.gl-start blockquote{margin:14px 0;max-width:60ch}.gl-start blockquote p{font-family:Caveat,'Segoe Print',cursive;font-size:1.5rem;line-height:1.25;margin:0 0 4px}
+.gl-start ul.siatka{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;list-style:none;padding:0}
+.gl-start ul.siatka a{display:block;background:#FFFDF8;border:1px solid #DDD5C4;border-radius:14px;padding:12px 14px;text-decoration:none;color:#2A2C31}.gl-start ul.siatka strong{font-family:"Young Serif",Georgia,serif;font-weight:400;color:#1F3B6E;font-size:1.12rem}
+.gl-start small{color:#5E626A;font-size:.88rem}.gl-start footer{border-top:2px solid #2A2C31;padding-top:16px}.gl-start footer ul{display:flex;flex-wrap:wrap;gap:6px 20px;list-style:none;padding:0;margin:0}
 </style>
 <div class="w">
 <nav aria-label="Menu"><a class="logo" href="/">Gołębie Latają</a><a href="/kierunki/">Kierunki</a><a href="/gdzie-leciec/">Gdzie lecieć</a><a href="/tanie-loty/">Tanie loty</a><a href="/dlugie-weekendy/">Długie weekendy</a><a href="/poradniki/">Poradniki</a><a href="/o-nas/">O nas</a></nav>
@@ -70,7 +80,7 @@
 <p>Do wyjazdu coraz bliżej, a w głowie sto otwartych kart i zero planu? Znamy to uczucie. Opowiedz nam w dwie minuty, o czym marzysz: przygoda, błogi relaks czy zwyczajnie udany urlop. My zamieniamy ten chaos w gotowy plan podróży.</p>
 <p><a class="cta" href="/?sciezka=%2Fnowy%2Fstart">Wyślij gołębia</a> <a href="/o-nas/">Kim jesteśmy</a></p>
 <section>
-<h2>Jak to działa: Gołębia Metoda</h2>
+<h2>Gołębia metoda w sześciu krokach</h2>
 <ol>
 <li>Odczyt zlecenia. Czytamy Twój list zdanie po zdaniu, dopytujemy o braki.</li>
 <li>Zwiad. Sezon, pogoda, ceny, sytuacja na miejscu.</li>
@@ -114,10 +124,10 @@
 <p>Michał i Paulina z Warszawy. Razem sprawdziliśmy na własnej skórze 35 krajów, od Sahary w Tunezji po Malediwy i Gambię. <a href="/o-nas/">Więcej o nas</a>.</p>
 </section>
 </main>
-<footer><p><small>Kontakt: <a href="mailto:lecimy@golebielataja.pl">lecimy@golebielataja.pl</a> · <a href="/regulamin.html">Regulamin</a> · <a href="/polityka-prywatnosci.html">Polityka prywatności</a></small></p></footer>
+<footer><ul><li><small><a href="mailto:lecimy@golebielataja.pl">lecimy@golebielataja.pl</a></small></li><li><small><a href="/regulamin.html">Regulamin</a></small></li><li><small><a href="/polityka-prywatnosci.html">Polityka prywatności</a></small></li></ul></footer>
 </div>
 </div>
 </div>
-  <script src="/_expo/static/js/web/__expo-metro-runtime-1f8f5d3ca6b7f58204d51e14506d73fb.js" defer></script><script src="/_expo/static/js/web/__common-e4f248f3c17f4becb831f391c12caf32.js" defer></script><script src="/_expo/static/js/web/entry-14f90d5a1e36a01a61c748556781aa14.js" defer></script>
+  <script src="/_expo/static/js/web/__expo-metro-runtime-1f8f5d3ca6b7f58204d51e14506d73fb.js" defer></script><script src="/_expo/static/js/web/__common-04220f260e607527d6892803ebc53835.js" defer></script><script src="/_expo/static/js/web/entry-b8ff6e55b1ba16b2bee6d37698877bb6.js" defer></script>
 </body>
 </html>
