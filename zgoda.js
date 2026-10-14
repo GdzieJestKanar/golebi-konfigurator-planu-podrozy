@@ -1,6 +1,6 @@
 /* Gołębie Latają: zgoda na cookies partnera (DW21). Plik generowany przez strony:generuj. */
 (function () {
-  var K = 'gl-zgoda', DRIVE = "https://emrldtp.com/NTgxMDk5.js?t=581099", T = {"tekst":"Klimat, ceny lotów i długie weekendy są u gołębi za darmo, bo utrzymują je partnerzy. Zgoda na ich cookies pozwala nam dalej tak działać, a Ty nic nie dopłacasz. Bez zgody wszystko działa tak samo.","tak":"Jasne, zgoda","nie":"Nie, dziękuję","wiecej":"Kto i po co"};
+  var K = 'gl-zgoda', DRIVE = "https://emrldtp.com/NTgxMDk5.js?t=581099", T = {"tekst":"Linki partnerów mogą zapisać cookies. Cena dla Ciebie się nie zmienia.","tak":"Zgoda","nie":"Nie, dziękuję","wiecej":"Kto i po co"};
   function laduj() {
     if (!DRIVE || window.__glDrive) return;
     window.__glDrive = 1;
@@ -11,10 +11,13 @@
   function czytaj() { try { return localStorage.getItem(K); } catch (e) { return null; } }
   function zapisz(v) { try { localStorage.setItem(K, v); } catch (e) {} }
   var pasek = null;
+  // N27: wybór w pasku jako zdarzenie GoatCounter (bez cookies), N22: pasek planu na telefonie wraca po zamknięciu.
+  function zdarzenie(n) { try { if (window.goatcounter && window.goatcounter.count) window.goatcounter.count({ path: 'zgoda-' + n, title: 'Zgoda: ' + n, event: true }); } catch (e) {} }
+  function zamknij(v) { pasek.hidden = true; zdarzenie(v); try { document.dispatchEvent(new Event('gl-zgoda')); } catch (e) {} }
   function pokaz() {
-    if (pasek) { pasek.hidden = false; return; }
+    if (pasek) { pasek.hidden = false; document.dispatchEvent(new Event('gl-zgoda')); return; }
     var st = document.createElement('style');
-    st.textContent = '.gl-zgoda{position:fixed;left:12px;right:12px;bottom:12px;max-width:760px;margin:0 auto;background:#FFFDF8;color:#2A2C31;border:1.5px solid #2A2C31;border-radius:16px;padding:14px 18px;box-shadow:3px 3px 0 #2A2C31;z-index:2147483000;font:500 16px/1.5 Nunito,system-ui,sans-serif}.gl-zgoda p{margin:0 0 10px}.gl-zgoda button{font:inherit;font-weight:800;border-radius:14px;padding:9px 16px;margin:0 8px 0 0;cursor:pointer;border:1.5px solid #DDD5C4;background:#FFFDF8;color:#1F3B6E;min-height:44px}.gl-zgoda button.tak{background:#D0402A;border-color:#D0402A;color:#FFFDF8}.gl-zgoda a{color:#1F3B6E}';
+    st.textContent = '.gl-zgoda{position:fixed;left:8px;right:8px;bottom:8px;max-width:760px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px;background:#FFFDF8;color:#2A2C31;border:1.5px solid #2A2C31;border-radius:14px;padding:8px 12px;z-index:2147483000;font:500 15px/1.35 Nunito,system-ui,sans-serif}.gl-zgoda[hidden]{display:none}.gl-zgoda p{margin:0;flex:1 1 260px}.gl-zgoda button{font:inherit;font-weight:800;border-radius:12px;padding:6px 14px;cursor:pointer;border:1.5px solid #1F3B6E;background:#FFFDF8;color:#1F3B6E;min-height:40px}.gl-zgoda a{color:#1F3B6E}@media(max-width:640px){.gl-zgoda{font-size:14px;padding:8px 10px}.gl-zgoda p{flex-basis:100%}.gl-zgoda button{min-height:38px;padding:5px 14px}}';
     document.head.appendChild(st);
     pasek = document.createElement('div');
     pasek.className = 'gl-zgoda'; pasek.id = 'zgoda'; pasek.setAttribute('role', 'region'); pasek.setAttribute('aria-label', 'Cookies');
@@ -22,10 +25,11 @@
     var a = document.createElement('a'); a.href = '/polityka-prywatnosci.html'; a.textContent = T.wiecej; p.appendChild(a);
     var tak = document.createElement('button'); tak.type = 'button'; tak.className = 'tak'; tak.textContent = T.tak;
     var nie = document.createElement('button'); nie.type = 'button'; nie.textContent = T.nie;
-    tak.onclick = function () { zapisz('tak'); pasek.hidden = true; laduj(); };
-    nie.onclick = function () { zapisz('nie'); pasek.hidden = true; };
+    tak.onclick = function () { zapisz('tak'); zamknij('tak'); laduj(); };
+    nie.onclick = function () { zapisz('nie'); zamknij('nie'); };
     pasek.appendChild(p); pasek.appendChild(tak); pasek.appendChild(nie);
     document.body.appendChild(pasek);
+    document.dispatchEvent(new Event('gl-zgoda'));
   }
   function start() {
     var z = czytaj();

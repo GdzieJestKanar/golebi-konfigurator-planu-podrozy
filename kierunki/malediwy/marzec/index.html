@@ -75,7 +75,7 @@ section.upal{background:#FBE4D8;border-radius:20px;padding:24px 26px}section.upa
 ul.rady{padding-left:1.1em}ul.rady li{margin:0 0 8px;padding-left:4px}ul.rady li::marker{content:"☀ ";color:var(--red)}
 table.ceny{max-width:640px}table.ceny th[scope=row]{font-weight:700;color:var(--ink);font-size:1rem;border-bottom:1px solid var(--line)}table.ceny td strong{color:var(--navy);font-size:1.08rem}
 .kategorie{columns:2 300px;column-gap:40px;max-width:none;margin:8px 0 10px}.kat{break-inside:avoid;margin:0 0 22px}
-.kat h4{font-family:var(--sans);font-weight:800;font-size:1.02rem;color:var(--navy);margin:0 0 2px}
+.kat h3{font-family:var(--sans);font-weight:800;font-size:1.02rem;color:var(--navy);margin:0 0 2px}
 ul.miejsca{list-style:none;padding:0;margin:0}ul.miejsca li{margin:0;padding:10px 0 12px;border-top:1px dashed var(--line)}
 ul.miejsca strong{display:block;font-family:var(--serif);font-weight:400;font-size:1.16rem;line-height:1.25;color:var(--ink)}
 ul.miejsca small{display:block;margin-top:1px}ul.miejsca p{margin:5px 0 0;max-width:none}
@@ -103,10 +103,10 @@ table.fakty th[scope=row]{width:34%;font-family:var(--mono);font-weight:500;font
 .partnerzy{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0}
 a.partner{display:inline-flex;align-items:center;min-height:46px;border:1.5px solid var(--line);color:var(--ink);padding:10px 18px;border-radius:999px;text-decoration:none;font-weight:800;font-size:1rem;background:var(--white)}
 a.partner:hover{border-color:var(--navy);color:var(--navy)}
-a.partner.glowny{background:var(--red);border-color:var(--red);color:var(--white);box-shadow:0 8px 18px -8px rgba(208,64,42,.7)}
+a.partner.glowny{border-color:var(--navy);border-width:2px;color:var(--navy)}
 .polecamy{border-left:4px solid var(--navy);padding:4px 0 4px 16px;margin:18px 0;max-width:var(--tekst)}.polecamy h3{margin-top:.2em}
 .przycisk{display:inline-flex;align-items:center;min-height:48px;background:var(--red);color:var(--white);padding:12px 22px;border-radius:16px;text-decoration:none;font-weight:800;margin:6px 10px 6px 0}
-.przycisk.jasny{background:var(--white);color:var(--navy)}
+.przycisk.jasny{background:var(--white);color:var(--navy);box-shadow:inset 0 0 0 1.5px var(--navy)}
 ul.siatka{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;padding:0;list-style:none;margin:12px 0;max-width:none}
 ul.siatka li{margin:0}ul.siatka a{display:block;background:var(--white);border:1px solid var(--line);border-radius:14px;padding:12px 14px;text-decoration:none;height:100%;color:var(--ink)}
 ul.siatka a:hover{border-color:var(--navy)}ul.siatka strong{display:block;font-family:var(--serif);font-weight:400;font-size:1.12rem;color:var(--navy)}ul.siatka span{font-size:.88rem;color:var(--ink-soft)}
@@ -139,8 +139,23 @@ footer{padding-top:22px;padding-bottom:24px;border-top:2px solid var(--ink);marg
 .stopka{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:18px 36px;margin-bottom:10px}@media(max-width:760px){.stopka{grid-template-columns:1fr 1fr}.stopka .o{grid-column:1 / -1}}
 .stopka .tytul{font-family:var(--serif);font-size:1.1rem;color:var(--ink);margin:0 0 6px}.stopka ul{list-style:none;padding:0;margin:0}.stopka li{margin:0 0 4px;font-size:.95rem}.stopka a{color:var(--ink)}
 @media(max-width:560px){body{font-size:1.06rem}header,main,footer{padding-left:16px;padding-right:16px}nav.spis{margin-left:-16px;margin-right:-16px;padding-left:16px;padding-right:16px}section.karta,section.cta,section.druk,section.tlo{padding:20px 18px}}
-@media print{.pasek,nav.spis,.partnerzy,.cta{display:none}}</style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Malediwy w marcu: pogoda, woda i ceny lotów","description":"Malediwy w marcu: 28°C w dzień, 28°C w nocy, woda 29°C, 11 dni z opadem. Ocena gołębi 2/5, ceny lotów i co spakować.","inLanguage":"pl","dateModified":"2026-10-12","about":{"@type":"TouristDestination","name":"Malediwy","geo":{"@type":"GeoCoordinates","latitude":4.175,"longitude":73.509},"containedInPlace":{"@type":"Country","name":"Malediwy"}},"author":[{"@type":"Person","name":"Michał Gołąb","url":"https://golebielataja.pl/o-nas/"},{"@type":"Person","name":"Paulina","url":"https://golebielataja.pl/o-nas/"}],"publisher":{"@id":"https://golebielataja.pl/#organization","@type":"Organization","name":"Gołębie Latają"}}</script>
+nav.gora a.plan-nav{order:2;align-self:center;background:var(--red);color:var(--white);padding:5px 14px;border-radius:999px;font-weight:800;white-space:nowrap}nav.gora a.plan-nav:hover{color:var(--white);background:#B8361F;text-decoration:none}nav.gora .linki{order:1}
+@media(max-width:640px){nav.gora a.plan-nav{order:1}nav.gora .linki{order:2}}
+aside.plan{display:grid;grid-template-columns:1fr auto;gap:6px 22px;align-items:center;margin:20px 0 8px;padding:16px 20px;background:var(--white);border:1.5px solid var(--red);border-radius:16px;max-width:820px}
+aside.plan p{margin:0;max-width:60ch}aside.plan strong{display:block;font-family:var(--serif);font-weight:400;font-size:1.22rem;color:var(--ink);line-height:1.2;margin-bottom:2px}aside.plan .przycisk{margin:0;white-space:nowrap}
+@media(max-width:640px){aside.plan{grid-template-columns:1fr;padding:14px 16px}aside.plan .przycisk{justify-content:center}}
+.plan-pasek{position:fixed;left:0;right:0;bottom:0;z-index:20;display:flex;align-items:center;gap:12px;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:var(--white);border-top:1.5px solid var(--ink);box-shadow:0 -6px 18px -10px rgba(42,44,49,.35)}
+.plan-pasek[hidden]{display:none}.plan-pasek p{margin:0;flex:1;font-size:.95rem;font-weight:700;line-height:1.3}.plan-pasek a{flex:none;background:var(--red);color:var(--white);text-decoration:none;font-weight:800;border-radius:14px;padding:10px 18px;min-height:44px;display:inline-flex;align-items:center}
+@media(min-width:761px){.plan-pasek{display:none}}
+.cta .cena{font-family:var(--serif);font-size:1.3rem;margin:4px 0 2px}.cta .drobne,.cta small{color:#DCE3EE}.cta .czy-sam{margin-top:14px;padding-top:12px;border-top:1px solid rgba(255,253,248,.25)}.cta .czy-sam p{margin:0 0 4px}
+nav.spis a.plan{border-color:var(--red);color:var(--red)}
+.pakiety{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:14px 0}.pakiety>div{background:var(--white);color:var(--ink);border-radius:16px;padding:16px 20px}.pakiety h3{margin:0;color:var(--navy)}.pakiety .cena{font-family:var(--serif);font-size:1.7rem;color:var(--red);margin:2px 0 4px}.pakiety ul{font-size:.95rem;padding-left:1.1em;margin:6px 0 0}
+ul.terminy{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px;max-width:none}ul.terminy li{margin:0;background:var(--white);border:1px solid var(--line);border-radius:16px;padding:12px 14px}ul.terminy strong{font-family:var(--serif);font-weight:400;font-size:1.2rem}
+figure.mini{margin:0 0 8px}figure.mini img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;border-radius:10px;display:block;background:var(--paper-deep)}figure.mini figcaption{font-size:.72rem;color:var(--ink-soft);margin-top:3px}
+.cena-terminu{margin:6px 0 4px;font-weight:800;color:var(--navy)}ul.terminy .partnerzy{display:flex;flex-wrap:wrap;gap:6px}ul.terminy a.partner{min-height:40px;padding:6px 12px;font-size:.92rem}
+a.cena-lot{color:var(--navy);text-decoration-thickness:1.5px}a.cena-lot::after{content:" ↗";font-size:.85em}.sprawdzono{white-space:nowrap}.cena-zwykle{font-weight:700;color:var(--ink-soft)}
+@media print{.pasek,nav.spis,.partnerzy,.cta,aside.plan,.plan-pasek{display:none}}</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Malediwy w marcu: pogoda, woda i ceny lotów","description":"Malediwy w marcu: 28°C w dzień, 28°C w nocy, woda 29°C, 11 dni z opadem. Ocena gołębi 2/5, ceny lotów i co spakować.","inLanguage":"pl","dateModified":"2026-10-14","about":{"@type":"TouristDestination","name":"Malediwy","geo":{"@type":"GeoCoordinates","latitude":4.175,"longitude":73.509},"containedInPlace":{"@type":"Country","name":"Malediwy"}},"author":[{"@type":"Person","name":"Michał Gołąb","url":"https://golebielataja.pl/o-nas/"},{"@type":"Person","name":"Paulina","url":"https://golebielataja.pl/o-nas/"}],"publisher":{"@id":"https://golebielataja.pl/#organization","@type":"Organization","name":"Gołębie Latają"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Czy Malediwy w marcu to dobry pomysł?","acceptedAnswer":{"@type":"Answer","text":"Da się, ale to nie jest najlepsza pora. Najlepsze miesiące tutaj: luty. Masz elastyczny termin? Przesuń wyjazd."}},{"@type":"Question","name":"Malediwy w marcu: czy dużo pada?","acceptedAnswer":{"@type":"Answer","text":"Średnio 11 dni z opadem i około 51 mm deszczu w całym miesiącu."}},{"@type":"Question","name":"Malediwy: kiedy najlepiej jechać?","acceptedAnswer":{"@type":"Answer","text":"Według ocen gołębi najlepiej wypadają luty."}},{"@type":"Question","name":"Malediwy w marcu: co spakować?","acceptedAnswer":{"@type":"Answer","text":"Na pewno przewiewne lniane i bawełniane ubrania, szorty i sandały, krem z filtrem 50 i coś na głowę i strój kąpielowy i szybkoschnący ręcznik. Pełna lista jest wyżej."}},{"@type":"Question","name":"Malediwy w marcu: jaka pogoda?","acceptedAnswer":{"@type":"Answer","text":"Średnio 28°C w dzień i 28°C w nocy, 11 dni z opadem, woda około 29°C."}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Gołębie Latają","item":"https://golebielataja.pl/"},{"@type":"ListItem","position":2,"name":"Kierunki","item":"https://golebielataja.pl/kierunki/"},{"@type":"ListItem","position":3,"name":"Malediwy","item":"https://golebielataja.pl/kierunki/malediwy/"},{"@type":"ListItem","position":4,"name":"Marzec","item":"https://golebielataja.pl/kierunki/malediwy/marzec/"}]}</script>
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "dabf88d8ecff46b9af7a1518edc3f5ee"}'></script>
@@ -152,6 +167,7 @@ footer{padding-top:22px;padding-bottom:24px;border-top:2px solid var(--ink);marg
 <header>
 <nav class="gora" aria-label="Menu">
 <a class="logo" href="/">Gołębie Latają</a>
+<a class="plan-nav" href="/nowy/start?z=nav" data-goatcounter-click="plan-nav-miesiac">Plan w 48 h</a>
 <span class="linki">
 <a href="/kierunki/">Kierunki</a>
 <a href="/gdzie-leciec/marzec/">Gdzie lecieć</a>
@@ -159,7 +175,6 @@ footer{padding-top:22px;padding-bottom:24px;border-top:2px solid var(--ink);marg
 <a href="/tanie-loty/">Tanie loty</a>
 <a href="/kraje/">Kraje</a>
 <a href="/o-nas/">O nas</a>
-<a href="/">Plan w 48 h</a>
 </span>
 </nav>
 <nav class="okruszki" aria-label="Ścieżka"><a href="/">Gołębie Latają</a> › <a href="/kierunki/">Kierunki</a> › <a href="/kierunki/malediwy/">Malediwy</a> › <span>Marzec</span></nav>
@@ -170,6 +185,10 @@ footer{padding-top:22px;padding-bottom:24px;border-top:2px solid var(--ink);marg
 <div class="stempel slaby" role="img" aria-label="Ocena gołębi na marzec: 2 na 5"><span>marzec</span><b>2/5</b><span>ocena gołębi</span></div>
 <p class="lead">Da się, ale to nie jest najlepsza pora. Około 28°C w dzień. Na plażę w sam raz, na długie spacery w południe trochę za gorąco.</p>
 </div>
+<aside class="plan" aria-label="Plan podróży od gołębi">
+<p><strong>Malediwy w marcu to loteria</strong>Powiedz, czego szukasz, a gołębie wybiorą cieplejszy kierunek i ułożą plan. Od 399 zł, pierwsze propozycje w 48 h.</p>
+<a class="przycisk" href="/nowy/start?miesiac=2027-03&amp;z=miesiac" data-goatcounter-click="plan-blok-miesiac">Wybierzcie mi kierunek</a>
+</aside>
 <figure class="foto"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Eriyadu_Island._View_from_the_south._Maldives.jpg/1280px-Eriyadu_Island._View_from_the_south._Maldives.jpg" alt="Wyspa Eriyadu" width="1280" height="678" fetchpriority="high" decoding="async"><figcaption>Wyspa Eriyadu. Fot. <a href="https://commons.wikimedia.org/wiki/File:Eriyadu_Island._View_from_the_south._Maldives.jpg" rel="nofollow noopener">Ввласенко, CC BY-SA 3.0</a>, Wikimedia Commons</figcaption></figure>
 <nav class="spis" aria-label="Spis treści">
 <p class="spis-tytul">Na tej stronie</p>
@@ -184,6 +203,7 @@ footer{padding-top:22px;padding-bottom:24px;border-top:2px solid var(--ink);marg
 <li><a href="#co-zabrac">Co zabrać</a></li>
 <li><a href="#pytania">Pytania</a></li>
 <li><a href="#podobne">Podobne kierunki</a></li>
+<li><a class="plan" href="#plan">Plan od gołębi</a></li>
 </ol>
 </nav>
 <script src="/spis.js" defer></script>
@@ -235,7 +255,7 @@ footer{padding-top:22px;padding-bottom:24px;border-top:2px solid var(--ink);marg
 <h2>Zarezerwuj sam</h2>
 <p>Wolisz szukać sam? Zacznij od tych przycisków. Lot i nocleg otworzą się z przykładowym terminem 13 do 20 marca 2027, daty zmienisz na miejscu.</p>
 <div class="partnerzy"><a class="partner glowny" href="https://www.aviasales.com/search/WAW1303MLE20032?marker=785120.mmalediwy03" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-mmalediwy03">Znajdź lot na te daty</a><a class="partner" href="https://www.booking.com/searchresults.pl.html?ss=Malediwy&amp;latitude=4.175&amp;longitude=73.509&amp;checkin=2027-03-13&amp;checkout=2027-03-20&amp;group_adults=2&amp;no_rooms=1" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-booking-mmalediwy03">Szukaj noclegu</a><a class="partner" href="https://www.expedia.pl/Hotel-Search?destination=Malediwy&amp;startDate=2027-03-13&amp;endDate=2027-03-20&amp;adults=2" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-expedia-mmalediwy03">Więcej noclegów</a><a class="partner" href="https://tp.media/r?campaign_id=89&amp;marker=785120&amp;p=2074&amp;trs=581099&amp;u=https%3A%2F%2Fwww.tiqets.com%2Fpl%2Fsearch%3Fq%3DMalediwy&amp;sub_id=mmalediwy03" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-tiqets-mmalediwy03">Bilety do atrakcji</a><a class="partner" href="https://www.getyourguide.pl/s/?q=Malediwy&amp;date_from=2027-03-13&amp;date_to=2027-03-20" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-getyourguide-mmalediwy03">Wycieczki z przewodnikiem</a><a class="partner" href="https://tp.media/r?campaign_id=541&amp;marker=785120&amp;p=8310&amp;trs=581099&amp;u=https%3A%2F%2Fwww.airalo.com%2Fpl&amp;sub_id=mmalediwy03" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-airalo-mmalediwy03">eSIM Airalo</a><a class="partner" href="https://tp.media/r?campaign_id=629&amp;marker=785120&amp;p=8979&amp;trs=581099&amp;u=https%3A%2F%2Fsaily.com%2Fpl%2F&amp;sub_id=mmalediwy03" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-saily-mmalediwy03">eSIM Saily</a></div>
-<p class="drobne">Poza UE roaming bywa drogi. eSIM kupisz przed wylotem i włączysz po lądowaniu. <a href="/poradniki/esim/malediwy/">eSIM: Malediwy, ceny i który wybrać</a></p><div class="polecamy"><h3>Tu przyda się auto</h3>
+<p class="drobne">Poza UE roaming bywa drogi. eSIM kupisz przed wylotem i włączysz po lądowaniu. <a href="/poradniki/ktory-esim/#lista-esim">eSIM: Malediwy, ceny i który wybrać</a></p><div class="polecamy"><h3>Tu przyda się auto</h3>
 <p>Na wyspie najładniejsze plaże są zwykle tam, gdzie nie dojeżdża autobus. Sami rezerwujemy auta przez tę porównywarkę. Raz mieliśmy szkodę i sprawa poszła szybko, na naszą korzyść.</p>
 <div class="partnerzy"><a class="partner glowny" href="https://tp.media/r?campaign_id=172&amp;marker=785120&amp;p=4845&amp;trs=581099&amp;u=https%3A%2F%2Fwww.qeeq.com%2Fpl&amp;sub_id=mmalediwy03" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-qeeq-mmalediwy03">Wynajmij auto</a></div></div>
 <p class="drobne"><a class="partner" href="https://rankomat.pl/ubezpieczenia-turystyczne" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-rankomat-mmalediwy03">Porównaj ubezpieczenia</a> Polisę na wyjazd znajdziesz w porównywarce.</p>
@@ -247,9 +267,10 @@ footer{padding-top:22px;padding-bottom:24px;border-top:2px solid var(--ink);marg
 <div class="przewin"><table class="ceny">
 <thead><tr><th scope="col">Skąd</th><th scope="col">Od</th><th scope="col">Przykładowy wylot</th></tr></thead>
 <tbody>
-<tr><th scope="row"><a href="/tanie-loty/warszawa/">Warszawa</a></th><td><strong>od 2932 zł</strong></td><td>NaN marca 2027</td></tr>
+<tr><th scope="row"><a href="/tanie-loty/warszawa/">Warszawa</a></th><td><a class="cena-lot" href="https://www.aviasales.com/search/WAW2203MLE31031?marker=785120.mcmalediwy03warszawa" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-mcmalediwy03warszawa"><strong>od 2932 zł</strong></a> <small class="sprawdzono">sprawdzone 7 października</small></td><td>22 do 31 marca 2027</td></tr>
 </tbody>
 </table></div>
+<p class="drobne">Cena „od” otwiera Aviasales z tymi samymi datami; ceny zmieniają się co godzinę, więc mogą się różnić. „Zwykle od” to cena sprzed ponad tygodnia, orientacyjna.</p>
 <p>Z Warszawy to 9,5 h w powietrzu, jeśli trafisz lot bez przesiadki.</p>
 </section>
 <section id="rekomendacja" class="rekomendacja">
@@ -257,21 +278,21 @@ footer{padding-top:22px;padding-bottom:24px;border-top:2px solid var(--ink);marg
 
 <p>Wybraliśmy parę miejsc z naszej listy. Pełna lista jest na stronie kierunku.</p>
 <div class="kategorie">
-<div class="kat"><h4>Nietypowe</h4>
+<div class="kat"><h3>Nietypowe</h3>
 <ul class="miejsca">
 <li><strong>Hukuru Miskiy</strong><small>Malé, czyt. hukuru miski</small><p>Stary Meczet Piątkowy z 1658 roku, zbudowany z rzeźbionego ręcznie koralowca. Jeden z najbardziej niezwykłych budynków w kraju, który rzadko zagląda do ulotek resortów.</p></li>
 </ul></div>
-<div class="kat"><h4>Smaki i trunki</h4>
+<div class="kat"><h3>Smaki i trunki</h3>
 <ul class="miejsca">
 <li><strong>Garudhiya</strong><small>czyt. garudija</small><p>Czysty rosół z tuńczyka bonito z solą i wodą, podany z ryżem, limonką, chili i cebulą. Proste i zaskakująco dobre.</p></li>
 </ul></div>
-<div class="kat"><h4>Tanie jedzenie</h4>
+<div class="kat"><h3>Tanie jedzenie</h3>
 <ul class="miejsca">
 <li><strong>Sea House Café</strong><small>Malé, tanio</small><p>Knajpka nad terminalem promu do Hulhumalé w Malé: owoce morza i azjatyckie dania w cenach lokalnych, nie resortowych. Dobre miejsce na obiad w oczekiwaniu na prom.</p></li>
 </ul></div>
 </div>
 
-<p class="dalej"><a href="/kierunki/malediwy/#rekomendacja">Wszystkie wskazówki: Malediwy</a> <a href="/?sciezka=%2Fkierunki%2Fmalediwy%2Fwskazowka">Byłeś tam? Dodaj wskazówkę</a></p>
+<p class="dalej"><a href="/kierunki/malediwy/#rekomendacja">Wszystkie wskazówki: Malediwy</a> <a href="/?sciezka=%2Fkierunki%2Fmalediwy%2Fwskazowka" rel="nofollow">Byłeś tam? Dodaj wskazówkę</a></p>
 </section>
 <section id="co-zabrac">
 <h2>Lista do spakowania</h2>
@@ -308,23 +329,29 @@ footer{padding-top:22px;padding-bottom:24px;border-top:2px solid var(--ink);marg
 </ul>
 <p><a href="/gdzie-leciec/marzec/">Gdzie polecieć w marcu: pełna lista</a></p>
 </section>
-<section class="cta">
+<section id="plan" class="cta">
 <h2>Nie chcesz układać tego sam?</h2>
 <p>Napisz, czego szukasz. W 48 godzin dostajesz plan z lotami, noclegami i trasą dzień po dniu.</p>
+<p class="cena">Od 399 zł za cały plan. Płacisz dopiero na końcu zamówienia.</p>
+<p class="drobne">BLIK, karta albo Klarna. Zwrot 100%, jeśli nie trafimy. Pierwsze propozycje w 48 h, pełny plan zaraz po Twoim wyborze.</p>
+<p><a class="przycisk" href="/nowy/start?kierunek=malediwy&amp;miesiac=2027-03&amp;z=miesiac" data-goatcounter-click="plan-koniec-miesiac">Zamów plan: Malediwy</a></p>
+<p><a href="/przyklad-plan.pdf" data-goatcounter-click="plan-pdf-miesiac">Zobacz przykładowy plan (PDF)</a></p>
 <blockquote class="opinia"><p>Potrzebowałem inspiracji na mototrip po Kaszubach i Pomorzu. Dostałem namiary, jakie punkty związane z II WŚ zwiedzić, gdzie rozbić namiot, gdzie zjeść i jakie jeziora zobaczyć.</p><small>Piotr, mototrip po Polsce</small></blockquote>
-<p><a class="przycisk" href="/">Zamów plan podróży</a></p>
+<div class="czy-sam"><p><strong>Gotowy plan czy sam?</strong></p><p><a href="/porownanie/biuro-podrozy/">Plan od gołębi czy biuro podróży</a></p><p><a href="/porownanie/plan-z-ai/">Plan od gołębi czy plan z AI</a></p></div>
 </section>
 <p class="drobne">Klimat: NASA POWER (MERRA-2) i NOAA OISST, dane publiczne, średnie z lat 1995-2024. Ceny lotów: wyszukiwania w aplikacji Gołębie Latają (Travelpayouts, Duffel), orientacyjne.</p>
 <p class="drobne autorzy">Przygotowali: <a href="/o-nas/">Michał i Paulina</a>, Gołębie Latają.</p>
 </main>
 <footer>
 <div class="stopka">
-<div class="o"><p class="tytul">Gołębie Latają</p><p>Gołębie Latają układają plany podróży. Ty mówisz, czego chcesz, my szukamy, liczymy i piszemy. Plan w 48 godzin.</p><p><a href="mailto:lecimy@golebielataja.pl">lecimy@golebielataja.pl</a></p></div>
+<div class="o"><p class="tytul">Gołębie Latają</p><p>Gołębie Latają układają plany podróży. Ty mówisz, czego chcesz, my szukamy, liczymy i piszemy. Plan w 48 godzin.</p><p><a href="mailto:lecimy@golebielataja.pl">lecimy@golebielataja.pl</a></p><p>RF Michał Gołąb, NIP 5213757913, Warszawa</p></div>
 <div><p class="tytul">Kiedy wolne</p><ul><li><a href="/majowka/">Majówka</a></li><li><a href="/boze-cialo/">Boże Ciało</a></li><li><a href="/ferie-zimowe/">Ferie zimowe</a></li><li><a href="/sylwester-za-granica/">Sylwester za granicą</a></li><li><a href="/swieta-w-cieple/">Święta w cieple</a></li><li><a href="/wakacje-z-dziecmi/">Wakacje z dziećmi</a></li></ul></div>
 <div><p class="tytul">Przydatne</p><ul><li><a href="/poradniki/">Poradniki</a></li><li><a href="/porownanie/">Porównania</a></li><li><a href="/tanie-loty/">Tanie loty</a></li><li><a href="/polityka-prywatnosci.html">Polityka prywatności</a></li><li><a href="/regulamin.html">Regulamin</a></li><li><a href="#zgoda" data-cookies="1">Ustawienia cookies</a></li></ul></div>
 </div>
-<p class="drobne">Dane odświeżamy co tydzień. Stan na 12 października 2026.</p>
+<p class="drobne">Dane odświeżamy co tydzień. Stan na 14 października 2026.</p>
 </footer>
 <div class="pasek"></div>
+<div class="plan-pasek" hidden><p>Plan podróży od 399 zł, propozycje w 48 h</p><a href="/nowy/start?miesiac=2027-03&amp;z=miesiac" data-goatcounter-click="plan-pasek-miesiac">Zamów</a></div>
+<script src="/plan.js" defer></script>
 </body>
 </html>
