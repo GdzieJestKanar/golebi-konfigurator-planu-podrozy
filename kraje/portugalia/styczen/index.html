@@ -13,6 +13,7 @@
 <meta property="og:locale" content="pl_PL">
 <meta property="og:site_name" content="Gołębie Latają">
 <meta property="og:image" content="https://golebielataja.pl/img/razem.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/svg+xml" href="/img/golab-sygnet.svg">
 <link rel="preload" href="/fonty/nunito-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonty/young-serif-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -155,7 +156,14 @@ figure.mini{margin:0 0 8px}figure.mini img{width:100%;height:auto;aspect-ratio:3
 .cena-terminu{margin:6px 0 4px;font-weight:800;color:var(--navy)}ul.terminy .partnerzy{display:flex;flex-wrap:wrap;gap:6px}ul.terminy a.partner{min-height:40px;padding:6px 12px;font-size:.92rem}
 a.cena-lot{color:var(--navy);text-decoration-thickness:1.5px}a.cena-lot::after{content:" ↗";font-size:.85em}.sprawdzono{white-space:nowrap}.cena-zwykle{font-weight:700;color:var(--ink-soft)}
 .autor-pasek{display:flex;align-items:center;gap:10px;margin:6px 0 0;font-size:.92rem;color:var(--ink-soft)}.autor-pasek img{width:40px;height:40px;border-radius:50%;object-fit:cover;flex:none}
-@media print{.pasek,nav.spis,.partnerzy,.cta,aside.plan,.plan-pasek{display:none}}</style>
+section.pocztowka{margin:40px auto 0;max-width:820px;padding:22px 24px;background:var(--navy-soft);border-radius:16px;border-top:0}
+section.pocztowka h2{margin-top:0}
+.pocztowka-form{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 8px}
+.pocztowka-form input[type=email]{flex:1 1 240px;min-height:46px;padding:10px 14px;border:1.5px solid var(--line);border-radius:12px;font:inherit;background:var(--white)}
+.pocztowka-form button{min-height:46px;padding:10px 20px;border:0;border-radius:999px;background:var(--red);color:#fff;font:inherit;font-weight:800;cursor:pointer}
+.pocztowka-form .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+@media print{.pasek,nav.spis,.partnerzy,.cta,aside.plan,.plan-pasek,section.pocztowka,.gl-zgoda,a[download],nav.gora .linki,.plan-nav,.okruszki{display:none}}</style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"Portugalia w styczniu: dokąd lecieć","itemListElement":[{"@type":"ListItem","position":1,"name":"Madera","url":"https://golebielataja.pl/kierunki/madera/styczen/"},{"@type":"ListItem","position":2,"name":"Azory","url":"https://golebielataja.pl/kierunki/azory/styczen/"},{"@type":"ListItem","position":3,"name":"Porto","url":"https://golebielataja.pl/kierunki/porto/styczen/"},{"@type":"ListItem","position":4,"name":"Algarve","url":"https://golebielataja.pl/kierunki/algarve/styczen/"},{"@type":"ListItem","position":5,"name":"Lizbona","url":"https://golebielataja.pl/kierunki/lizbona/styczen/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Portugalia w styczniu: czy warto lecieć?","acceptedAnswer":{"@type":"Answer","text":"Tak, w styczniu dobrą pogodę mają: Madera."}},{"@type":"Question","name":"Portugalia w styczniu: gdzie najcieplej?","acceptedAnswer":{"@type":"Answer","text":"Najcieplej: Madera, średnio 18°C w dzień."}},{"@type":"Question","name":"Portugalia w styczniu: gdzie najcieplejsze morze?","acceptedAnswer":{"@type":"Answer","text":"Najcieplejsza woda: Algarve, około 16°C."}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Gołębie Latają","item":"https://golebielataja.pl/"},{"@type":"ListItem","position":2,"name":"Kraje","item":"https://golebielataja.pl/kraje/"},{"@type":"ListItem","position":3,"name":"Portugalia","item":"https://golebielataja.pl/kraje/portugalia/"},{"@type":"ListItem","position":4,"name":"Styczeń","item":"https://golebielataja.pl/kraje/portugalia/styczen/"}]}</script>
@@ -234,9 +242,21 @@ a.cena-lot{color:var(--navy);text-decoration-thickness:1.5px}a.cena-lot::after{c
 <p><a class="przycisk" href="/nowy/start?miesiac=2027-01&amp;z=kraj" data-goatcounter-click="plan-koniec-kraj">Zamów plan podróży</a></p>
 <p><a href="/przyklad-plan.pdf" data-goatcounter-click="plan-pdf-kraj">Zobacz przykładowy plan (PDF)</a></p>
 <blockquote class="opinia"><p>Zaplanowali dla nas dwutygodniową podróż do Japonii, która była jednocześnie naszą podróżą poślubną. Rada dotycząca wysyłania bagaży z hotelu do hotelu: absolutny strzał w dziesiątkę!</p><small>Alicja i Łukasz, podróż poślubna w Japonii</small></blockquote>
-<div class="czy-sam"><p><strong>Gotowy plan czy sam?</strong></p><p><a href="/porownanie/biuro-podrozy/">Plan od gołębi czy biuro podróży</a></p><p><a href="/porownanie/plan-z-ai/">Plan od gołębi czy plan z AI</a></p></div>
+<div class="czy-sam"><p><strong>Gotowy plan czy sam?</strong></p><p><a href="/porownanie/biuro-podrozy/">Plan od gołębi czy biuro podróży</a></p><p><a href="/porownanie/plan-z-ai/">Plan od gołębi czy plan z AI</a></p><p><a href="/porownanie/itaka-rainbow-tui/">Itaka, Rainbow czy TUI? Porównanie biur</a></p></div>
 </section>
 </main>
+<section class="pocztowka" id="pocztowka" aria-labelledby="pocztowka-h">
+<h2 id="pocztowka-h">Pocztówka od gołębi</h2>
+<p>Co dwa tygodnie trzy najtańsze loty z polskich lotnisk, kierunek miesiąca i jeden patent z naszych podróży. Na start dostaniesz raport „Długie weekendy 2027: gdzie i za ile”.</p>
+<form class="pocztowka-form" data-k="5575997dc354487cbe8f3e38dbe2b2f7" data-raport="/dlugie-weekendy/2027/raport/" data-raport-tekst="Długie weekendy 2027: gdzie i za ile" data-zly="Wpisz poprawny adres e-mail, żeby gołąb wiedział, dokąd lecieć." data-wysylam="Zapisuję…" data-gotowe="Gotowe! Pierwsza pocztówka już leci. Raport czeka tutaj: " data-blad="Coś poszło nie tak. Spróbuj jeszcze raz albo napisz: lecimy@golebielataja.pl" novalidate>
+<input class="hp" type="text" name="firma" tabindex="-1" autocomplete="off" aria-hidden="true">
+<label class="sr" for="pocztowka-email">Twój e-mail</label>
+<input id="pocztowka-email" type="email" name="email" placeholder="Twój e-mail" required autocomplete="email">
+<button type="submit">Wyślij mi pocztówkę</button>
+</form>
+<p class="drobne" data-status aria-live="polite">Zapisując się, akceptujesz <a href="/polityka-prywatnosci.html">politykę prywatności</a>. Wypiszesz się jednym kliknięciem.</p>
+</section>
+<script src="/poczta.js" defer></script>
 <footer>
 <div class="stopka">
 <div class="o"><p class="tytul">Gołębie Latają</p><p>Gołębie Latają układają plany podróży. Ty mówisz, czego chcesz, my szukamy, liczymy i piszemy. Plan w 48 godzin.</p><p><a href="mailto:lecimy@golebielataja.pl">lecimy@golebielataja.pl</a></p><p>RF Michał Gołąb, NIP 5213757913, Warszawa</p></div>
