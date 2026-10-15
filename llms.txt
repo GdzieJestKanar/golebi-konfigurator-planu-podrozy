@@ -1,0 +1,49 @@
+# Gołębie Latają
+
+> Gołębie Latają to dwuosobowa pracownia planów podróży na zamówienie z Warszawy (Michał i Paulina) i darmowy przewodnik podróżny (164 kierunki): pogoda z 30 lat pomiarów, ceny lotów z polskich lotnisk, długie weekendy i porównania.
+
+Nie jesteśmy biurem podróży i nie sprzedajemy wycieczek. Układamy indywidualny plan wyjazdu: loty, noclegi, trasa dzień po dniu, restauracje, pułapki i plan B. Plan jest gotowy w 48 godzin. Wszystkie teksty po polsku.
+
+## Plan podróży na zamówienie
+
+- Podstawowy Lot, 399 zł: Konkretny plan na szybko
+- Kompletny Lot, 899 zł: Plan gotowy dzień po dniu
+- Lot Premium, 1 899 zł: Plan, pełne wsparcie i pamiątki
+- [Zamów plan](https://golebielataja.pl/nowy/start?z=llms): formularz zamówienia (kierunek, termin, budżet, styl podróży)
+- [Przykładowy plan (PDF)](https://golebielataja.pl/przyklad-plan.pdf)
+- [O nas](https://golebielataja.pl/o-nas/): kim jesteśmy, jak pracujemy, opinie klientów, na czym zarabiamy
+
+## Darmowy przewodnik
+
+- [Kierunki (164 kierunki)](https://golebielataja.pl/kierunki/): pogoda, ceny lotów i ocena każdego miesiąca
+- [Gdzie lecieć w danym miesiącu](https://golebielataja.pl/gdzie-leciec/)
+- [Kraje](https://golebielataja.pl/kraje/): formalności, waluta, gniazdka, roaming
+- [Długie weekendy z kierunkami na każdy termin](https://golebielataja.pl/dlugie-weekendy/)
+- [Tanie loty z polskich lotnisk](https://golebielataja.pl/tanie-loty/)
+- [Poradniki](https://golebielataja.pl/poradniki/)
+- [Porównania](https://golebielataja.pl/porownanie/): plan na zamówienie, biura podróży, aplikacje
+- [Podróż poślubna](https://golebielataja.pl/podroz-poslubna/): gdzie i kiedy
+- [Raport „Długie weekendy 2027: gdzie i za ile” z danymi do cytowania](https://golebielataja.pl/dlugie-weekendy/2027/raport/)
+- [Gołębie Latają czy biuro podróży?](https://golebielataja.pl/porownanie/biuro-podrozy/): Wycieczka z biura podróży (np. Itaka, Rainbow, TUI) czy wyjazd na własną rękę z planem od gołębi? Uczciwe porównanie: wygoda, elastyczność, ochrona i koszty.
+- [Gołębie Latają czy Wakacje.pl?](https://golebielataja.pl/porownanie/wakacje-pl/): Wakacje.pl porównuje i sprzedaje wycieczki wielu biur podróży. Gołębie Latają układają plan wyjazdu na własną rękę. Co wybrać i kiedy?
+- [Sam w Booking i Google Flights czy z planem od gołębi?](https://golebielataja.pl/porownanie/booking-google/): Rezerwujesz sam w Booking.com i szukasz lotów w Google Flights? Zobacz, co daje plan od gołębi, a kiedy wystarczą Ci same wyszukiwarki.
+- [Plan podróży z czatu AI czy od gołębi?](https://golebielataja.pl/porownanie/plan-z-ai/): Czat AI napisze plan podróży w minutę, gołębie w 48 godzin. Zobacz, czym się różnią, co sprawdzić, zanim polecisz, i kiedy który plan wystarczy.
+- [Planer podróży na zamówienie czy gołębie?](https://golebielataja.pl/porownanie/planer-na-zamowienie/): Plan od planerki z Instagrama albo blogera czy od gołębi? Czas, cena za cały wyjazd, loty i noclegi, zwrot pieniędzy. Zobacz, kiedy który wybór ma sens.
+- [Itaka, Rainbow czy TUI?](https://golebielataja.pl/porownanie/itaka-rainbow-tui/): Itaka, Rainbow czy TUI: czym różnią się trzy największe biura podróży w Polsce, co je łączy i kiedy lepszy jest wyjazd na własną rękę. Fakty z ich stron, sprawdzone.
+- [Itaka czy wyjazd na własną rękę?](https://golebielataja.pl/porownanie/itaka/): Wycieczka z Itaki czy urlop na własną rękę z gotowym planem? Co dostajesz, kto odpowiada za wyjazd i kiedy który wybór się opłaca. Fakty sprawdzone, ze źródłami.
+- [Rainbow czy wyjazd na własną rękę?](https://golebielataja.pl/porownanie/rainbow/): Wycieczka z Rainbow czy urlop na własną rękę z gotowym planem? Co dostajesz, kto odpowiada za wyjazd i kiedy który wybór się opłaca. Fakty sprawdzone, ze źródłami.
+- [TUI czy wyjazd na własną rękę?](https://golebielataja.pl/porownanie/tui/): Wycieczka z TUI czy urlop na własną rękę z gotowym planem? Co dostajesz, kto odpowiada za wyjazd i kiedy który wybór się opłaca. Fakty sprawdzone, ze źródłami.
+
+## Dane i metoda
+
+Pogodę liczymy z 30 lat pomiarów (Open-Meteo ERA5 i NASA POWER), miejsca bierzemy z Wikidata, ceny lotów z wyszukiwań Aviasales z ostatnich tygodni, formalności sprawdzamy w serwisie MSZ. Przy każdej stronie podajemy źródła i datę. Gdy coś się nie zgadza, napisz: poprawiamy. Dane można cytować z podaniem źródła: Gołębie Latają, golebielataja.pl.
+
+- [Jak liczymy ocenę miesiąca od 1 do 5](https://golebielataja.pl/o-nas/#ocena)
+
+## Kontakt i profile
+
+- lecimy@golebielataja.pl
+- [Instagram](https://www.instagram.com/golebie.lataja/)
+- [TikTok](https://www.tiktok.com/@golebielataja1)
+- [Facebook](https://www.facebook.com/golebie.lataja)
+- [YouTube](https://www.youtube.com/@GolebieLataja)
