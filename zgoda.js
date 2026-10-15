@@ -1,7 +1,15 @@
 /* Gołębie Latają: zgoda na cookies partnera (DW21). Plik generowany przez strony:generuj. */
 (function () {
-  var K = 'gl-zgoda', DRIVE = "https://emrldtp.com/NTgxMDk5.js?t=581099", T = {"tekst":"Linki partnerów mogą zapisać cookies. Cena dla Ciebie się nie zmienia.","tak":"Zgoda","nie":"Nie, dziękuję","wiecej":"Kto i po co"};
+  // Klucz v2 od 15.10.2026: zgoda obejmuje też Microsoft Clarity, więc wcześniejsze „tak” pytamy jeszcze raz.
+  var K = 'gl-zgoda-v2', DRIVE = "https://emrldtp.com/NTgxMDk5.js?t=581099", CLARITY = "yy9c57o9pl", T = {"tekst":"Linki partnerów i mapa kliknięć (Microsoft Clarity) zapisują cookies. Pomagają nam ulepszać stronę, cena dla Ciebie się nie zmienia.","tak":"Zgoda","nie":"Nie, dziękuję","wiecej":"Kto i po co"};
+  function clarity() {
+    if (!CLARITY || window.__glClarity) return;
+    window.__glClarity = 1;
+    (function (c, l, a, r, i, t, y) { c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); }; t = l.createElement(r); t.async = 1; t.src = 'https://www.clarity.ms/tag/' + i; y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y); })(window, document, 'clarity', 'script', CLARITY);
+    window.clarity('consentv2', { ad_Storage: 'denied', analytics_Storage: 'granted' });
+  }
   function laduj() {
+    clarity();
     if (!DRIVE || window.__glDrive) return;
     window.__glDrive = 1;
     var s = document.createElement('script');
