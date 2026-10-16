@@ -1,7 +1,7 @@
 /* Gołębie Latają: zgoda na cookies partnera (DW21). Plik generowany przez strony:generuj. */
 (function () {
   // Klucz v2 od 15.10.2026: zgoda obejmuje też Microsoft Clarity, więc wcześniejsze „tak” pytamy jeszcze raz.
-  var K = 'gl-zgoda-v2', DRIVE = "https://emrldtp.com/NTgxMDk5.js?t=581099", CLARITY = "yy9c57o9pl", T = {"tekst":"Linki partnerów i mapa kliknięć (Microsoft Clarity) zapisują cookies. Pomagają nam ulepszać stronę, cena dla Ciebie się nie zmienia.","tak":"Zgoda","nie":"Nie, dziękuję","wiecej":"Kto i po co"};
+  var K = 'gl-zgoda-v2', DRIVE = "https://emrldtp.com/NTgxMDk5.js?t=581099", CLARITY = "yy9c57o9pl", T = {"w":{"a":{"tekst":"Ten przewodnik jest darmowy, bo utrzymują go linki partnerów, a mapa kliknięć (Microsoft Clarity) pokazuje nam, co poprawić. Oba zapisują cookies. Zgoda nic Cię nie kosztuje, a nam bardzo pomaga.","tak":"Zgoda, pomagam","nie":"Nie, dziękuję"},"c":{"tekst":"Gołąb pyta, zanim zajrzy: możemy zapisać cookies linków partnerów i mapy kliknięć (Microsoft Clarity)? Dzięki temu wiemy, co ulepszyć, a przewodnik zostaje za darmo.","tak":"Jasne","nie":"Nie, dziękuję"}},"wiecej":"Kto i po co"};
   function clarity() {
     if (!CLARITY || window.__glClarity) return;
     window.__glClarity = 1;
@@ -20,7 +20,9 @@
   function zapisz(v) { try { localStorage.setItem(K, v); } catch (e) {} }
   var pasek = null;
   // N27: wybór w pasku jako zdarzenie GoatCounter (bez cookies), N22: pasek planu na telefonie wraca po zamknięciu.
-  function zdarzenie(n) { try { if (window.goatcounter && window.goatcounter.count) window.goatcounter.count({ path: 'zgoda-' + n, title: 'Zgoda: ' + n, event: true }); } catch (e) {} }
+  // N44: wersja tekstu losowana bez zapisu w przeglądarce (zapis przed zgodą wymagałby zgody).
+  var WK = Math.random() < 0.5 ? 'a' : 'c', W = T.w[WK];
+  function zdarzenie(n) { try { if (window.goatcounter && window.goatcounter.count) window.goatcounter.count({ path: 'zgoda-' + n + '-' + WK, title: 'Zgoda: ' + n + ' (' + WK + ')', event: true }); } catch (e) {} }
   function zamknij(v) { pasek.hidden = true; zdarzenie(v); try { document.dispatchEvent(new Event('gl-zgoda')); } catch (e) {} }
   function pokaz() {
     if (pasek) { pasek.hidden = false; document.dispatchEvent(new Event('gl-zgoda')); return; }
@@ -29,14 +31,15 @@
     document.head.appendChild(st);
     pasek = document.createElement('div');
     pasek.className = 'gl-zgoda'; pasek.id = 'zgoda'; pasek.setAttribute('role', 'region'); pasek.setAttribute('aria-label', 'Cookies');
-    var p = document.createElement('p'); p.textContent = T.tekst + ' ';
+    var p = document.createElement('p'); p.textContent = W.tekst + ' ';
     var a = document.createElement('a'); a.href = '/polityka-prywatnosci.html'; a.textContent = T.wiecej; p.appendChild(a);
-    var tak = document.createElement('button'); tak.type = 'button'; tak.className = 'tak'; tak.textContent = T.tak;
-    var nie = document.createElement('button'); nie.type = 'button'; nie.textContent = T.nie;
+    var tak = document.createElement('button'); tak.type = 'button'; tak.className = 'tak'; tak.textContent = W.tak;
+    var nie = document.createElement('button'); nie.type = 'button'; nie.textContent = W.nie;
     tak.onclick = function () { zapisz('tak'); zamknij('tak'); laduj(); };
     nie.onclick = function () { zapisz('nie'); zamknij('nie'); };
     pasek.appendChild(p); pasek.appendChild(tak); pasek.appendChild(nie);
     document.body.appendChild(pasek);
+    zdarzenie('pokaz');
     document.dispatchEvent(new Event('gl-zgoda'));
   }
   function start() {

@@ -17,7 +17,8 @@
 <link rel="icon" type="image/svg+xml" href="/img/golab-sygnet.svg">
 <link rel="preload" href="/fonty/nunito-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonty/young-serif-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<style>@font-face{font-family:"Young Serif";font-style:normal;font-weight:400;font-display:swap;src:url(/fonty/young-serif-latin-400-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+<style>@font-face{font-family:"Nunito zapas";src:local("Arial"),local("Helvetica"),local("Liberation Sans");size-adjust:96.3%;ascent-override:105%;descent-override:36.7%;line-gap-override:0%}
+@font-face{font-family:"Young Serif";font-style:normal;font-weight:400;font-display:swap;src:url(/fonty/young-serif-latin-400-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
 @font-face{font-family:"Young Serif";font-style:normal;font-weight:400;font-display:swap;src:url(/fonty/young-serif-latin-ext-400-normal.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
 @font-face{font-family:"Nunito";font-style:normal;font-weight:200 1000;font-display:swap;src:url(/fonty/nunito-latin-wght-normal.woff2) format("woff2-variations");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
 @font-face{font-family:"Nunito";font-style:normal;font-weight:200 1000;font-display:swap;src:url(/fonty/nunito-latin-ext-wght-normal.woff2) format("woff2-variations");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
@@ -26,7 +27,7 @@
 @font-face{font-family:"IBM Plex Mono";font-style:normal;font-weight:500;font-display:swap;src:url(/fonty/ibm-plex-mono-latin-500-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
 @font-face{font-family:"IBM Plex Mono";font-style:normal;font-weight:500;font-display:swap;src:url(/fonty/ibm-plex-mono-latin-ext-500-normal.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
 :root{--paper:#F7F1E4;--paper-deep:#EFE6D1;--cream:#FBF6EA;--white:#FFFDF8;--ink:#2A2C31;--ink-soft:#5E626A;--line:#DDD5C4;--red:#D0402A;--navy:#1F3B6E;--navy-soft:#E6ECF5;--niebo:#DCEAF3;--zielen:#276A4D;--zielen-soft:#E3F1EA;--muted:#5E626A;
---serif:"Young Serif",Georgia,"Times New Roman",serif;--sans:Nunito,"Segoe UI",system-ui,-apple-system,sans-serif;--hand:Caveat,"Segoe Print","Bradley Hand",cursive;--mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;--tekst:66ch}
+--serif:"Young Serif",Georgia,"Times New Roman",serif;--sans:Nunito,"Nunito zapas","Segoe UI",system-ui,-apple-system,sans-serif;--hand:Caveat,"Segoe Print","Bradley Hand",cursive;--mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;--tekst:66ch}
 *{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{margin:0;font-family:var(--sans);font-weight:500;font-size:1.125rem;line-height:1.65;color:var(--ink);background:var(--paper);font-variant-numeric:lining-nums}
 a{color:var(--navy);text-decoration-thickness:1px;text-underline-offset:.18em}a:hover{text-decoration-thickness:2px}
@@ -85,6 +86,7 @@ ul.miejsca small{display:block;margin-top:1px}ul.miejsca p{margin:5px 0 0;max-wi
 .rok a span{font-weight:500;font-size:.78rem}.rok a[aria-current]{outline:2.5px solid var(--navy);outline-offset:1px}
 @media(max-width:640px){.rok{grid-template-columns:repeat(6,1fr)}}
 .legenda{font-size:.85rem;color:var(--ink-soft);margin:0;max-width:none}
+.tabela-roku{margin:.75rem 0 0}.tabela-roku summary{cursor:pointer;font-weight:700;color:var(--navy);font-size:.95rem}.tabela-roku table{font-size:.9rem;width:100%}.tabela-roku th,.tabela-roku td{padding:.35rem .4rem;white-space:nowrap}
 .dwie{display:grid;grid-template-columns:1fr 1fr;gap:16px 28px}@media(max-width:700px){.dwie{grid-template-columns:1fr}}
 .dwie>div{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:16px 20px}.dwie h3{margin-top:0}
 ul.plusy li::marker{content:"+  ";color:var(--zielen);font-weight:800}ul.minusy li::marker{content:"−  ";color:var(--red);font-weight:800}
@@ -165,7 +167,7 @@ section.pocztowka h2{margin-top:0}
 .pocztowka-form .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 @media print{.pasek,nav.spis,.partnerzy,.cta,aside.plan,.plan-pasek,section.pocztowka,.gl-zgoda,a[download],nav.gora .linki,.plan-nav,.okruszki{display:none}}</style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Dubrownik w listopadzie: pogoda, woda i ceny lotów","description":"Dubrownik w listopadzie: 16°C w dzień, 13°C w nocy, woda 20°C, 14 dni z opadem. Ocena gołębi 1/5, ceny lotów i co spakować.","inLanguage":"pl","dateModified":"2026-10-15","about":{"@type":"TouristDestination","name":"Dubrownik","geo":{"@type":"GeoCoordinates","latitude":42.65,"longitude":18.094},"containedInPlace":{"@type":"Country","name":"Chorwacja"}},"author":[{"@type":"Person","name":"Michał Gołąb","url":"https://golebielataja.pl/o-nas/","image":"https://golebielataja.pl/img/razem.jpg"},{"@type":"Person","name":"Paulina","url":"https://golebielataja.pl/o-nas/","image":"https://golebielataja.pl/img/razem.jpg"}],"publisher":{"@id":"https://golebielataja.pl/#organization","@type":"Organization","name":"Gołębie Latają"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Dubrownik w listopadzie: pogoda, woda i ceny lotów","description":"Dubrownik w listopadzie: 16°C w dzień, 13°C w nocy, woda 20°C, 14 dni z opadem. Ocena gołębi 1/5, ceny lotów i co spakować.","inLanguage":"pl","dateModified":"2026-10-16","about":{"@type":"TouristDestination","name":"Dubrownik","geo":{"@type":"GeoCoordinates","latitude":42.65,"longitude":18.094},"containedInPlace":{"@type":"Country","name":"Chorwacja"}},"author":[{"@type":"Person","name":"Michał Gołąb","url":"https://golebielataja.pl/o-nas/","image":"https://golebielataja.pl/img/razem.jpg"},{"@type":"Person","name":"Paulina","url":"https://golebielataja.pl/o-nas/","image":"https://golebielataja.pl/img/razem.jpg"}],"publisher":{"@id":"https://golebielataja.pl/#organization","@type":"Organization","name":"Gołębie Latają"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Czy Dubrownik w listopadzie to dobry pomysł?","acceptedAnswer":{"@type":"Answer","text":"Dubrownik w listopadzie to pogodowo najsłabszy wybór w roku. Najlepsze miesiące tutaj: lipiec. Masz elastyczny termin? Przesuń wyjazd."}},{"@type":"Question","name":"Dubrownik w listopadzie: czy woda jest ciepła?","acceptedAnswer":{"@type":"Answer","text":"Woda ma około 20°C. Da się pływać, pierwsze zanurzenie orzeźwia."}},{"@type":"Question","name":"Dubrownik w listopadzie: jaka pogoda?","acceptedAnswer":{"@type":"Answer","text":"Średnio 16°C w dzień i 13°C w nocy, 14 dni z opadem, woda około 20°C."}},{"@type":"Question","name":"Dubrownik: kiedy najlepiej jechać?","acceptedAnswer":{"@type":"Answer","text":"Według ocen gołębi najlepiej wypadają lipiec."}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Gołębie Latają","item":"https://golebielataja.pl/"},{"@type":"ListItem","position":2,"name":"Kierunki","item":"https://golebielataja.pl/kierunki/"},{"@type":"ListItem","position":3,"name":"Dubrownik","item":"https://golebielataja.pl/kierunki/dubrownik/"},{"@type":"ListItem","position":4,"name":"Listopad","item":"https://golebielataja.pl/kierunki/dubrownik/listopad/"}]}</script>
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "dabf88d8ecff46b9af7a1518edc3f5ee"}'></script>
@@ -202,6 +204,7 @@ section.pocztowka h2{margin-top:0}
 <a class="przycisk" href="/nowy/start?miesiac=2026-11&amp;z=miesiac" data-goatcounter-click="plan-blok-miesiac">Wybierzcie mi kierunek</a>
 </aside>
 <figure class="foto"><picture><source type="image/avif" srcset="/img/k/dubrownik-3txthf-480.avif 480w, /img/k/dubrownik-3txthf-960.avif 960w, /img/k/dubrownik-3txthf-1280.avif 1280w" sizes="(max-width: 860px) 100vw, 820px"><source type="image/webp" srcset="/img/k/dubrownik-3txthf-480.webp 480w, /img/k/dubrownik-3txthf-960.webp 960w, /img/k/dubrownik-3txthf-1280.webp 1280w" sizes="(max-width: 860px) 100vw, 820px"><img src="/img/k/dubrownik-3txthf-960.webp" alt="Stare Miasto" width="1280" height="788" fetchpriority="high" decoding="async"></picture><figcaption>Stare Miasto. Fot. <a href="https://commons.wikimedia.org/wiki/File:Dubrovnik_Old_Town_1.jpg" rel="nofollow noopener">kallerna, CC BY-SA 4.0</a>, Wikimedia Commons</figcaption></figure>
+
 <nav class="spis" aria-label="Spis treści">
 <p class="spis-tytul">Na tej stronie</p>
 <ol>
@@ -288,7 +291,7 @@ section.pocztowka h2{margin-top:0}
 <tr><th scope="row"><a href="/tanie-loty/krakow/">Kraków</a></th><td><a class="cena-lot" href="https://www.aviasales.com/search/KRK1411DBV21111?currency=pln&amp;marker=785120.mcdubrownik11krakow" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-mcdubrownik11krakow"><strong>od 189 zł</strong></a> <small class="sprawdzono">sprawdzone 10 października</small></td><td>14 do 21 listopada 2026</td></tr>
 </tbody>
 </table></div>
-<p class="drobne">Cena „od” otwiera Aviasales z tymi samymi datami; ceny zmieniają się co godzinę, więc mogą się różnić. „Zwykle od” to cena sprzed ponad tygodnia, orientacyjna.</p>
+<p class="drobne">Cena „od” otwiera Aviasales z tymi samymi datami; ceny zmieniają się co godzinę, więc mogą się różnić. „Zwykle od” to cena sprzed ponad tygodnia, orientacyjna. Ceny sprawdzone 10 października 2026.</p>
 </section>
 <section id="rekomendacja" class="rekomendacja">
 <h2>Rekomendacja gołębi</h2>
@@ -363,7 +366,7 @@ section.pocztowka h2{margin-top:0}
 <div><p class="tytul">Kiedy wolne</p><ul><li><a href="/majowka/">Majówka</a></li><li><a href="/boze-cialo/">Boże Ciało</a></li><li><a href="/ferie-zimowe/">Ferie zimowe</a></li><li><a href="/sylwester-za-granica/">Sylwester za granicą</a></li><li><a href="/swieta-w-cieple/">Święta w cieple</a></li><li><a href="/wakacje-z-dziecmi/">Wakacje z dziećmi</a></li><li><a href="/podroz-poslubna/">Podróż poślubna</a></li></ul></div>
 <div><p class="tytul">Przydatne</p><ul><li><a href="/poradniki/">Poradniki</a></li><li><a href="/porownanie/">Porównania</a></li><li><a href="/tanie-loty/">Tanie loty</a></li><li><a href="/polityka-prywatnosci.html">Polityka prywatności</a></li><li><a href="/regulamin.html">Regulamin</a></li><li><a href="#zgoda" data-cookies="1">Ustawienia cookies</a></li></ul></div>
 </div>
-<p class="drobne">Dane odświeżamy co tydzień. Stan na 15 października 2026.</p>
+<p class="drobne">Dane odświeżamy co tydzień. Stan na 16 października 2026.</p>
 </footer>
 <div class="pasek"></div>
 <div class="plan-pasek" hidden><p>Plan podróży od 399 zł, propozycje w 48 h</p><a href="/nowy/start?miesiac=2026-11&amp;z=miesiac" data-goatcounter-click="plan-pasek-miesiac">Zamów</a></div>
