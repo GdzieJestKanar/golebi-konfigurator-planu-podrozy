@@ -15,6 +15,7 @@
 <meta property="og:image" content="https://golebielataja.pl/img/k/las-vegas-1bme0l1-og.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/svg+xml" href="/img/golab-sygnet.svg">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
 <link rel="preload" href="/fonty/nunito-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonty/young-serif-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <style>@font-face{font-family:"Nunito zapas";src:local("Arial"),local("Helvetica"),local("Liberation Sans");size-adjust:96.3%;ascent-override:105%;descent-override:36.7%;line-gap-override:0%}
@@ -68,6 +69,7 @@ section.tlo{background:var(--niebo);border-radius:20px;padding:24px 26px}section
 @media(max-width:640px){.hero{grid-template-columns:1fr auto;gap:4px 14px}.hero h1{font-size:clamp(2rem,9vw,2.4rem)}.hero .stempel{grid-column:2;grid-row:1;width:96px;height:96px;margin:14px 0 0;border-width:4px}.hero .lead{grid-column:1 / -1}.stempel b{font-size:1.65rem}.stempel span{font-size:.56rem}}
 .podpis{font-size:.92rem;color:var(--ink-soft);margin:-4px 0 18px}
 dl.liczby,dl.list-przewozowy{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin:0;background:var(--white);border:1.5px solid var(--ink);border-radius:6px;box-shadow:3px 3px 0 var(--ink);overflow:hidden}
+dl.szczegoly-auta{margin:8px 0 0}dl.szczegoly-auta dt{font-weight:800;color:var(--ink);margin-top:14px}dl.szczegoly-auta dd{margin:4px 0 0}
 dl.liczby div{padding:12px 16px;border-right:1px dashed var(--line);border-bottom:1px dashed var(--line);margin:0 -1px -1px 0}
 dl.liczby dt{font-family:var(--mono);font-size:.76rem;color:var(--ink-soft);letter-spacing:.02em}
 dl.liczby dd{margin:2px 0 0;font-family:var(--serif);font-size:1.75rem;line-height:1.15;color:var(--navy)}
@@ -95,7 +97,7 @@ ul.lista-rzeczy li::before{content:"";position:absolute;left:0;top:.3em;width:16
 @media(max-width:640px){ul.lista-rzeczy{columns:1}}
 .pocztowka{background:var(--white);border:1.5px solid var(--ink);border-radius:6px;box-shadow:3px 3px 0 var(--ink);padding:18px 22px 16px;margin:18px 0;max-width:62ch;transform:rotate(-.6deg);position:relative}
 .pocztowka::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;background:repeating-linear-gradient(135deg,var(--red) 0 10px,var(--white) 10px 16px,var(--navy) 16px 26px,var(--white) 26px 32px);border-radius:5px 5px 0 0}
-.pocztowka p,.reka{font-family:var(--hand);font-size:1.55rem;line-height:1.25;font-weight:500;margin:.25em 0}
+.pocztowka p,.reka{font-family:var(--hand);font-size:1.62rem;line-height:1.25;font-weight:600;margin:.25em 0}
 .pocztowka small{display:block;font-family:var(--sans);font-size:.85rem;color:var(--ink-soft);margin-top:6px}
 table{border-collapse:collapse;width:100%;font-size:.98rem;font-variant-numeric:tabular-nums lining-nums}
 th,td{padding:8px 10px;text-align:left;border-bottom:1px solid var(--line)}thead th{font-weight:800;font-size:.88rem;color:var(--ink-soft);border-bottom:2px solid var(--ink)}tbody th{font-weight:700;color:var(--ink)}
@@ -132,7 +134,7 @@ details p{margin:.5em 0 0}
 p.podpowiedz{grid-column:1 / -1;margin:6px 0 0;padding:10px 14px;background:var(--niebo);border-radius:12px;max-width:62ch}
 figure.foto{margin:18px 0 8px}figure.foto img{width:100%;height:auto;max-height:520px;object-fit:cover;border-radius:20px;display:block;background:var(--paper-deep)}
 figure.foto figcaption{font-size:.8rem;color:var(--ink-soft);margin-top:6px}
-blockquote.opinia{margin:16px 0;padding:0;max-width:60ch}blockquote.opinia p{font-family:var(--hand);font-size:1.5rem;line-height:1.25;margin:0 0 4px}
+blockquote.opinia{margin:16px 0;padding:0 0 0 16px;max-width:60ch;border-left:3px solid var(--red)}blockquote.opinia p{font-family:var(--sans);font-size:1.06rem;line-height:1.6;font-weight:600;font-style:italic;margin:0 0 4px}blockquote.opinia p::before{content:"„"}blockquote.opinia p::after{content:"”"}
 blockquote.opinia small{font-size:.88rem}.cta blockquote.opinia small{color:#DCE3EE}
 ul.wskazowki{list-style:none;padding:0;max-width:var(--tekst)}ul.wskazowki li{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:14px 18px;margin:0 0 12px}
 ul.wskazowki strong{display:block;font-family:var(--serif);font-weight:400;font-size:1.16rem}ul.wskazowki p{margin:4px 0 6px}
@@ -161,13 +163,15 @@ a.cena-lot{color:var(--navy);text-decoration-thickness:1.5px}a.cena-lot::after{c
 .autor-pasek{display:flex;align-items:center;gap:10px;margin:6px 0 0;font-size:.92rem;color:var(--ink-soft)}.autor-pasek img{width:40px;height:40px;border-radius:50%;object-fit:cover;flex:none}
 section.pocztowka{margin:40px auto 0;max-width:820px;padding:22px 24px;background:var(--navy-soft);border-radius:16px;border-top:0}
 section.pocztowka h2{margin-top:0}
+/* 17.10.2026: tekst zapisu na Pocztówkę zwykłym krojem, bo odręczny przy dłuższym zdaniu i drobnym druku słabo się czyta. */
+section.pocztowka p{font-family:var(--sans);font-size:1.05rem;line-height:1.55;font-weight:600}section.pocztowka p.drobne{font-size:.88rem;font-weight:500;color:var(--ink-soft)}
 .pocztowka-form{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 8px}
 .pocztowka-form input[type=email]{flex:1 1 240px;min-height:46px;padding:10px 14px;border:1.5px solid var(--line);border-radius:12px;font:inherit;background:var(--white)}
 .pocztowka-form button{min-height:46px;padding:10px 20px;border:0;border-radius:999px;background:var(--red);color:#fff;font:inherit;font-weight:800;cursor:pointer}
 .pocztowka-form .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 @media print{.pasek,nav.spis,.partnerzy,.cta,aside.plan,.plan-pasek,section.pocztowka,.gl-zgoda,a[download],nav.gora .linki,.plan-nav,.okruszki{display:none}}</style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Las Vegas i parki narodowe w lipcu: pogoda, temperatura i czy warto","description":"Las Vegas i parki narodowe w lipcu: 41°C w dzień, 26°C w nocy, 5 dni z opadem. Ocena gołębi 3/5 i co spakować.","inLanguage":"pl","dateModified":"2026-10-16","about":{"@type":"TouristDestination","name":"Las Vegas i parki narodowe","geo":{"@type":"GeoCoordinates","latitude":36.17,"longitude":-115.14},"containedInPlace":{"@type":"Country","name":"Stany Zjednoczone"}},"author":[{"@type":"Person","name":"Michał Gołąb","url":"https://golebielataja.pl/o-nas/","image":"https://golebielataja.pl/img/razem.jpg"},{"@type":"Person","name":"Paulina","url":"https://golebielataja.pl/o-nas/","image":"https://golebielataja.pl/img/razem.jpg"}],"publisher":{"@id":"https://golebielataja.pl/#organization","@type":"Organization","name":"Gołębie Latają"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Las Vegas i parki narodowe w lipcu: pogoda, temperatura i czy warto","description":"Las Vegas i parki narodowe w lipcu: 41°C w dzień, 26°C w nocy, 5 dni z opadem. Ocena gołębi 3/5 i co spakować.","inLanguage":"pl","dateModified":"2026-10-17","about":{"@type":"TouristDestination","name":"Las Vegas i parki narodowe","geo":{"@type":"GeoCoordinates","latitude":36.17,"longitude":-115.14},"containedInPlace":{"@type":"Country","name":"Stany Zjednoczone"}},"author":[{"@type":"Person","name":"Michał Gołąb","url":"https://golebielataja.pl/o-nas/","image":"https://golebielataja.pl/img/razem.jpg"},{"@type":"Person","name":"Paulina","url":"https://golebielataja.pl/o-nas/","image":"https://golebielataja.pl/img/razem.jpg"}],"publisher":{"@id":"https://golebielataja.pl/#organization","@type":"Organization","name":"Gołębie Latają"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Czy Las Vegas i parki narodowe w lipcu to dobry pomysł?","acceptedAnswer":{"@type":"Answer","text":"Jeśli możesz wybrać inny miesiąc, wybierz. W lipcu pogoda tu nie rozpieszcza. Najlepsze miesiące tutaj: styczeń, luty, marzec, kwiecień, maj, październik, listopad, grudzień. Masz elastyczny termin? Przesuń wyjazd."}},{"@type":"Question","name":"Las Vegas i parki narodowe w lipcu: czy dużo pada?","acceptedAnswer":{"@type":"Answer","text":"Średnio 5 dni z opadem i około 16 mm deszczu w całym miesiącu."}},{"@type":"Question","name":"Las Vegas i parki narodowe w lipcu: jaka pogoda?","acceptedAnswer":{"@type":"Answer","text":"Średnio 41°C w dzień i 26°C w nocy, 5 dni z opadem."}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Gołębie Latają","item":"https://golebielataja.pl/"},{"@type":"ListItem","position":2,"name":"Kierunki","item":"https://golebielataja.pl/kierunki/"},{"@type":"ListItem","position":3,"name":"Las Vegas i parki narodowe","item":"https://golebielataja.pl/kierunki/las-vegas/"},{"@type":"ListItem","position":4,"name":"Lipiec","item":"https://golebielataja.pl/kierunki/las-vegas/lipiec/"}]}</script>
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "dabf88d8ecff46b9af7a1518edc3f5ee"}'></script>
@@ -179,7 +183,7 @@ section.pocztowka h2{margin-top:0}
 <header>
 <nav class="gora" aria-label="Menu">
 <a class="logo" href="/">Gołębie Latają</a>
-<a class="plan-nav" href="/nowy/start?z=nav" data-goatcounter-click="plan-nav-miesiac">Plan w 48 h</a>
+<a class="plan-nav" href="/nowy/start?z=nav" data-goatcounter-click="plan-nav-miesiac">Zamów plan</a>
 <span class="linki">
 <a href="/kierunki/">Kierunki</a>
 <a href="/gdzie-leciec/lipiec/">Gdzie lecieć</a>
@@ -196,7 +200,7 @@ section.pocztowka h2{margin-top:0}
 <h1>Las Vegas i parki narodowe w lipcu</h1>
 <div class="stempel" role="img" aria-label="Ocena gołębi na lipiec: 3 na 5"><span>lipiec</span><b>3/5</b><span>ocena gołębi</span></div>
 <p class="lead">Jeśli możesz wybrać inny miesiąc, wybierz. W lipcu pogoda tu nie rozpieszcza. W dzień 41°C. Między 12 a 16 na zewnątrz da się wytrzymać głównie w wodzie.</p>
-<p class="podpowiedz">Lepszy termin: <a href="/kierunki/las-vegas/pazdziernik/">Las Vegas i parki narodowe w październiku</a>. Jeśli termin jest sztywny, w lipcu lepiej wypadają: <a href="/kierunki/kalifornia/lipiec/">Kalifornia</a>, <a href="/kierunki/toskania/lipiec/">Toskania</a>, <a href="/kierunki/cusco/lipiec/">Cusco i Machu Picchu</a>.</p>
+<p class="podpowiedz">Lepszy termin: <a href="/kierunki/las-vegas/pazdziernik/">Las Vegas i parki narodowe w październiku</a>. Jeśli termin jest sztywny, w lipcu lepiej wypadają: <a href="/kierunki/kalifornia/lipiec/">Kalifornia</a>, <a href="/kierunki/toskania/lipiec/">Toskania</a>, <a href="/kierunki/bali/lipiec/">Bali</a>.</p>
 </div>
 <p class="autor-pasek"><img src="/img/razem.jpg" alt="" width="40" height="40" loading="lazy" decoding="async">Przygotowali <a href="/o-nas/">Michał i Paulina</a>, którzy sprawdzili na miejscu 35 krajów.</p>
 <aside class="plan" aria-label="Plan podróży od gołębi">
@@ -252,10 +256,10 @@ section.pocztowka h2{margin-top:0}
 <ul class="siatka">
 <li><a href="/kierunki/kalifornia/lipiec/"><strong>Kalifornia</strong><span>30°C, ocena 4/5</span></a></li>
 <li><a href="/kierunki/toskania/lipiec/"><strong>Toskania</strong><span>30°C, ocena 4/5</span></a></li>
+<li><a href="/kierunki/bali/lipiec/"><strong>Bali</strong><span>27°C, woda 27°C, ocena 4/5</span></a></li>
 <li><a href="/kierunki/cusco/lipiec/"><strong>Cusco i Machu Picchu</strong><span>15°C, ocena 4/5</span></a></li>
 <li><a href="/kierunki/teneryfa/lipiec/"><strong>Teneryfa</strong><span>26°C, woda 24°C, ocena 5/5</span></a></li>
 <li><a href="/kierunki/gran-canaria/lipiec/"><strong>Gran Canaria</strong><span>28°C, woda 23°C, ocena 5/5</span></a></li>
-<li><a href="/kierunki/madera/lipiec/"><strong>Madera</strong><span>26°C, ocena 5/5</span></a></li>
 </ul>
 </section>
 <section id="pogoda">
@@ -328,10 +332,10 @@ section.pocztowka h2{margin-top:0}
 <details><summary>Las Vegas i parki narodowe w lipcu: jaka pogoda?</summary><p>Średnio 41°C w dzień i 26°C w nocy, 5 dni z opadem.</p></details>
 </section>
 <section id="plan" class="cta">
-<h2>Plan od gołębi w 48 godzin</h2>
+<h2>Plan od gołębi, propozycje w 48 godzin</h2>
 <p>Ty mówisz, dokąd i za ile. My szukamy, porównujemy i piszemy plan, z którego od razu skorzystasz.</p>
 <p class="cena">Od 399 zł za cały plan. Płacisz dopiero na końcu zamówienia.</p>
-<p class="drobne">BLIK, karta albo Klarna. Zwrot 100%, jeśli nie trafimy. Pierwsze propozycje w 48 h, pełny plan zaraz po Twoim wyborze.</p>
+<p class="drobne">BLIK, karta albo Klarna. Zwrot 100%, jeśli nie trafimy. Propozycje z lotami i hotelami w 48 h. Pełny plan dzień po dniu w 5 dni roboczych od rezerwacji.</p>
 <p><a class="przycisk" href="/nowy/start?kierunek=las-vegas&amp;miesiac=2027-07&amp;z=miesiac" data-goatcounter-click="plan-koniec-miesiac">Zamów plan: Las Vegas i parki narodowe</a></p>
 <p><a href="/przyklad-plan.pdf" data-goatcounter-click="plan-pdf-miesiac">Zobacz przykładowy plan (PDF)</a></p>
 <blockquote class="opinia"><p>Zaplanowali dla nas dwutygodniową podróż do Japonii, która była jednocześnie naszą podróżą poślubną. Rada dotycząca wysyłania bagaży z hotelu do hotelu: absolutny strzał w dziesiątkę!</p><small>Alicja i Łukasz, podróż poślubna w Japonii</small></blockquote>
@@ -353,11 +357,11 @@ section.pocztowka h2{margin-top:0}
 <script src="/poczta.js" defer></script>
 <footer>
 <div class="stopka">
-<div class="o"><p class="tytul">Gołębie Latają</p><p>Gołębie Latają układają plany podróży. Ty mówisz, czego chcesz, my szukamy, liczymy i piszemy. Plan w 48 godzin.</p><p><a href="mailto:lecimy@golebielataja.pl">lecimy@golebielataja.pl</a></p><p>RF Michał Gołąb, NIP 5213757913, Warszawa</p></div>
-<div><p class="tytul">Kiedy wolne</p><ul><li><a href="/majowka/">Majówka</a></li><li><a href="/boze-cialo/">Boże Ciało</a></li><li><a href="/ferie-zimowe/">Ferie zimowe</a></li><li><a href="/sylwester-za-granica/">Sylwester za granicą</a></li><li><a href="/swieta-w-cieple/">Święta w cieple</a></li><li><a href="/wakacje-z-dziecmi/">Wakacje z dziećmi</a></li><li><a href="/podroz-poslubna/">Podróż poślubna</a></li></ul></div>
-<div><p class="tytul">Przydatne</p><ul><li><a href="/poradniki/">Poradniki</a></li><li><a href="/porownanie/">Porównania</a></li><li><a href="/tanie-loty/">Tanie loty</a></li><li><a href="/polityka-prywatnosci.html">Polityka prywatności</a></li><li><a href="/regulamin.html">Regulamin</a></li><li><a href="#zgoda" data-cookies="1">Ustawienia cookies</a></li></ul></div>
+<div class="o"><p class="tytul">Gołębie Latają</p><p>Gołębie Latają układają plany podróży. Ty mówisz, czego chcesz, my szukamy, liczymy i piszemy. Propozycje w 48 godzin.</p><p><a href="mailto:lecimy@golebielataja.pl">lecimy@golebielataja.pl</a></p><p>RF Michał Gołąb, NIP 5213757913, Warszawa</p></div>
+<div><p class="tytul">Kiedy wolne</p><ul><li><a href="/majowka/">Majówka</a></li><li><a href="/wielkanoc/">Wielkanoc za granicą</a></li><li><a href="/boze-cialo/">Boże Ciało</a></li><li><a href="/ferie-zimowe/">Ferie zimowe</a></li><li><a href="/sylwester-za-granica/">Sylwester za granicą</a></li><li><a href="/swieta-w-cieple/">Święta w cieple</a></li><li><a href="/wakacje-z-dziecmi/">Wakacje z dziećmi</a></li><li><a href="/podroz-poslubna/">Podróż poślubna</a></li></ul></div>
+<div><p class="tytul">Przydatne</p><ul><li><a href="/poradniki/">Poradniki</a></li><li><a href="/porownanie/">Porównania</a></li><li><a href="/tanie-loty/">Tanie loty</a></li><li><a href="/okazje/">Okazje</a></li><li><a href="/prezent/">Voucher na podróż</a></li><li><a href="/polityka-prywatnosci.html">Polityka prywatności</a></li><li><a href="/regulamin.html">Regulamin</a></li><li><a href="#zgoda" data-cookies="1">Ustawienia cookies</a></li></ul></div>
 </div>
-<p class="drobne">Dane odświeżamy co tydzień. Stan na 16 października 2026.</p>
+<p class="drobne">Strony odświeżamy codziennie, a ceny lotów same przy każdym wejściu. Stan na 17 października 2026.</p>
 </footer>
 <div class="pasek"></div>
 <div class="plan-pasek" hidden><p>Plan podróży od 399 zł, propozycje w 48 h</p><a href="/nowy/start?kierunek=las-vegas&amp;miesiac=2027-07&amp;z=miesiac" data-goatcounter-click="plan-pasek-miesiac">Zamów</a></div>

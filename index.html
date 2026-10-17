@@ -1,133 +1,383 @@
 <!DOCTYPE html>
 <html lang="pl">
-  <head>
-    <meta charset="utf-8" />
-    <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    
-    <!-- The `react-native-web` recommended style reset: https://necolas.github.io/react-native-web/docs/setup/#root-element -->
-    <style id="expo-reset">
-      /* These styles make the body full-height */
-      html,
-      body {
-        height: 100%;
-      }
-      /* These styles disable body scrolling if you are using <ScrollView> */
-      body {
-        overflow: hidden;
-      }
-      /* These styles make the root element full-height */
-      #root {
-        display: flex;
-        height: 100%;
-        flex: 1;
-      }
-    </style>
-  <meta name="theme-color" content="#F6F0E2">
-<link rel="icon" href="/favicon.ico"/><title>Gołębie Latają. Plan podróży na zamówienie</title>
-<meta name="description" content="Nie kolejne biuro podróży. Wyślij gołębia, a w 48h dostaniesz propozycje z lotami i hotelami, potem pełny plan. Kierunki, pogoda, loty i noclegi w jednej aplikacji.">
-<meta property="og:title" content="Gołębie Latają. Plan podróży na zamówienie">
-<meta property="og:description" content="Ty mówisz, czego chcesz. My układamy wyjazd dopięty na ostatni guzik. Propozycje w 48h.">
-<meta property="og:image" content="https://golebielataja.pl/img/razem.jpg">
-<meta property="og:url" content="https://golebielataja.pl/">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plan podróży na zamówienie | Gołębie Latają</title>
+<meta name="description" content="Opowiedz w dwie minuty, jak chcesz wypocząć, a Michał i Paulina ułożą Ci plan podróży: kierunki, loty, noclegi i dni krok po kroku.">
 <link rel="canonical" href="https://golebielataja.pl/">
+<meta property="og:title" content="Plan podróży na zamówienie | Gołębie Latają">
+<meta property="og:description" content="Opowiedz w dwie minuty, jak chcesz wypocząć, a Michał i Paulina ułożą Ci plan podróży: kierunki, loty, noclegi i dni krok po kroku.">
+<meta property="og:url" content="https://golebielataja.pl/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pl_PL">
+<meta property="og:site_name" content="Gołębie Latają">
+<meta property="og:image" content="https://golebielataja.pl/img/razem.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/svg+xml" href="/img/golab-sygnet.svg">
 <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
-<script src="/zgoda.js" defer></script>
-<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "dabf88d8ecff46b9af7a1518edc3f5ee"}'></script>
-<script data-goatcounter="https://golebielataja.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://golebielataja.pl/#organization","name":"Gołębie Latają","url":"https://golebielataja.pl","logo":{"@type":"ImageObject","url":"https://golebielataja.pl/img/icon-512.png"},"description":"Spersonalizowane plany podróży: propozycje z lotami i hotelami w 48 godzin, pełny plan po rezerwacji. Nie biuro podróży, tylko indywidualny plan szyty na miarę: loty, hotele, restauracje, atrakcje i słowniczek lokalnej kuchni.","email":"lecimy@golebielataja.pl","areaServed":{"@type":"Country","name":"Polska"},"sameAs":["https://www.instagram.com/golebie.lataja/","https://www.tiktok.com/@golebielataja1","https://www.facebook.com/golebie.lataja","https://www.youtube.com/@GolebieLataja"]},{"@type":"WebSite","@id":"https://golebielataja.pl/#website","url":"https://golebielataja.pl","name":"Gołębie Latają","publisher":{"@id":"https://golebielataja.pl/#organization"}}]}
-</script>
-</head>
-
-  <body>
-    <!-- Use static rendering with Expo Router to support running without JavaScript. -->
-    <noscript>
-      You need to enable JavaScript to run this app.
-    </noscript>
-    <!-- The root element for your Expo app. -->
-    <div id="root"><!-- N3 (plan naprawczy): treść strony głównej w HTML. wstaw-glowna.mjs wkłada ją do <div id="root">: robot i pierwszy
-     rzut oka widzą stronę, a appka po załadowaniu podmienia zawartość root. Teksty ze starej strony głównej. -->
-<div class="gl-start" style="height:100%;overflow:auto;background:#F7F1E4;color:#2A2C31;font:500 18px/1.65 Nunito,'Segoe UI',system-ui,sans-serif">
-<style>
-@font-face{font-family:"Young Serif";font-weight:400;font-display:swap;src:url(/fonty/young-serif-latin-400-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+2000-206F}
-@font-face{font-family:"Young Serif";font-weight:400;font-display:swap;src:url(/fonty/young-serif-latin-ext-400-normal.woff2) format("woff2");unicode-range:U+0100-02BA,U+1E00-1E9F}
-@font-face{font-family:"Nunito";font-weight:200 1000;font-display:swap;src:url(/fonty/nunito-latin-wght-normal.woff2) format("woff2-variations");unicode-range:U+0000-00FF,U+2000-206F}
-@font-face{font-family:"Nunito";font-weight:200 1000;font-display:swap;src:url(/fonty/nunito-latin-ext-wght-normal.woff2) format("woff2-variations");unicode-range:U+0100-02BA,U+1E00-1E9F}
-@font-face{font-family:"Caveat";font-weight:400 700;font-display:swap;src:url(/fonty/caveat-latin-wght-normal.woff2) format("woff2-variations");unicode-range:U+0000-00FF,U+2000-206F}
-@font-face{font-family:"Caveat";font-weight:400 700;font-display:swap;src:url(/fonty/caveat-latin-ext-wght-normal.woff2) format("woff2-variations");unicode-range:U+0100-02BA,U+1E00-1E9F}
-.gl-start a{color:#1F3B6E;text-underline-offset:.18em}.gl-start .w{max-width:1000px;margin:0 auto;padding:14px 20px 28px}
-.gl-start h1,.gl-start h2,.gl-start h3{font-family:"Young Serif",Georgia,serif;font-weight:400;color:#2A2C31;line-height:1.12;text-wrap:balance}
-.gl-start h1{font-size:clamp(2.3rem,6vw,3.6rem);color:#1F3B6E;margin:.45em 0 .35em}.gl-start h2{font-size:clamp(1.5rem,3vw,1.9rem);margin:0 0 .5em}.gl-start h3{font-size:1.2rem;margin:0 0 .3em}
-.gl-start p,.gl-start ol{max-width:66ch}
-.gl-start nav{display:flex;flex-wrap:wrap;gap:4px 18px;align-items:baseline}.gl-start nav a{text-decoration:none;font-weight:700;font-size:.95rem;color:#2A2C31}
-.gl-start nav .logo{font-family:"Young Serif",Georgia,serif;font-weight:400;font-size:1.45rem;color:#1F3B6E;margin-right:auto}
-.gl-start section{margin:40px 0}.gl-start section>h2{padding-top:16px;border-top:2px solid #2A2C31}
-.gl-start .cta{display:inline-block;background:#D0402A;color:#FFFDF8;padding:12px 22px;border-radius:16px;text-decoration:none;font-weight:800;margin:4px 10px 4px 0}
-.gl-start ol li{margin:0 0 6px}
-.gl-start .pakiety{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}.gl-start .pakiety div{background:#FFFDF8;border:1px solid #DDD5C4;border-radius:20px;padding:18px 20px}
-.gl-start .cena{font-family:"Young Serif",Georgia,serif;font-size:1.9rem;color:#1F3B6E;margin:0 0 .3em}
-.gl-start blockquote{margin:14px 0;max-width:60ch}.gl-start blockquote p{font-family:Caveat,'Segoe Print',cursive;font-size:1.5rem;line-height:1.25;margin:0 0 4px}
-.gl-start ul.siatka{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;list-style:none;padding:0}
-.gl-start ul.siatka a{display:block;background:#FFFDF8;border:1px solid #DDD5C4;border-radius:14px;padding:12px 14px;text-decoration:none;color:#2A2C31}.gl-start ul.siatka strong{font-family:"Young Serif",Georgia,serif;font-weight:400;color:#1F3B6E;font-size:1.12rem}
-.gl-start small{color:#5E626A;font-size:.88rem}.gl-start footer{border-top:2px solid #2A2C31;padding-top:16px}.gl-start footer ul{display:flex;flex-wrap:wrap;gap:6px 20px;list-style:none;padding:0;margin:0}
+<link rel="preload" href="/fonty/nunito-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonty/young-serif-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>@font-face{font-family:"Nunito zapas";src:local("Arial"),local("Helvetica"),local("Liberation Sans");size-adjust:96.3%;ascent-override:105%;descent-override:36.7%;line-gap-override:0%}
+@font-face{font-family:"Young Serif";font-style:normal;font-weight:400;font-display:swap;src:url(/fonty/young-serif-latin-400-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Young Serif";font-style:normal;font-weight:400;font-display:swap;src:url(/fonty/young-serif-latin-ext-400-normal.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Nunito";font-style:normal;font-weight:200 1000;font-display:swap;src:url(/fonty/nunito-latin-wght-normal.woff2) format("woff2-variations");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Nunito";font-style:normal;font-weight:200 1000;font-display:swap;src:url(/fonty/nunito-latin-ext-wght-normal.woff2) format("woff2-variations");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Caveat";font-style:normal;font-weight:400 700;font-display:swap;src:url(/fonty/caveat-latin-wght-normal.woff2) format("woff2-variations");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Caveat";font-style:normal;font-weight:400 700;font-display:swap;src:url(/fonty/caveat-latin-ext-wght-normal.woff2) format("woff2-variations");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"IBM Plex Mono";font-style:normal;font-weight:500;font-display:swap;src:url(/fonty/ibm-plex-mono-latin-500-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"IBM Plex Mono";font-style:normal;font-weight:500;font-display:swap;src:url(/fonty/ibm-plex-mono-latin-ext-500-normal.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+:root{--paper:#F7F1E4;--paper-deep:#EFE6D1;--cream:#FBF6EA;--white:#FFFDF8;--ink:#2A2C31;--ink-soft:#5E626A;--line:#DDD5C4;--red:#D0402A;--navy:#1F3B6E;--navy-soft:#E6ECF5;--niebo:#DCEAF3;--zielen:#276A4D;--zielen-soft:#E3F1EA;--muted:#5E626A;
+--serif:"Young Serif",Georgia,"Times New Roman",serif;--sans:Nunito,"Nunito zapas","Segoe UI",system-ui,-apple-system,sans-serif;--hand:Caveat,"Segoe Print","Bradley Hand",cursive;--mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;--tekst:66ch}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--sans);font-weight:500;font-size:1.125rem;line-height:1.65;color:var(--ink);background:var(--paper);font-variant-numeric:lining-nums}
+a{color:var(--navy);text-decoration-thickness:1px;text-underline-offset:.18em}a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:2px solid var(--navy);outline-offset:2px;border-radius:4px}
+.pasek{height:8px;background:repeating-linear-gradient(135deg,var(--red) 0 14px,var(--white) 14px 22px,var(--navy) 22px 36px,var(--white) 36px 44px)}
+header,main,footer{max-width:1080px;margin:0 auto;padding:0 20px}
+header{padding-top:14px}
+nav.gora{display:flex;flex-wrap:wrap;gap:2px 18px;align-items:baseline}nav.gora .linki{display:flex;flex-wrap:wrap;gap:2px 18px}
+@media(max-width:640px){nav.gora .linki{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;width:100%;gap:18px;margin:0 -16px;padding:0 16px;mask-image:linear-gradient(90deg,#000 85%,transparent)}nav.gora .linki a{white-space:nowrap}}
+nav.gora a{text-decoration:none;font-weight:700;font-size:.95rem;color:var(--ink);padding:6px 0}nav.gora a:hover{color:var(--navy);text-decoration:underline}
+nav.gora a.logo{font-family:var(--serif);font-weight:400;font-size:1.45rem;color:var(--navy);margin-right:auto;letter-spacing:-.01em}
+nav.gora a.logo::before{content:"";display:inline-block;width:12px;height:12px;margin-right:8px;border-radius:50%;background:var(--red);vertical-align:.08em}
+.okruszki{font-size:.88rem;color:var(--ink-soft);margin:10px 0 0}.okruszki a{color:var(--ink-soft)}
+main{padding-top:8px;padding-bottom:24px}
+main>p,main>ul,main>ol,section>p,section>ul,section>ol,section>h2,section>h3,section>details,.wezsze{max-width:var(--tekst)}
+h1,h2,h3{font-family:var(--serif);font-weight:400;color:var(--ink);line-height:1.15;letter-spacing:-.01em;text-wrap:balance}
+h1{font-size:clamp(2.3rem,6vw,3.6rem);line-height:1.04;margin:.35em 0 .3em;color:var(--navy)}
+h2{font-size:clamp(1.55rem,3.2vw,1.95rem);margin:0 0 .55em}
+h3{font-size:1.28rem;margin:1.3em 0 .4em}
+p{margin:0 0 .9em}ul,ol{padding-left:1.25em;margin:0 0 1em}li{margin:.2em 0}li::marker{color:var(--navy)}
+strong{font-weight:800}
+.lead{font-size:clamp(1.18rem,2.2vw,1.32rem);line-height:1.55;font-weight:600;color:var(--ink);max-width:62ch}
+section{margin:44px 0;padding:0}
+section>h2{padding-top:18px;border-top:2px solid var(--ink)}
+section.karta,section.cta,section.druk{padding:24px 26px;border-radius:20px}
+section.karta{background:var(--white);border:1px solid var(--line)}section.karta>h2,section.cta>h2,section.druk>h2{border-top:0;padding-top:0}
+section.druk{background:var(--white);border:1.5px solid var(--ink);border-radius:6px;box-shadow:3px 3px 0 var(--ink)}
+section.tlo{background:var(--niebo);border-radius:20px;padding:24px 26px}section.tlo>h2{border-top:0;padding-top:0}
+.cta{background:var(--navy);color:var(--white)}.cta h2{color:var(--white)}.cta a{color:var(--white)}
+.cta a.przycisk{color:var(--white)}.cta a.przycisk.jasny{color:var(--navy)}
+.hero{display:grid;grid-template-columns:1fr auto;gap:8px 28px;align-items:start}
+.hero.bez-stempla{grid-template-columns:1fr}dl.liczby.skrot{margin:6px 0 10px}dl.liczby.skrot dd{font-size:1.3rem}
+.hero h1{grid-column:1}.hero .stempel{grid-column:2;grid-row:1 / span 2;margin-top:22px}.hero .lead{grid-column:1}
+.stempel{display:inline-grid;place-items:center;align-content:center;width:132px;height:132px;border-radius:50%;border:5px double var(--red);color:var(--red);transform:rotate(-9deg);text-align:center;line-height:1.05;flex:none;background:transparent}
+.stempel b{display:block;font-family:var(--serif);font-weight:400;font-size:2.4rem;letter-spacing:-.02em}
+.stempel span{display:block;font-family:var(--mono);font-size:.7rem;letter-spacing:.02em}
+.stempel.slaby{color:var(--ink-soft);border-color:var(--ink-soft)}
+@media(max-width:640px){.hero{grid-template-columns:1fr auto;gap:4px 14px}.hero h1{font-size:clamp(2rem,9vw,2.4rem)}.hero .stempel{grid-column:2;grid-row:1;width:96px;height:96px;margin:14px 0 0;border-width:4px}.hero .lead{grid-column:1 / -1}.stempel b{font-size:1.65rem}.stempel span{font-size:.56rem}}
+.podpis{font-size:.92rem;color:var(--ink-soft);margin:-4px 0 18px}
+dl.liczby,dl.list-przewozowy{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin:0;background:var(--white);border:1.5px solid var(--ink);border-radius:6px;box-shadow:3px 3px 0 var(--ink);overflow:hidden}
+dl.szczegoly-auta{margin:8px 0 0}dl.szczegoly-auta dt{font-weight:800;color:var(--ink);margin-top:14px}dl.szczegoly-auta dd{margin:4px 0 0}
+dl.liczby div{padding:12px 16px;border-right:1px dashed var(--line);border-bottom:1px dashed var(--line);margin:0 -1px -1px 0}
+dl.liczby dt{font-family:var(--mono);font-size:.76rem;color:var(--ink-soft);letter-spacing:.02em}
+dl.liczby dd{margin:2px 0 0;font-family:var(--serif);font-size:1.75rem;line-height:1.15;color:var(--navy)}
+section>dl.liczby{margin-bottom:18px}p+dl.liczby{margin-top:6px}
+.dalej{display:flex;flex-wrap:wrap;gap:8px 10px;margin:16px 0 0}.dalej a{display:inline-flex;align-items:center;min-height:42px;padding:8px 16px;border:1.5px solid var(--line);border-radius:999px;background:var(--white);text-decoration:none;font-weight:700;font-size:.95rem;color:var(--ink)}.dalej a:hover{border-color:var(--navy);color:var(--navy)}
+section.upal{background:#FBE4D8;border-radius:20px;padding:24px 26px}section.upal>h2{border-top:0;padding-top:0}
+ul.rady{padding-left:1.1em}ul.rady li{margin:0 0 8px;padding-left:4px}ul.rady li::marker{content:"☀ ";color:var(--red)}
+table.ceny{max-width:640px}table.ceny th[scope=row]{font-weight:700;color:var(--ink);font-size:1rem;border-bottom:1px solid var(--line)}table.ceny td strong{color:var(--navy);font-size:1.08rem}
+.kategorie{columns:2 300px;column-gap:40px;max-width:none;margin:8px 0 10px}.kat{break-inside:avoid;margin:0 0 22px}
+.kat h3{font-family:var(--sans);font-weight:800;font-size:1.02rem;color:var(--navy);margin:0 0 2px}
+ul.miejsca{list-style:none;padding:0;margin:0}ul.miejsca li{margin:0;padding:10px 0 12px;border-top:1px dashed var(--line)}
+ul.miejsca strong{display:block;font-family:var(--serif);font-weight:400;font-size:1.16rem;line-height:1.25;color:var(--ink)}
+ul.miejsca small{display:block;margin-top:1px}ul.miejsca p{margin:5px 0 0;max-width:none}
+.rok{display:grid;grid-template-columns:repeat(12,1fr);gap:6px;list-style:none;padding:0;margin:12px 0 6px}
+.rok li{margin:0}.rok a{display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 2px;border-radius:10px;text-decoration:none;color:var(--ink);font-size:.82rem;font-weight:700;line-height:1.2;min-height:44px}
+.rok a span{font-weight:500;font-size:.78rem}.rok a[aria-current]{outline:2.5px solid var(--navy);outline-offset:1px}
+@media(max-width:640px){.rok{grid-template-columns:repeat(6,1fr)}}
+.legenda{font-size:.85rem;color:var(--ink-soft);margin:0;max-width:none}
+.tabela-roku{margin:.75rem 0 0}.tabela-roku summary{cursor:pointer;font-weight:700;color:var(--navy);font-size:.95rem}.tabela-roku table{font-size:.9rem;width:100%}.tabela-roku th,.tabela-roku td{padding:.35rem .4rem;white-space:nowrap}
+.dwie{display:grid;grid-template-columns:1fr 1fr;gap:16px 28px}@media(max-width:700px){.dwie{grid-template-columns:1fr}}
+.dwie>div{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:16px 20px}.dwie h3{margin-top:0}
+ul.plusy li::marker{content:"+  ";color:var(--zielen);font-weight:800}ul.minusy li::marker{content:"−  ";color:var(--red);font-weight:800}
+ul.lista-rzeczy{list-style:none;padding:0;columns:2;column-gap:28px;max-width:none}ul.lista-rzeczy li{break-inside:avoid;padding-left:30px;position:relative;margin:0 0 8px}
+ul.lista-rzeczy li::before{content:"";position:absolute;left:0;top:.3em;width:16px;height:16px;border:2px solid var(--navy);border-radius:4px}
+@media(max-width:640px){ul.lista-rzeczy{columns:1}}
+.pocztowka{background:var(--white);border:1.5px solid var(--ink);border-radius:6px;box-shadow:3px 3px 0 var(--ink);padding:18px 22px 16px;margin:18px 0;max-width:62ch;transform:rotate(-.6deg);position:relative}
+.pocztowka::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;background:repeating-linear-gradient(135deg,var(--red) 0 10px,var(--white) 10px 16px,var(--navy) 16px 26px,var(--white) 26px 32px);border-radius:5px 5px 0 0}
+.pocztowka p,.reka{font-family:var(--hand);font-size:1.62rem;line-height:1.25;font-weight:600;margin:.25em 0}
+.pocztowka small{display:block;font-family:var(--sans);font-size:.85rem;color:var(--ink-soft);margin-top:6px}
+table{border-collapse:collapse;width:100%;font-size:.98rem;font-variant-numeric:tabular-nums lining-nums}
+th,td{padding:8px 10px;text-align:left;border-bottom:1px solid var(--line)}thead th{font-weight:800;font-size:.88rem;color:var(--ink-soft);border-bottom:2px solid var(--ink)}tbody th{font-weight:700;color:var(--ink)}
+tbody tr:nth-child(even){background:rgba(255,253,248,.7)}.przewin{overflow-x:auto;-webkit-overflow-scrolling:touch}
+table.mapa td,table.mapa th{text-align:center;padding:6px 3px;font-size:.84rem}table.mapa td:first-child,table.mapa th:first-child{text-align:left;white-space:nowrap}
+table.fakty th[scope=row]{width:34%;font-family:var(--mono);font-weight:500;font-size:.8rem;color:var(--ink-soft);border-bottom:1px dashed var(--line);vertical-align:top;padding-top:11px}table.fakty td{border-bottom:1px dashed var(--line)}
+.o1{background:#F3DED8}.o2{background:#F0E3CC}.o3{background:#E6E8C8}.o4{background:#C8E0C0}.o5{background:#9ACB98}
+.partnerzy{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0}
+a.partner{display:inline-flex;align-items:center;min-height:46px;border:1.5px solid var(--line);color:var(--ink);padding:10px 18px;border-radius:999px;text-decoration:none;font-weight:800;font-size:1rem;background:var(--white)}
+a.partner:hover{border-color:var(--navy);color:var(--navy)}
+a.partner.glowny{border-color:var(--navy);border-width:2px;color:var(--navy)}
+.polecamy{border-left:4px solid var(--navy);padding:4px 0 4px 16px;margin:18px 0;max-width:var(--tekst)}.polecamy h3{margin-top:.2em}
+.przycisk{display:inline-flex;align-items:center;min-height:48px;background:var(--red);color:var(--white);padding:12px 22px;border-radius:16px;text-decoration:none;font-weight:800;margin:6px 10px 6px 0}
+.przycisk.jasny{background:var(--white);color:var(--navy);box-shadow:inset 0 0 0 1.5px var(--navy)}
+ul.siatka{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;padding:0;list-style:none;margin:12px 0;max-width:none}
+ul.siatka li{margin:0}ul.siatka a{display:block;background:var(--white);border:1px solid var(--line);border-radius:14px;padding:12px 14px;text-decoration:none;height:100%;color:var(--ink)}
+ul.siatka a:hover{border-color:var(--navy)}ul.siatka strong{display:block;font-family:var(--serif);font-weight:400;font-size:1.12rem;color:var(--navy)}ul.siatka span{font-size:.88rem;color:var(--ink-soft)}
+small,.drobne{font-size:.88rem;color:var(--ink-soft)}.drobne{max-width:var(--tekst)}
+section[id]{scroll-margin-top:64px}
+nav.spis{position:sticky;top:0;z-index:5;background:var(--paper);margin:12px -20px 0;padding:10px 20px;border-bottom:1px solid var(--line)}nav.spis .spis-tytul{display:none}
+nav.spis ol{display:flex;gap:8px;list-style:none;margin:0;padding:0;overflow-x:auto;scrollbar-width:none}nav.spis li{margin:0}
+nav.spis a{display:block;white-space:nowrap;padding:6px 14px;border:1.5px solid var(--line);border-radius:999px;background:var(--white);text-decoration:none;font-size:.92rem;font-weight:700;color:var(--ink)}
+nav.spis a[aria-current]{background:var(--navy);border-color:var(--navy);color:var(--white)}
+@media(min-width:1400px){nav.spis{position:fixed;top:24px;left:calc(50% + 560px);width:200px;margin:0;padding:14px;border:0;border-radius:16px;background:var(--white)}
+nav.spis .spis-tytul{display:block;margin:0 0 6px 10px;font-weight:800;font-size:.85rem;color:var(--ink-soft)}
+nav.spis ol{flex-direction:column;gap:2px;overflow:visible}nav.spis a{border:0;border-radius:10px;background:none;font-weight:600;white-space:normal;padding:6px 10px}
+nav.spis a[aria-current]{background:var(--paper);color:var(--navy);font-weight:800}section[id]{scroll-margin-top:16px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+ul.kolumny{columns:2;column-gap:28px;padding-left:1.2em;max-width:none}@media(max-width:600px){ul.kolumny{columns:1}}
+details{margin:0;border-bottom:1px solid var(--line);padding:10px 0}details:first-of-type{border-top:1px solid var(--line)}
+summary{cursor:pointer;font-weight:800;list-style:none;padding-right:28px;position:relative}summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:4px;top:-2px;font-size:1.4rem;color:var(--navy);font-weight:500}details[open] summary::after{content:"−"}
+details p{margin:.5em 0 0}
+p.podpowiedz{grid-column:1 / -1;margin:6px 0 0;padding:10px 14px;background:var(--niebo);border-radius:12px;max-width:62ch}
+figure.foto{margin:18px 0 8px}figure.foto img{width:100%;height:auto;max-height:520px;object-fit:cover;border-radius:20px;display:block;background:var(--paper-deep)}
+figure.foto figcaption{font-size:.8rem;color:var(--ink-soft);margin-top:6px}
+blockquote.opinia{margin:16px 0;padding:0 0 0 16px;max-width:60ch;border-left:3px solid var(--red)}blockquote.opinia p{font-family:var(--sans);font-size:1.06rem;line-height:1.6;font-weight:600;font-style:italic;margin:0 0 4px}blockquote.opinia p::before{content:"„"}blockquote.opinia p::after{content:"”"}
+blockquote.opinia small{font-size:.88rem}.cta blockquote.opinia small{color:#DCE3EE}
+ul.wskazowki{list-style:none;padding:0;max-width:var(--tekst)}ul.wskazowki li{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:14px 18px;margin:0 0 12px}
+ul.wskazowki strong{display:block;font-family:var(--serif);font-weight:400;font-size:1.16rem}ul.wskazowki p{margin:4px 0 6px}
+.kat-wsk{display:inline-block;font-size:.8rem;font-weight:800;color:var(--navy);background:var(--navy-soft);border-radius:999px;padding:2px 10px;margin-bottom:6px}
+.sprawdzone{color:var(--zielen);font-weight:800;white-space:nowrap}.sprawdzone::before{content:"✓ "}
+.autorzy{margin-top:36px}
+footer{padding-top:22px;padding-bottom:24px;border-top:2px solid var(--ink);margin-top:12px}footer p{font-size:.9rem;color:var(--ink-soft);max-width:none}
+.stopka{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:18px 36px;margin-bottom:10px}@media(max-width:760px){.stopka{grid-template-columns:1fr 1fr}.stopka .o{grid-column:1 / -1}}
+.stopka .tytul{font-family:var(--serif);font-size:1.1rem;color:var(--ink);margin:0 0 6px}.stopka ul{list-style:none;padding:0;margin:0}.stopka li{margin:0 0 4px;font-size:.95rem}.stopka a{color:var(--ink)}
+@media(max-width:560px){body{font-size:1.06rem}header,main,footer{padding-left:16px;padding-right:16px}nav.spis{margin-left:-16px;margin-right:-16px;padding-left:16px;padding-right:16px}section.karta,section.cta,section.druk,section.tlo{padding:20px 18px}}
+nav.gora a.plan-nav{order:2;align-self:center;background:var(--red);color:var(--white);padding:5px 14px;border-radius:999px;font-weight:800;white-space:nowrap}nav.gora a.plan-nav:hover{color:var(--white);background:#B8361F;text-decoration:none}nav.gora .linki{order:1}
+@media(max-width:640px){nav.gora a.plan-nav{order:1}nav.gora .linki{order:2}}
+aside.plan{display:grid;grid-template-columns:1fr auto;gap:6px 22px;align-items:center;margin:20px 0 8px;padding:16px 20px;background:var(--white);border:1.5px solid var(--red);border-radius:16px;max-width:820px}
+aside.plan p{margin:0;max-width:60ch}aside.plan strong{display:block;font-family:var(--serif);font-weight:400;font-size:1.22rem;color:var(--ink);line-height:1.2;margin-bottom:2px}aside.plan .przycisk{margin:0;white-space:nowrap}
+@media(max-width:640px){aside.plan{grid-template-columns:1fr;padding:14px 16px}aside.plan .przycisk{justify-content:center}}
+.plan-pasek{position:fixed;left:0;right:0;bottom:0;z-index:20;display:flex;align-items:center;gap:12px;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:var(--white);border-top:1.5px solid var(--ink);box-shadow:0 -6px 18px -10px rgba(42,44,49,.35)}
+.plan-pasek[hidden]{display:none}.plan-pasek p{margin:0;flex:1;font-size:.95rem;font-weight:700;line-height:1.3}.plan-pasek a{flex:none;background:var(--red);color:var(--white);text-decoration:none;font-weight:800;border-radius:14px;padding:10px 18px;min-height:44px;display:inline-flex;align-items:center}
+@media(min-width:761px){.plan-pasek{display:none}}
+.cta .cena{font-family:var(--serif);font-size:1.3rem;margin:4px 0 2px}.cta .drobne,.cta small{color:#DCE3EE}.cta .czy-sam{margin-top:14px;padding-top:12px;border-top:1px solid rgba(255,253,248,.25)}.cta .czy-sam p{margin:0 0 4px}
+nav.spis a.plan{border-color:var(--red);color:var(--red)}
+.pakiety{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:14px 0}.pakiety>div{background:var(--white);color:var(--ink);border-radius:16px;padding:16px 20px}.pakiety h3{margin:0;color:var(--navy)}.pakiety .cena{font-family:var(--serif);font-size:1.7rem;color:var(--red);margin:2px 0 4px}.pakiety ul{font-size:.95rem;padding-left:1.1em;margin:6px 0 0}
+ul.terminy{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px;max-width:none}ul.terminy li{margin:0;background:var(--white);border:1px solid var(--line);border-radius:16px;padding:12px 14px}ul.terminy strong{font-family:var(--serif);font-weight:400;font-size:1.2rem}
+figure.mini{margin:0 0 8px}figure.mini img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;border-radius:10px;display:block;background:var(--paper-deep)}figure.mini figcaption{font-size:.72rem;color:var(--ink-soft);margin-top:3px}
+.cena-terminu{margin:6px 0 4px;font-weight:800;color:var(--navy)}ul.terminy .partnerzy{display:flex;flex-wrap:wrap;gap:6px}ul.terminy a.partner{min-height:40px;padding:6px 12px;font-size:.92rem}
+a.cena-lot{color:var(--navy);text-decoration-thickness:1.5px}a.cena-lot::after{content:" ↗";font-size:.85em}.sprawdzono{white-space:nowrap}.cena-zwykle{font-weight:700;color:var(--ink-soft)}
+.autor-pasek{display:flex;align-items:center;gap:10px;margin:6px 0 0;font-size:.92rem;color:var(--ink-soft)}.autor-pasek img{width:40px;height:40px;border-radius:50%;object-fit:cover;flex:none}
+section.pocztowka{margin:40px auto 0;max-width:820px;padding:22px 24px;background:var(--navy-soft);border-radius:16px;border-top:0}
+section.pocztowka h2{margin-top:0}
+/* 17.10.2026: tekst zapisu na Pocztówkę zwykłym krojem, bo odręczny przy dłuższym zdaniu i drobnym druku słabo się czyta. */
+section.pocztowka p{font-family:var(--sans);font-size:1.05rem;line-height:1.55;font-weight:600}section.pocztowka p.drobne{font-size:.88rem;font-weight:500;color:var(--ink-soft)}
+.pocztowka-form{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 8px}
+.pocztowka-form input[type=email]{flex:1 1 240px;min-height:46px;padding:10px 14px;border:1.5px solid var(--line);border-radius:12px;font:inherit;background:var(--white)}
+.pocztowka-form button{min-height:46px;padding:10px 20px;border:0;border-radius:999px;background:var(--red);color:#fff;font:inherit;font-weight:800;cursor:pointer}
+.pocztowka-form .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+@media print{.pasek,nav.spis,.partnerzy,.cta,aside.plan,.plan-pasek,section.pocztowka,.gl-zgoda,a[download],nav.gora .linki,.plan-nav,.okruszki{display:none}}
+.g-hero{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:24px 48px;align-items:center;margin:22px 0 30px}
+.g-hero h1{margin:.1em 0 .32em}.g-hero .lead{margin-bottom:0}
+.g-cta{display:flex;flex-wrap:wrap;align-items:center;gap:4px 14px;margin:20px 0 4px}.g-cta .przycisk{margin:0;font-size:1.08rem;min-height:52px;padding:12px 26px}
+.g-cta a.link{font-weight:800}
+.przycisk.g-dwie{flex-direction:column;align-items:flex-start;justify-content:center;gap:1px;line-height:1.2}.przycisk.g-dwie small{font-size:.8rem;font-weight:600;color:inherit;opacity:.88}
+.g-hero .drobne{margin:10px 0 0}
+.g-list{position:relative;margin:0;padding:30px 28px 26px;border:9px solid transparent;border-radius:6px;background:linear-gradient(var(--white),var(--white)) padding-box,repeating-linear-gradient(135deg,var(--red) 0 12px,var(--white) 12px 19px,var(--navy) 19px 31px,var(--white) 31px 38px) border-box;box-shadow:4px 4px 0 var(--ink);transform:rotate(1.4deg)}
+.g-list blockquote{margin:0;padding-right:84px}.g-list blockquote p{font-family:var(--hand);font-size:1.7rem;line-height:1.22;font-weight:600;margin:0 0 8px;color:var(--ink)}
+.g-list cite{display:block;font-family:var(--hand);font-style:normal;font-size:1.35rem;color:var(--navy)}
+.g-znaczek{position:absolute;top:18px;right:18px;width:72px;padding:4px;background:radial-gradient(circle,var(--paper) 2.4px,transparent 2.9px) -4px -4px/8px 8px,var(--navy);transform:rotate(4deg)}
+.g-znaczek span{display:grid;place-items:center;gap:2px;height:84px;background:var(--navy);border:1.5px solid var(--paper);color:var(--white);font-family:var(--mono);font-size:.68rem}
+.g-znaczek img{width:38px;height:38px;filter:brightness(0) invert(1)}
+.g-odp{display:flex;align-items:center;gap:14px;margin:18px 0 0;padding-top:14px;border-top:1.5px dashed var(--line)}
+.g-odp .stempel{width:96px;height:96px;border-width:4px;margin:-6px 0 -10px -4px}.g-odp .stempel b{font-size:1.7rem}.g-odp .stempel span{font-size:.56rem;text-transform:none}
+.g-odp p{margin:0;font-weight:700;font-size:1rem;line-height:1.4;color:var(--ink)}
+dl.liczby.g-liczby{margin:6px 0 0}dl.liczby.g-liczby div{display:flex;flex-direction:column-reverse;justify-content:flex-end}dl.liczby.g-liczby dd{font-size:clamp(1.5rem,3vw,1.9rem);margin:0 0 2px}
+ol.g-kroki{list-style:none;counter-reset:krok;display:grid;grid-template-columns:repeat(3,1fr);gap:16px 26px;padding:0;margin:8px 0 0;max-width:none}
+ol.g-kroki li{counter-increment:krok;margin:0;padding:16px 0 0;border-top:1.5px solid var(--line)}
+ol.g-kroki li::before{content:counter(krok);display:block;font-family:var(--serif);font-size:2.6rem;line-height:1;color:var(--red);margin-bottom:8px}
+ol.g-kroki h3{margin:0 0 6px}ol.g-kroki p{margin:0;font-size:1rem}
+.g-znaczki{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:16px 0 4px}
+.g-znaczki>div{display:flex;flex-direction:column;background:var(--white);border:1px solid var(--line);border-radius:16px;padding:18px 20px 16px;position:relative}
+.g-znaczki>div.wyroznione{border:2px solid var(--navy)}
+.g-znaczki .nr{font-family:var(--mono);font-size:.74rem;color:var(--ink-soft)}.g-znaczki h3{margin:2px 0 0;color:var(--navy)}
+.g-znaczki .cena{font-family:var(--serif);font-size:2rem;line-height:1.1;color:var(--red);margin:6px 0 0}
+.g-znaczki .rozpiska{font-size:.85rem;color:var(--ink-soft);margin:2px 0 0}
+.g-znaczki ul{font-size:.96rem;padding-left:1.1em;margin:12px 0 14px;flex:1}
+.g-znaczki .pigulka{position:absolute;top:-12px;left:18px;background:var(--navy);color:var(--white);font-size:.78rem;font-weight:800;border-radius:999px;padding:3px 12px}
+.g-znaczki .przycisk{margin:0;justify-content:center}
+ul.g-miesiac{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:14px;padding:0;margin:14px 0 6px;max-width:none}
+ul.g-miesiac li{margin:0}ul.g-miesiac a.karta{display:block;text-decoration:none;color:var(--ink);background:var(--white);border:1px solid var(--line);border-radius:16px;padding:10px 10px 12px;height:100%}
+ul.g-miesiac a.karta:hover{border-color:var(--navy)}ul.g-miesiac strong{display:block;font-family:var(--serif);font-weight:400;font-size:1.18rem;color:var(--navy);margin:4px 2px 0}
+ul.g-miesiac .fakty{display:block;font-size:.88rem;color:var(--ink-soft);margin:2px 2px 0}ul.g-miesiac .temp{font-weight:800;color:var(--ink)}
+ul.g-miesiac img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;border-radius:10px;display:block;background:var(--paper-deep)}
+ul.g-miesiac .bez-foto{display:grid;place-items:center;aspect-ratio:3/2;border-radius:10px;background:var(--niebo);font-family:var(--serif);font-size:2.2rem;color:var(--navy)}
+.g-foto-zrodla{font-size:.72rem;color:var(--ink-soft);margin:4px 0 0;max-width:none}.g-foto-zrodla a{color:var(--ink-soft)}
+.g-opinie{display:grid;grid-template-columns:1fr 1fr;gap:6px 26px}.g-opinie .pocztowka p{font-family:var(--sans);font-size:1.06rem;line-height:1.6;font-weight:600;color:var(--ink)}.g-opinie .pocztowka p::before{content:"„"}.g-opinie .pocztowka p::after{content:"”"}.g-opinie .pocztowka small{font-weight:700}.g-opinie .pocztowka{margin:12px 0}.g-opinie .pocztowka:nth-child(even){transform:rotate(.7deg)}
+.g-nadawcy{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:20px 34px;align-items:center}
+.g-nadawcy img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;border-radius:20px;display:block;background:var(--paper-deep)}
+.g-nadawcy p{max-width:56ch}
+section.cta.g-koniec{text-align:left}section.cta.g-koniec p{max-width:56ch}
+nav.gora a.twoje-loty{order:3;font-weight:800;color:var(--navy)}nav.gora a.twoje-loty[hidden]{display:none}
+@media(max-width:900px){ul.g-miesiac{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:760px){.g-hero{grid-template-columns:1fr;gap:26px;margin-top:12px}.g-list{transform:rotate(.8deg);padding:24px 20px 20px;border-width:8px}.g-list blockquote{padding-right:70px}.g-list blockquote p{font-size:1.45rem}
+.g-znaczek{width:62px;top:14px;right:14px}.g-znaczek span{height:72px}.g-znaczek img{width:32px;height:32px}
+ol.g-kroki,.g-znaczki{grid-template-columns:1fr}.g-znaczki{gap:22px}.g-opinie,.g-nadawcy{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:no-preference){.g-list{animation:g-przylot .7s cubic-bezier(.2,.8,.2,1) both}@keyframes g-przylot{from{opacity:0;transform:translateY(14px) rotate(-2deg)}}}
 </style>
-<div class="w">
-<nav aria-label="Menu"><a class="logo" href="/">Gołębie Latają</a><a href="/kierunki/">Kierunki</a><a href="/gdzie-leciec/">Gdzie lecieć</a><a href="/tanie-loty/">Tanie loty</a><a href="/dlugie-weekendy/">Długie weekendy</a><a href="/poradniki/">Poradniki</a><a href="/o-nas/">O nas</a></nav>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Gołębie Latają","url":"https://golebielataja.pl/","inLanguage":"pl","publisher":{"@id":"https://golebielataja.pl/#organization"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","@id":"https://golebielataja.pl/#organization","name":"Gołębie Latają","url":"https://golebielataja.pl","description":"Gołębie Latają to Michał i Paulina z Warszawy. Układamy plany podróży szyte na miarę i prowadzimy przewodnik, w którym liczymy pogodę z 30 lat pomiarów, ceny lotów z polskich lotnisk i długie weekendy. Wszystko, co tu czytasz, układamy sami.","logo":{"@type":"ImageObject","url":"https://golebielataja.pl/img/icon-512.png"},"image":"https://golebielataja.pl/img/razem.jpg","email":"lecimy@golebielataja.pl","address":{"@type":"PostalAddress","addressLocality":"Warszawa","addressCountry":"PL"},"sameAs":["https://www.instagram.com/golebie.lataja/","https://www.tiktok.com/@golebielataja1","https://www.facebook.com/golebie.lataja","https://www.youtube.com/@GolebieLataja"],"founder":[{"@type":"Person","name":"Michał Gołąb","url":"https://golebielataja.pl/o-nas/"},{"@type":"Person","name":"Paulina","url":"https://golebielataja.pl/o-nas/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Plan podróży na zamówienie. Propozycje w 48 godzin","serviceType":"Planowanie podróży na zamówienie","description":"Opowiedz w dwie minuty, jak chcesz wypocząć, a Michał i Paulina ułożą Ci plan podróży: kierunki, loty, noclegi i dni krok po kroku. Od 399 zł, zwrot, jeśli nie trafimy.","provider":{"@id":"https://golebielataja.pl/#organization"},"areaServed":{"@type":"Country","name":"Polska"},"offers":{"@type":"AggregateOffer","priceCurrency":"PLN","lowPrice":399,"highPrice":1899,"offerCount":3}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Ile kosztuje plan podróży?","acceptedAnswer":{"@type":"Answer","text":"Podstawowy Lot 399 zł, Kompletny Lot 899 zł, Lot Premium 1 499 zł przy wyjeździe do 10 dni, 1 899 zł przy dłuższym. To cena planu na cały wyjazd, bez względu na liczbę osób i dni."}},{"@type":"Question","name":"Jak szybko dostanę plan?","acceptedAnswer":{"@type":"Answer","text":"Pierwsze propozycje kierunków wysyłamy w ciągu 48 godzin od opłacenia. Gdy zarezerwujesz lot i hotel, pełny plan dzień po dniu dosyłamy w 5 dni roboczych, najpóźniej 3 dni przed wylotem."}},{"@type":"Question","name":"Czy rezerwujecie loty i hotele?","acceptedAnswer":{"@type":"Answer","text":"Nie. Wskazujemy konkretne loty i noclegi z linkami, a rezerwujesz je sam, bezpośrednio u przewoźnika i w hotelu. Masz pełną kontrolę i nie płacisz marży biura."}},{"@type":"Question","name":"Co, jeśli propozycje mi nie podejdą?","acceptedAnswer":{"@type":"Answer","text":"Przygotujemy nowe w ramach tej samej opłaty albo oddamy pieniądze."}},{"@type":"Question","name":"Czy muszę zakładać konto?","acceptedAnswer":{"@type":"Answer","text":"Nie. Podajesz e-mail i płacisz. Po opłaceniu dostajesz link, który otwiera Twoje zlecenie bez hasła i bez kodu."}},{"@type":"Question","name":"Jak mogę zapłacić?","acceptedAnswer":{"@type":"Answer","text":"BLIK-iem, kartą, przez Przelewy24 albo Klarną, także później. Płatność obsługuje Stripe."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Gołębie Latają","item":"https://golebielataja.pl/"}]}</script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "dabf88d8ecff46b9af7a1518edc3f5ee"}'></script>
+<script data-goatcounter="https://golebielataja.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+<script src="/zgoda.js" defer></script>
+</head>
+<body>
+<div class="pasek"></div>
+<header>
+<nav class="gora" aria-label="Menu">
+<a class="logo" href="/">Gołębie Latają</a>
+<a class="plan-nav" href="/nowy/start?z=nav" data-goatcounter-click="plan-nav-glowna">Zamów plan</a>
+<span class="linki">
+<a href="/kierunki/">Kierunki</a>
+<a href="/gdzie-leciec/pazdziernik/">Gdzie lecieć</a>
+<a href="/dlugie-weekendy/">Długie weekendy</a>
+<a href="/tanie-loty/">Tanie loty</a>
+<a href="/kraje/">Kraje</a>
+<a href="/o-nas/">O nas</a>
+</span><a class="twoje-loty" href="/start" hidden>Twoje loty</a>
+</nav>
+
+</header>
 <main>
-<h1>Gołębie Latają. Plan podróży na zamówienie</h1>
-<p>Do wyjazdu coraz bliżej, a w głowie sto otwartych kart i zero planu? Znamy to uczucie. Opowiedz nam w dwie minuty, o czym marzysz: przygoda, błogi relaks czy zwyczajnie udany urlop. My zamieniamy ten chaos w gotowy plan podróży.</p>
-<p><a class="cta" href="/?sciezka=%2Fnowy%2Fstart">Wyślij gołębia</a> <a href="/o-nas/">Kim jesteśmy</a></p>
-<section>
-<h2>Gołębia metoda w sześciu krokach</h2>
-<ol>
-<li>Odczyt zlecenia. Czytamy Twój list zdanie po zdaniu, dopytujemy o braki.</li>
-<li>Zwiad. Sezon, pogoda, ceny, sytuacja na miejscu.</li>
-<li>Selekcja. Porównujemy hotele i restauracje, większość odpada.</li>
-<li>Trasa. Układamy dni tak, żeby się nie nachodzić.</li>
-<li>Pułapki i plan B. Spisujemy, co może pójść nie tak.</li>
-<li>Kontrola i stempel. Lista kontrolna, ceny z datą dnia, wysyłka.</li>
-</ol>
-<p>Propozycje z lotami i hotelami dostajesz w 48h od zamówienia, a po rezerwacji pełny plan dzień po dniu w 5 dni roboczych. Jeśli nie trafimy, przygotujemy nowe w ramach tej samej opłaty albo oddamy pieniądze.</p>
-</section>
-<section>
-<h2>Pakiety</h2>
-<div class="pakiety">
-<div><h3>Podstawowy Lot</h3><p class="cena">399 zł</p><p>Propozycje kierunków z lotami i wycieczkami, pogoda w Twoim terminie, niezbędnik kraju, lista atrakcji w okolicy i lista do spakowania.</p></div>
-<div><h3>Kompletny Lot</h3><p class="cena">899 zł</p><p>Wszystko z Podstawowego, do tego loty i hotele pod budżet, plan dzień po dniu, mapa miejsc, restauracje, transport, tradycje i obyczaje, słowniczek i plan B.</p></div>
-<div><h3>Lot Premium</h3><p class="cena">od 1 499 zł</p><p>Wszystko z Kompletnego, do tego mapa z trasą na każdy dzień, czat i zmiany planu w trakcie wyjazdu, przegląd rezerwacji, kolekcjonerskie wydanie planu i pocztówka ze stemplem.</p></div>
+<div class="g-hero">
+<div>
+<h1>Plan podróży na zamówienie. Propozycje w 48 godzin</h1>
+<p class="lead">Opowiadasz w dwie minuty, dokąd i jak chcesz jechać. My szukamy, liczymy i piszemy plan, który pasuje do Ciebie, a nie do katalogu biura podróży.</p>
+<p class="g-cta"><a class="przycisk g-dwie" href="/nowy/start?z=glowna" data-goatcounter-click="plan-hero-glowna"><span>Zamów plan podróży</span><small>czyli wyślij gołębia, odpiszemy w 48 h</small></a><a class="link" href="/przyklad-plan.pdf" data-goatcounter-click="plan-pdf-glowna">Zobacz przykładowy plan</a></p>
+<p class="drobne">Płacisz dopiero na końcu: BLIK, karta albo Klarna. Konto nie jest potrzebne.</p>
 </div>
-<p><a class="cta" href="/?sciezka=%2Fnowy%2Fstart">Zamów plan</a></p>
+<figure class="g-list" aria-label="Przykładowy list do gołębi">
+<span class="g-znaczek" aria-hidden="true"><span><img src="/img/golab-sygnet.svg" alt="" width="38" height="38">№ 2</span></span>
+<blockquote><p>Cześć Gołębie! Lecimy we dwoje na tydzień w maju. Chcemy ciepłe morze, trochę zwiedzania i zero tłumów. Budżet około 6 tysięcy.</p><cite>Ala i Bartek</cite></blockquote>
+<figcaption class="g-odp"><span class="stempel" aria-hidden="true"><b>48 h</b><span>propozycje</span></span><p>Cypr, Kreta albo Malta, z lotami i hotelami.</p></figcaption>
+</figure>
+</div>
+<dl class="liczby g-liczby">
+<div><dt>krajów sprawdzonych na sobie</dt><dd>35</dd></div>
+<div><dt>kierunków w przewodniku</dt><dd>164</dd></div>
+<div><dt>do pierwszych propozycji</dt><dd>48 h</dd></div>
+<div><dt>gdy nie trafimy</dt><dd>zwrot 100%</dd></div>
+</dl>
+<section id="jak">
+<h2>Jak to działa</h2>
+<ol class="g-kroki">
+<li><h3>Piszesz list</h3><p>Dziesięć krótkich pytań: kto leci, kiedy, za ile i co lubisz. Zajmuje około dwóch minut.</p></li>
+<li><h3>Dostajesz propozycje</h3><p>W 48 godzin wysyłamy kierunki dopasowane do Twojego listu, z lotami, hotelami, pogodą i tym, dlaczego właśnie one.</p></li>
+<li><h3>Rezerwujesz, my piszemy plan</h3><p>Rezerwujesz lot i hotel z propozycji, a w 5 dni roboczych dostajesz pełny plan dzień po dniu, z jedzeniem i planem B.</p></li>
+</ol>
 </section>
-<section>
+<section id="pakiety">
+<h2>Trzy znaczki do wyboru</h2>
+<p>Płacisz za plan na cały wyjazd, nie za osobę ani za dzień. BLIK, karta albo Klarna. Zwrot 100%, jeśli nie trafimy.</p>
+<div class="g-znaczki">
+<div>
+<span class="nr">Znaczek № 1</span>
+<h3>Podstawowy Lot</h3>
+<p class="cena">399 zł</p>
+<ul><li>Propozycje kierunków z lotami i zorganizowanymi wycieczkami pod Twoje parametry</li><li>Pogoda w Twoim terminie i czy to dobry moment na wyjazd</li><li>Niezbędnik kraju: dokumenty, waluta, napiwki, gniazdka, internet, numery alarmowe</li><li>Ogólna lista możliwych atrakcji i wycieczek w okolicy</li></ul>
+<a class="przycisk jasny" href="/nowy/start?z=glowna&amp;pakiet=podstawowy" data-goatcounter-click="plan-pakiet-podstawowy-glowna">Wybieram Podstawowy Lot</a>
+</div>
+<div class="wyroznione"><span class="pigulka">Najczęściej wybierany</span>
+<span class="nr">Znaczek № 2</span>
+<h3>Kompletny Lot</h3>
+<p class="cena">899 zł</p>
+<ul><li>Wszystko z Podstawowego Lotu</li><li>Propozycje lotów i hoteli dopasowane do budżetu</li><li>Szczegółowy plan dzień po dniu pod Twoje preferencje, w 5 dni roboczych od rezerwacji</li><li>Rekomendacje restauracji: budżetowo i na bogato</li></ul>
+<a class="przycisk" href="/nowy/start?z=glowna&amp;pakiet=kompletny" data-goatcounter-click="plan-pakiet-kompletny-glowna">Wybieram Kompletny Lot</a>
+</div>
+<div>
+<span class="nr">Znaczek № 3</span>
+<h3>Lot Premium</h3>
+<p class="cena">od 1 499 zł</p><p class="rozpiska">1 499 zł przy wyjeździe do 10 dni, 1 899 zł przy dłuższym</p>
+<ul><li>Wszystko z Kompletnego Lotu</li><li>Najpełniejszy plan: mapa z trasą na każdy dzień, także offline</li><li>Wsparcie na czacie w trakcie wyjazdu</li><li>Zmiany planu w trakcie wyjazdu: odwołany lot, deszcz, inny hotel</li></ul>
+<a class="przycisk jasny" href="/nowy/start?z=glowna&amp;pakiet=premium" data-goatcounter-click="plan-pakiet-premium-glowna">Wybieram Lot Premium</a>
+</div>
+</div>
+</section>
+<section id="miesiac">
+<h2>Dokąd lecieć w październiku</h2>
+<p>Tu jest teraz ciepło i sucho. Kliknij kierunek, a zobaczysz pogodę, temperaturę wody, ceny lotów i co robić na miejscu.</p>
+<ul class="g-miesiac">
+<li><a class="karta" href="/kierunki/antalya/pazdziernik/"><picture><source type="image/avif" srcset="/img/k/antalya-odfm6s-480.avif 480w, /img/k/antalya-odfm6s-960.avif 960w, /img/k/antalya-odfm6s-1280.avif 1280w" sizes="(max-width: 760px) 45vw, 240px"><source type="image/webp" srcset="/img/k/antalya-odfm6s-480.webp 480w, /img/k/antalya-odfm6s-960.webp 960w, /img/k/antalya-odfm6s-1280.webp 1280w" sizes="(max-width: 760px) 45vw, 240px"><img src="/img/k/antalya-odfm6s-960.webp" alt="Plaża Konyaaltı" width="1280" height="720" loading="lazy" decoding="async"></picture><strong>Antalya</strong><span class="fakty"><span class="temp">26°C</span> · woda 26°C · lot ok. 3 h</span></a></li>
+<li><a class="karta" href="/kierunki/pafos/pazdziernik/"><picture><source type="image/avif" srcset="/img/k/pafos-jo6kn3-480.avif 480w, /img/k/pafos-jo6kn3-960.avif 960w, /img/k/pafos-jo6kn3-1280.avif 1280w" sizes="(max-width: 760px) 45vw, 240px"><source type="image/webp" srcset="/img/k/pafos-jo6kn3-480.webp 480w, /img/k/pafos-jo6kn3-960.webp 960w, /img/k/pafos-jo6kn3-1280.webp 1280w" sizes="(max-width: 760px) 45vw, 240px"><img src="/img/k/pafos-jo6kn3-960.webp" alt="Petra tou Romiou" width="1280" height="853" loading="lazy" decoding="async"></picture><strong>Pafos</strong><span class="fakty"><span class="temp">25°C</span> · woda 26°C · lot ok. 3 h</span></a></li>
+<li><a class="karta" href="/kierunki/dzerba/pazdziernik/"><picture><source type="image/avif" srcset="/img/k/dzerba-1fbix5f-480.avif 480w, /img/k/dzerba-1fbix5f-960.avif 960w, /img/k/dzerba-1fbix5f-1280.avif 1280w" sizes="(max-width: 760px) 45vw, 240px"><source type="image/webp" srcset="/img/k/dzerba-1fbix5f-480.webp 480w, /img/k/dzerba-1fbix5f-960.webp 960w, /img/k/dzerba-1fbix5f-1280.webp 1280w" sizes="(max-width: 760px) 45vw, 240px"><img src="/img/k/dzerba-1fbix5f-960.webp" alt="Meczet w Guellala" width="1280" height="960" loading="lazy" decoding="async"></picture><strong>Dżerba</strong><span class="fakty"><span class="temp">26°C</span> · woda 26°C · lot ok. 3,5 h</span></a></li>
+<li><a class="karta" href="/kierunki/sal/pazdziernik/"><picture><source type="image/avif" srcset="/img/k/sal-1xmf1c9-480.avif 480w, /img/k/sal-1xmf1c9-960.avif 960w, /img/k/sal-1xmf1c9-1280.avif 1280w" sizes="(max-width: 760px) 45vw, 240px"><source type="image/webp" srcset="/img/k/sal-1xmf1c9-480.webp 480w, /img/k/sal-1xmf1c9-960.webp 960w, /img/k/sal-1xmf1c9-1280.webp 1280w" sizes="(max-width: 760px) 45vw, 240px"><img src="/img/k/sal-1xmf1c9-960.webp" alt="Port Pedra de Lume" width="1280" height="960" loading="lazy" decoding="async"></picture><strong>Wyspy Zielonego Przylądka</strong><span class="fakty"><span class="temp">27°C</span> · woda 27°C · lot ok. 7,5 h</span></a></li>
+</ul>
+<p class="g-foto-zrodla">Fot. <a href="https://commons.wikimedia.org/wiki/File:Falezlerden_Antalya_Konyaalt%C4%B1_Plaj%C4%B1na_do%C4%9Fru_bir_g%C3%B6r%C3%BCn%C3%BCm.jpg" rel="nofollow noopener">Antalya: Esginmurat, CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Petra_tou_romiou_3.jpg" rel="nofollow noopener">Pafos: Anton Zelenov, CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Abu_Mesouar_Guellala_Djerba_02.jpg" rel="nofollow noopener">Dżerba: Rais67, CC0</a>, <a href="https://commons.wikimedia.org/wiki/File:Porto_de_Pedra_de_Lume.jpg" rel="nofollow noopener">Wyspy Zielonego Przylądka: Catiaritaferreira, CC BY-SA 4.0</a></p>
+<p class="dalej"><a href="/gdzie-leciec/pazdziernik/">Wszystkie kierunki w październiku</a></p>
+</section>
+<section id="opinie">
 <h2>Napisali do nas po lądowaniu</h2>
-<blockquote><p>Zaplanowali dla nas dwutygodniową podróż do Japonii, która była jednocześnie naszą podróżą poślubną. Rada dotycząca wysyłania bagaży z hotelu do hotelu: absolutny strzał w dziesiątkę!</p><small>Alicja i Łukasz, podróż poślubna w Japonii</small></blockquote>
-<blockquote><p>Potrzebowałem inspiracji na mototrip po Kaszubach i Pomorzu. Dostałem namiary, jakie punkty związane z II WŚ zwiedzić, gdzie rozbić namiot, gdzie zjeść i jakie jeziora zobaczyć.</p><small>Piotr, mototrip po Polsce</small></blockquote>
-<blockquote><p>Zależało mi na rodzinnych, tanich wakacjach all inclusive z basenami. Dostałam propozycje kierunków i najlepsze propozycje hotelowe, wszystko ekspresowo.</p><small>Paula z Otwocka, wakacje z rodziną</small></blockquote>
-<blockquote><p>Miałem biznesowy wyjazd do południowych Niemiec. Gołębie wskazali, jakie miasteczka po drodze zwiedzić oraz jak spędzić wolny weekend w tych okolicach.</p><small>Tomasz, Niemcy służbowo i po godzinach</small></blockquote>
+<div class="g-opinie">
+<div class="pocztowka"><p>Zaplanowali dla nas dwutygodniową podróż do Japonii, która była jednocześnie naszą podróżą poślubną. Rada dotycząca wysyłania bagaży z hotelu do hotelu: absolutny strzał w dziesiątkę!</p><small>Alicja i Łukasz, podróż poślubna w Japonii</small></div>
+<div class="pocztowka"><p>Potrzebowałem inspiracji na mototrip po Kaszubach i Pomorzu. Dostałem namiary, jakie punkty związane z II WŚ zwiedzić, gdzie rozbić namiot, gdzie zjeść i jakie jeziora zobaczyć.</p><small>Piotr, mototrip po Polsce</small></div>
+<div class="pocztowka"><p>Zależało mi na rodzinnych, tanich wakacjach all inclusive z basenami. Dostałam propozycje kierunków i najlepsze propozycje hotelowe, wszystko ekspresowo.</p><small>Paula z Otwocka, wakacje z rodziną</small></div>
+<div class="pocztowka"><p>Miałem biznesowy wyjazd do południowych Niemiec. Gołębie wskazali, jakie miasteczka po drodze zwiedzić oraz jak spędzić wolny weekend w tych okolicach.</p><small>Tomasz, Niemcy służbowo i po godzinach</small></div>
+</div>
 </section>
-<section>
-<h2>Przewodnik gołębi</h2>
-<p>Sam chcesz poszperać? Pogoda z 30 lat pomiarów, ceny lotów z polskich lotnisk i formalności dla 164 kierunków.</p>
+<section id="nadawcy">
+<h2>Kto pisze Twój plan</h2>
+<div class="g-nadawcy">
+<img src="/img/razem.jpg" alt="Michał i Paulina w podróży" width="1200" height="800" loading="lazy" decoding="async">
+<div><p>Michał i Paulina z Warszawy. Razem sprawdziliśmy na własnej skórze 35 krajów, od Sahary w Tunezji po Malediwy i Gambię. Każdy list czytamy sami i każdy plan sami układamy.</p><p class="dalej"><a href="/o-nas/">Więcej o nas</a></p></div>
+</div>
+</section>
+<section id="przewodnik">
+<h2>Wolisz poszperać sam?</h2>
+<p>Darmowy przewodnik gołębi: pogoda z 30 lat pomiarów, ceny lotów z polskich lotnisk i formalności dla 164 kierunków.</p>
 <ul class="siatka">
-<li><a href="/kierunki/"><strong>164 kierunki</strong><br><small>kiedy lecieć, pogoda, co zobaczyć</small></a></li>
-<li><a href="/gdzie-leciec/"><strong>Gdzie lecieć</strong><br><small>najlepsze kierunki w każdym miesiącu</small></a></li>
-<li><a href="/tanie-loty/"><strong>Tanie loty</strong><br><small>najtańsze trasy z 13 lotnisk</small></a></li>
-<li><a href="/dlugie-weekendy/"><strong>Długie weekendy</strong><br><small>ile urlopu, ile wolnego</small></a></li>
-<li><a href="/poradniki/"><strong>Poradniki</strong><br><small>eSIM, auto, pakowanie, loty do 4 h</small></a></li>
-<li><a href="/kraje/"><strong>Kraje</strong><br><small>wjazd, waluta, gniazdka</small></a></li>
+<li><a href="/kierunki/"><strong>Kierunki</strong><span>kiedy lecieć, pogoda, co zobaczyć</span></a></li>
+<li><a href="/gdzie-leciec/pazdziernik/"><strong>Gdzie lecieć</strong><span>najlepsze kierunki w każdym miesiącu</span></a></li>
+<li><a href="/tanie-loty/"><strong>Tanie loty</strong><span>najtańsze trasy z polskich lotnisk</span></a></li>
+<li><a href="/dlugie-weekendy/"><strong>Długie weekendy</strong><span>ile urlopu, ile wolnego</span></a></li>
+<li><a href="/na-dowod-osobisty/"><strong>Gdzie polecieć na dowód osobisty</strong><span>lista krajów bez paszportu</span></a></li>
+<li><a href="/poradniki/"><strong>Poradniki</strong><span>eSIM, auto, pakowanie, loty do 4 h</span></a></li>
 </ul>
 </section>
 <section>
-<h2>Nadawcy</h2>
-<p>Michał i Paulina z Warszawy. Razem sprawdziliśmy na własnej skórze 35 krajów, od Sahary w Tunezji po Malediwy i Gambię. <a href="/o-nas/">Więcej o nas</a>.</p>
+<h2>Pytania przed wysłaniem gołębia</h2>
+<details><summary>Ile kosztuje plan podróży?</summary><p>Podstawowy Lot 399 zł, Kompletny Lot 899 zł, Lot Premium 1 499 zł przy wyjeździe do 10 dni, 1 899 zł przy dłuższym. To cena planu na cały wyjazd, bez względu na liczbę osób i dni.</p></details>
+<details><summary>Jak szybko dostanę plan?</summary><p>Pierwsze propozycje kierunków wysyłamy w ciągu 48 godzin od opłacenia. Gdy zarezerwujesz lot i hotel, pełny plan dzień po dniu dosyłamy w 5 dni roboczych, najpóźniej 3 dni przed wylotem.</p></details>
+<details><summary>Czy rezerwujecie loty i hotele?</summary><p>Nie. Wskazujemy konkretne loty i noclegi z linkami, a rezerwujesz je sam, bezpośrednio u przewoźnika i w hotelu. Masz pełną kontrolę i nie płacisz marży biura.</p></details>
+<details><summary>Co, jeśli propozycje mi nie podejdą?</summary><p>Przygotujemy nowe w ramach tej samej opłaty albo oddamy pieniądze.</p></details>
+<details><summary>Czy muszę zakładać konto?</summary><p>Nie. Podajesz e-mail i płacisz. Po opłaceniu dostajesz link, który otwiera Twoje zlecenie bez hasła i bez kodu.</p></details>
+<details><summary>Jak mogę zapłacić?</summary><p>BLIK-iem, kartą, przez Przelewy24 albo Klarną, także później. Płatność obsługuje Stripe.</p></details>
 </section>
+<section class="cta g-koniec">
+<h2>Gotowy wysłać gołębia?</h2>
+<p>Dwie minuty pytań dziś, propozycje w skrzynce za 48 godzin. BLIK, karta albo Klarna. Zwrot 100%, jeśli nie trafimy.</p>
+<p><a class="przycisk jasny g-dwie" href="/nowy/start?z=glowna" data-goatcounter-click="plan-koniec-glowna"><span>Zamów plan podróży</span><small>czyli wyślij gołębia, odpiszemy w 48 h</small></a></p>
+</section>
+<script>try{if(localStorage.getItem('gl-zalogowany')==='1')document.querySelector('a.twoje-loty').hidden=false}catch(e){}</script>
 </main>
-<footer><ul><li><small><a href="mailto:lecimy@golebielataja.pl">lecimy@golebielataja.pl</a></small></li><li><small><a href="/regulamin.html">Regulamin</a></small></li><li><small><a href="/polityka-prywatnosci.html">Polityka prywatności</a></small></li></ul></footer>
+<section class="pocztowka" id="pocztowka" aria-labelledby="pocztowka-h">
+<h2 id="pocztowka-h">Pocztówka od gołębi</h2>
+<p>Co dwa tygodnie trzy najtańsze loty z polskich lotnisk, kierunek miesiąca i jeden patent z naszych podróży. Na start dostaniesz raport „Długie weekendy 2027: gdzie i za ile”.</p>
+<form class="pocztowka-form" data-k="5575997dc354487cbe8f3e38dbe2b2f7" data-raport="/dlugie-weekendy/2027/raport/" data-raport-tekst="Długie weekendy 2027: gdzie i za ile" data-zly="Wpisz poprawny adres e-mail, żeby gołąb wiedział, dokąd lecieć." data-wysylam="Zapisuję…" data-gotowe="Gotowe! Pierwsza pocztówka już leci. Raport czeka tutaj: " data-blad="Coś poszło nie tak. Spróbuj jeszcze raz albo napisz: lecimy@golebielataja.pl" novalidate>
+<input class="hp" type="text" name="firma" tabindex="-1" autocomplete="off" aria-hidden="true">
+<label class="sr" for="pocztowka-email">Twój e-mail</label>
+<input id="pocztowka-email" type="email" name="email" placeholder="Twój e-mail" required autocomplete="email">
+<button type="submit">Wyślij mi pocztówkę</button>
+</form>
+<p class="drobne" data-status aria-live="polite">Zapisując się, akceptujesz <a href="/polityka-prywatnosci.html">politykę prywatności</a>. Wypiszesz się jednym kliknięciem.</p>
+</section>
+<script src="/poczta.js" defer></script>
+<footer>
+<div class="stopka">
+<div class="o"><p class="tytul">Gołębie Latają</p><p>Gołębie Latają układają plany podróży. Ty mówisz, czego chcesz, my szukamy, liczymy i piszemy. Propozycje w 48 godzin.</p><p><a href="mailto:lecimy@golebielataja.pl">lecimy@golebielataja.pl</a></p><p>RF Michał Gołąb, NIP 5213757913, Warszawa</p></div>
+<div><p class="tytul">Kiedy wolne</p><ul><li><a href="/majowka/">Majówka</a></li><li><a href="/wielkanoc/">Wielkanoc za granicą</a></li><li><a href="/boze-cialo/">Boże Ciało</a></li><li><a href="/ferie-zimowe/">Ferie zimowe</a></li><li><a href="/sylwester-za-granica/">Sylwester za granicą</a></li><li><a href="/swieta-w-cieple/">Święta w cieple</a></li><li><a href="/wakacje-z-dziecmi/">Wakacje z dziećmi</a></li><li><a href="/podroz-poslubna/">Podróż poślubna</a></li></ul></div>
+<div><p class="tytul">Przydatne</p><ul><li><a href="/poradniki/">Poradniki</a></li><li><a href="/porownanie/">Porównania</a></li><li><a href="/tanie-loty/">Tanie loty</a></li><li><a href="/okazje/">Okazje</a></li><li><a href="/prezent/">Voucher na podróż</a></li><li><a href="/polityka-prywatnosci.html">Polityka prywatności</a></li><li><a href="/regulamin.html">Regulamin</a></li><li><a href="#zgoda" data-cookies="1">Ustawienia cookies</a></li></ul></div>
 </div>
-</div>
-</div>
-  <script src="/_expo/static/js/web/__expo-metro-runtime-1f8f5d3ca6b7f58204d51e14506d73fb.js" defer></script><script src="/_expo/static/js/web/__common-c6084e93eeefe9794cdfcfc10ea03f5b.js" defer></script><script src="/_expo/static/js/web/entry-01a4dce02a6fdc7221f085aeb07819c6.js" defer></script>
+<p class="drobne">Strony odświeżamy codziennie, a ceny lotów same przy każdym wejściu. Stan na 17 października 2026.</p>
+</footer>
+<div class="pasek"></div>
+<div class="plan-pasek" hidden><p>Plan podróży od 399 zł, propozycje w 48 h</p><a href="/nowy/start?z=glowna" data-goatcounter-click="plan-pasek-glowna">Zamów</a></div>
+<script src="/plan.js" defer></script>
 </body>
 </html>

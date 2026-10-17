@@ -15,6 +15,7 @@
 <meta property="og:image" content="https://golebielataja.pl/img/k/sal-1xmf1c9-og.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/svg+xml" href="/img/golab-sygnet.svg">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
 <link rel="preload" href="/fonty/nunito-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonty/young-serif-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <style>@font-face{font-family:"Nunito zapas";src:local("Arial"),local("Helvetica"),local("Liberation Sans");size-adjust:96.3%;ascent-override:105%;descent-override:36.7%;line-gap-override:0%}
@@ -68,6 +69,7 @@ section.tlo{background:var(--niebo);border-radius:20px;padding:24px 26px}section
 @media(max-width:640px){.hero{grid-template-columns:1fr auto;gap:4px 14px}.hero h1{font-size:clamp(2rem,9vw,2.4rem)}.hero .stempel{grid-column:2;grid-row:1;width:96px;height:96px;margin:14px 0 0;border-width:4px}.hero .lead{grid-column:1 / -1}.stempel b{font-size:1.65rem}.stempel span{font-size:.56rem}}
 .podpis{font-size:.92rem;color:var(--ink-soft);margin:-4px 0 18px}
 dl.liczby,dl.list-przewozowy{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin:0;background:var(--white);border:1.5px solid var(--ink);border-radius:6px;box-shadow:3px 3px 0 var(--ink);overflow:hidden}
+dl.szczegoly-auta{margin:8px 0 0}dl.szczegoly-auta dt{font-weight:800;color:var(--ink);margin-top:14px}dl.szczegoly-auta dd{margin:4px 0 0}
 dl.liczby div{padding:12px 16px;border-right:1px dashed var(--line);border-bottom:1px dashed var(--line);margin:0 -1px -1px 0}
 dl.liczby dt{font-family:var(--mono);font-size:.76rem;color:var(--ink-soft);letter-spacing:.02em}
 dl.liczby dd{margin:2px 0 0;font-family:var(--serif);font-size:1.75rem;line-height:1.15;color:var(--navy)}
@@ -95,7 +97,7 @@ ul.lista-rzeczy li::before{content:"";position:absolute;left:0;top:.3em;width:16
 @media(max-width:640px){ul.lista-rzeczy{columns:1}}
 .pocztowka{background:var(--white);border:1.5px solid var(--ink);border-radius:6px;box-shadow:3px 3px 0 var(--ink);padding:18px 22px 16px;margin:18px 0;max-width:62ch;transform:rotate(-.6deg);position:relative}
 .pocztowka::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;background:repeating-linear-gradient(135deg,var(--red) 0 10px,var(--white) 10px 16px,var(--navy) 16px 26px,var(--white) 26px 32px);border-radius:5px 5px 0 0}
-.pocztowka p,.reka{font-family:var(--hand);font-size:1.55rem;line-height:1.25;font-weight:500;margin:.25em 0}
+.pocztowka p,.reka{font-family:var(--hand);font-size:1.62rem;line-height:1.25;font-weight:600;margin:.25em 0}
 .pocztowka small{display:block;font-family:var(--sans);font-size:.85rem;color:var(--ink-soft);margin-top:6px}
 table{border-collapse:collapse;width:100%;font-size:.98rem;font-variant-numeric:tabular-nums lining-nums}
 th,td{padding:8px 10px;text-align:left;border-bottom:1px solid var(--line)}thead th{font-weight:800;font-size:.88rem;color:var(--ink-soft);border-bottom:2px solid var(--ink)}tbody th{font-weight:700;color:var(--ink)}
@@ -132,7 +134,7 @@ details p{margin:.5em 0 0}
 p.podpowiedz{grid-column:1 / -1;margin:6px 0 0;padding:10px 14px;background:var(--niebo);border-radius:12px;max-width:62ch}
 figure.foto{margin:18px 0 8px}figure.foto img{width:100%;height:auto;max-height:520px;object-fit:cover;border-radius:20px;display:block;background:var(--paper-deep)}
 figure.foto figcaption{font-size:.8rem;color:var(--ink-soft);margin-top:6px}
-blockquote.opinia{margin:16px 0;padding:0;max-width:60ch}blockquote.opinia p{font-family:var(--hand);font-size:1.5rem;line-height:1.25;margin:0 0 4px}
+blockquote.opinia{margin:16px 0;padding:0 0 0 16px;max-width:60ch;border-left:3px solid var(--red)}blockquote.opinia p{font-family:var(--sans);font-size:1.06rem;line-height:1.6;font-weight:600;font-style:italic;margin:0 0 4px}blockquote.opinia p::before{content:"„"}blockquote.opinia p::after{content:"”"}
 blockquote.opinia small{font-size:.88rem}.cta blockquote.opinia small{color:#DCE3EE}
 ul.wskazowki{list-style:none;padding:0;max-width:var(--tekst)}ul.wskazowki li{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:14px 18px;margin:0 0 12px}
 ul.wskazowki strong{display:block;font-family:var(--serif);font-weight:400;font-size:1.16rem}ul.wskazowki p{margin:4px 0 6px}
@@ -161,25 +163,40 @@ a.cena-lot{color:var(--navy);text-decoration-thickness:1.5px}a.cena-lot::after{c
 .autor-pasek{display:flex;align-items:center;gap:10px;margin:6px 0 0;font-size:.92rem;color:var(--ink-soft)}.autor-pasek img{width:40px;height:40px;border-radius:50%;object-fit:cover;flex:none}
 section.pocztowka{margin:40px auto 0;max-width:820px;padding:22px 24px;background:var(--navy-soft);border-radius:16px;border-top:0}
 section.pocztowka h2{margin-top:0}
+/* 17.10.2026: tekst zapisu na Pocztówkę zwykłym krojem, bo odręczny przy dłuższym zdaniu i drobnym druku słabo się czyta. */
+section.pocztowka p{font-family:var(--sans);font-size:1.05rem;line-height:1.55;font-weight:600}section.pocztowka p.drobne{font-size:.88rem;font-weight:500;color:var(--ink-soft)}
 .pocztowka-form{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 8px}
 .pocztowka-form input[type=email]{flex:1 1 240px;min-height:46px;padding:10px 14px;border:1.5px solid var(--line);border-radius:12px;font:inherit;background:var(--white)}
 .pocztowka-form button{min-height:46px;padding:10px 20px;border:0;border-radius:999px;background:var(--red);color:#fff;font:inherit;font-weight:800;cursor:pointer}
 .pocztowka-form .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-@media print{.pasek,nav.spis,.partnerzy,.cta,aside.plan,.plan-pasek,section.pocztowka,.gl-zgoda,a[download],nav.gora .linki,.plan-nav,.okruszki{display:none}}</style>
+@media print{.pasek,nav.spis,.partnerzy,.cta,aside.plan,.plan-pasek,section.pocztowka,.gl-zgoda,a[download],nav.gora .linki,.plan-nav,.okruszki{display:none}}.okazje-lista{display:grid;gap:14px;margin:18px 0}
+article.okazja{background:var(--white);border:1px solid var(--line);border-left:4px solid var(--red);border-radius:16px;padding:16px 18px}
+article.okazja .typ{font-size:.8rem;font-weight:800;color:var(--navy);margin:0}
+article.okazja h3{margin:4px 0 6px;font-size:1.25rem}
+article.okazja .gdzie{margin:0;color:var(--ink-soft);font-size:.95rem}
+article.okazja .cena{margin:8px 0 0;font-family:var(--serif);font-size:1.45rem;color:var(--red)}
+article.okazja .cena small{font-family:var(--sans);font-size:.92rem;color:var(--zielen,#2f7a4b);margin-left:8px}
+article.okazja .opis{margin:8px 0 0}
+article.okazja .kiedy{margin:8px 0 0;font-size:.85rem;color:var(--ink-soft)}
+article.okazja .akcje{margin:10px 0 0}article.okazja .przycisk{margin:0}
+article.okazja a.kierunek{font-weight:700}
+ul.dalej-okazje{margin:8px 0 16px;padding-left:1.2em}ul.dalej-okazje li{margin:4px 0;font-weight:700}
+aside.okazja-kierunku{margin:20px 0}aside.okazja-kierunku h2{font-size:1.3rem;margin:0 0 8px}</style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"TouristDestination","name":"Wyspy Zielonego Przylądka","description":"Wyspy Zielonego Przylądka (Republika Zielonego Przylądka): najlepsze miesiące na wyjazd, ceny lotów z Polski z ostatnich 90 dni, miejsca warte zobaczenia i formalności z polskim paszportem.","url":"https://golebielataja.pl/kierunki/sal/","geo":{"@type":"GeoCoordinates","latitude":16.73,"longitude":-22.94},"containedInPlace":{"@type":"Country","name":"Republika Zielonego Przylądka"},"includesAttraction":[{"@type":"TouristAttraction","name":"Santa Maria Beach","sameAs":"https://www.wikidata.org/wiki/Q55630355"},{"@type":"TouristAttraction","name":"Ponta Preta","sameAs":"https://www.wikidata.org/wiki/Q7228047"}]}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Wyspy Zielonego Przylądka: ile trwa lot z Polski?","acceptedAnswer":{"@type":"Answer","text":"Z Warszawy około 7,5 h w powietrzu bez przesiadek (w linii prostej około 5495 km). Z przesiadką dolicz czas na zmianę samolotu."}},{"@type":"Question","name":"Wyspy Zielonego Przylądka: kiedy najlepiej lecieć?","acceptedAnswer":{"@type":"Answer","text":"Najlepiej od października do lipca. Najcieplej jest we wrześniu, około 27°C w dzień."}},{"@type":"Question","name":"Wyspy Zielonego Przylądka: paszport czy dowód?","acceptedAnswer":{"@type":"Answer","text":"Bez wizy, z zezwoleniem online przed wylotem. Przed wyjazdem sprawdź aktualne zasady w serwisie MSZ."}},{"@type":"Question","name":"Wyspy Zielonego Przylądka: gdzie to jest?","acceptedAnswer":{"@type":"Answer","text":"Kraj: Republika Zielonego Przylądka. Od Warszawy w linii prostej około 5495 km."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Wyspy Zielonego Przylądka: ile trwa lot z Polski?","acceptedAnswer":{"@type":"Answer","text":"Z Warszawy około 7,5 h w powietrzu bez przesiadek (w linii prostej około 5495 km). Z przesiadką dolicz czas na zmianę samolotu."}},{"@type":"Question","name":"Wyspy Zielonego Przylądka: kiedy najlepiej lecieć?","acceptedAnswer":{"@type":"Answer","text":"Najlepiej od października do sierpnia. Najcieplej jest we wrześniu, około 27°C w dzień."}},{"@type":"Question","name":"Wyspy Zielonego Przylądka: paszport czy dowód?","acceptedAnswer":{"@type":"Answer","text":"Bez wizy, z zezwoleniem online przed wylotem. Przed wyjazdem sprawdź aktualne zasady w serwisie MSZ."}},{"@type":"Question","name":"Wyspy Zielonego Przylądka: gdzie to jest?","acceptedAnswer":{"@type":"Answer","text":"Kraj: Republika Zielonego Przylądka. Od Warszawy w linii prostej około 5495 km."}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Gołębie Latają","item":"https://golebielataja.pl/"},{"@type":"ListItem","position":2,"name":"Kierunki","item":"https://golebielataja.pl/kierunki/"},{"@type":"ListItem","position":3,"name":"Wyspy Zielonego Przylądka","item":"https://golebielataja.pl/kierunki/sal/"}]}</script>
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "dabf88d8ecff46b9af7a1518edc3f5ee"}'></script>
 <script data-goatcounter="https://golebielataja.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <script src="/zgoda.js" defer></script>
+<script src="/ceny.js" defer></script>
 </head>
 <body>
 <div class="pasek"></div>
 <header>
 <nav class="gora" aria-label="Menu">
 <a class="logo" href="/">Gołębie Latają</a>
-<a class="plan-nav" href="/nowy/start?z=nav" data-goatcounter-click="plan-nav-kierunek">Plan w 48 h</a>
+<a class="plan-nav" href="/nowy/start?z=nav" data-goatcounter-click="plan-nav-kierunek">Zamów plan</a>
 <span class="linki">
 <a href="/kierunki/">Kierunki</a>
 <a href="/gdzie-leciec/pazdziernik/">Gdzie lecieć</a>
@@ -194,7 +211,7 @@ section.pocztowka h2{margin-top:0}
 <main>
 <div class="hero bez-stempla">
 <h1>Wyspy Zielonego Przylądka</h1>
-<p class="lead">Najcieplej jest we wrześniu, około 27°C w dzień, a morze ma około 28°C. Najprzyjemniej jest tu od października do lipca. Bilety ostatnio od 1203 zł w obie strony (Warszawa). Niżej znajdziesz tanie jedzenie i miejsca spoza przewodników.</p>
+<p class="lead">Najcieplej jest we wrześniu, około 27°C w dzień, a morze ma około 28°C. Najprzyjemniej jest tu od października do sierpnia. Bilety ostatnio od 1203 zł w obie strony (Warszawa). Niżej znajdziesz tanie jedzenie i miejsca spoza przewodników.</p>
 </div>
 <p class="autor-pasek"><img src="/img/razem.jpg" alt="" width="40" height="40" loading="lazy" decoding="async">Przygotowali <a href="/o-nas/">Michał i Paulina</a>, którzy sprawdzili na miejscu 35 krajów.</p>
 <aside class="plan" aria-label="Plan podróży od gołębi">
@@ -204,13 +221,15 @@ section.pocztowka h2{margin-top:0}
 <figure class="foto"><picture><source type="image/avif" srcset="/img/k/sal-1xmf1c9-480.avif 480w, /img/k/sal-1xmf1c9-960.avif 960w, /img/k/sal-1xmf1c9-1280.avif 1280w" sizes="(max-width: 860px) 100vw, 820px"><source type="image/webp" srcset="/img/k/sal-1xmf1c9-480.webp 480w, /img/k/sal-1xmf1c9-960.webp 960w, /img/k/sal-1xmf1c9-1280.webp 1280w" sizes="(max-width: 860px) 100vw, 820px"><img src="/img/k/sal-1xmf1c9-960.webp" alt="Port Pedra de Lume" width="1280" height="960" fetchpriority="high" decoding="async"></picture><figcaption>Port Pedra de Lume. Fot. <a href="https://commons.wikimedia.org/wiki/File:Porto_de_Pedra_de_Lume.jpg" rel="nofollow noopener">Catiaritaferreira, CC BY-SA 4.0</a>, Wikimedia Commons</figcaption></figure>
 <dl class="liczby skrot">
 <div><dt>Lot z Warszawy</dt><dd>7,5 h</dd></div>
-<div><dt>Najlepiej</dt><dd>od października do lipca</dd></div>
+<div><dt>Najlepiej</dt><dd>od października do sierpnia</dd></div>
 <div><dt>Najcieplej</dt><dd>wrzesień, 27°C</dd></div>
 <div><dt>Najcieplejsza woda</dt><dd>wrzesień, 28°C</dd></div>
 <div><dt>Wjazd</dt><dd>paszport i zezwolenie online</dd></div>
 <div><dt>Waluta</dt><dd>CVE</dd></div>
 <div><dt>Lot od</dt><dd>1203 zł</dd></div>
 </dl>
+<aside class="okazja-kierunku" data-okazje-k="sal" aria-label="Okazja na ten kierunek" hidden></aside>
+<script src="/okazje.js" defer></script>
 <nav class="spis" aria-label="Spis treści">
 <p class="spis-tytul">Na tej stronie</p>
 <ol>
@@ -235,7 +254,7 @@ section.pocztowka h2{margin-top:0}
 <li><a class="o5" href="/kierunki/sal/maj/" aria-label="Maj: 23°C, ocena 5 na 5">Maj<span>23°</span></a></li>
 <li><a class="o5" href="/kierunki/sal/czerwiec/" aria-label="Czerwiec: 24°C, ocena 5 na 5">Cze<span>24°</span></a></li>
 <li><a class="o5" href="/kierunki/sal/lipiec/" aria-label="Lipiec: 25°C, ocena 5 na 5">Lip<span>25°</span></a></li>
-<li><a class="o3" href="/kierunki/sal/sierpien/" aria-label="Sierpień: 27°C, ocena 3 na 5">Sie<span>27°</span></a></li>
+<li><a class="o4" href="/kierunki/sal/sierpien/" aria-label="Sierpień: 27°C, ocena 4 na 5">Sie<span>27°</span></a></li>
 <li><a class="o3" href="/kierunki/sal/wrzesien/" aria-label="Wrzesień: 27°C, ocena 3 na 5">Wrz<span>27°</span></a></li>
 <li><a class="o5" href="/kierunki/sal/pazdziernik/" aria-label="Październik: 27°C, ocena 5 na 5">Paź<span>27°</span></a></li>
 <li><a class="o5" href="/kierunki/sal/listopad/" aria-label="Listopad: 26°C, ocena 5 na 5">Lis<span>26°</span></a></li>
@@ -252,7 +271,7 @@ section.pocztowka h2{margin-top:0}
 <tr><td><a href="/kierunki/sal/maj/">Wyspy Zielonego Przylądka w maju</a></td><td>23°C</td><td>22°C</td><td>1</td><td>23°C</td><td class="o5">5 z 5</td></tr>
 <tr><td><a href="/kierunki/sal/czerwiec/">Wyspy Zielonego Przylądka w czerwcu</a></td><td>24°C</td><td>23°C</td><td>1</td><td>24°C</td><td class="o5">5 z 5</td></tr>
 <tr><td><a href="/kierunki/sal/lipiec/">Wyspy Zielonego Przylądka w lipcu</a></td><td>25°C</td><td>24°C</td><td>1</td><td>25°C</td><td class="o5">5 z 5</td></tr>
-<tr><td><a href="/kierunki/sal/sierpien/">Wyspy Zielonego Przylądka w sierpniu</a></td><td>27°C</td><td>25°C</td><td>8</td><td>27°C</td><td class="o3">3 z 5</td></tr>
+<tr><td><a href="/kierunki/sal/sierpien/">Wyspy Zielonego Przylądka w sierpniu</a></td><td>27°C</td><td>25°C</td><td>8</td><td>27°C</td><td class="o4">4 z 5</td></tr>
 <tr><td><a href="/kierunki/sal/wrzesien/">Wyspy Zielonego Przylądka we wrześniu</a></td><td>27°C</td><td>26°C</td><td>10</td><td>28°C</td><td class="o3">3 z 5</td></tr>
 <tr><td><a href="/kierunki/sal/pazdziernik/">Wyspy Zielonego Przylądka w październiku</a></td><td>27°C</td><td>26°C</td><td>5</td><td>27°C</td><td class="o5">5 z 5</td></tr>
 <tr><td><a href="/kierunki/sal/listopad/">Wyspy Zielonego Przylądka w listopadzie</a></td><td>26°C</td><td>25°C</td><td>4</td><td>26°C</td><td class="o5">5 z 5</td></tr>
@@ -304,9 +323,9 @@ section.pocztowka h2{margin-top:0}
 <div class="przewin"><table class="ceny">
 <thead><tr><th scope="col">Skąd</th><th scope="col">Od</th><th scope="col">Przykładowy wylot</th></tr></thead>
 <tbody>
-<tr><th scope="row">Warszawa</th><td><a class="cena-lot" href="https://www.aviasales.com/search/WAW3101SID10021?currency=pln&amp;marker=785120.kcsalwarszawa" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-kcsalwarszawa"><strong>od 1203 zł</strong></a> <small class="sprawdzono">sprawdzone 13 października</small></td><td>31 stycznia do 10 lutego 2027</td></tr>
-<tr><th scope="row">Kraków</th><td><a class="cena-lot" href="https://www.aviasales.com/search/KRK1811SID25111?currency=pln&amp;marker=785120.kcsalkrakow" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-kcsalkrakow"><strong>od 1285 zł</strong></a> <small class="sprawdzono">sprawdzone 9 października</small></td><td>18 do 25 listopada 2026</td></tr>
-<tr><th scope="row">Poznań</th><td><strong class="cena-zwykle">zwykle od 1616 zł</strong></td><td>4 do 12 lutego 2027</td></tr>
+<tr><th scope="row">Warszawa</th><td><span class="cena-zywa" data-cena="sal|warszawa|01|kcsalwarszawa" data-at="2026-10-13T22:56:46.133Z" data-c="1203"><a class="cena-lot" href="https://www.aviasales.com/search/WAW3101SID10021?currency=pln&amp;marker=785120.kcsalwarszawa" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-kcsalwarszawa"><strong>od 1203 zł</strong></a> <small class="sprawdzono">sprawdzone 13 października</small></span></td><td data-kiedy>31 stycznia do 10 lutego 2027</td></tr>
+<tr><th scope="row">Kraków</th><td><span class="cena-zywa" data-cena="sal|krakow|11|kcsalkrakow" data-at="2026-10-10T22:28:35.854Z" data-c="1285"><a class="cena-lot" href="https://www.aviasales.com/search/KRK1811SID25111?currency=pln&amp;marker=785120.kcsalkrakow" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-kcsalkrakow"><strong>od 1285 zł</strong></a> <small class="sprawdzono">sprawdzone 10 października</small></span></td><td data-kiedy>18 do 25 listopada 2026</td></tr>
+<tr><th scope="row">Poznań</th><td><strong class="cena-zwykle" data-cena="sal|poznan|02|kcsalpoznan">zwykle od 1616 zł</strong></td><td data-kiedy>4 do 12 lutego 2027</td></tr>
 </tbody>
 </table></div>
 <p class="drobne">Cena „od” otwiera Aviasales z tymi samymi datami; ceny zmieniają się co godzinę, więc mogą się różnić. „Zwykle od” to cena sprzed ponad tygodnia, orientacyjna.</p>
@@ -333,16 +352,16 @@ section.pocztowka h2{margin-top:0}
 <section>
 <h2>Wyspy Zielonego Przylądka: krótko o tym, o co pytacie</h2>
 <details><summary>Wyspy Zielonego Przylądka: ile trwa lot z Polski?</summary><p>Z Warszawy około 7,5 h w powietrzu bez przesiadek (w linii prostej około 5495 km). Z przesiadką dolicz czas na zmianę samolotu.</p></details>
-<details><summary>Wyspy Zielonego Przylądka: kiedy najlepiej lecieć?</summary><p>Najlepiej od października do lipca. Najcieplej jest we wrześniu, około 27°C w dzień.</p></details>
+<details><summary>Wyspy Zielonego Przylądka: kiedy najlepiej lecieć?</summary><p>Najlepiej od października do sierpnia. Najcieplej jest we wrześniu, około 27°C w dzień.</p></details>
 <details><summary>Wyspy Zielonego Przylądka: paszport czy dowód?</summary><p>Bez wizy, z zezwoleniem online przed wylotem. Przed wyjazdem sprawdź aktualne zasady w serwisie MSZ.</p></details>
 <details><summary>Wyspy Zielonego Przylądka: gdzie to jest?</summary><p>Kraj: Republika Zielonego Przylądka. Od Warszawy w linii prostej około 5495 km.</p></details>
 </section>
 
 <section id="plan" class="cta">
 <h2>Nie chcesz układać tego sam?</h2>
-<p>Napisz, czego szukasz. W 48 godzin dostajesz plan z lotami, noclegami i trasą dzień po dniu.</p>
+<p>Napisz, czego szukasz. W 48 godzin dostajesz propozycje z lotami i noclegami, a po rezerwacji plan dzień po dniu.</p>
 <p class="cena">Od 399 zł za cały plan. Płacisz dopiero na końcu zamówienia.</p>
-<p class="drobne">BLIK, karta albo Klarna. Zwrot 100%, jeśli nie trafimy. Pierwsze propozycje w 48 h, pełny plan zaraz po Twoim wyborze.</p>
+<p class="drobne">BLIK, karta albo Klarna. Zwrot 100%, jeśli nie trafimy. Propozycje z lotami i hotelami w 48 h. Pełny plan dzień po dniu w 5 dni roboczych od rezerwacji.</p>
 <p><a class="przycisk" href="/nowy/start?kierunek=sal&amp;z=kierunek" data-goatcounter-click="plan-koniec-kierunek">Zamów plan: Wyspy Zielonego Przylądka</a><a class="przycisk jasny" href="/?sciezka=%2Fkierunki%2Fsal" rel="nofollow">Otwórz w aplikacji</a></p>
 <p><a href="/przyklad-plan.pdf" data-goatcounter-click="plan-pdf-kierunek">Zobacz przykładowy plan (PDF)</a></p>
 <blockquote class="opinia"><p>Zależało mi na rodzinnych, tanich wakacjach all inclusive z basenami. Dostałam propozycje kierunków i najlepsze propozycje hotelowe, wszystko ekspresowo.</p><small>Paula z Otwocka, wakacje z rodziną</small></blockquote>
@@ -364,11 +383,11 @@ section.pocztowka h2{margin-top:0}
 <script src="/poczta.js" defer></script>
 <footer>
 <div class="stopka">
-<div class="o"><p class="tytul">Gołębie Latają</p><p>Gołębie Latają układają plany podróży. Ty mówisz, czego chcesz, my szukamy, liczymy i piszemy. Plan w 48 godzin.</p><p><a href="mailto:lecimy@golebielataja.pl">lecimy@golebielataja.pl</a></p><p>RF Michał Gołąb, NIP 5213757913, Warszawa</p></div>
-<div><p class="tytul">Kiedy wolne</p><ul><li><a href="/majowka/">Majówka</a></li><li><a href="/boze-cialo/">Boże Ciało</a></li><li><a href="/ferie-zimowe/">Ferie zimowe</a></li><li><a href="/sylwester-za-granica/">Sylwester za granicą</a></li><li><a href="/swieta-w-cieple/">Święta w cieple</a></li><li><a href="/wakacje-z-dziecmi/">Wakacje z dziećmi</a></li><li><a href="/podroz-poslubna/">Podróż poślubna</a></li></ul></div>
-<div><p class="tytul">Przydatne</p><ul><li><a href="/poradniki/">Poradniki</a></li><li><a href="/porownanie/">Porównania</a></li><li><a href="/tanie-loty/">Tanie loty</a></li><li><a href="/polityka-prywatnosci.html">Polityka prywatności</a></li><li><a href="/regulamin.html">Regulamin</a></li><li><a href="#zgoda" data-cookies="1">Ustawienia cookies</a></li></ul></div>
+<div class="o"><p class="tytul">Gołębie Latają</p><p>Gołębie Latają układają plany podróży. Ty mówisz, czego chcesz, my szukamy, liczymy i piszemy. Propozycje w 48 godzin.</p><p><a href="mailto:lecimy@golebielataja.pl">lecimy@golebielataja.pl</a></p><p>RF Michał Gołąb, NIP 5213757913, Warszawa</p></div>
+<div><p class="tytul">Kiedy wolne</p><ul><li><a href="/majowka/">Majówka</a></li><li><a href="/wielkanoc/">Wielkanoc za granicą</a></li><li><a href="/boze-cialo/">Boże Ciało</a></li><li><a href="/ferie-zimowe/">Ferie zimowe</a></li><li><a href="/sylwester-za-granica/">Sylwester za granicą</a></li><li><a href="/swieta-w-cieple/">Święta w cieple</a></li><li><a href="/wakacje-z-dziecmi/">Wakacje z dziećmi</a></li><li><a href="/podroz-poslubna/">Podróż poślubna</a></li></ul></div>
+<div><p class="tytul">Przydatne</p><ul><li><a href="/poradniki/">Poradniki</a></li><li><a href="/porownanie/">Porównania</a></li><li><a href="/tanie-loty/">Tanie loty</a></li><li><a href="/okazje/">Okazje</a></li><li><a href="/prezent/">Voucher na podróż</a></li><li><a href="/polityka-prywatnosci.html">Polityka prywatności</a></li><li><a href="/regulamin.html">Regulamin</a></li><li><a href="#zgoda" data-cookies="1">Ustawienia cookies</a></li></ul></div>
 </div>
-<p class="drobne">Dane odświeżamy co tydzień. Stan na 16 października 2026.</p>
+<p class="drobne">Strony odświeżamy codziennie, a ceny lotów same przy każdym wejściu. Stan na 17 października 2026.</p>
 </footer>
 <div class="pasek"></div>
 <div class="plan-pasek" hidden><p>Plan podróży od 399 zł, propozycje w 48 h</p><a href="/nowy/start?kierunek=sal&amp;z=kierunek" data-goatcounter-click="plan-pasek-kierunek">Zamów</a></div>

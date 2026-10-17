@@ -15,6 +15,7 @@
 <meta property="og:image" content="https://golebielataja.pl/img/k/las-vegas-1bme0l1-og.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/svg+xml" href="/img/golab-sygnet.svg">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
 <link rel="preload" href="/fonty/nunito-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonty/young-serif-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <style>@font-face{font-family:"Nunito zapas";src:local("Arial"),local("Helvetica"),local("Liberation Sans");size-adjust:96.3%;ascent-override:105%;descent-override:36.7%;line-gap-override:0%}
@@ -68,6 +69,7 @@ section.tlo{background:var(--niebo);border-radius:20px;padding:24px 26px}section
 @media(max-width:640px){.hero{grid-template-columns:1fr auto;gap:4px 14px}.hero h1{font-size:clamp(2rem,9vw,2.4rem)}.hero .stempel{grid-column:2;grid-row:1;width:96px;height:96px;margin:14px 0 0;border-width:4px}.hero .lead{grid-column:1 / -1}.stempel b{font-size:1.65rem}.stempel span{font-size:.56rem}}
 .podpis{font-size:.92rem;color:var(--ink-soft);margin:-4px 0 18px}
 dl.liczby,dl.list-przewozowy{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin:0;background:var(--white);border:1.5px solid var(--ink);border-radius:6px;box-shadow:3px 3px 0 var(--ink);overflow:hidden}
+dl.szczegoly-auta{margin:8px 0 0}dl.szczegoly-auta dt{font-weight:800;color:var(--ink);margin-top:14px}dl.szczegoly-auta dd{margin:4px 0 0}
 dl.liczby div{padding:12px 16px;border-right:1px dashed var(--line);border-bottom:1px dashed var(--line);margin:0 -1px -1px 0}
 dl.liczby dt{font-family:var(--mono);font-size:.76rem;color:var(--ink-soft);letter-spacing:.02em}
 dl.liczby dd{margin:2px 0 0;font-family:var(--serif);font-size:1.75rem;line-height:1.15;color:var(--navy)}
@@ -95,7 +97,7 @@ ul.lista-rzeczy li::before{content:"";position:absolute;left:0;top:.3em;width:16
 @media(max-width:640px){ul.lista-rzeczy{columns:1}}
 .pocztowka{background:var(--white);border:1.5px solid var(--ink);border-radius:6px;box-shadow:3px 3px 0 var(--ink);padding:18px 22px 16px;margin:18px 0;max-width:62ch;transform:rotate(-.6deg);position:relative}
 .pocztowka::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;background:repeating-linear-gradient(135deg,var(--red) 0 10px,var(--white) 10px 16px,var(--navy) 16px 26px,var(--white) 26px 32px);border-radius:5px 5px 0 0}
-.pocztowka p,.reka{font-family:var(--hand);font-size:1.55rem;line-height:1.25;font-weight:500;margin:.25em 0}
+.pocztowka p,.reka{font-family:var(--hand);font-size:1.62rem;line-height:1.25;font-weight:600;margin:.25em 0}
 .pocztowka small{display:block;font-family:var(--sans);font-size:.85rem;color:var(--ink-soft);margin-top:6px}
 table{border-collapse:collapse;width:100%;font-size:.98rem;font-variant-numeric:tabular-nums lining-nums}
 th,td{padding:8px 10px;text-align:left;border-bottom:1px solid var(--line)}thead th{font-weight:800;font-size:.88rem;color:var(--ink-soft);border-bottom:2px solid var(--ink)}tbody th{font-weight:700;color:var(--ink)}
@@ -132,7 +134,7 @@ details p{margin:.5em 0 0}
 p.podpowiedz{grid-column:1 / -1;margin:6px 0 0;padding:10px 14px;background:var(--niebo);border-radius:12px;max-width:62ch}
 figure.foto{margin:18px 0 8px}figure.foto img{width:100%;height:auto;max-height:520px;object-fit:cover;border-radius:20px;display:block;background:var(--paper-deep)}
 figure.foto figcaption{font-size:.8rem;color:var(--ink-soft);margin-top:6px}
-blockquote.opinia{margin:16px 0;padding:0;max-width:60ch}blockquote.opinia p{font-family:var(--hand);font-size:1.5rem;line-height:1.25;margin:0 0 4px}
+blockquote.opinia{margin:16px 0;padding:0 0 0 16px;max-width:60ch;border-left:3px solid var(--red)}blockquote.opinia p{font-family:var(--sans);font-size:1.06rem;line-height:1.6;font-weight:600;font-style:italic;margin:0 0 4px}blockquote.opinia p::before{content:"„"}blockquote.opinia p::after{content:"”"}
 blockquote.opinia small{font-size:.88rem}.cta blockquote.opinia small{color:#DCE3EE}
 ul.wskazowki{list-style:none;padding:0;max-width:var(--tekst)}ul.wskazowki li{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:14px 18px;margin:0 0 12px}
 ul.wskazowki strong{display:block;font-family:var(--serif);font-weight:400;font-size:1.16rem}ul.wskazowki p{margin:4px 0 6px}
@@ -161,14 +163,16 @@ a.cena-lot{color:var(--navy);text-decoration-thickness:1.5px}a.cena-lot::after{c
 .autor-pasek{display:flex;align-items:center;gap:10px;margin:6px 0 0;font-size:.92rem;color:var(--ink-soft)}.autor-pasek img{width:40px;height:40px;border-radius:50%;object-fit:cover;flex:none}
 section.pocztowka{margin:40px auto 0;max-width:820px;padding:22px 24px;background:var(--navy-soft);border-radius:16px;border-top:0}
 section.pocztowka h2{margin-top:0}
+/* 17.10.2026: tekst zapisu na Pocztówkę zwykłym krojem, bo odręczny przy dłuższym zdaniu i drobnym druku słabo się czyta. */
+section.pocztowka p{font-family:var(--sans);font-size:1.05rem;line-height:1.55;font-weight:600}section.pocztowka p.drobne{font-size:.88rem;font-weight:500;color:var(--ink-soft)}
 .pocztowka-form{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 8px}
 .pocztowka-form input[type=email]{flex:1 1 240px;min-height:46px;padding:10px 14px;border:1.5px solid var(--line);border-radius:12px;font:inherit;background:var(--white)}
 .pocztowka-form button{min-height:46px;padding:10px 20px;border:0;border-radius:999px;background:var(--red);color:#fff;font:inherit;font-weight:800;cursor:pointer}
 .pocztowka-form .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 @media print{.pasek,nav.spis,.partnerzy,.cta,aside.plan,.plan-pasek,section.pocztowka,.gl-zgoda,a[download],nav.gora .linki,.plan-nav,.okruszki{display:none}}</style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Las Vegas i parki narodowe w maju: pogoda, temperatura i czy warto","description":"Las Vegas i parki narodowe w maju: 32°C w dzień, 15°C w nocy, 1 dzień z opadem. Ocena gołębi 4/5 i co spakować.","inLanguage":"pl","dateModified":"2026-10-16","about":{"@type":"TouristDestination","name":"Las Vegas i parki narodowe","geo":{"@type":"GeoCoordinates","latitude":36.17,"longitude":-115.14},"containedInPlace":{"@type":"Country","name":"Stany Zjednoczone"}},"author":[{"@type":"Person","name":"Michał Gołąb","url":"https://golebielataja.pl/o-nas/","image":"https://golebielataja.pl/img/razem.jpg"},{"@type":"Person","name":"Paulina","url":"https://golebielataja.pl/o-nas/","image":"https://golebielataja.pl/img/razem.jpg"}],"publisher":{"@id":"https://golebielataja.pl/#organization","@type":"Organization","name":"Gołębie Latają"}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Czy Las Vegas i parki narodowe w maju to dobry pomysł?","acceptedAnswer":{"@type":"Answer","text":"Las Vegas i parki narodowe w maju to średni pomysł. Może być przyjemnie, może być różnie. Najlepsze miesiące tutaj: styczeń, luty, marzec, kwiecień, maj, październik, listopad, grudzień. Maj jest wśród nich."}},{"@type":"Question","name":"Las Vegas i parki narodowe w maju: co spakować?","acceptedAnswer":{"@type":"Answer","text":"Na pewno krem z filtrem 50 i coś na głowę, okulary przeciwsłoneczne i butelkę na wodę, bo pić trzeba dużo. Pełna lista jest wyżej."}},{"@type":"Question","name":"Las Vegas i parki narodowe: kiedy najlepiej jechać?","acceptedAnswer":{"@type":"Answer","text":"Według ocen gołębi najlepiej wypadają styczeń, luty, marzec, kwiecień, maj, październik, listopad i grudzień."}},{"@type":"Question","name":"Las Vegas i parki narodowe: ile trwa lot z Polski?","acceptedAnswer":{"@type":"Answer","text":"Z Warszawy około 12,5 h, jeśli lecisz bez przesiadki. Z innych lotnisk podobnie, z przesiadką dłużej."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Las Vegas i parki narodowe w maju: pogoda, temperatura i czy warto","description":"Las Vegas i parki narodowe w maju: 32°C w dzień, 15°C w nocy, 1 dzień z opadem. Ocena gołębi 4/5 i co spakować.","inLanguage":"pl","dateModified":"2026-10-17","about":{"@type":"TouristDestination","name":"Las Vegas i parki narodowe","geo":{"@type":"GeoCoordinates","latitude":36.17,"longitude":-115.14},"containedInPlace":{"@type":"Country","name":"Stany Zjednoczone"}},"author":[{"@type":"Person","name":"Michał Gołąb","url":"https://golebielataja.pl/o-nas/","image":"https://golebielataja.pl/img/razem.jpg"},{"@type":"Person","name":"Paulina","url":"https://golebielataja.pl/o-nas/","image":"https://golebielataja.pl/img/razem.jpg"}],"publisher":{"@id":"https://golebielataja.pl/#organization","@type":"Organization","name":"Gołębie Latają"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Czy Las Vegas i parki narodowe w maju to dobry pomysł?","acceptedAnswer":{"@type":"Answer","text":"Las Vegas i parki narodowe w maju to dobry wybór. Do ideału brakuje niewiele. Najlepsze miesiące tutaj: styczeń, luty, marzec, kwiecień, maj, październik, listopad, grudzień. Maj jest wśród nich."}},{"@type":"Question","name":"Las Vegas i parki narodowe w maju: co spakować?","acceptedAnswer":{"@type":"Answer","text":"Na pewno krem z filtrem 50 i coś na głowę, okulary przeciwsłoneczne i butelkę na wodę, bo pić trzeba dużo. Pełna lista jest wyżej."}},{"@type":"Question","name":"Las Vegas i parki narodowe: kiedy najlepiej jechać?","acceptedAnswer":{"@type":"Answer","text":"Według ocen gołębi najlepiej wypadają styczeń, luty, marzec, kwiecień, maj, październik, listopad i grudzień."}},{"@type":"Question","name":"Las Vegas i parki narodowe: ile trwa lot z Polski?","acceptedAnswer":{"@type":"Answer","text":"Z Warszawy około 12,5 h, jeśli lecisz bez przesiadki. Z innych lotnisk podobnie, z przesiadką dłużej."}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Gołębie Latają","item":"https://golebielataja.pl/"},{"@type":"ListItem","position":2,"name":"Kierunki","item":"https://golebielataja.pl/kierunki/"},{"@type":"ListItem","position":3,"name":"Las Vegas i parki narodowe","item":"https://golebielataja.pl/kierunki/las-vegas/"},{"@type":"ListItem","position":4,"name":"Maj","item":"https://golebielataja.pl/kierunki/las-vegas/maj/"}]}</script>
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "dabf88d8ecff46b9af7a1518edc3f5ee"}'></script>
 <script data-goatcounter="https://golebielataja.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
@@ -179,7 +183,7 @@ section.pocztowka h2{margin-top:0}
 <header>
 <nav class="gora" aria-label="Menu">
 <a class="logo" href="/">Gołębie Latają</a>
-<a class="plan-nav" href="/nowy/start?z=nav" data-goatcounter-click="plan-nav-miesiac">Plan w 48 h</a>
+<a class="plan-nav" href="/nowy/start?z=nav" data-goatcounter-click="plan-nav-miesiac">Zamów plan</a>
 <span class="linki">
 <a href="/kierunki/">Kierunki</a>
 <a href="/gdzie-leciec/maj/">Gdzie lecieć</a>
@@ -195,7 +199,7 @@ section.pocztowka h2{margin-top:0}
 <div class="hero">
 <h1>Las Vegas i parki narodowe w maju</h1>
 <div class="stempel" role="img" aria-label="Ocena gołębi na maj: 4 na 5"><span>maj</span><b>4/5</b><span>ocena gołębi</span></div>
-<p class="lead">Las Vegas i parki narodowe w maju to średni pomysł. Może być przyjemnie, może być różnie. W dzień 32°C. To już upał: w południe cień i woda, aktywności rano.</p>
+<p class="lead">Las Vegas i parki narodowe w maju to dobry wybór. Do ideału brakuje niewiele. W dzień 32°C. To już upał: w południe cień i woda, aktywności rano.</p>
 
 </div>
 <p class="autor-pasek"><img src="/img/razem.jpg" alt="" width="40" height="40" loading="lazy" decoding="async">Przygotowali <a href="/o-nas/">Michał i Paulina</a>, którzy sprawdzili na miejscu 35 krajów.</p>
@@ -208,27 +212,20 @@ section.pocztowka h2{margin-top:0}
 <nav class="spis" aria-label="Spis treści">
 <p class="spis-tytul">Na tej stronie</p>
 <ol>
-<li><a href="#za-i-przeciw">Za i przeciw</a></li>
 <li><a href="#pogoda">Pogoda</a></li>
+<li><a href="#za-i-przeciw">Za i przeciw</a></li>
+<li><a href="#rekomendacja">Rekomendacja gołębi</a></li>
+<li><a href="#rezerwacje">Zarezerwuj</a></li>
+<li><a href="#ceny">Ceny lotów</a></li>
+<li><a href="#co-zabrac">Co zabrać</a></li>
 <li><a href="#miesiace">Inne miesiące</a></li>
 <li><a href="#podobne">Podobne kierunki</a></li>
-<li><a href="#rezerwacje">Zarezerwuj</a></li>
-<li><a href="#co-zabrac">Co zabrać</a></li>
-<li><a href="#rekomendacja">Rekomendacja gołębi</a></li>
-<li><a href="#ceny">Ceny lotów</a></li>
-<li><a href="#pytania">Pytania</a></li>
 <li><a href="#dlugie-weekendy">Długie weekendy</a></li>
+<li><a href="#pytania">Pytania</a></li>
 <li><a class="plan" href="#plan">Plan od gołębi</a></li>
 </ol>
 </nav>
 <script src="/spis.js" defer></script>
-<section id="za-i-przeciw">
-<h2>Plusy i minusy</h2>
-<div class="dwie">
-<div class="za"><h3>Za</h3><ul class="plusy"><li>Deszcz prawie nie pada, średnio 1 dzień w miesiącu.</li><li>Wypada tu długi weekend (Święto Pracy, Święto Konstytucji 3 Maja).</li></ul></div>
-<div class="przeciw"><h3>Przeciw</h3><ul class="minusy"><li>32°C w dzień, w południe da się wytrzymać tylko w cieniu.</li></ul></div>
-</div>
-</section>
 <section id="pogoda">
 <h2>Pogoda w maju</h2>
 <dl class="liczby">
@@ -239,6 +236,58 @@ section.pocztowka h2{margin-top:0}
 </dl>
 <p class="po-liczbach">Między dniem a nocą jest duża różnica: w nocy spada do 15°C. Deszcz to tu rzadkość: średnio 1 dzień z opadem w miesiącu.</p>
 <p class="drobne">Ocena pod zwiedzanie: najlepiej 18 do 26°C i mało deszczu. Średnie z lat 1995-2024. To klimat, a nie prognoza. <a href="/o-nas/#ocena">Jak liczymy ocenę</a></p>
+</section>
+<section id="za-i-przeciw">
+<h2>Plusy i minusy</h2>
+<div class="dwie">
+<div class="za"><h3>Za</h3><ul class="plusy"><li>Deszcz prawie nie pada, średnio 1 dzień w miesiącu.</li><li>Wypada tu długi weekend (Święto Pracy, Święto Konstytucji 3 Maja).</li></ul></div>
+<div class="przeciw"><h3>Przeciw</h3><ul class="minusy"><li>32°C w dzień, w południe da się wytrzymać tylko w cieniu.</li></ul></div>
+</div>
+</section>
+<section id="rekomendacja" class="rekomendacja">
+<h2>Rekomendacja gołębi</h2>
+
+<p>Na zachętę kilka pozycji z listy gołębi, cała czeka na stronie kierunku.</p>
+<div class="kategorie">
+<div class="kat"><h3>Patent</h3>
+<ul class="miejsca">
+<li><strong>Zion jednego dnia</strong><small>Zion</small><p>Wyjedź z Las Vegas do siódmej rano, parkuj przy centrum i jedź darmowym shuttle. W Utah jest godzina później niż w Nevadzie.</p></li>
+</ul></div>
+<div class="kat"><h3>Smaki i trunki</h3>
+<ul class="miejsca">
+<li><strong>Arepas w Viva Las Arepas</strong><small>czyt. arepas</small><p>Wenezuelskie placki kukurydziane z nadzieniem, rodzinny lokal z kilkoma adresami. Szybki fast food zamiast hotelowej restauracji.</p></li>
+</ul></div>
+<div class="kat"><h3>Nietypowe</h3>
+<ul class="miejsca">
+<li><strong>Pinball Hall of Fame</strong><small>Las Vegas Blvd</small><p>Ponad czterysta działających automatów flipperowych, część z lat pięćdziesiątych. Jedna gra kosztuje grosze, a bawisz się lepiej niż w kasynie.</p></li>
+</ul></div>
+</div>
+
+<p class="dalej"><a href="/kierunki/las-vegas/#rekomendacja">Wszystkie wskazówki: Las Vegas i parki narodowe</a> <a href="/?sciezka=%2Fkierunki%2Flas-vegas%2Fwskazowka" rel="nofollow">Byłeś tam? Dodaj wskazówkę</a></p>
+</section>
+<section id="rezerwacje" class="karta">
+<h2>Szukasz na własną rękę?</h2>
+<p>Lot, nocleg i auto rezerwujesz sam, każde osobno. Lot i nocleg otworzą się z przykładowym terminem 8 do 15 maja 2027, daty zmienisz na miejscu.</p>
+<div class="partnerzy"><a class="partner glowny" href="https://www.aviasales.com/search/WAW0805LAS15052?currency=pln&amp;marker=785120.mlasvegas05" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-mlasvegas05">Znajdź lot na te daty w Aviasales</a><a class="partner" href="https://www.booking.com/searchresults.pl.html?ss=Las%20Vegas%20i%20parki%20narodowe&amp;latitude=36.17&amp;longitude=-115.14&amp;checkin=2027-05-08&amp;checkout=2027-05-15&amp;group_adults=2&amp;no_rooms=1" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-booking-mlasvegas05">Szukaj noclegu w Booking.com</a><a class="partner" href="https://www.expedia.pl/Hotel-Search?destination=Las%20Vegas%20i%20parki%20narodowe&amp;startDate=2027-05-08&amp;endDate=2027-05-15&amp;adults=2" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-expedia-mlasvegas05">Więcej noclegów w Expedii</a><a class="partner" href="https://tp.media/r?campaign_id=89&amp;marker=785120&amp;p=2074&amp;trs=581099&amp;u=https%3A%2F%2Fwww.tiqets.com%2Fpl%2Fsearch%3Fq%3DLas%2520Vegas%2520i%2520parki%2520narodowe&amp;sub_id=mlasvegas05" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-tiqets-mlasvegas05">Bilety do atrakcji w Tiqets</a><a class="partner" href="https://www.getyourguide.pl/s/?q=Las%20Vegas%20i%20parki%20narodowe&amp;date_from=2027-05-08&amp;date_to=2027-05-15" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-getyourguide-mlasvegas05">Wycieczki z przewodnikiem w GetYourGuide</a><a class="partner" href="https://tp.media/r?campaign_id=541&amp;marker=785120&amp;p=8310&amp;trs=581099&amp;u=https%3A%2F%2Fwww.airalo.com%2Fpl&amp;sub_id=mlasvegas05" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-airalo-mlasvegas05">eSIM Airalo</a><a class="partner" href="https://tp.media/r?campaign_id=629&amp;marker=785120&amp;p=8979&amp;trs=581099&amp;u=https%3A%2F%2Fsaily.com%2Fpl%2F&amp;sub_id=mlasvegas05" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-saily-mlasvegas05">eSIM Saily</a></div>
+<p class="drobne">Poza UE roaming bywa drogi. eSIM kupisz przed wylotem i włączysz po lądowaniu. <a href="/poradniki/esim/stany-zjednoczone/">eSIM: Stany Zjednoczone, ceny i który wybrać</a></p><div class="polecamy"><h3>Tu przyda się auto</h3>
+<p>To kierunek na road trip. Bez auta zobaczysz połowę. Porównywarka zbiera oferty wielu wypożyczalni. Bierz pełne ubezpieczenie, przy oddawaniu auta oszczędza nerwów.</p>
+<div class="partnerzy"><a class="partner glowny" href="https://tp.media/r?campaign_id=172&amp;marker=785120&amp;p=4845&amp;trs=581099&amp;u=https%3A%2F%2Fwww.qeeq.com%2F&amp;sub_id=mlasvegas05" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-qeeq-mlasvegas05">Wynajmij auto w QEEQ</a></div><p><a href="/poradniki/wynajem-auta/las-vegas/">Wynajem auta: Las Vegas i parki narodowe, na co uważać</a></p></div>
+<p class="drobne"><a class="partner" href="https://rankomat.pl/ubezpieczenia-turystyczne" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-rankomat-mlasvegas05">Porównaj ubezpieczenia w Rankomat</a> Ubezpieczenie podróżne porównasz w kilka minut.</p>
+<p class="drobne">Przyciski prowadzą do partnerów (Aviasales, Booking.com, Expedia, Tiqets, GetYourGuide, Airalo, Saily, QEEQ, Rankomat). Płacisz u nich tyle samo, a my dostajemy małą prowizję.</p>
+</section>
+<section id="ceny">
+<h2>Ceny lotów</h2>
+<p>Z Warszawy to 12,5 h w powietrzu, jeśli trafisz lot bez przesiadki.</p>
+<p>Na maj nie mamy jeszcze cen z ostatnich 90 dni. Sprawdź aktualne w przycisku poniżej.</p>
+</section>
+<section id="co-zabrac">
+<h2>Co spakować</h2>
+<ul class="lista-rzeczy">
+<li>Krem z filtrem 50 i coś na głowę</li>
+<li>Okulary przeciwsłoneczne</li>
+<li>Butelkę na wodę, bo pić trzeba dużo</li>
+<li>Przejściówkę do gniazdek typu A, B</li>
+</ul>
 </section>
 <section id="miesiace">
 <h2>Miesiąc po miesiącu</h2>
@@ -287,74 +336,29 @@ section.pocztowka h2{margin-top:0}
 <li><a href="/kierunki/toskania/maj/"><strong>Toskania</strong><span>22°C, ocena 4/5</span></a></li>
 <li><a href="/kierunki/petra/maj/"><strong>Petra i Wadi Rum</strong><span>28°C, ocena 5/5</span></a></li>
 <li><a href="/kierunki/buenos-aires/maj/"><strong>Buenos Aires</strong><span>17°C, ocena 5/5</span></a></li>
+<li><a href="/kierunki/sardynia/maj/"><strong>Sardynia</strong><span>23°C, woda 20°C, ocena 5/5</span></a></li>
 <li><a href="/kierunki/prowansja/maj/"><strong>Prowansja</strong><span>22°C, ocena 5/5</span></a></li>
-<li><a href="/kierunki/seul/maj/"><strong>Seul</strong><span>21°C, ocena 4/5</span></a></li>
 </ul>
 <p><a href="/gdzie-leciec/maj/">Gdzie polecieć w maju: pełna lista</a></p>
 <p><a href="/kraje/stany-zjednoczone/maj/">Stany Zjednoczone w maju: wszystkie kierunki obok siebie</a></p>
-</section>
-<section id="rezerwacje" class="karta">
-<h2>Szukasz na własną rękę?</h2>
-<p>Lot, nocleg i auto rezerwujesz sam, każde osobno. Lot i nocleg otworzą się z przykładowym terminem 8 do 15 maja 2027, daty zmienisz na miejscu.</p>
-<div class="partnerzy"><a class="partner glowny" href="https://www.aviasales.com/search/WAW0805LAS15052?currency=pln&amp;marker=785120.mlasvegas05" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-mlasvegas05">Znajdź lot na te daty w Aviasales</a><a class="partner" href="https://www.booking.com/searchresults.pl.html?ss=Las%20Vegas%20i%20parki%20narodowe&amp;latitude=36.17&amp;longitude=-115.14&amp;checkin=2027-05-08&amp;checkout=2027-05-15&amp;group_adults=2&amp;no_rooms=1" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-booking-mlasvegas05">Szukaj noclegu w Booking.com</a><a class="partner" href="https://www.expedia.pl/Hotel-Search?destination=Las%20Vegas%20i%20parki%20narodowe&amp;startDate=2027-05-08&amp;endDate=2027-05-15&amp;adults=2" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-expedia-mlasvegas05">Więcej noclegów w Expedii</a><a class="partner" href="https://tp.media/r?campaign_id=89&amp;marker=785120&amp;p=2074&amp;trs=581099&amp;u=https%3A%2F%2Fwww.tiqets.com%2Fpl%2Fsearch%3Fq%3DLas%2520Vegas%2520i%2520parki%2520narodowe&amp;sub_id=mlasvegas05" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-tiqets-mlasvegas05">Bilety do atrakcji w Tiqets</a><a class="partner" href="https://www.getyourguide.pl/s/?q=Las%20Vegas%20i%20parki%20narodowe&amp;date_from=2027-05-08&amp;date_to=2027-05-15" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-getyourguide-mlasvegas05">Wycieczki z przewodnikiem w GetYourGuide</a><a class="partner" href="https://tp.media/r?campaign_id=541&amp;marker=785120&amp;p=8310&amp;trs=581099&amp;u=https%3A%2F%2Fwww.airalo.com%2Fpl&amp;sub_id=mlasvegas05" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-airalo-mlasvegas05">eSIM Airalo</a><a class="partner" href="https://tp.media/r?campaign_id=629&amp;marker=785120&amp;p=8979&amp;trs=581099&amp;u=https%3A%2F%2Fsaily.com%2Fpl%2F&amp;sub_id=mlasvegas05" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-saily-mlasvegas05">eSIM Saily</a></div>
-<p class="drobne">Poza UE roaming bywa drogi. eSIM kupisz przed wylotem i włączysz po lądowaniu. <a href="/poradniki/esim/stany-zjednoczone/">eSIM: Stany Zjednoczone, ceny i który wybrać</a></p><div class="polecamy"><h3>Tu przyda się auto</h3>
-<p>To kierunek na road trip. Bez auta zobaczysz połowę. Porównywarka zbiera oferty wielu wypożyczalni. Bierz pełne ubezpieczenie, przy oddawaniu auta oszczędza nerwów.</p>
-<div class="partnerzy"><a class="partner glowny" href="https://tp.media/r?campaign_id=172&amp;marker=785120&amp;p=4845&amp;trs=581099&amp;u=https%3A%2F%2Fwww.qeeq.com%2F&amp;sub_id=mlasvegas05" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-qeeq-mlasvegas05">Wynajmij auto w QEEQ</a></div><p><a href="/poradniki/wynajem-auta/las-vegas/">Wynajem auta: Las Vegas i parki narodowe, na co uważać</a></p></div>
-<p class="drobne"><a class="partner" href="https://rankomat.pl/ubezpieczenia-turystyczne" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-rankomat-mlasvegas05">Porównaj ubezpieczenia w Rankomat</a> Ubezpieczenie podróżne porównasz w kilka minut.</p>
-<p class="drobne">Przyciski prowadzą do partnerów (Aviasales, Booking.com, Expedia, Tiqets, GetYourGuide, Airalo, Saily, QEEQ, Rankomat). Płacisz u nich tyle samo, a my dostajemy małą prowizję.</p>
-</section>
-<section id="co-zabrac">
-<h2>Co spakować</h2>
-<ul class="lista-rzeczy">
-<li>Krem z filtrem 50 i coś na głowę</li>
-<li>Okulary przeciwsłoneczne</li>
-<li>Butelkę na wodę, bo pić trzeba dużo</li>
-<li>Przejściówkę do gniazdek typu A, B</li>
-</ul>
-</section>
-<section id="rekomendacja" class="rekomendacja">
-<h2>Rekomendacja gołębi</h2>
-
-<p>Na zachętę kilka pozycji z listy gołębi, cała czeka na stronie kierunku.</p>
-<div class="kategorie">
-<div class="kat"><h3>Patent</h3>
-<ul class="miejsca">
-<li><strong>Zion jednego dnia</strong><small>Zion</small><p>Wyjedź z Las Vegas do siódmej rano, parkuj przy centrum i jedź darmowym shuttle. W Utah jest godzina później niż w Nevadzie.</p></li>
-</ul></div>
-<div class="kat"><h3>Smaki i trunki</h3>
-<ul class="miejsca">
-<li><strong>Arepas w Viva Las Arepas</strong><small>czyt. arepas</small><p>Wenezuelskie placki kukurydziane z nadzieniem, rodzinny lokal z kilkoma adresami. Szybki fast food zamiast hotelowej restauracji.</p></li>
-</ul></div>
-<div class="kat"><h3>Nietypowe</h3>
-<ul class="miejsca">
-<li><strong>Pinball Hall of Fame</strong><small>Las Vegas Blvd</small><p>Ponad czterysta działających automatów flipperowych, część z lat pięćdziesiątych. Jedna gra kosztuje grosze, a bawisz się lepiej niż w kasynie.</p></li>
-</ul></div>
-</div>
-
-<p class="dalej"><a href="/kierunki/las-vegas/#rekomendacja">Wszystkie wskazówki: Las Vegas i parki narodowe</a> <a href="/?sciezka=%2Fkierunki%2Flas-vegas%2Fwskazowka" rel="nofollow">Byłeś tam? Dodaj wskazówkę</a></p>
-</section>
-<section id="ceny">
-<h2>Ceny lotów</h2>
-<p>Z Warszawy to 12,5 h w powietrzu, jeśli trafisz lot bez przesiadki.</p>
-<p>Na maj nie mamy jeszcze cen z ostatnich 90 dni. Sprawdź aktualne w przycisku poniżej.</p>
-</section>
-<section id="pytania">
-<h2>Najczęstsze pytania</h2>
-<details><summary>Czy Las Vegas i parki narodowe w maju to dobry pomysł?</summary><p>Las Vegas i parki narodowe w maju to średni pomysł. Może być przyjemnie, może być różnie. Najlepsze miesiące tutaj: styczeń, luty, marzec, kwiecień, maj, październik, listopad, grudzień. Maj jest wśród nich.</p></details>
-<details><summary>Las Vegas i parki narodowe w maju: co spakować?</summary><p>Na pewno krem z filtrem 50 i coś na głowę, okulary przeciwsłoneczne i butelkę na wodę, bo pić trzeba dużo. Pełna lista jest wyżej.</p></details>
-<details><summary>Las Vegas i parki narodowe: kiedy najlepiej jechać?</summary><p>Według ocen gołębi najlepiej wypadają styczeń, luty, marzec, kwiecień, maj, październik, listopad i grudzień.</p></details>
-<details><summary>Las Vegas i parki narodowe: ile trwa lot z Polski?</summary><p>Z Warszawy około 12,5 h, jeśli lecisz bez przesiadki. Z innych lotnisk podobnie, z przesiadką dłużej.</p></details>
 </section>
 <section id="dlugie-weekendy">
 <h2>Długi weekend w maju</h2>
 <ul><li>Święto Pracy, Święto Konstytucji 3 Maja: 1 do 3 maja 2027, 3 dni wolnego, bez brania urlopu.</li><li>Boże Ciało: 27 do 30 maja 2027, 4 dni wolnego, urlop: 1 dzień.</li></ul>
 <p><a href="/dlugie-weekendy/2027/">Wszystkie długie weekendy</a></p>
 </section>
+<section id="pytania">
+<h2>Najczęstsze pytania</h2>
+<details><summary>Czy Las Vegas i parki narodowe w maju to dobry pomysł?</summary><p>Las Vegas i parki narodowe w maju to dobry wybór. Do ideału brakuje niewiele. Najlepsze miesiące tutaj: styczeń, luty, marzec, kwiecień, maj, październik, listopad, grudzień. Maj jest wśród nich.</p></details>
+<details><summary>Las Vegas i parki narodowe w maju: co spakować?</summary><p>Na pewno krem z filtrem 50 i coś na głowę, okulary przeciwsłoneczne i butelkę na wodę, bo pić trzeba dużo. Pełna lista jest wyżej.</p></details>
+<details><summary>Las Vegas i parki narodowe: kiedy najlepiej jechać?</summary><p>Według ocen gołębi najlepiej wypadają styczeń, luty, marzec, kwiecień, maj, październik, listopad i grudzień.</p></details>
+<details><summary>Las Vegas i parki narodowe: ile trwa lot z Polski?</summary><p>Z Warszawy około 12,5 h, jeśli lecisz bez przesiadki. Z innych lotnisk podobnie, z przesiadką dłużej.</p></details>
+</section>
 <section id="plan" class="cta">
-<h2>Plan od gołębi w 48 godzin</h2>
+<h2>Plan od gołębi, propozycje w 48 godzin</h2>
 <p>Ty mówisz, dokąd i za ile. My szukamy, porównujemy i piszemy plan, z którego od razu skorzystasz.</p>
 <p class="cena">Od 399 zł za cały plan. Płacisz dopiero na końcu zamówienia.</p>
-<p class="drobne">BLIK, karta albo Klarna. Zwrot 100%, jeśli nie trafimy. Pierwsze propozycje w 48 h, pełny plan zaraz po Twoim wyborze.</p>
+<p class="drobne">BLIK, karta albo Klarna. Zwrot 100%, jeśli nie trafimy. Propozycje z lotami i hotelami w 48 h. Pełny plan dzień po dniu w 5 dni roboczych od rezerwacji.</p>
 <p><a class="przycisk" href="/nowy/start?kierunek=las-vegas&amp;miesiac=2027-05&amp;z=miesiac" data-goatcounter-click="plan-koniec-miesiac">Zamów plan: Las Vegas i parki narodowe</a></p>
 <p><a href="/przyklad-plan.pdf" data-goatcounter-click="plan-pdf-miesiac">Zobacz przykładowy plan (PDF)</a></p>
 <blockquote class="opinia"><p>Zależało mi na rodzinnych, tanich wakacjach all inclusive z basenami. Dostałam propozycje kierunków i najlepsze propozycje hotelowe, wszystko ekspresowo.</p><small>Paula z Otwocka, wakacje z rodziną</small></blockquote>
@@ -376,11 +380,11 @@ section.pocztowka h2{margin-top:0}
 <script src="/poczta.js" defer></script>
 <footer>
 <div class="stopka">
-<div class="o"><p class="tytul">Gołębie Latają</p><p>Gołębie Latają układają plany podróży. Ty mówisz, czego chcesz, my szukamy, liczymy i piszemy. Plan w 48 godzin.</p><p><a href="mailto:lecimy@golebielataja.pl">lecimy@golebielataja.pl</a></p><p>RF Michał Gołąb, NIP 5213757913, Warszawa</p></div>
-<div><p class="tytul">Kiedy wolne</p><ul><li><a href="/majowka/">Majówka</a></li><li><a href="/boze-cialo/">Boże Ciało</a></li><li><a href="/ferie-zimowe/">Ferie zimowe</a></li><li><a href="/sylwester-za-granica/">Sylwester za granicą</a></li><li><a href="/swieta-w-cieple/">Święta w cieple</a></li><li><a href="/wakacje-z-dziecmi/">Wakacje z dziećmi</a></li><li><a href="/podroz-poslubna/">Podróż poślubna</a></li></ul></div>
-<div><p class="tytul">Przydatne</p><ul><li><a href="/poradniki/">Poradniki</a></li><li><a href="/porownanie/">Porównania</a></li><li><a href="/tanie-loty/">Tanie loty</a></li><li><a href="/polityka-prywatnosci.html">Polityka prywatności</a></li><li><a href="/regulamin.html">Regulamin</a></li><li><a href="#zgoda" data-cookies="1">Ustawienia cookies</a></li></ul></div>
+<div class="o"><p class="tytul">Gołębie Latają</p><p>Gołębie Latają układają plany podróży. Ty mówisz, czego chcesz, my szukamy, liczymy i piszemy. Propozycje w 48 godzin.</p><p><a href="mailto:lecimy@golebielataja.pl">lecimy@golebielataja.pl</a></p><p>RF Michał Gołąb, NIP 5213757913, Warszawa</p></div>
+<div><p class="tytul">Kiedy wolne</p><ul><li><a href="/majowka/">Majówka</a></li><li><a href="/wielkanoc/">Wielkanoc za granicą</a></li><li><a href="/boze-cialo/">Boże Ciało</a></li><li><a href="/ferie-zimowe/">Ferie zimowe</a></li><li><a href="/sylwester-za-granica/">Sylwester za granicą</a></li><li><a href="/swieta-w-cieple/">Święta w cieple</a></li><li><a href="/wakacje-z-dziecmi/">Wakacje z dziećmi</a></li><li><a href="/podroz-poslubna/">Podróż poślubna</a></li></ul></div>
+<div><p class="tytul">Przydatne</p><ul><li><a href="/poradniki/">Poradniki</a></li><li><a href="/porownanie/">Porównania</a></li><li><a href="/tanie-loty/">Tanie loty</a></li><li><a href="/okazje/">Okazje</a></li><li><a href="/prezent/">Voucher na podróż</a></li><li><a href="/polityka-prywatnosci.html">Polityka prywatności</a></li><li><a href="/regulamin.html">Regulamin</a></li><li><a href="#zgoda" data-cookies="1">Ustawienia cookies</a></li></ul></div>
 </div>
-<p class="drobne">Dane odświeżamy co tydzień. Stan na 16 października 2026.</p>
+<p class="drobne">Strony odświeżamy codziennie, a ceny lotów same przy każdym wejściu. Stan na 17 października 2026.</p>
 </footer>
 <div class="pasek"></div>
 <div class="plan-pasek" hidden><p>Plan podróży od 399 zł, propozycje w 48 h</p><a href="/nowy/start?kierunek=las-vegas&amp;miesiac=2027-05&amp;z=miesiac" data-goatcounter-click="plan-pasek-miesiac">Zamów</a></div>

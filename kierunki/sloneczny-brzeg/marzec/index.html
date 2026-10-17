@@ -15,6 +15,7 @@
 <meta property="og:image" content="https://golebielataja.pl/img/k/sloneczny-brzeg-1eohr4n-og.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/svg+xml" href="/img/golab-sygnet.svg">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
 <link rel="preload" href="/fonty/nunito-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonty/young-serif-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <style>@font-face{font-family:"Nunito zapas";src:local("Arial"),local("Helvetica"),local("Liberation Sans");size-adjust:96.3%;ascent-override:105%;descent-override:36.7%;line-gap-override:0%}
@@ -68,6 +69,7 @@ section.tlo{background:var(--niebo);border-radius:20px;padding:24px 26px}section
 @media(max-width:640px){.hero{grid-template-columns:1fr auto;gap:4px 14px}.hero h1{font-size:clamp(2rem,9vw,2.4rem)}.hero .stempel{grid-column:2;grid-row:1;width:96px;height:96px;margin:14px 0 0;border-width:4px}.hero .lead{grid-column:1 / -1}.stempel b{font-size:1.65rem}.stempel span{font-size:.56rem}}
 .podpis{font-size:.92rem;color:var(--ink-soft);margin:-4px 0 18px}
 dl.liczby,dl.list-przewozowy{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin:0;background:var(--white);border:1.5px solid var(--ink);border-radius:6px;box-shadow:3px 3px 0 var(--ink);overflow:hidden}
+dl.szczegoly-auta{margin:8px 0 0}dl.szczegoly-auta dt{font-weight:800;color:var(--ink);margin-top:14px}dl.szczegoly-auta dd{margin:4px 0 0}
 dl.liczby div{padding:12px 16px;border-right:1px dashed var(--line);border-bottom:1px dashed var(--line);margin:0 -1px -1px 0}
 dl.liczby dt{font-family:var(--mono);font-size:.76rem;color:var(--ink-soft);letter-spacing:.02em}
 dl.liczby dd{margin:2px 0 0;font-family:var(--serif);font-size:1.75rem;line-height:1.15;color:var(--navy)}
@@ -95,7 +97,7 @@ ul.lista-rzeczy li::before{content:"";position:absolute;left:0;top:.3em;width:16
 @media(max-width:640px){ul.lista-rzeczy{columns:1}}
 .pocztowka{background:var(--white);border:1.5px solid var(--ink);border-radius:6px;box-shadow:3px 3px 0 var(--ink);padding:18px 22px 16px;margin:18px 0;max-width:62ch;transform:rotate(-.6deg);position:relative}
 .pocztowka::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;background:repeating-linear-gradient(135deg,var(--red) 0 10px,var(--white) 10px 16px,var(--navy) 16px 26px,var(--white) 26px 32px);border-radius:5px 5px 0 0}
-.pocztowka p,.reka{font-family:var(--hand);font-size:1.55rem;line-height:1.25;font-weight:500;margin:.25em 0}
+.pocztowka p,.reka{font-family:var(--hand);font-size:1.62rem;line-height:1.25;font-weight:600;margin:.25em 0}
 .pocztowka small{display:block;font-family:var(--sans);font-size:.85rem;color:var(--ink-soft);margin-top:6px}
 table{border-collapse:collapse;width:100%;font-size:.98rem;font-variant-numeric:tabular-nums lining-nums}
 th,td{padding:8px 10px;text-align:left;border-bottom:1px solid var(--line)}thead th{font-weight:800;font-size:.88rem;color:var(--ink-soft);border-bottom:2px solid var(--ink)}tbody th{font-weight:700;color:var(--ink)}
@@ -132,7 +134,7 @@ details p{margin:.5em 0 0}
 p.podpowiedz{grid-column:1 / -1;margin:6px 0 0;padding:10px 14px;background:var(--niebo);border-radius:12px;max-width:62ch}
 figure.foto{margin:18px 0 8px}figure.foto img{width:100%;height:auto;max-height:520px;object-fit:cover;border-radius:20px;display:block;background:var(--paper-deep)}
 figure.foto figcaption{font-size:.8rem;color:var(--ink-soft);margin-top:6px}
-blockquote.opinia{margin:16px 0;padding:0;max-width:60ch}blockquote.opinia p{font-family:var(--hand);font-size:1.5rem;line-height:1.25;margin:0 0 4px}
+blockquote.opinia{margin:16px 0;padding:0 0 0 16px;max-width:60ch;border-left:3px solid var(--red)}blockquote.opinia p{font-family:var(--sans);font-size:1.06rem;line-height:1.6;font-weight:600;font-style:italic;margin:0 0 4px}blockquote.opinia p::before{content:"„"}blockquote.opinia p::after{content:"”"}
 blockquote.opinia small{font-size:.88rem}.cta blockquote.opinia small{color:#DCE3EE}
 ul.wskazowki{list-style:none;padding:0;max-width:var(--tekst)}ul.wskazowki li{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:14px 18px;margin:0 0 12px}
 ul.wskazowki strong{display:block;font-family:var(--serif);font-weight:400;font-size:1.16rem}ul.wskazowki p{margin:4px 0 6px}
@@ -161,25 +163,28 @@ a.cena-lot{color:var(--navy);text-decoration-thickness:1.5px}a.cena-lot::after{c
 .autor-pasek{display:flex;align-items:center;gap:10px;margin:6px 0 0;font-size:.92rem;color:var(--ink-soft)}.autor-pasek img{width:40px;height:40px;border-radius:50%;object-fit:cover;flex:none}
 section.pocztowka{margin:40px auto 0;max-width:820px;padding:22px 24px;background:var(--navy-soft);border-radius:16px;border-top:0}
 section.pocztowka h2{margin-top:0}
+/* 17.10.2026: tekst zapisu na Pocztówkę zwykłym krojem, bo odręczny przy dłuższym zdaniu i drobnym druku słabo się czyta. */
+section.pocztowka p{font-family:var(--sans);font-size:1.05rem;line-height:1.55;font-weight:600}section.pocztowka p.drobne{font-size:.88rem;font-weight:500;color:var(--ink-soft)}
 .pocztowka-form{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 8px}
 .pocztowka-form input[type=email]{flex:1 1 240px;min-height:46px;padding:10px 14px;border:1.5px solid var(--line);border-radius:12px;font:inherit;background:var(--white)}
 .pocztowka-form button{min-height:46px;padding:10px 20px;border:0;border-radius:999px;background:var(--red);color:#fff;font:inherit;font-weight:800;cursor:pointer}
 .pocztowka-form .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 @media print{.pasek,nav.spis,.partnerzy,.cta,aside.plan,.plan-pasek,section.pocztowka,.gl-zgoda,a[download],nav.gora .linki,.plan-nav,.okruszki{display:none}}</style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Słoneczny Brzeg w marcu: pogoda, woda i ceny lotów","description":"Słoneczny Brzeg w marcu: 11°C w dzień, 3°C w nocy, woda 8°C, 8 dni z opadem. Ocena gołębi 1/5, ceny lotów i co spakować.","inLanguage":"pl","dateModified":"2026-10-16","about":{"@type":"TouristDestination","name":"Słoneczny Brzeg","geo":{"@type":"GeoCoordinates","latitude":42.69,"longitude":27.71},"containedInPlace":{"@type":"Country","name":"Bułgaria"}},"author":[{"@type":"Person","name":"Michał Gołąb","url":"https://golebielataja.pl/o-nas/","image":"https://golebielataja.pl/img/razem.jpg"},{"@type":"Person","name":"Paulina","url":"https://golebielataja.pl/o-nas/","image":"https://golebielataja.pl/img/razem.jpg"}],"publisher":{"@id":"https://golebielataja.pl/#organization","@type":"Organization","name":"Gołębie Latają"}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Czy Słoneczny Brzeg w marcu to dobry pomysł?","acceptedAnswer":{"@type":"Answer","text":"Słoneczny Brzeg w marcu to pogodowo najsłabszy wybór w roku. Najlepsze miesiące tutaj: sierpień. Masz elastyczny termin? Przesuń wyjazd."}},{"@type":"Question","name":"Słoneczny Brzeg w marcu: jaka pogoda?","acceptedAnswer":{"@type":"Answer","text":"Średnio 11°C w dzień i 3°C w nocy, 8 dni z opadem, woda około 8°C."}},{"@type":"Question","name":"Słoneczny Brzeg w marcu: czy woda jest ciepła?","acceptedAnswer":{"@type":"Answer","text":"Morze ma około 8°C. Kąpiel tylko dla morsów."}},{"@type":"Question","name":"Słoneczny Brzeg w marcu: co spakować?","acceptedAnswer":{"@type":"Answer","text":"Na pewno warstwy: koszulki, bluzę i długie spodnie, ciepłą kurtkę, czapkę i rękawiczki i kurtkę przeciwdeszczową albo parasol. Pełna lista jest wyżej."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Słoneczny Brzeg w marcu: pogoda, woda i ceny lotów","description":"Słoneczny Brzeg w marcu: 11°C w dzień, 3°C w nocy, woda 8°C, 8 dni z opadem. Ocena gołębi 1/5, ceny lotów i co spakować.","inLanguage":"pl","dateModified":"2026-10-17","about":{"@type":"TouristDestination","name":"Słoneczny Brzeg","geo":{"@type":"GeoCoordinates","latitude":42.69,"longitude":27.71},"containedInPlace":{"@type":"Country","name":"Bułgaria"}},"author":[{"@type":"Person","name":"Michał Gołąb","url":"https://golebielataja.pl/o-nas/","image":"https://golebielataja.pl/img/razem.jpg"},{"@type":"Person","name":"Paulina","url":"https://golebielataja.pl/o-nas/","image":"https://golebielataja.pl/img/razem.jpg"}],"publisher":{"@id":"https://golebielataja.pl/#organization","@type":"Organization","name":"Gołębie Latają"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Czy Słoneczny Brzeg w marcu to dobry pomysł?","acceptedAnswer":{"@type":"Answer","text":"Słoneczny Brzeg w marcu to pogodowo najsłabszy wybór w roku. Najlepsze miesiące tutaj: lipiec, sierpień. Masz elastyczny termin? Przesuń wyjazd."}},{"@type":"Question","name":"Słoneczny Brzeg w marcu: jaka pogoda?","acceptedAnswer":{"@type":"Answer","text":"Średnio 11°C w dzień i 3°C w nocy, 8 dni z opadem, woda około 8°C."}},{"@type":"Question","name":"Słoneczny Brzeg w marcu: czy woda jest ciepła?","acceptedAnswer":{"@type":"Answer","text":"Morze ma około 8°C. Kąpiel tylko dla morsów."}},{"@type":"Question","name":"Słoneczny Brzeg w marcu: co spakować?","acceptedAnswer":{"@type":"Answer","text":"Na pewno warstwy: koszulki, bluzę i długie spodnie, ciepłą kurtkę, czapkę i rękawiczki i kurtkę przeciwdeszczową albo parasol. Pełna lista jest wyżej."}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Gołębie Latają","item":"https://golebielataja.pl/"},{"@type":"ListItem","position":2,"name":"Kierunki","item":"https://golebielataja.pl/kierunki/"},{"@type":"ListItem","position":3,"name":"Słoneczny Brzeg","item":"https://golebielataja.pl/kierunki/sloneczny-brzeg/"},{"@type":"ListItem","position":4,"name":"Marzec","item":"https://golebielataja.pl/kierunki/sloneczny-brzeg/marzec/"}]}</script>
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "dabf88d8ecff46b9af7a1518edc3f5ee"}'></script>
 <script data-goatcounter="https://golebielataja.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <script src="/zgoda.js" defer></script>
+<script src="/ceny.js" defer></script>
 </head>
 <body>
 <div class="pasek"></div>
 <header>
 <nav class="gora" aria-label="Menu">
 <a class="logo" href="/">Gołębie Latają</a>
-<a class="plan-nav" href="/nowy/start?z=nav" data-goatcounter-click="plan-nav-miesiac">Plan w 48 h</a>
+<a class="plan-nav" href="/nowy/start?z=nav" data-goatcounter-click="plan-nav-miesiac">Zamów plan</a>
 <span class="linki">
 <a href="/kierunki/">Kierunki</a>
 <a href="/gdzie-leciec/marzec/">Gdzie lecieć</a>
@@ -196,7 +201,7 @@ section.pocztowka h2{margin-top:0}
 <h1>Słoneczny Brzeg w marcu</h1>
 <div class="stempel slaby" role="img" aria-label="Ocena gołębi na marzec: 1 na 5"><span>marzec</span><b>1/5</b><span>ocena gołębi</span></div>
 <p class="lead">Słoneczny Brzeg w marcu to pogodowo najsłabszy wybór w roku. Około 11°C w dzień, więc kurtka jest potrzebna przez cały pobyt.</p>
-<p class="podpowiedz">Lepszy termin: <a href="/kierunki/sloneczny-brzeg/sierpien/">Słoneczny Brzeg w sierpniu</a>. Jeśli termin jest sztywny, w marcu lepiej wypadają: <a href="/kierunki/szarm/marzec/">Szarm el-Szejk</a>, <a href="/kierunki/hurghada/marzec/">Hurghada</a>, <a href="/kierunki/abu-zabi/marzec/">Abu Zabi</a>.</p>
+<p class="podpowiedz">Lepszy termin: <a href="/kierunki/sloneczny-brzeg/lipiec/">Słoneczny Brzeg w lipcu</a>. Jeśli termin jest sztywny, w marcu lepiej wypadają: <a href="/kierunki/szarm/marzec/">Szarm el-Szejk</a>, <a href="/kierunki/hurghada/marzec/">Hurghada</a>, <a href="/kierunki/abu-zabi/marzec/">Abu Zabi</a>.</p>
 </div>
 <p class="autor-pasek"><img src="/img/razem.jpg" alt="" width="40" height="40" loading="lazy" decoding="async">Przygotowali <a href="/o-nas/">Michał i Paulina</a>, którzy sprawdzili na miejscu 35 krajów.</p>
 <aside class="plan" aria-label="Plan podróży od gołębi">
@@ -224,7 +229,7 @@ section.pocztowka h2{margin-top:0}
 <script src="/spis.js" defer></script>
 <section id="kiedy-lepiej">
 <h2>Jeśli możesz przesunąć wyjazd</h2>
-<p>Najbliższy lepszy termin to sierpień.</p>
+<p>Gołębie poczekałyby do lipca.</p>
 <ol class="rok">
 <li><a class="o1" href="/kierunki/sloneczny-brzeg/styczen/" aria-label="Styczeń: 7°C, ocena 1 na 5">Sty<span>7°</span></a></li>
 <li><a class="o1" href="/kierunki/sloneczny-brzeg/luty/" aria-label="Luty: 8°C, ocena 1 na 5">Lut<span>8°</span></a></li>
@@ -232,7 +237,7 @@ section.pocztowka h2{margin-top:0}
 <li><a class="o1" href="/kierunki/sloneczny-brzeg/kwiecien/" aria-label="Kwiecień: 16°C, ocena 1 na 5">Kwi<span>16°</span></a></li>
 <li><a class="o1" href="/kierunki/sloneczny-brzeg/maj/" aria-label="Maj: 22°C, ocena 1 na 5">Maj<span>22°</span></a></li>
 <li><a class="o3" href="/kierunki/sloneczny-brzeg/czerwiec/" aria-label="Czerwiec: 27°C, ocena 3 na 5">Cze<span>27°</span></a></li>
-<li><a class="o2" href="/kierunki/sloneczny-brzeg/lipiec/" aria-label="Lipiec: 30°C, ocena 2 na 5">Lip<span>30°</span></a></li>
+<li><a class="o4" href="/kierunki/sloneczny-brzeg/lipiec/" aria-label="Lipiec: 30°C, ocena 4 na 5">Lip<span>30°</span></a></li>
 <li><a class="o5" href="/kierunki/sloneczny-brzeg/sierpien/" aria-label="Sierpień: 30°C, ocena 5 na 5">Sie<span>30°</span></a></li>
 <li><a class="o3" href="/kierunki/sloneczny-brzeg/wrzesien/" aria-label="Wrzesień: 25°C, ocena 3 na 5">Wrz<span>25°</span></a></li>
 <li><a class="o2" href="/kierunki/sloneczny-brzeg/pazdziernik/" aria-label="Październik: 19°C, ocena 2 na 5">Paź<span>19°</span></a></li>
@@ -240,7 +245,7 @@ section.pocztowka h2{margin-top:0}
 <li><a class="o1" href="/kierunki/sloneczny-brzeg/grudzien/" aria-label="Grudzień: 8°C, ocena 1 na 5">Gru<span>8°</span></a></li>
 </ol>
 <p class="legenda">Im bardziej zielono, tym lepsza pogoda na taki wyjazd. Każdy miesiąc ma swoją stronę.</p>
-<p class="dalej"><a href="/kierunki/sloneczny-brzeg/sierpien/">Słoneczny Brzeg w sierpniu</a> <a href="/kierunki/sloneczny-brzeg/">Słoneczny Brzeg przez cały rok</a> <a href="/kraje/bulgaria/">Dokumenty, waluta i gniazdka: Bułgaria</a></p>
+<p class="dalej"><a href="/kierunki/sloneczny-brzeg/lipiec/">Słoneczny Brzeg w lipcu</a> <a href="/kierunki/sloneczny-brzeg/">Słoneczny Brzeg przez cały rok</a> <a href="/kraje/bulgaria/">Dokumenty, waluta i gniazdka: Bułgaria</a></p>
 </section>
 <section id="gdzie-zamiast">
 <h2>Co wybrać w marcu</h2>
@@ -318,18 +323,18 @@ section.pocztowka h2{margin-top:0}
 <div class="przewin"><table class="ceny">
 <thead><tr><th scope="col">Skąd</th><th scope="col">Od</th><th scope="col">Przykładowy wylot</th></tr></thead>
 <tbody>
-<tr><th scope="row"><a href="/tanie-loty/wroclaw/">Wrocław</a></th><td><a class="cena-lot" href="https://www.aviasales.com/search/WRO2603BOJ02041?currency=pln&amp;marker=785120.mcslonecznybrzeg03wroclaw" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-mcslonecznybrzeg03wroclaw"><strong>od 1040 zł</strong></a> <small class="sprawdzono">sprawdzone 9 października</small></td><td>26 marca do 2 kwietnia 2027</td></tr>
-<tr><th scope="row"><a href="/tanie-loty/krakow/">Kraków</a></th><td><a class="cena-lot" href="https://www.aviasales.com/search/KRK2603BOJ02041?currency=pln&amp;marker=785120.mcslonecznybrzeg03krakow" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-mcslonecznybrzeg03krakow"><strong>od 1085 zł</strong></a> <small class="sprawdzono">sprawdzone 9 października</small></td><td>26 marca do 2 kwietnia 2027</td></tr>
-<tr><th scope="row"><a href="/tanie-loty/katowice/">Katowice</a></th><td><a class="cena-lot" href="https://www.aviasales.com/search/KTW2603BOJ02041?currency=pln&amp;marker=785120.mcslonecznybrzeg03katowice" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-mcslonecznybrzeg03katowice"><strong>od 1126 zł</strong></a> <small class="sprawdzono">sprawdzone 9 października</small></td><td>26 marca do 2 kwietnia 2027</td></tr>
-<tr><th scope="row"><a href="/tanie-loty/warszawa/">Warszawa</a></th><td><a class="cena-lot" href="https://www.aviasales.com/search/WAW2603BOJ02041?currency=pln&amp;marker=785120.mcslonecznybrzeg03warszawa" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-mcslonecznybrzeg03warszawa"><strong>od 1237 zł</strong></a> <small class="sprawdzono">sprawdzone 9 października</small></td><td>26 marca do 2 kwietnia 2027</td></tr>
+<tr><th scope="row"><a href="/tanie-loty/wroclaw/">Wrocław</a></th><td><span class="cena-zywa" data-cena="sloneczny-brzeg|wroclaw|03|mcslonecznybrzeg03wroclaw" data-at="2026-10-10T23:28:35.890Z" data-c="1040"><a class="cena-lot" href="https://www.aviasales.com/search/WRO2603BOJ02041?currency=pln&amp;marker=785120.mcslonecznybrzeg03wroclaw" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-mcslonecznybrzeg03wroclaw"><strong>od 1040 zł</strong></a> <small class="sprawdzono">sprawdzone 10 października</small></span></td><td data-kiedy>26 marca do 2 kwietnia 2027</td></tr>
+<tr><th scope="row"><a href="/tanie-loty/krakow/">Kraków</a></th><td><span class="cena-zywa" data-cena="sloneczny-brzeg|krakow|03|mcslonecznybrzeg03krakow" data-at="2026-10-10T23:28:35.890Z" data-c="1085"><a class="cena-lot" href="https://www.aviasales.com/search/KRK2603BOJ02041?currency=pln&amp;marker=785120.mcslonecznybrzeg03krakow" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-mcslonecznybrzeg03krakow"><strong>od 1085 zł</strong></a> <small class="sprawdzono">sprawdzone 10 października</small></span></td><td data-kiedy>26 marca do 2 kwietnia 2027</td></tr>
+<tr><th scope="row"><a href="/tanie-loty/katowice/">Katowice</a></th><td><span class="cena-zywa" data-cena="sloneczny-brzeg|katowice|03|mcslonecznybrzeg03katowice" data-at="2026-10-10T23:28:35.890Z" data-c="1126"><a class="cena-lot" href="https://www.aviasales.com/search/KTW2603BOJ02041?currency=pln&amp;marker=785120.mcslonecznybrzeg03katowice" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-mcslonecznybrzeg03katowice"><strong>od 1126 zł</strong></a> <small class="sprawdzono">sprawdzone 10 października</small></span></td><td data-kiedy>26 marca do 2 kwietnia 2027</td></tr>
+<tr><th scope="row"><a href="/tanie-loty/warszawa/">Warszawa</a></th><td><span class="cena-zywa" data-cena="sloneczny-brzeg|warszawa|03|mcslonecznybrzeg03warszawa" data-at="2026-10-10T23:28:35.890Z" data-c="1237"><a class="cena-lot" href="https://www.aviasales.com/search/WAW2603BOJ02041?currency=pln&amp;marker=785120.mcslonecznybrzeg03warszawa" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-mcslonecznybrzeg03warszawa"><strong>od 1237 zł</strong></a> <small class="sprawdzono">sprawdzone 10 października</small></span></td><td data-kiedy>26 marca do 2 kwietnia 2027</td></tr>
 </tbody>
 </table></div>
-<p class="drobne">Cena „od” otwiera Aviasales z tymi samymi datami; ceny zmieniają się co godzinę, więc mogą się różnić. „Zwykle od” to cena sprzed ponad tygodnia, orientacyjna. Ceny sprawdzone 9 października 2026.</p>
+<p class="drobne">Cena „od” otwiera Aviasales z tymi samymi datami; ceny zmieniają się co godzinę, więc mogą się różnić. „Zwykle od” to cena sprzed ponad tygodnia, orientacyjna. Ceny sprawdzone 10 października 2026.</p>
 <p>Z Warszawy to 2 h w powietrzu, jeśli trafisz lot bez przesiadki.</p>
 </section>
 <section id="pytania">
 <h2>Krótko i konkretnie</h2>
-<details><summary>Czy Słoneczny Brzeg w marcu to dobry pomysł?</summary><p>Słoneczny Brzeg w marcu to pogodowo najsłabszy wybór w roku. Najlepsze miesiące tutaj: sierpień. Masz elastyczny termin? Przesuń wyjazd.</p></details>
+<details><summary>Czy Słoneczny Brzeg w marcu to dobry pomysł?</summary><p>Słoneczny Brzeg w marcu to pogodowo najsłabszy wybór w roku. Najlepsze miesiące tutaj: lipiec, sierpień. Masz elastyczny termin? Przesuń wyjazd.</p></details>
 <details><summary>Słoneczny Brzeg w marcu: jaka pogoda?</summary><p>Średnio 11°C w dzień i 3°C w nocy, 8 dni z opadem, woda około 8°C.</p></details>
 <details><summary>Słoneczny Brzeg w marcu: czy woda jest ciepła?</summary><p>Morze ma około 8°C. Kąpiel tylko dla morsów.</p></details>
 <details><summary>Słoneczny Brzeg w marcu: co spakować?</summary><p>Na pewno warstwy: koszulki, bluzę i długie spodnie, ciepłą kurtkę, czapkę i rękawiczki i kurtkę przeciwdeszczową albo parasol. Pełna lista jest wyżej.</p></details>
@@ -340,10 +345,10 @@ section.pocztowka h2{margin-top:0}
 <p><a href="/dlugie-weekendy/2027/">Wszystkie długie weekendy</a></p>
 </section>
 <section id="plan" class="cta">
-<h2>Plan od gołębi w 48 godzin</h2>
+<h2>Plan od gołębi, propozycje w 48 godzin</h2>
 <p>Ty mówisz, dokąd i za ile. My szukamy, porównujemy i piszemy plan, z którego od razu skorzystasz.</p>
 <p class="cena">Od 399 zł za cały plan. Płacisz dopiero na końcu zamówienia.</p>
-<p class="drobne">BLIK, karta albo Klarna. Zwrot 100%, jeśli nie trafimy. Pierwsze propozycje w 48 h, pełny plan zaraz po Twoim wyborze.</p>
+<p class="drobne">BLIK, karta albo Klarna. Zwrot 100%, jeśli nie trafimy. Propozycje z lotami i hotelami w 48 h. Pełny plan dzień po dniu w 5 dni roboczych od rezerwacji.</p>
 <p><a class="przycisk" href="/nowy/start?kierunek=sloneczny-brzeg&amp;miesiac=2027-03&amp;z=miesiac" data-goatcounter-click="plan-koniec-miesiac">Zamów plan: Słoneczny Brzeg</a></p>
 <p><a href="/przyklad-plan.pdf" data-goatcounter-click="plan-pdf-miesiac">Zobacz przykładowy plan (PDF)</a></p>
 <blockquote class="opinia"><p>Miałem biznesowy wyjazd do południowych Niemiec. Gołębie wskazali, jakie miasteczka po drodze zwiedzić oraz jak spędzić wolny weekend w tych okolicach.</p><small>Tomasz, Niemcy służbowo i po godzinach</small></blockquote>
@@ -365,11 +370,11 @@ section.pocztowka h2{margin-top:0}
 <script src="/poczta.js" defer></script>
 <footer>
 <div class="stopka">
-<div class="o"><p class="tytul">Gołębie Latają</p><p>Gołębie Latają układają plany podróży. Ty mówisz, czego chcesz, my szukamy, liczymy i piszemy. Plan w 48 godzin.</p><p><a href="mailto:lecimy@golebielataja.pl">lecimy@golebielataja.pl</a></p><p>RF Michał Gołąb, NIP 5213757913, Warszawa</p></div>
-<div><p class="tytul">Kiedy wolne</p><ul><li><a href="/majowka/">Majówka</a></li><li><a href="/boze-cialo/">Boże Ciało</a></li><li><a href="/ferie-zimowe/">Ferie zimowe</a></li><li><a href="/sylwester-za-granica/">Sylwester za granicą</a></li><li><a href="/swieta-w-cieple/">Święta w cieple</a></li><li><a href="/wakacje-z-dziecmi/">Wakacje z dziećmi</a></li><li><a href="/podroz-poslubna/">Podróż poślubna</a></li></ul></div>
-<div><p class="tytul">Przydatne</p><ul><li><a href="/poradniki/">Poradniki</a></li><li><a href="/porownanie/">Porównania</a></li><li><a href="/tanie-loty/">Tanie loty</a></li><li><a href="/polityka-prywatnosci.html">Polityka prywatności</a></li><li><a href="/regulamin.html">Regulamin</a></li><li><a href="#zgoda" data-cookies="1">Ustawienia cookies</a></li></ul></div>
+<div class="o"><p class="tytul">Gołębie Latają</p><p>Gołębie Latają układają plany podróży. Ty mówisz, czego chcesz, my szukamy, liczymy i piszemy. Propozycje w 48 godzin.</p><p><a href="mailto:lecimy@golebielataja.pl">lecimy@golebielataja.pl</a></p><p>RF Michał Gołąb, NIP 5213757913, Warszawa</p></div>
+<div><p class="tytul">Kiedy wolne</p><ul><li><a href="/majowka/">Majówka</a></li><li><a href="/wielkanoc/">Wielkanoc za granicą</a></li><li><a href="/boze-cialo/">Boże Ciało</a></li><li><a href="/ferie-zimowe/">Ferie zimowe</a></li><li><a href="/sylwester-za-granica/">Sylwester za granicą</a></li><li><a href="/swieta-w-cieple/">Święta w cieple</a></li><li><a href="/wakacje-z-dziecmi/">Wakacje z dziećmi</a></li><li><a href="/podroz-poslubna/">Podróż poślubna</a></li></ul></div>
+<div><p class="tytul">Przydatne</p><ul><li><a href="/poradniki/">Poradniki</a></li><li><a href="/porownanie/">Porównania</a></li><li><a href="/tanie-loty/">Tanie loty</a></li><li><a href="/okazje/">Okazje</a></li><li><a href="/prezent/">Voucher na podróż</a></li><li><a href="/polityka-prywatnosci.html">Polityka prywatności</a></li><li><a href="/regulamin.html">Regulamin</a></li><li><a href="#zgoda" data-cookies="1">Ustawienia cookies</a></li></ul></div>
 </div>
-<p class="drobne">Dane odświeżamy co tydzień. Stan na 16 października 2026.</p>
+<p class="drobne">Strony odświeżamy codziennie, a ceny lotów same przy każdym wejściu. Stan na 17 października 2026.</p>
 </footer>
 <div class="pasek"></div>
 <div class="plan-pasek" hidden><p>Plan podróży od 399 zł, propozycje w 48 h</p><a href="/nowy/start?miesiac=2027-03&amp;z=miesiac" data-goatcounter-click="plan-pasek-miesiac">Zamów</a></div>
