@@ -22,7 +22,9 @@
     return;
   }
   var reszta = "/" + p.slice(baza.length) + location.search;
-  location.replace(baza + "?sciezka=" + encodeURIComponent(reszta) + location.hash);
+  /* D9: przy bazie "/" pod adresem głównym jest statyczna strona główna, a appka startuje z /start. */
+  var cel = baza === "/" ? "/start" : baza;
+  location.replace(cel + "?sciezka=" + encodeURIComponent(reszta) + location.hash);
 })();
 </script>
 <title>Gołąb zabłądził | Gołębie Latają</title>
