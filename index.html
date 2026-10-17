@@ -355,6 +355,7 @@ ol.g-kroki,.g-znaczki{grid-template-columns:1fr}.g-znaczki{gap:22px}.g-opinie,.g
 <p><a class="przycisk jasny g-dwie" href="/nowy/start?z=glowna" data-goatcounter-click="plan-koniec-glowna"><span>Zamów plan podróży</span><small>czyli wyślij gołębia, odpiszemy w 48 h</small></a></p>
 </section>
 <script>try{if(localStorage.getItem('gl-zalogowany')==='1')document.querySelector('a.twoje-loty').hidden=false}catch(e){}</script>
+<script>if(/[?&]sciezka=/.test(location.search))location.replace('/start'+location.search+location.hash)</script>
 </main>
 <section class="pocztowka" id="pocztowka" aria-labelledby="pocztowka-h">
 <h2 id="pocztowka-h">Pocztówka od gołębi</h2>
