@@ -30,7 +30,7 @@
 :root{--paper:#F7F1E4;--paper-deep:#EFE6D1;--cream:#FBF6EA;--white:#FFFDF8;--ink:#2A2C31;--ink-soft:#5E626A;--line:#DDD5C4;--red:#D0402A;--navy:#1F3B6E;--navy-soft:#E6ECF5;--niebo:#DCEAF3;--zielen:#276A4D;--zielen-soft:#E3F1EA;--muted:#5E626A;
 --serif:"Young Serif",Georgia,"Times New Roman",serif;--sans:Nunito,"Nunito zapas","Segoe UI",system-ui,-apple-system,sans-serif;--hand:Caveat,"Segoe Print","Bradley Hand",cursive;--mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;--tekst:66ch}
 *{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{margin:0;font-family:var(--sans);font-weight:500;font-size:1.125rem;line-height:1.65;color:var(--ink);background:var(--paper);font-variant-numeric:lining-nums}
+body{margin:0;font-family:var(--sans);font-weight:500;font-size:1.125rem;line-height:1.65;color:var(--ink);background:var(--paper);font-variant-numeric:lining-nums;overflow-x:clip}
 a{color:var(--navy);text-decoration-thickness:1px;text-underline-offset:.18em}a:hover{text-decoration-thickness:2px}
 :focus-visible{outline:2px solid var(--navy);outline-offset:2px;border-radius:4px}
 .pasek{height:8px;background:repeating-linear-gradient(135deg,var(--red) 0 14px,var(--white) 14px 22px,var(--navy) 22px 36px,var(--white) 36px 44px)}
@@ -96,6 +96,7 @@ ul.lista-rzeczy{list-style:none;padding:0;columns:2;column-gap:28px;max-width:no
 ul.lista-rzeczy li::before{content:"";position:absolute;left:0;top:.3em;width:16px;height:16px;border:2px solid var(--navy);border-radius:4px}
 @media(max-width:640px){ul.lista-rzeczy{columns:1}}
 .pocztowka{background:var(--white);border:1.5px solid var(--ink);border-radius:6px;box-shadow:3px 3px 0 var(--ink);padding:18px 22px 16px;margin:18px 0;max-width:62ch;transform:rotate(-.6deg);position:relative}
+@media(max-width:640px){.pocztowka{transform:rotate(-.6deg) scale(.985)}}
 .pocztowka::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;background:repeating-linear-gradient(135deg,var(--red) 0 10px,var(--white) 10px 16px,var(--navy) 16px 26px,var(--white) 26px 32px);border-radius:5px 5px 0 0}
 .pocztowka p,.reka{font-family:var(--hand);font-size:1.62rem;line-height:1.25;font-weight:600;margin:.25em 0}
 .pocztowka small{display:block;font-family:var(--sans);font-size:.85rem;color:var(--ink-soft);margin-top:6px}
@@ -155,7 +156,7 @@ aside.plan p{margin:0;max-width:60ch}aside.plan strong{display:block;font-family
 @media(min-width:761px){.plan-pasek{display:none}}
 .cta .cena{font-family:var(--serif);font-size:1.3rem;margin:4px 0 2px}.cta .drobne,.cta small{color:#DCE3EE}.cta .czy-sam{margin-top:14px;padding-top:12px;border-top:1px solid rgba(255,253,248,.25)}.cta .czy-sam p{margin:0 0 4px}
 nav.spis a.plan{border-color:var(--red);color:var(--red)}
-.pakiety{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:14px 0}.pakiety>div{background:var(--white);color:var(--ink);border-radius:16px;padding:16px 20px}.pakiety h3{margin:0;color:var(--navy)}.pakiety .cena{font-family:var(--serif);font-size:1.7rem;color:var(--red);margin:2px 0 4px}.pakiety ul{font-size:.95rem;padding-left:1.1em;margin:6px 0 0}
+.pakiety{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:14px 0}.pakiety>div{background:var(--white);color:var(--ink);border-radius:16px;padding:16px 20px}.pakiety h3{margin:0;color:var(--navy)}.pakiety .cena{font-family:var(--serif);font-size:1.7rem;color:var(--red);margin:2px 0 4px}.pakiety ul{font-size:.95rem;padding-left:1.1em;margin:6px 0 0}.pakiety .drobne{color:var(--ink-soft)}
 ul.terminy{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px;max-width:none}ul.terminy li{margin:0;background:var(--white);border:1px solid var(--line);border-radius:16px;padding:12px 14px}ul.terminy strong{font-family:var(--serif);font-weight:400;font-size:1.2rem}
 figure.mini{margin:0 0 8px}figure.mini img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;border-radius:10px;display:block;background:var(--paper-deep)}figure.mini figcaption{font-size:.72rem;color:var(--ink-soft);margin-top:3px}
 .cena-terminu{margin:6px 0 4px;font-weight:800;color:var(--navy)}ul.terminy .partnerzy{display:flex;flex-wrap:wrap;gap:6px}ul.terminy a.partner{min-height:40px;padding:6px 12px;font-size:.92rem}
@@ -171,7 +172,7 @@ section.pocztowka p{font-family:var(--sans);font-size:1.05rem;line-height:1.55;f
 .pocztowka-form .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 @media print{.pasek,nav.spis,.partnerzy,.cta,aside.plan,.plan-pasek,section.pocztowka,.gl-zgoda,a[download],nav.gora .linki,.plan-nav,.okruszki{display:none}}</style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Transylwania we wrześniu: pogoda, temperatura i czy warto","description":"Transylwania we wrześniu: 18°C w dzień, 7°C w nocy, 10 dni z opadem. Ocena gołębi 4/5 i co spakować.","inLanguage":"pl","dateModified":"2026-10-17","about":{"@type":"TouristDestination","name":"Transylwania","geo":{"@type":"GeoCoordinates","latitude":45.643,"longitude":25.588},"containedInPlace":{"@type":"Country","name":"Rumunia"}},"author":[{"@type":"Person","name":"Michał Gołąb","url":"https://golebielataja.pl/o-nas/","image":"https://golebielataja.pl/img/razem.jpg"},{"@type":"Person","name":"Paulina","url":"https://golebielataja.pl/o-nas/","image":"https://golebielataja.pl/img/razem.jpg"}],"publisher":{"@id":"https://golebielataja.pl/#organization","@type":"Organization","name":"Gołębie Latają"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Transylwania we wrześniu: pogoda, temperatura i czy warto","description":"Transylwania we wrześniu: 18°C w dzień, 7°C w nocy, 10 dni z opadem. Ocena gołębi 4/5 i co spakować.","inLanguage":"pl","dateModified":"2026-10-18","about":{"@type":"TouristDestination","name":"Transylwania","geo":{"@type":"GeoCoordinates","latitude":45.643,"longitude":25.588},"containedInPlace":{"@type":"Country","name":"Rumunia"}},"author":[{"@type":"Person","name":"Michał Gołąb","url":"https://golebielataja.pl/o-nas/","image":"https://golebielataja.pl/img/razem.jpg"},{"@type":"Person","name":"Paulina","url":"https://golebielataja.pl/o-nas/","image":"https://golebielataja.pl/img/razem.jpg"}],"publisher":{"@id":"https://golebielataja.pl/#organization","@type":"Organization","name":"Gołębie Latają"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Czy Transylwania we wrześniu to dobry pomysł?","acceptedAnswer":{"@type":"Answer","text":"Transylwania we wrześniu? Lepszego terminu tu nie znajdziesz, najwyżej równie dobry. Najlepsze miesiące tutaj: wrzesień. Wrzesień jest wśród nich."}},{"@type":"Question","name":"Transylwania we wrześniu: czy dużo pada?","acceptedAnswer":{"@type":"Answer","text":"Średnio 10 dni z opadem i około 61 mm deszczu w całym miesiącu."}},{"@type":"Question","name":"Transylwania: ile trwa lot z Polski?","acceptedAnswer":{"@type":"Answer","text":"Z Warszawy około 1,5 h, jeśli lecisz bez przesiadki. Z innych lotnisk podobnie, z przesiadką dłużej."}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Gołębie Latają","item":"https://golebielataja.pl/"},{"@type":"ListItem","position":2,"name":"Kierunki","item":"https://golebielataja.pl/kierunki/"},{"@type":"ListItem","position":3,"name":"Transylwania","item":"https://golebielataja.pl/kierunki/transylwania/"},{"@type":"ListItem","position":4,"name":"Wrzesień","item":"https://golebielataja.pl/kierunki/transylwania/wrzesien/"}]}</script>
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "dabf88d8ecff46b9af7a1518edc3f5ee"}'></script>
@@ -289,7 +290,7 @@ section.pocztowka p{font-family:var(--sans);font-size:1.05rem;line-height:1.55;f
 </ul></div>
 <div class="kat"><h3>Smaki i trunki</h3>
 <ul class="miejsca">
-<li><strong>Țuică i pălincă</strong><small>czyt. cujka i pelinka</small><p>Śliwowica i jej mocniejsza, podwójnie destylowana wersja, pite jako aperitif na jeden raz z okrzykiem „Noroc!”. Domowa potrafi kopnąć mocniej niż się spodziewasz.</p></li>
+<li><strong>Țuică i pălincă</strong><small>czyt. cujka i pelinka</small><p>Śliwowica i jej mocniejsza, podwójnie destylowana wersja, pite jako aperitif duszkiem z okrzykiem „Noroc!”. Domowa potrafi kopnąć mocniej, niż się spodziewasz.</p></li>
 </ul></div>
 </div>
 
@@ -297,7 +298,7 @@ section.pocztowka p{font-family:var(--sans);font-size:1.05rem;line-height:1.55;f
 </section>
 <section id="rezerwacje" class="karta">
 <h2>Rezerwacje</h2>
-<p>Wolisz szukać sam? Zacznij od tych przycisków. Lot i nocleg otworzą się z przykładowym terminem 11 do 18 września 2027, daty zmienisz na miejscu.</p>
+<p>Wolisz szukać sam? Zacznij od tych przycisków. Lot i nocleg otworzą się z przykładowymi datami (11 do 18 września 2027), zmienisz je na miejscu.</p>
 <div class="partnerzy"><a class="partner glowny" href="https://www.aviasales.com/search/WAW1109OTP18092?currency=pln&amp;marker=785120.mtransylwania09" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-mtransylwania09">Znajdź lot na te daty w Aviasales</a><a class="partner" href="https://www.booking.com/searchresults.pl.html?ss=Transylwania&amp;latitude=45.643&amp;longitude=25.588&amp;checkin=2027-09-11&amp;checkout=2027-09-18&amp;group_adults=2&amp;no_rooms=1" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-booking-mtransylwania09">Szukaj noclegu w Booking.com</a><a class="partner" href="https://www.expedia.pl/Hotel-Search?destination=Transylwania&amp;startDate=2027-09-11&amp;endDate=2027-09-18&amp;adults=2" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-expedia-mtransylwania09">Więcej noclegów w Expedii</a><a class="partner" href="https://tp.media/r?campaign_id=89&amp;marker=785120&amp;p=2074&amp;trs=581099&amp;u=https%3A%2F%2Fwww.tiqets.com%2Fpl%2Fsearch%3Fq%3DTransylwania&amp;sub_id=mtransylwania09" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-tiqets-mtransylwania09">Bilety do atrakcji w Tiqets</a><a class="partner" href="https://www.getyourguide.pl/s/?q=Transylwania&amp;date_from=2027-09-11&amp;date_to=2027-09-18" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-getyourguide-mtransylwania09">Wycieczki z przewodnikiem w GetYourGuide</a></div>
 <div class="polecamy"><h3>Tu przyda się auto</h3>
 <p>To kierunek na road trip. Bez auta zobaczysz połowę. Porównywarka zbiera oferty wielu wypożyczalni. Bierz pełne ubezpieczenie, przy oddawaniu auta oszczędza nerwów.</p>
@@ -307,7 +308,7 @@ section.pocztowka p{font-family:var(--sans);font-size:1.05rem;line-height:1.55;f
 </section>
 <section id="ceny">
 <h2>Ceny lotów</h2>
-<p>Na wrzesień nie mamy jeszcze cen z ostatnich 90 dni. Sprawdź aktualne w przycisku poniżej.</p>
+<p>Na wrzesień nie mamy jeszcze cen z ostatnich 90 dni. Aktualne sprawdzisz pod przyciskiem poniżej.</p>
 <p>Z Warszawy to 1,5 h w powietrzu, jeśli trafisz lot bez przesiadki.</p>
 </section>
 <section id="co-zabrac">
@@ -367,7 +368,7 @@ section.pocztowka p{font-family:var(--sans);font-size:1.05rem;line-height:1.55;f
 <div><p class="tytul">Kiedy wolne</p><ul><li><a href="/majowka/">Majówka</a></li><li><a href="/wielkanoc/">Wielkanoc za granicą</a></li><li><a href="/boze-cialo/">Boże Ciało</a></li><li><a href="/ferie-zimowe/">Ferie zimowe</a></li><li><a href="/sylwester-za-granica/">Sylwester za granicą</a></li><li><a href="/swieta-w-cieple/">Święta w cieple</a></li><li><a href="/wakacje-z-dziecmi/">Wakacje z dziećmi</a></li><li><a href="/podroz-poslubna/">Podróż poślubna</a></li></ul></div>
 <div><p class="tytul">Przydatne</p><ul><li><a href="/poradniki/">Poradniki</a></li><li><a href="/porownanie/">Porównania</a></li><li><a href="/tanie-loty/">Tanie loty</a></li><li><a href="/okazje/">Okazje</a></li><li><a href="/prezent/">Voucher na podróż</a></li><li><a href="/polityka-prywatnosci.html">Polityka prywatności</a></li><li><a href="/regulamin.html">Regulamin</a></li><li><a href="#zgoda" data-cookies="1">Ustawienia cookies</a></li></ul></div>
 </div>
-<p class="drobne">Strony odświeżamy codziennie, a ceny lotów same przy każdym wejściu. Stan na 18 października 2026.</p>
+<p class="drobne">Strony odświeżamy codziennie, a ceny lotów odświeżają się same przy każdym wejściu. Stan na 18 października 2026.</p>
 </footer>
 <div class="pasek"></div>
 <div class="plan-pasek" hidden><p>Plan podróży od 399 zł, propozycje w 48 h</p><a href="/nowy/start?kierunek=transylwania&amp;miesiac=2027-09&amp;z=miesiac" data-goatcounter-click="plan-pasek-miesiac">Zamów</a></div>

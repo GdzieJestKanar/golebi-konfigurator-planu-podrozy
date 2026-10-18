@@ -34,7 +34,7 @@
 :root{--paper:#F7F1E4;--paper-deep:#EFE6D1;--cream:#FBF6EA;--white:#FFFDF8;--ink:#2A2C31;--ink-soft:#5E626A;--line:#DDD5C4;--red:#D0402A;--navy:#1F3B6E;--navy-soft:#E6ECF5;--niebo:#DCEAF3;--zielen:#276A4D;--zielen-soft:#E3F1EA;--muted:#5E626A;
 --serif:"Young Serif",Georgia,"Times New Roman",serif;--sans:Nunito,"Nunito zapas","Segoe UI",system-ui,-apple-system,sans-serif;--hand:Caveat,"Segoe Print","Bradley Hand",cursive;--mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;--tekst:66ch}
 *{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{margin:0;font-family:var(--sans);font-weight:500;font-size:1.125rem;line-height:1.65;color:var(--ink);background:var(--paper);font-variant-numeric:lining-nums}
+body{margin:0;font-family:var(--sans);font-weight:500;font-size:1.125rem;line-height:1.65;color:var(--ink);background:var(--paper);font-variant-numeric:lining-nums;overflow-x:clip}
 a{color:var(--navy);text-decoration-thickness:1px;text-underline-offset:.18em}a:hover{text-decoration-thickness:2px}
 :focus-visible{outline:2px solid var(--navy);outline-offset:2px;border-radius:4px}
 .pasek{height:8px;background:repeating-linear-gradient(135deg,var(--red) 0 14px,var(--white) 14px 22px,var(--navy) 22px 36px,var(--white) 36px 44px)}
@@ -100,6 +100,7 @@ ul.lista-rzeczy{list-style:none;padding:0;columns:2;column-gap:28px;max-width:no
 ul.lista-rzeczy li::before{content:"";position:absolute;left:0;top:.3em;width:16px;height:16px;border:2px solid var(--navy);border-radius:4px}
 @media(max-width:640px){ul.lista-rzeczy{columns:1}}
 .pocztowka{background:var(--white);border:1.5px solid var(--ink);border-radius:6px;box-shadow:3px 3px 0 var(--ink);padding:18px 22px 16px;margin:18px 0;max-width:62ch;transform:rotate(-.6deg);position:relative}
+@media(max-width:640px){.pocztowka{transform:rotate(-.6deg) scale(.985)}}
 .pocztowka::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;background:repeating-linear-gradient(135deg,var(--red) 0 10px,var(--white) 10px 16px,var(--navy) 16px 26px,var(--white) 26px 32px);border-radius:5px 5px 0 0}
 .pocztowka p,.reka{font-family:var(--hand);font-size:1.62rem;line-height:1.25;font-weight:600;margin:.25em 0}
 .pocztowka small{display:block;font-family:var(--sans);font-size:.85rem;color:var(--ink-soft);margin-top:6px}
@@ -159,7 +160,7 @@ aside.plan p{margin:0;max-width:60ch}aside.plan strong{display:block;font-family
 @media(min-width:761px){.plan-pasek{display:none}}
 .cta .cena{font-family:var(--serif);font-size:1.3rem;margin:4px 0 2px}.cta .drobne,.cta small{color:#DCE3EE}.cta .czy-sam{margin-top:14px;padding-top:12px;border-top:1px solid rgba(255,253,248,.25)}.cta .czy-sam p{margin:0 0 4px}
 nav.spis a.plan{border-color:var(--red);color:var(--red)}
-.pakiety{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:14px 0}.pakiety>div{background:var(--white);color:var(--ink);border-radius:16px;padding:16px 20px}.pakiety h3{margin:0;color:var(--navy)}.pakiety .cena{font-family:var(--serif);font-size:1.7rem;color:var(--red);margin:2px 0 4px}.pakiety ul{font-size:.95rem;padding-left:1.1em;margin:6px 0 0}
+.pakiety{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:14px 0}.pakiety>div{background:var(--white);color:var(--ink);border-radius:16px;padding:16px 20px}.pakiety h3{margin:0;color:var(--navy)}.pakiety .cena{font-family:var(--serif);font-size:1.7rem;color:var(--red);margin:2px 0 4px}.pakiety ul{font-size:.95rem;padding-left:1.1em;margin:6px 0 0}.pakiety .drobne{color:var(--ink-soft)}
 ul.terminy{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px;max-width:none}ul.terminy li{margin:0;background:var(--white);border:1px solid var(--line);border-radius:16px;padding:12px 14px}ul.terminy strong{font-family:var(--serif);font-weight:400;font-size:1.2rem}
 figure.mini{margin:0 0 8px}figure.mini img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;border-radius:10px;display:block;background:var(--paper-deep)}figure.mini figcaption{font-size:.72rem;color:var(--ink-soft);margin-top:3px}
 .cena-terminu{margin:6px 0 4px;font-weight:800;color:var(--navy)}ul.terminy .partnerzy{display:flex;flex-wrap:wrap;gap:6px}ul.terminy a.partner{min-height:40px;padding:6px 12px;font-size:.92rem}
@@ -180,7 +181,7 @@ section.pocztowka p{font-family:var(--sans);font-size:1.05rem;line-height:1.55;f
 :root{--serif:Lora,Georgia,"Times New Roman",serif}
 h1,h2,h3{font-weight:600}
 .logo{font-family:"Young Serif",Georgia,serif}</style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Куди найдешевше летіти з Модліна?","acceptedAnswer":{"@type":"Answer","text":"У найближчі 12 місяців найдешевші знайдені квитки з Модліна: Мілан від 130 зл у жовтні, Софія від 130 зл у жовтні, Стокгольм від 130 зл у жовтні, Копенгаген від 131 зл у листопаді, Загреб від 139 зл у жовтні. Повний список у таблиці вище."}},{"@type":"Question","name":"Коли квитки з Модліна найдешевші?","acceptedAnswer":{"@type":"Answer","text":"За нашими пошуками найнижчі середні ціни маршрутів з Модліна припадають на такі місяці: грудень 2026, листопад 2026, січень 2027. Кожен маршрут має свій сезон, тож дивіться на конкретний напрямок."}},{"@type":"Question","name":"Куди полетіти з Модліна дешево і в тепло?","acceptedAnswer":{"@type":"Answer","text":"Дешево і з хорошою погодою в місяць найнижчої ціни: Мілан у жовтні: від 130 зл, 18°C удень, погода 4/5; Софія у жовтні: від 130 зл, 17°C удень, погода 4/5; Загреб у жовтні: від 139 зл, 17°C удень, погода 4/5; Тирана у жовтні: від 149 зл, 19°C удень, погода 4/5; Будапешт у жовтні: від 183 зл, 17°C удень, погода 4/5. Погоду рахуємо із середніх за 30 років, оцінка 4 з 5 означає тепло без спеки і мало дощу."}},{"@type":"Question","name":"Чи ці ціни актуальні?","acceptedAnswer":{"@type":"Answer","text":"Ціни з пошуків за останні 45 днів, більшість з останньої доби; біля кожної є дата вильоту. Якщо квиток уже зник, кнопка Aviasales покаже актуальну ціну на ці дати."}},{"@type":"Question","name":"Чи потрібна віза для подорожі з Польщі?","acceptedAnswer":{"@type":"Answer","text":"З біометричним паспортом громадяни України подорожують Шенгенською зоною без візи до 90 днів у будь-якому 180-денному періоді. Для країн поза Шенгеном правила різні. Якщо у вас статус UKR або карта побиту, перед поїздкою за кордон перевірте умови виїзду й повернення на gov.pl і на сайті консульства країни, куди летите."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Куди найдешевше летіти з Модліна?","acceptedAnswer":{"@type":"Answer","text":"У найближчі 12 місяців найдешевші знайдені квитки з Модліна: Мілан від 130 зл у жовтні, Софія від 130 зл у жовтні, Стокгольм від 130 зл у жовтні, Копенгаген від 131 зл у листопаді, Загреб від 139 зл у жовтні. Повний список у таблиці вище."}},{"@type":"Question","name":"Коли квитки з Модліна найдешевші?","acceptedAnswer":{"@type":"Answer","text":"За даними наших пошуків найнижчі середні ціни маршрутів з Модліна припадають на такі місяці: грудень 2026, листопад 2026, січень 2027. Кожен маршрут має свій сезон, тож дивіться на конкретний напрямок."}},{"@type":"Question","name":"Куди полетіти з Модліна дешево і в тепло?","acceptedAnswer":{"@type":"Answer","text":"Дешево і з хорошою погодою в місяць найнижчої ціни: Мілан у жовтні: від 130 зл, 18°C удень, погода 4/5; Софія у жовтні: від 130 зл, 17°C удень, погода 4/5; Загреб у жовтні: від 139 зл, 17°C удень, погода 4/5; Тирана у жовтні: від 149 зл, 19°C удень, погода 4/5; Будапешт у жовтні: від 183 зл, 17°C удень, погода 4/5. Оцінка 4 з 5 означає тепло без спеки і мало дощу."}},{"@type":"Question","name":"Чи ці ціни актуальні?","acceptedAnswer":{"@type":"Answer","text":"Ціни з пошуків за останні 45 днів, більшість за останню добу; біля кожної є дата вильоту. Якщо квиток уже зник, кнопка Aviasales покаже актуальну ціну на ці дати."}},{"@type":"Question","name":"Чи потрібна віза для подорожі з Польщі?","acceptedAnswer":{"@type":"Answer","text":"З біометричним паспортом громадяни України подорожують Шенгенською зоною без візи до 90 днів у будь-якому 180-денному періоді. Для країн поза Шенгеном правила різні. Якщо у вас статус UKR або карта побиту, перед поїздкою за кордон перевірте умови виїзду й повернення на gov.pl і на сайті консульства країни, куди летите."}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"Дешеві авіаквитки з Модліна","itemListElement":[{"@type":"ListItem","position":1,"name":"Варшава-Модлін → Мілан: 130 зл"},{"@type":"ListItem","position":2,"name":"Варшава-Модлін → Софія: 130 зл"},{"@type":"ListItem","position":3,"name":"Варшава-Модлін → Стокгольм: 130 зл"},{"@type":"ListItem","position":4,"name":"Варшава-Модлін → Копенгаген: 131 зл"},{"@type":"ListItem","position":5,"name":"Варшава-Модлін → Загреб: 139 зл"},{"@type":"ListItem","position":6,"name":"Варшава-Модлін → Тирана: 140 зл"},{"@type":"ListItem","position":7,"name":"Варшава-Модлін → Сонячний Берег: 152 зл"},{"@type":"ListItem","position":8,"name":"Варшава-Модлін → Будапешт: 178 зл"},{"@type":"ListItem","position":9,"name":"Варшава-Модлін → Мадрид: 186 зл"},{"@type":"ListItem","position":10,"name":"Варшава-Модлін → Мальта: 190 зл"},{"@type":"ListItem","position":11,"name":"Варшава-Модлін → Майорка: 195 зл"},{"@type":"ListItem","position":12,"name":"Варшава-Модлін → Пафос: 208 зл"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Дешеві квитки з Польщі","item":"https://golebielataja.pl/uk/"},{"@type":"ListItem","position":2,"name":"Варшава-Модлін","item":"https://golebielataja.pl/uk/modlin/"}]}</script>
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "dabf88d8ecff46b9af7a1518edc3f5ee"}'></script>
@@ -202,16 +203,16 @@ h1,h2,h3{font-weight:600}
 </header>
 <main>
 <h1>Дешеві авіаквитки з Модліна</h1>
-<p class="lead">Найдешевші квитки з Модліна (Варшава-Модлін, WMI) з пошуків Aviasales, за особу туди й назад. 29 напрямків з цінами на найближчі 12 місяців, стан на 18 жовтня 2026. Нижче: що зараз найдешевше, рейси найближчими тижнями і напрямки, де дешево і тепло.</p>
+<p class="lead">Найдешевші квитки з Модліна (WMI) з пошуків Aviasales, за особу туди й назад. 29 напрямків з цінами на найближчі 12 місяців, станом на 18 жовтня 2026. Нижче: що зараз найдешевше, рейси найближчими тижнями і напрямки, де дешево і тепло.</p>
 <section>
 <h2>Найдешевші рейси з Модліна зараз</h2>
 <p>Найнижчі знайдені ціни, кожен напрямок один раз. Кнопка відкриває пошук Aviasales на ці самі дати; дати можна змінити після переходу.</p>
 <div class="przewin"><table>
 <thead><tr><th scope="col">Напрямок</th><th scope="col">Дати</th><th scope="col">Ціна</th><th scope="col">Погода тоді</th><th scope="col">Пошук</th></tr></thead>
 <tbody>
-<tr><td><strong>Мілан</strong> <small>2 год</small></td><td>з 26 жовтня до 5 листопада</td><td><strong>130 зл</strong> <small class="sprawdzono">перевірено 17 жовтня</small></td><td>18°C, погода 4/5</td><td><a class="partner glowny" href="https://www.aviasales.com/search/WAW2610MXP05111?currency=pln&amp;marker=785120.ukmodlinmediolan" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-ukmodlinmediolan">Перевірити в Aviasales</a></td></tr>
-<tr><td><strong>Софія</strong> <small>2 год</small></td><td>з 22 до 31 жовтня</td><td><strong>130 зл</strong> <small class="sprawdzono">перевірено 17 жовтня</small></td><td>17°C, погода 4/5</td><td><a class="partner glowny" href="https://www.aviasales.com/search/WAW2210SOF31101?currency=pln&amp;marker=785120.ukmodlinsofia" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-ukmodlinsofia">Перевірити в Aviasales</a></td></tr>
-<tr><td><strong>Стокгольм</strong> <small>1,5 год</small></td><td>з 22 жовтня до 1 листопада</td><td><strong>130 зл</strong> <small class="sprawdzono">перевірено 17 жовтня</small></td><td>10°C, погода 1/5</td><td><a class="partner glowny" href="https://www.aviasales.com/search/WAW2210ARN01111?currency=pln&amp;marker=785120.ukmodlinsztokholm" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-ukmodlinsztokholm">Перевірити в Aviasales</a></td></tr>
+<tr><td><strong>Мілан</strong> <small>2 год</small></td><td>з 26 жовтня до 5 листопада</td><td><strong>130 зл</strong> <small class="sprawdzono">перевірено 18 жовтня</small></td><td>18°C, погода 4/5</td><td><a class="partner glowny" href="https://www.aviasales.com/search/WAW2610MXP05111?currency=pln&amp;marker=785120.ukmodlinmediolan" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-ukmodlinmediolan">Перевірити в Aviasales</a></td></tr>
+<tr><td><strong>Софія</strong> <small>2 год</small></td><td>з 31 жовтня до 7 листопада</td><td><strong>130 зл</strong> <small class="sprawdzono">перевірено 18 жовтня</small></td><td>17°C, погода 4/5</td><td><a class="partner glowny" href="https://www.aviasales.com/search/WAW3110SOF07111?currency=pln&amp;marker=785120.ukmodlinsofia" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-ukmodlinsofia">Перевірити в Aviasales</a></td></tr>
+<tr><td><strong>Стокгольм</strong> <small>1,5 год</small></td><td>з 22 жовтня до 1 листопада</td><td><strong>130 зл</strong> <small class="sprawdzono">перевірено 18 жовтня</small></td><td>10°C, погода 1/5</td><td><a class="partner glowny" href="https://www.aviasales.com/search/WAW2210ARN01111?currency=pln&amp;marker=785120.ukmodlinsztokholm" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-ukmodlinsztokholm">Перевірити в Aviasales</a></td></tr>
 <tr><td><strong>Копенгаген</strong> <small>1,5 год</small></td><td>з 28 листопада до 3 грудня</td><td><strong>131 зл</strong> <small class="sprawdzono">перевірено 17 жовтня</small></td><td>7°C, погода 1/5</td><td><a class="partner glowny" href="https://www.aviasales.com/search/WAW2811CPH03121?currency=pln&amp;marker=785120.ukmodlinkopenhaga" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-ukmodlinkopenhaga">Перевірити в Aviasales</a></td></tr>
 <tr><td><strong>Загреб</strong> <small>1,5 год</small></td><td>з 26 жовтня до 2 листопада</td><td><strong>139 зл</strong> <small class="sprawdzono">перевірено 17 жовтня</small></td><td>17°C, погода 4/5</td><td><a class="partner glowny" href="https://www.aviasales.com/search/WAW2610ZAG02111?currency=pln&amp;marker=785120.ukmodlinzagrzeb" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-ukmodlinzagrzeb">Перевірити в Aviasales</a></td></tr>
 <tr><td><strong>Тирана</strong> <small>2 год</small></td><td>з 11 до 14 грудня</td><td><strong>140 зл</strong> <small class="sprawdzono">перевірено 17 жовтня</small></td><td>8°C, погода 1/5</td><td><a class="partner glowny" href="https://www.aviasales.com/search/WAW1112TIA14121?currency=pln&amp;marker=785120.ukmodlintirana" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-ukmodlintirana">Перевірити в Aviasales</a></td></tr>
@@ -226,16 +227,16 @@ h1,h2,h3{font-weight:600}
 </section>
 <section>
 <h2>Last minute з Модліна: вильоти найближчими тижнями</h2>
-<p>Найдешевші рейси з вильотом протягом 30 днів, з цін, перевірених за останній тиждень. За особу туди й назад.</p>
+<p>Найдешевші рейси з вильотом протягом 30 днів, серед цін, перевірених за останній тиждень. За особу туди й назад.</p>
 <ul class="terminy">
 <li><strong>Мілан</strong>: від 130 зл, з 26 жовтня до 5 листопада <a class="partner glowny" href="https://www.aviasales.com/search/WAW2610MXP05111?currency=pln&amp;marker=785120.ukmodlinlmmediolan" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-ukmodlinlmmediolan">Перевірити в Aviasales</a></li>
-<li><strong>Софія</strong>: від 130 зл, з 22 до 31 жовтня <a class="partner glowny" href="https://www.aviasales.com/search/WAW2210SOF31101?currency=pln&amp;marker=785120.ukmodlinlmsofia" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-ukmodlinlmsofia">Перевірити в Aviasales</a></li>
+<li><strong>Софія</strong>: від 130 зл, з 31 жовтня до 7 листопада <a class="partner glowny" href="https://www.aviasales.com/search/WAW3110SOF07111?currency=pln&amp;marker=785120.ukmodlinlmsofia" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-ukmodlinlmsofia">Перевірити в Aviasales</a></li>
 <li><strong>Стокгольм</strong>: від 130 зл, з 22 жовтня до 1 листопада <a class="partner glowny" href="https://www.aviasales.com/search/WAW2210ARN01111?currency=pln&amp;marker=785120.ukmodlinlmsztokholm" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-ukmodlinlmsztokholm">Перевірити в Aviasales</a></li>
 <li><strong>Загреб</strong>: від 139 зл, з 26 жовтня до 2 листопада <a class="partner glowny" href="https://www.aviasales.com/search/WAW2610ZAG02111?currency=pln&amp;marker=785120.ukmodlinlmzagrzeb" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-ukmodlinlmzagrzeb">Перевірити в Aviasales</a></li>
-<li><strong>Тирана</strong>: від 149 зл, з 29 жовтня до 6 листопада <a class="partner glowny" href="https://www.aviasales.com/search/WAW2910TIA06111?currency=pln&amp;marker=785120.ukmodlinlmtirana" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-ukmodlinlmtirana">Перевірити в Aviasales</a></li>
+<li><strong>Тирана</strong>: від 149 зл, з 30 жовтня до 6 листопада <a class="partner glowny" href="https://www.aviasales.com/search/WAW3010TIA06111?currency=pln&amp;marker=785120.ukmodlinlmtirana" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-ukmodlinlmtirana">Перевірити в Aviasales</a></li>
 <li><strong>Сонячний Берег</strong>: від 152 зл, з 23 до 28 жовтня <a class="partner glowny" href="https://www.aviasales.com/search/WAW2310BOJ28101?currency=pln&amp;marker=785120.ukmodlinlmslonecznybrzeg" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-ukmodlinlmslonecznybrzeg">Перевірити в Aviasales</a></li>
 <li><strong>Будапешт</strong>: від 183 зл, з 21 до 30 жовтня <a class="partner glowny" href="https://www.aviasales.com/search/WAW2110BUD30101?currency=pln&amp;marker=785120.ukmodlinlmbudapeszt" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-ukmodlinlmbudapeszt">Перевірити в Aviasales</a></li>
-<li><strong>Копенгаген</strong>: від 200 зл, з 23 жовтня до 2 листопада <a class="partner glowny" href="https://www.aviasales.com/search/WAW2310CPH02111?currency=pln&amp;marker=785120.ukmodlinlmkopenhaga" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-ukmodlinlmkopenhaga">Перевірити в Aviasales</a></li>
+<li><strong>Копенгаген</strong>: від 200 зл, з 23 жовтня до 1 листопада <a class="partner glowny" href="https://www.aviasales.com/search/WAW2310CPH01111?currency=pln&amp;marker=785120.ukmodlinlmkopenhaga" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-ukmodlinlmkopenhaga">Перевірити в Aviasales</a></li>
 </ul>
 </section>
 <section>
@@ -253,10 +254,10 @@ h1,h2,h3{font-weight:600}
 </ul>
 </section>
 <section>
-<h2>Ціни по місяцях</h2>
-<p>Найдешевший знайдений квиток туди й назад за особу з Модліна у кожному місяці, у злотих. Крапка означає, що в цьому місяці не було пошуків, а не що немає рейсів.</p>
+<h2>Ціни за місяцями</h2>
+<p>Найдешевший знайдений квиток туди й назад за особу з Модліна у кожному місяці, у злотих. Крапка означає, що в цьому місяці не було пошуків, а не те, що немає рейсів.</p>
 <div class="przewin"><table class="mapa">
-<thead><tr><th scope="col">Напрямок</th><th scope="col">жов 26</th><th scope="col">лис 26</th><th scope="col">гру 26</th><th scope="col">січ 27</th><th scope="col">лют 27</th><th scope="col">бер 27</th><th scope="col">кві 27</th><th scope="col">тра 27</th><th scope="col">чер 27</th><th scope="col">лип 27</th><th scope="col">сер 27</th><th scope="col">вер 27</th></tr></thead>
+<thead><tr><th scope="col">Напрямок</th><th scope="col">жовт. 26</th><th scope="col">лист. 26</th><th scope="col">груд. 26</th><th scope="col">січ. 27</th><th scope="col">лют. 27</th><th scope="col">бер. 27</th><th scope="col">квіт. 27</th><th scope="col">трав. 27</th><th scope="col">черв. 27</th><th scope="col">лип. 27</th><th scope="col">серп. 27</th><th scope="col">вер. 27</th></tr></thead>
 <tbody>
 <tr><td>Мілан</td><td>130</td><td>130</td><td>130</td><td>153</td><td>177</td><td>168</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td></tr>
 <tr><td>Софія</td><td>130</td><td>130</td><td>130</td><td>168</td><td>193</td><td>183</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td></tr>
@@ -269,15 +270,15 @@ h1,h2,h3{font-weight:600}
 <tr><td>Мадрид</td><td>284</td><td>263</td><td>186</td><td>236</td><td>284</td><td>272</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td></tr>
 <tr><td>Мальта</td><td>259</td><td>210</td><td>190</td><td>231</td><td>201</td><td>237</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td></tr>
 <tr><td>Майорка</td><td>505</td><td>279</td><td>195</td><td>271</td><td>392</td><td>332</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td></tr>
-<tr><td>Пафос</td><td>613</td><td>224</td><td>208</td><td>259</td><td>297</td><td>270</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td></tr>
-<tr><td>Барселона</td><td>359</td><td>222</td><td>213</td><td>245</td><td>232</td><td>332</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td></tr>
+<tr><td>Пафос</td><td>547</td><td>224</td><td>208</td><td>259</td><td>297</td><td>270</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td></tr>
+<tr><td>Барселона</td><td>279</td><td>222</td><td>213</td><td>245</td><td>232</td><td>332</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td></tr>
 <tr><td>Афіни</td><td>396</td><td>249</td><td>214</td><td>320</td><td>358</td><td>392</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td></tr>
-<tr><td>Дублін</td><td>570</td><td>227</td><td>340</td><td>357</td><td>344</td><td>340</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td></tr>
-<tr><td>Единбург</td><td>381</td><td>351</td><td>312</td><td>349</td><td>309</td><td>262</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td></tr>
+<tr><td>Дублін</td><td>511</td><td>227</td><td>340</td><td>357</td><td>344</td><td>340</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td></tr>
+<tr><td>Единбург</td><td>349</td><td>351</td><td>312</td><td>349</td><td>309</td><td>262</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td></tr>
 <tr><td>Гельсінкі</td><td>394</td><td>381</td><td>352</td><td>554</td><td>511</td><td>459</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td></tr>
 <tr><td>Лісабон</td><td>685</td><td>466</td><td>389</td><td>353</td><td>418</td><td>484</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td></tr>
 <tr><td>Корфу</td><td>386</td><td>·</td><td>·</td><td>·</td><td>·</td><td>646</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td></tr>
-<tr><td>Неаполь</td><td>444</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td></tr>
+<tr><td>Неаполь</td><td>407</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td></tr>
 <tr><td>Салоніки</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>476</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td></tr>
 <tr><td>Малага</td><td>523</td><td>·</td><td>·</td><td>·</td><td>·</td><td>698</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td></tr>
 <tr><td>Тенерифе</td><td>1163</td><td>626</td><td>539</td><td>685</td><td>781</td><td>715</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td></tr>
@@ -292,7 +293,7 @@ h1,h2,h3{font-weight:600}
 </section>
 <section>
 <h2>Дешево і в хорошу погоду</h2>
-<p>Маршрути, де найдешевший місяць має в нашій оцінці погоди щонайменше 4 з 5. Дешевий Родос у листопаді і дешевий Родос у червні: це дві різні поїздки.</p>
+<p>Маршрути, де найдешевший місяць має за нашою оцінкою погоди щонайменше 4 з 5. Дешевий Родос у листопаді і дешевий Родос у червні: це дві різні поїздки.</p>
 <ul>
 <li>Мілан у жовтні: від 130 зл, 18°C удень, погода 4/5</li>
 <li>Софія у жовтні: від 130 зл, 17°C удень, погода 4/5</li>
@@ -301,7 +302,7 @@ h1,h2,h3{font-weight:600}
 <li>Будапешт у жовтні: від 183 зл, 17°C удень, погода 4/5</li>
 <li>Афіни у грудні: від 214 зл, 14°C удень, погода 4/5</li>
 <li>Мадрид у листопаді: від 263 зл, 14°C удень, погода 4/5</li>
-<li>Неаполь у жовтні: від 444 зл, 22°C удень, погода 4/5</li>
+<li>Неаполь у жовтні: від 407 зл, 22°C удень, погода 4/5</li>
 </ul>
 </section>
 <section>
@@ -312,9 +313,9 @@ h1,h2,h3{font-weight:600}
 <section>
 <h2>Питання і відповіді</h2>
 <details><summary>Куди найдешевше летіти з Модліна?</summary><p>У найближчі 12 місяців найдешевші знайдені квитки з Модліна: Мілан від 130 зл у жовтні, Софія від 130 зл у жовтні, Стокгольм від 130 зл у жовтні, Копенгаген від 131 зл у листопаді, Загреб від 139 зл у жовтні. Повний список у таблиці вище.</p></details>
-<details><summary>Коли квитки з Модліна найдешевші?</summary><p>За нашими пошуками найнижчі середні ціни маршрутів з Модліна припадають на такі місяці: грудень 2026, листопад 2026, січень 2027. Кожен маршрут має свій сезон, тож дивіться на конкретний напрямок.</p></details>
-<details><summary>Куди полетіти з Модліна дешево і в тепло?</summary><p>Дешево і з хорошою погодою в місяць найнижчої ціни: Мілан у жовтні: від 130 зл, 18°C удень, погода 4/5; Софія у жовтні: від 130 зл, 17°C удень, погода 4/5; Загреб у жовтні: від 139 зл, 17°C удень, погода 4/5; Тирана у жовтні: від 149 зл, 19°C удень, погода 4/5; Будапешт у жовтні: від 183 зл, 17°C удень, погода 4/5. Погоду рахуємо із середніх за 30 років, оцінка 4 з 5 означає тепло без спеки і мало дощу.</p></details>
-<details><summary>Чи ці ціни актуальні?</summary><p>Ціни з пошуків за останні 45 днів, більшість з останньої доби; біля кожної є дата вильоту. Якщо квиток уже зник, кнопка Aviasales покаже актуальну ціну на ці дати.</p></details>
+<details><summary>Коли квитки з Модліна найдешевші?</summary><p>За даними наших пошуків найнижчі середні ціни маршрутів з Модліна припадають на такі місяці: грудень 2026, листопад 2026, січень 2027. Кожен маршрут має свій сезон, тож дивіться на конкретний напрямок.</p></details>
+<details><summary>Куди полетіти з Модліна дешево і в тепло?</summary><p>Дешево і з хорошою погодою в місяць найнижчої ціни: Мілан у жовтні: від 130 зл, 18°C удень, погода 4/5; Софія у жовтні: від 130 зл, 17°C удень, погода 4/5; Загреб у жовтні: від 139 зл, 17°C удень, погода 4/5; Тирана у жовтні: від 149 зл, 19°C удень, погода 4/5; Будапешт у жовтні: від 183 зл, 17°C удень, погода 4/5. Оцінка 4 з 5 означає тепло без спеки і мало дощу.</p></details>
+<details><summary>Чи ці ціни актуальні?</summary><p>Ціни з пошуків за останні 45 днів, більшість за останню добу; біля кожної є дата вильоту. Якщо квиток уже зник, кнопка Aviasales покаже актуальну ціну на ці дати.</p></details>
 <details><summary>Чи потрібна віза для подорожі з Польщі?</summary><p>З біометричним паспортом громадяни України подорожують Шенгенською зоною без візи до 90 днів у будь-якому 180-денному періоді. Для країн поза Шенгеном правила різні. Якщо у вас статус UKR або карта побиту, перед поїздкою за кордон перевірте умови виїзду й повернення на gov.pl і на сайті консульства країни, куди летите.</p></details>
 </section>
 <section class="appka-uk">
@@ -338,11 +339,11 @@ h1,h2,h3{font-weight:600}
 <li><a href="/uk/lodz/"><strong>Лодзь</strong></a></li>
 </ul>
 </section>
-<p class="drobne">Ціни: пошуки Aviasales (Travelpayouts) і застосунку Gołębie Latają за останні 45 днів, за особу туди й назад, без багажу в багажному відсіку. Стан на 18 жовтня 2026. Погода: середні за 30 років (Open-Meteo, CC BY 4.0). Це партнерські посилання: якщо купите квиток через Aviasales, ми отримаємо комісію, а ціна для вас не зміниться.</p>
+<p class="drobne">Ціни: пошуки Aviasales (Travelpayouts) і застосунку Gołębie Latają за останні 45 днів, за особу туди й назад, без зареєстрованого багажу. Стан на 18 жовтня 2026. Погода: багаторічні середні (Open-Meteo, CC BY 4.0). Це партнерські посилання: якщо купите квиток через Aviasales, ми отримаємо комісію, а ціна для вас не зміниться.</p>
 </main>
 <footer>
 <div class="stopka">
-<div class="o"><p class="tytul">Gołębie Latają</p><p>Путівник Міхала і Пауліни з Польщі: ціни квитків з польських аеропортів, погода за 30 років і перевірені напрямки.</p><p><a href="mailto:lecimy@golebielataja.pl">lecimy@golebielataja.pl</a></p><p>RF Michał Gołąb, NIP 5213757913, Варшава</p></div>
+<div class="o"><p class="tytul">Gołębie Latają</p><p>Путівник Міхала і Пауліни з Польщі: ціни квитків з польських аеропортів, погода за місяцями і перевірені напрямки.</p><p><a href="mailto:lecimy@golebielataja.pl">lecimy@golebielataja.pl</a></p><p>RF Michał Gołąb, NIP 5213757913, Варшава</p></div>
 <div><p class="tytul">Аеропорти</p><ul><li><a href="/uk/warszawa/">Варшава (Шопен)</a></li><li><a href="/uk/modlin/">Варшава-Модлін</a></li><li><a href="/uk/krakow/">Краків (Баліце)</a></li><li><a href="/uk/gdansk/">Гданськ</a></li><li><a href="/uk/wroclaw/">Вроцлав</a></li><li><a href="/uk/poznan/">Познань</a></li><li><a href="/uk/katowice/">Катовіце (Пижовіце)</a></li><li><a href="/uk/rzeszow/">Жешув</a></li><li><a href="/uk/szczecin/">Щецин</a></li><li><a href="/uk/bydgoszcz/">Бидгощ</a></li><li><a href="/uk/lublin/">Люблін</a></li><li><a href="/uk/lodz/">Лодзь</a></li></ul></div>
 <div><p class="tytul">Корисне</p><ul><li><a href="/" hreflang="pl" lang="pl">Більше сторінок польською</a></li><li><a href="/polityka-prywatnosci.html">Політика приватності (польською)</a></li><li><a href="#zgoda" data-cookies="1">Налаштування cookies</a></li></ul></div>
 </div>

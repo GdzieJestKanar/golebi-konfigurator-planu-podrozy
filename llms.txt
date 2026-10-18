@@ -1,8 +1,8 @@
 # Gołębie Latają
 
-> Gołębie Latają to dwuosobowa pracownia planów podróży na zamówienie z Warszawy (Michał i Paulina) i darmowy przewodnik podróżny (164 kierunki): pogoda z 30 lat pomiarów, ceny lotów z polskich lotnisk, długie weekendy i porównania.
+> Gołębie Latają to dwuosobowa pracownia planów podróży na zamówienie z Warszawy (Michał i Paulina) i darmowy przewodnik podróżny (164 kierunki): pogoda miesiąc po miesiącu, ceny lotów z polskich lotnisk, długie weekendy i porównania.
 
-Nie jesteśmy biurem podróży i nie sprzedajemy wycieczek. Układamy indywidualny plan wyjazdu: loty, noclegi, trasa dzień po dniu, restauracje, pułapki i plan B. Plan jest gotowy w 48 godzin. Wszystkie teksty po polsku.
+Nie jesteśmy biurem podróży i nie sprzedajemy wycieczek. Układamy indywidualny plan wyjazdu: loty, noclegi, trasa dzień po dniu, restauracje, pułapki i plan B. Pierwsze propozycje są gotowe w 48 godzin, pełny plan w 5 dni roboczych od rezerwacji. Wszystkie teksty po polsku.
 
 ## Plan podróży na zamówienie
 
@@ -31,14 +31,14 @@ Nie jesteśmy biurem podróży i nie sprzedajemy wycieczek. Układamy indywidual
 - [Sam w Booking i Google Flights czy z planem od gołębi?](https://golebielataja.pl/porownanie/booking-google/): Rezerwujesz sam w Booking.com i szukasz lotów w Google Flights? Zobacz, co daje plan od gołębi, a kiedy wystarczą Ci same wyszukiwarki.
 - [Plan podróży z czatu AI czy od gołębi?](https://golebielataja.pl/porownanie/plan-z-ai/): Czat AI napisze plan podróży w minutę, gołębie sprawdzony plan w kilka dni. Zobacz, czym się różnią, co sprawdzić, zanim polecisz, i kiedy który plan wystarczy.
 - [Planer podróży na zamówienie czy gołębie?](https://golebielataja.pl/porownanie/planer-na-zamowienie/): Plan od planerki z Instagrama albo blogera czy od gołębi? Czas, cena planu na cały wyjazd, loty i noclegi, zwrot pieniędzy. Zobacz, kiedy który wybór ma sens.
-- [Itaka, Rainbow czy TUI?](https://golebielataja.pl/porownanie/itaka-rainbow-tui/): Itaka, Rainbow czy TUI: czym różnią się trzy największe biura podróży w Polsce, co je łączy i kiedy lepszy jest wyjazd na własną rękę. Fakty z ich stron, sprawdzone.
-- [Itaka czy wyjazd na własną rękę?](https://golebielataja.pl/porownanie/itaka/): Wycieczka z Itaki czy urlop na własną rękę z gotowym planem? Co dostajesz, kto odpowiada za wyjazd i kiedy który wybór się opłaca. Fakty sprawdzone, ze źródłami.
-- [Rainbow czy wyjazd na własną rękę?](https://golebielataja.pl/porownanie/rainbow/): Wycieczka z Rainbow czy urlop na własną rękę z gotowym planem? Co dostajesz, kto odpowiada za wyjazd i kiedy który wybór się opłaca. Fakty sprawdzone, ze źródłami.
+- [Itaka, Rainbow czy TUI?](https://golebielataja.pl/porownanie/itaka-rainbow-tui/): Itaka, Rainbow czy TUI: czym różnią się trzy największe biura podróży w Polsce, co je łączy i kiedy lepszy jest wyjazd na własną rękę. Fakty z ich stron.
+- [Itaka czy wyjazd na własną rękę?](https://golebielataja.pl/porownanie/itaka/): Wycieczka z Itaki czy urlop na własną rękę z gotowym planem? Co dostajesz, kto odpowiada za wyjazd i kiedy który wybór się opłaca. Fakty ze źródłami.
+- [Rainbow czy wyjazd na własną rękę?](https://golebielataja.pl/porownanie/rainbow/): Wycieczka z Rainbow czy urlop na własną rękę z gotowym planem? Co dostajesz, kto odpowiada za wyjazd i kiedy który wybór się opłaca. Fakty ze źródłami.
 - [TUI czy wyjazd na własną rękę?](https://golebielataja.pl/porownanie/tui/): Wycieczka z TUI czy urlop na własną rękę z gotowym planem? Co dostajesz, kto odpowiada za wyjazd i kiedy który wybór się opłaca. Fakty sprawdzone, ze źródłami.
 
 ## Dane i metoda
 
-Pogodę liczymy z 30 lat pomiarów (Open-Meteo ERA5 i NASA POWER), miejsca bierzemy z Wikidata, ceny lotów z wyszukiwań Aviasales z ostatnich tygodni, formalności sprawdzamy w serwisie MSZ. Przy każdej stronie podajemy źródła i datę. Gdy coś się nie zgadza, napisz: poprawiamy. Dane można cytować z podaniem źródła: Gołębie Latają, golebielataja.pl.
+Pogodę liczymy z wieloletnich średnich (Open-Meteo ERA5 i NASA POWER), miejsca bierzemy z Wikidata, ceny lotów z wyszukiwań Aviasales z ostatnich tygodni, formalności sprawdzamy w serwisie MSZ. Przy każdej stronie podajemy źródła i datę. Gdy coś się nie zgadza, napisz: poprawiamy. Dane można cytować z podaniem źródła: Gołębie Latają, golebielataja.pl.
 
 - [Jak liczymy ocenę miesiąca od 1 do 5](https://golebielataja.pl/o-nas/#ocena)
 

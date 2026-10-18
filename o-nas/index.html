@@ -30,7 +30,7 @@
 :root{--paper:#F7F1E4;--paper-deep:#EFE6D1;--cream:#FBF6EA;--white:#FFFDF8;--ink:#2A2C31;--ink-soft:#5E626A;--line:#DDD5C4;--red:#D0402A;--navy:#1F3B6E;--navy-soft:#E6ECF5;--niebo:#DCEAF3;--zielen:#276A4D;--zielen-soft:#E3F1EA;--muted:#5E626A;
 --serif:"Young Serif",Georgia,"Times New Roman",serif;--sans:Nunito,"Nunito zapas","Segoe UI",system-ui,-apple-system,sans-serif;--hand:Caveat,"Segoe Print","Bradley Hand",cursive;--mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;--tekst:66ch}
 *{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{margin:0;font-family:var(--sans);font-weight:500;font-size:1.125rem;line-height:1.65;color:var(--ink);background:var(--paper);font-variant-numeric:lining-nums}
+body{margin:0;font-family:var(--sans);font-weight:500;font-size:1.125rem;line-height:1.65;color:var(--ink);background:var(--paper);font-variant-numeric:lining-nums;overflow-x:clip}
 a{color:var(--navy);text-decoration-thickness:1px;text-underline-offset:.18em}a:hover{text-decoration-thickness:2px}
 :focus-visible{outline:2px solid var(--navy);outline-offset:2px;border-radius:4px}
 .pasek{height:8px;background:repeating-linear-gradient(135deg,var(--red) 0 14px,var(--white) 14px 22px,var(--navy) 22px 36px,var(--white) 36px 44px)}
@@ -96,6 +96,7 @@ ul.lista-rzeczy{list-style:none;padding:0;columns:2;column-gap:28px;max-width:no
 ul.lista-rzeczy li::before{content:"";position:absolute;left:0;top:.3em;width:16px;height:16px;border:2px solid var(--navy);border-radius:4px}
 @media(max-width:640px){ul.lista-rzeczy{columns:1}}
 .pocztowka{background:var(--white);border:1.5px solid var(--ink);border-radius:6px;box-shadow:3px 3px 0 var(--ink);padding:18px 22px 16px;margin:18px 0;max-width:62ch;transform:rotate(-.6deg);position:relative}
+@media(max-width:640px){.pocztowka{transform:rotate(-.6deg) scale(.985)}}
 .pocztowka::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;background:repeating-linear-gradient(135deg,var(--red) 0 10px,var(--white) 10px 16px,var(--navy) 16px 26px,var(--white) 26px 32px);border-radius:5px 5px 0 0}
 .pocztowka p,.reka{font-family:var(--hand);font-size:1.62rem;line-height:1.25;font-weight:600;margin:.25em 0}
 .pocztowka small{display:block;font-family:var(--sans);font-size:.85rem;color:var(--ink-soft);margin-top:6px}
@@ -155,7 +156,7 @@ aside.plan p{margin:0;max-width:60ch}aside.plan strong{display:block;font-family
 @media(min-width:761px){.plan-pasek{display:none}}
 .cta .cena{font-family:var(--serif);font-size:1.3rem;margin:4px 0 2px}.cta .drobne,.cta small{color:#DCE3EE}.cta .czy-sam{margin-top:14px;padding-top:12px;border-top:1px solid rgba(255,253,248,.25)}.cta .czy-sam p{margin:0 0 4px}
 nav.spis a.plan{border-color:var(--red);color:var(--red)}
-.pakiety{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:14px 0}.pakiety>div{background:var(--white);color:var(--ink);border-radius:16px;padding:16px 20px}.pakiety h3{margin:0;color:var(--navy)}.pakiety .cena{font-family:var(--serif);font-size:1.7rem;color:var(--red);margin:2px 0 4px}.pakiety ul{font-size:.95rem;padding-left:1.1em;margin:6px 0 0}
+.pakiety{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:14px 0}.pakiety>div{background:var(--white);color:var(--ink);border-radius:16px;padding:16px 20px}.pakiety h3{margin:0;color:var(--navy)}.pakiety .cena{font-family:var(--serif);font-size:1.7rem;color:var(--red);margin:2px 0 4px}.pakiety ul{font-size:.95rem;padding-left:1.1em;margin:6px 0 0}.pakiety .drobne{color:var(--ink-soft)}
 ul.terminy{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px;max-width:none}ul.terminy li{margin:0;background:var(--white);border:1px solid var(--line);border-radius:16px;padding:12px 14px}ul.terminy strong{font-family:var(--serif);font-weight:400;font-size:1.2rem}
 figure.mini{margin:0 0 8px}figure.mini img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;border-radius:10px;display:block;background:var(--paper-deep)}figure.mini figcaption{font-size:.72rem;color:var(--ink-soft);margin-top:3px}
 .cena-terminu{margin:6px 0 4px;font-weight:800;color:var(--navy)}ul.terminy .partnerzy{display:flex;flex-wrap:wrap;gap:6px}ul.terminy a.partner{min-height:40px;padding:6px 12px;font-size:.92rem}
@@ -170,8 +171,83 @@ section.pocztowka p{font-family:var(--sans);font-size:1.05rem;line-height:1.55;f
 .pocztowka-form button{min-height:46px;padding:10px 20px;border:0;border-radius:999px;background:var(--red);color:#fff;font:inherit;font-weight:800;cursor:pointer}
 .pocztowka-form .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-@media print{.pasek,nav.spis,.partnerzy,.cta,aside.plan,.plan-pasek,section.pocztowka,.gl-zgoda,a[download],nav.gora .linki,.plan-nav,.okruszki{display:none}}</style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"AboutPage","name":"O nas: Michał i Paulina, Gołębie Latają","description":"Michał i Paulina z Warszawy. Układamy plany podróży na zamówienie i prowadzimy darmowy przewodnik po 164 kierunkach. Sprawdziliśmy na własnej skórze 35 krajów.","inLanguage":"pl","url":"https://golebielataja.pl/o-nas/","image":"https://golebielataja.pl/img/razem.jpg","mainEntity":{"@type":"Organization","@id":"https://golebielataja.pl/#organization","name":"Gołębie Latają","url":"https://golebielataja.pl","description":"Gołębie Latają to Michał i Paulina z Warszawy. Układamy plany podróży szyte na miarę i prowadzimy przewodnik, w którym liczymy pogodę z 30 lat pomiarów, ceny lotów z polskich lotnisk i długie weekendy. Wszystko, co tu czytasz, układamy sami.","logo":{"@type":"ImageObject","url":"https://golebielataja.pl/img/icon-512.png"},"image":"https://golebielataja.pl/img/razem.jpg","email":"lecimy@golebielataja.pl","address":{"@type":"PostalAddress","addressLocality":"Warszawa","addressCountry":"PL"},"areaServed":{"@type":"Country","name":"Polska"},"knowsAbout":["planowanie podróży","plany podróży na zamówienie","pogoda w podróży","tanie loty z Polski","długie weekendy"],"sameAs":["https://www.instagram.com/golebie.lataja/","https://www.tiktok.com/@golebielataja1","https://www.facebook.com/golebie.lataja","https://www.youtube.com/@GolebieLataja"],"founder":[{"@type":"Person","name":"Michał Gołąb","url":"https://golebielataja.pl/o-nas/"},{"@type":"Person","name":"Paulina","url":"https://golebielataja.pl/o-nas/"}]}}</script>
+@media print{.pasek,nav.spis,.partnerzy,.cta,aside.plan,.plan-pasek,section.pocztowka,.gl-zgoda,a[download],nav.gora .linki,.plan-nav,.okruszki{display:none}}.g-znaczki{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:16px 0 4px}
+.g-znaczki>div{display:flex;flex-direction:column;background:var(--white);border:1px solid var(--line);border-radius:16px;padding:18px 20px 16px;position:relative}
+.g-znaczki>div.wyroznione{border:2px solid var(--navy)}
+.g-znaczki .nr{font-family:var(--mono);font-size:.74rem;color:var(--ink-soft)}.g-znaczki h3{margin:2px 0 0;color:var(--navy)}
+.g-znaczki .cena{font-family:var(--serif);font-size:2rem;line-height:1.1;color:var(--red);margin:6px 0 0}
+.g-znaczki .rozpiska{font-size:.85rem;color:var(--ink-soft);margin:2px 0 0}
+.g-znaczki ul{font-size:.96rem;padding-left:1.1em;margin:12px 0 14px;flex:1}
+.g-znaczki .pigulka{position:absolute;top:-12px;left:18px;background:var(--navy);color:var(--white);font-size:.78rem;font-weight:800;border-radius:999px;padding:3px 12px}
+.g-znaczki .przycisk{margin:0;justify-content:center}
+@media(max-width:760px){.g-znaczki{grid-template-columns:1fr;gap:22px}}
+
+
+.on-hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px 56px;align-items:center;margin:18px 0 40px}
+.on-hero h1{margin:.1em 0 .3em}.on-hero .lead{margin:0}
+.on-cta{display:flex;flex-wrap:wrap;gap:4px 12px;margin:22px 0 0}.on-cta .przycisk{margin:0}
+dl.on-fakty{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:8px 30px;margin:26px 0 0;padding:16px 0 0;border-top:1.5px dashed var(--line)}
+dl.on-fakty div{display:flex;flex-direction:column}dl.on-fakty dd{order:-1}dl.on-fakty dd{margin:0;font-family:var(--serif);font-size:2rem;line-height:1;color:var(--red)}
+dl.on-fakty dt{font-size:.88rem;color:var(--ink-soft);max-width:15ch;margin-top:4px;line-height:1.3}
+.on-kolaz{position:relative;height:560px}
+.on-foto{position:absolute;margin:0;background:var(--white);padding:10px 10px 0;box-shadow:0 1px 0 var(--line),4px 6px 0 rgba(42,44,49,.12);border:1px solid var(--line)}
+.on-foto img{display:block;width:100%;height:auto;object-fit:cover;background:var(--paper-deep)}
+.on-foto figcaption{font-family:var(--hand);font-size:1.45rem;line-height:1;color:var(--navy);padding:9px 2px 11px;text-align:center}
+.on-foto.f1{width:60%;left:0;top:70px;z-index:2;transform:rotate(-2.5deg)}.on-foto.f1 figcaption{text-align:left;padding-left:8px}.on-foto.f1 img{aspect-ratio:4/3}
+.on-foto.f2{width:36%;right:0;top:0;z-index:1;transform:rotate(4deg)}.on-foto.f2 img{aspect-ratio:3/4}
+.on-foto.f3{width:34%;left:56%;bottom:0;z-index:3;transform:rotate(-5deg)}.on-foto.f3 img{aspect-ratio:3/4}
+.on-kolaz .stempel{position:absolute;left:10%;bottom:28px;z-index:4;background:rgba(251,246,234,.92)}.on-kolaz .stempel b{font-size:1.45rem;letter-spacing:0}
+#pakiety>h2{border-top:0;padding-top:0}.on-sekcja{margin:56px 0}.on-sekcja>h2{border-top:0;padding-top:0;margin-bottom:.3em}.on-sekcja>p.wstep{max-width:62ch;font-size:1.08rem;margin:0 0 22px}
+.on-nadawcy{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.on-list{position:relative;background:var(--white);border:1px solid var(--line);border-radius:6px;padding:26px 26px 22px;box-shadow:4px 4px 0 var(--ink)}
+.on-list:nth-child(2){transform:rotate(.6deg)}.on-list:nth-child(1){transform:rotate(-.5deg)}
+.on-znaczek{float:right;width:118px;margin:-6px -6px 10px 18px;padding:6px;background:radial-gradient(circle,var(--paper) 3px,transparent 3.5px) -5px -5px/10px 10px,var(--red);transform:rotate(3deg)}
+.on-list:nth-child(2) .on-znaczek{background-color:var(--navy);transform:rotate(-3deg)}
+.on-znaczek img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:cover;border:3px solid var(--white)}
+.on-list .nr{display:block;font-family:var(--mono);font-size:.76rem;color:var(--ink-soft)}
+.on-list h3{font-size:2rem;margin:2px 0 10px;color:var(--navy)}
+.on-list p{margin:0 0 12px;line-height:1.6}
+.on-list .reka{font-family:var(--hand);font-size:1.6rem;line-height:1.15;color:var(--red);margin:14px 0 0;clear:both}
+.on-galeria{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:22px;padding:6px 4px 10px;margin:0;max-width:none}
+.on-galeria li{margin:0}.on-galeria .on-foto{position:static;width:auto}
+.on-galeria li:nth-child(odd) .on-foto{transform:rotate(-1.6deg)}.on-galeria li:nth-child(even) .on-foto{transform:rotate(1.8deg) translateY(10px)}
+.on-galeria .on-foto img{aspect-ratio:3/4}.on-galeria figcaption{font-size:1.25rem}
+.on-kraje{display:grid;grid-template-columns:auto minmax(0,1fr);gap:20px 40px;align-items:start}
+.on-kraje .stempel{width:150px;height:150px;transform:rotate(-8deg)}.on-kraje .stempel b{font-size:3rem}
+.on-grupy{display:grid;gap:18px}.on-grupy h3{font-family:var(--sans);font-size:.95rem;font-weight:800;color:var(--ink-soft);margin:0 0 8px}
+ul.on-stemple{list-style:none;display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:0;max-width:none}
+ul.on-stemple li{margin:0;padding:5px 12px;border:1.5px solid currentColor;border-radius:999px;font-weight:700;font-size:.95rem;color:var(--navy);background:var(--white)}
+ul.on-stemple li:nth-child(3n+2){color:var(--red)}ul.on-stemple li:nth-child(5n+3){transform:rotate(-2deg)}ul.on-stemple li:nth-child(7n+4){transform:rotate(1.5deg)}
+ol.on-trasa{list-style:none;counter-reset:krok;display:grid;grid-template-columns:repeat(3,1fr);gap:28px 30px;padding:0;margin:0;max-width:none;position:relative}
+ol.on-trasa li{counter-increment:krok;position:relative;margin:0;padding:0 0 0 70px;min-height:56px}
+ol.on-trasa li::before{content:counter(krok);position:absolute;left:0;top:-4px;width:52px;height:52px;border-radius:50%;border:3px double var(--red);display:grid;place-items:center;font-family:var(--serif);font-size:1.5rem;color:var(--red);transform:rotate(-8deg);background:var(--paper)}
+ol.on-trasa strong{display:block;font-family:var(--serif);font-weight:400;font-size:1.25rem;color:var(--navy);margin-bottom:2px}
+ol.on-trasa span{font-size:1rem;line-height:1.5}
+.on-pocztowki{display:grid;grid-template-columns:1fr 1fr;gap:10px 28px}
+.on-pocztowki .pocztowka{margin:12px 0;max-width:none}.on-pocztowki .pocztowka:nth-child(even){transform:rotate(.8deg)}
+.on-pocztowki .pocztowka p{font-family:var(--sans);font-size:1.06rem;line-height:1.6;font-weight:600;color:var(--ink);margin:0 0 8px}
+.on-pocztowki .pocztowka p::before{content:"„"}.on-pocztowki .pocztowka p::after{content:"”"}.on-pocztowki .pocztowka small{font-weight:700;color:var(--navy)}
+.on-przejrzyste{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:none}
+.on-przejrzyste details{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:14px 18px}
+.on-przejrzyste summary{font-family:var(--serif);font-size:1.2rem;color:var(--navy);cursor:pointer}
+.on-przejrzyste details p{margin:10px 0 0;font-size:.98rem;line-height:1.6}
+.on-koperta{position:relative;margin:56px 0 20px;padding:34px 34px 30px;border:10px solid transparent;border-radius:6px;background:linear-gradient(var(--white),var(--white)) padding-box,repeating-linear-gradient(135deg,var(--red) 0 12px,var(--white) 12px 19px,var(--navy) 19px 31px,var(--white) 31px 38px) border-box;box-shadow:4px 4px 0 var(--ink)}
+.on-koperta h2{border:0;padding:0;margin:0 0 .3em}.on-koperta p{max-width:58ch}
+.on-koperta a.mail{display:inline-block;font-family:var(--serif);font-size:clamp(1.4rem,3.6vw,2rem);color:var(--navy);text-decoration-thickness:2px;text-underline-offset:5px;margin:6px 0 10px;word-break:break-word}
+.on-koperta .profile{display:flex;flex-wrap:wrap;gap:8px 18px;margin:14px 0 0;padding:14px 0 0;border-top:1.5px dashed var(--line)}
+.on-koperta .profile strong{width:100%;font-size:.9rem;color:var(--ink-soft)}.on-koperta .profile a{font-weight:800;color:var(--navy)}
+.on-koperta .stempel{position:absolute;top:22px;right:26px;width:104px;height:104px}.on-koperta .stempel b{font-size:1.15rem}
+@media(max-width:900px){.on-galeria{grid-template-columns:repeat(2,1fr)}ol.on-trasa{grid-template-columns:1fr 1fr}}
+@media(max-width:760px){.on-hero{grid-template-columns:1fr;gap:20px;margin-top:8px}.on-kolaz{height:auto;display:grid;grid-template-columns:1fr 1fr;gap:14px;padding:6px 4px 30px}
+.on-foto.f1 figcaption{text-align:center;padding-left:2px}.on-foto.f1,.on-foto.f2,.on-foto.f3{position:relative;width:auto;left:auto;right:auto;top:auto;bottom:auto}.on-foto.f1{grid-column:1 / -1}
+.on-foto.f2 img,.on-foto.f3 img{aspect-ratio:4/5}.on-kolaz .stempel{display:none}
+dl.on-fakty{grid-template-columns:repeat(3,1fr);gap:8px 14px}dl.on-fakty dd{font-size:1.6rem}
+.on-nadawcy,.on-pocztowki,.on-przejrzyste{grid-template-columns:1fr}.on-list{padding:22px 20px 18px}.on-znaczek{width:96px}
+.on-kraje{grid-template-columns:1fr}.on-kraje .stempel{width:116px;height:116px}.on-kraje .stempel b{font-size:2.3rem}
+ol.on-trasa{grid-template-columns:1fr}.on-koperta{padding:26px 20px 22px;border-width:8px}.on-koperta .stempel{display:none}}
+@media(prefers-reduced-motion:no-preference){.on-kolaz .on-foto{animation:on-wpad .8s cubic-bezier(.2,.8,.2,1) both}.on-kolaz .f2{animation-delay:.12s}.on-kolaz .f3{animation-delay:.24s}@keyframes on-wpad{from{opacity:0;translate:0 18px}}}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"AboutPage","name":"O nas: Michał i Paulina, Gołębie Latają","description":"Michał i Paulina z Warszawy. Układamy plany podróży na zamówienie i prowadzimy darmowy przewodnik po 164 kierunkach. Sprawdziliśmy na własnej skórze 35 krajów.","inLanguage":"pl","url":"https://golebielataja.pl/o-nas/","image":"https://golebielataja.pl/img/razem.jpg","mainEntity":{"@type":"Organization","@id":"https://golebielataja.pl/#organization","name":"Gołębie Latają","url":"https://golebielataja.pl","description":"Gołębie Latają to Michał i Paulina z Warszawy. Układamy plany podróży szyte na miarę i prowadzimy przewodnik: pogoda miesiąc po miesiącu, ceny lotów z polskich lotnisk i długie weekendy. Wszystko, co tu czytasz, piszemy sami.","logo":{"@type":"ImageObject","url":"https://golebielataja.pl/img/icon-512.png"},"image":"https://golebielataja.pl/img/razem.jpg","email":"lecimy@golebielataja.pl","address":{"@type":"PostalAddress","addressLocality":"Warszawa","addressCountry":"PL"},"areaServed":{"@type":"Country","name":"Polska"},"knowsAbout":["planowanie podróży","plany podróży na zamówienie","pogoda w podróży","tanie loty z Polski","długie weekendy"],"sameAs":["https://www.instagram.com/golebie.lataja/","https://www.tiktok.com/@golebielataja1","https://www.facebook.com/golebie.lataja","https://www.youtube.com/@GolebieLataja"],"founder":[{"@type":"Person","name":"Michał Gołąb","url":"https://golebielataja.pl/o-nas/","image":"https://golebielataja.pl/img/michal.jpg"},{"@type":"Person","name":"Paulina","url":"https://golebielataja.pl/o-nas/","image":"https://golebielataja.pl/img/paulina.jpg"}]}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Gołębie Latają","item":"https://golebielataja.pl/"},{"@type":"ListItem","position":2,"name":"Nadawcy","item":"https://golebielataja.pl/o-nas/"}]}</script>
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "dabf88d8ecff46b9af7a1518edc3f5ee"}'></script>
 <script data-goatcounter="https://golebielataja.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
@@ -195,63 +271,124 @@ section.pocztowka p{font-family:var(--sans);font-size:1.05rem;line-height:1.55;f
 <nav class="okruszki" aria-label="Ścieżka"><a href="/">Gołębie Latają</a> › <span>Nadawcy</span></nav>
 </header>
 <main>
+<div class="on-hero">
+<div>
 <h1>Dwa gołębie, jeden cel: Twój idealny wyjazd</h1>
-<p class="lead">Gołębie Latają to Michał i Paulina z Warszawy. Układamy plany podróży szyte na miarę i prowadzimy przewodnik, w którym liczymy pogodę z 30 lat pomiarów, ceny lotów z polskich lotnisk i długie weekendy. Wszystko, co tu czytasz, układamy sami.</p>
-<figure class="foto"><img src="/img/razem.jpg" alt="Michał i Paulina w podróży" width="1200" height="800" fetchpriority="high"><figcaption>Michał i Paulina w podróży</figcaption></figure>
-<section id="pakiety" class="cta">
-<h2>Plan od gołębi: trzy pakiety</h2>
-<p>Propozycje z lotami i hotelami w 48 h. Pełny plan dzień po dniu w 5 dni roboczych od rezerwacji. BLIK, karta albo Klarna. Zwrot 100%, jeśli nie trafimy.</p>
-<div class="pakiety">
-<div><h3>Podstawowy Lot</h3><p class="cena">399 zł</p><p>Wiesz, dokąd i kiedy</p><ul><li>Propozycje kierunków z lotami i zorganizowanymi wycieczkami pod Twoje parametry</li><li>Pogoda w Twoim terminie i czy to dobry moment na wyjazd</li><li>Niezbędnik kraju: dokumenty, waluta, napiwki, gniazdka, internet, numery alarmowe</li><li>Ogólna lista możliwych atrakcji i wycieczek w okolicy</li><li>Lista do spakowania pod kierunek i porę roku</li></ul></div>
-<div><h3>Kompletny Lot</h3><p class="cena">899 zł</p><p>Plan gotowy dzień po dniu</p><ul><li>Wszystko z Podstawowego Lotu</li><li>Propozycje lotów i hoteli dopasowane do budżetu</li><li>Szczegółowy plan dzień po dniu pod Twoje preferencje, w 5 dni roboczych od rezerwacji</li><li>Rekomendacje restauracji: budżetowo i na bogato</li><li>Mapa ze wszystkimi miejscami z planu</li><li>Słowniczek: przydatne zwroty i lokalna kuchnia</li><li>Tradycje i obyczaje: co wypada, a czego lepiej unikać</li><li>Transport: z lotniska, po mieście i przydatne aplikacje</li><li>Ceny na miejscu: kawa, obiad, taksówka, bilety</li><li>Plan B na deszcz i co zarezerwować wcześniej</li></ul></div>
-<div><h3>Lot Premium</h3><p class="cena">od 1 499 zł</p><p class="drobne">1 499 zł przy wyjeździe do 10 dni, 1 899 zł przy dłuższym</p><p>Najpełniejszy plan i opieka w trakcie</p><ul><li>Wszystko z Kompletnego Lotu</li><li>Najpełniejszy plan: mapa z trasą na każdy dzień, także offline</li><li>Wsparcie na czacie w trakcie wyjazdu. Odpisujemy osobiście, zwykle szybko, czasem dopiero po powrocie z plaży</li><li>Zmiany planu w trakcie wyjazdu: odwołany lot, deszcz, inny hotel</li><li>Przegląd rezerwacji przed wyjazdem: dokumenty, odprawa, przypomnienia w aplikacji</li><li>Kolekcjonerskie wydanie planu z numerem egzemplarza i pocztówka ze stemplem, wysłana tradycyjną pocztą</li><li>Udostępnienie Twojego filmu z podróży na naszych kanałach, o ile zechcesz</li></ul></div>
+<p class="lead">Gołębie Latają to Michał i Paulina z Warszawy. Układamy plany podróży szyte na miarę i prowadzimy przewodnik: pogoda miesiąc po miesiącu, ceny lotów z polskich lotnisk i długie weekendy. Wszystko, co tu czytasz, piszemy sami.</p>
+<p class="on-cta"><a class="przycisk" href="/nowy/start?z=onas" data-goatcounter-click="plan-onas-hero">Zamów plan podróży</a><a class="przycisk jasny" href="/przyklad-plan.pdf" data-goatcounter-click="plan-pdf-onas">Zobacz przykładowy plan (PDF)</a></p>
+<dl class="on-fakty"><div><dt>krajów sprawdzonych na własnej skórze</dt><dd>35</dd></div><div><dt>lat aktywnego podróżowania</dt><dd>10+</dd></div><div><dt>kierunki w darmowym przewodniku</dt><dd>164</dd></div></dl>
 </div>
-<p><a class="przycisk" href="/nowy/start?z=onas" data-goatcounter-click="plan-onas-pakiety">Zamów plan podróży</a><a class="przycisk jasny" href="/przyklad-plan.pdf" data-goatcounter-click="plan-pdf-onas">Zobacz przykładowy plan (PDF)</a></p>
-</section>
-<section id="nadawcy">
+<div class="on-kolaz">
+<figure class="on-foto f1"><img src="/img/razem.jpg" alt="My, na plaży" width="1000" height="750" fetchpriority="high" decoding="async"><figcaption>My, na plaży</figcaption></figure>
+<figure class="on-foto f2"><img src="/img/lot-2.jpg" alt="Kapadocja, Turcja" width="1050" height="1400" loading="lazy" decoding="async"><figcaption>Kapadocja, Turcja</figcaption></figure>
+<figure class="on-foto f3"><img src="/img/lot-4.jpg" alt="Seszele" width="1050" height="1400" loading="lazy" decoding="async"><figcaption>Seszele</figcaption></figure>
+<span class="stempel" aria-hidden="true"><b>Par avion</b><span>Warszawa</span></span>
+</div>
+</div>
+<section id="nadawcy" class="on-sekcja">
 <h2>Nadawcy</h2>
-<h3>Gołąb nr 1: Michał</h3>
+<p class="wstep">Dwie osoby i dwa style podróżowania: Michał szuka ciszy i historii, Paulina plaży i lokalnej kuchni. W planach łączymy jedno i drugie.</p>
+<div class="on-nadawcy">
+<article class="on-list">
+<div class="on-znaczek"><img src="/img/michal.jpg" alt="Michał" width="600" height="600" loading="lazy" decoding="async"></div>
+<span class="nr">Gołąb nr 1</span>
+<h3>Michał</h3>
 <p>City break, plaże, dżungla czy koniec świata? Byłem. Widziałem wschód słońca na Saharze w Tunezji i prawdziwe życie w slumsach na Wyspach Zielonego Przylądka. W podróżach szukam ciszy, lokalnych smaków i historii, której nie ma w przewodnikach. Malediwy i Seszele nauczyły mnie, że najlepsze wakacje to te, po których wracasz spokojniejszy, niż wyjechałeś.</p>
-<h3>Gołąb nr 2: Paulina</h3>
+<p class="reka">Najlepsze wakacje to te, po których wracasz spokojniejszy.</p>
+</article>
+<article class="on-list">
+<div class="on-znaczek"><img src="/img/paulina.jpg" alt="Paulina" width="600" height="600" loading="lazy" decoding="async"></div>
+<span class="nr">Gołąb nr 2</span>
+<h3>Paulina</h3>
 <p>Zakynthos o zachodzie słońca, Gambia pełna kolorów i zwierząt, których nie zapomnę do końca życia, słońce Egiptu. Kocham plaże, lokalne kuchnie, opalanie się godzinami i tę idealną proporcję: 50% leżenie, 50% odkrywanie. Planując Twój wyjazd, dbam o każdy detal.</p>
-<h3>Sprawdziliśmy na własnej skórze: 35 krajów</h3>
-<p>Polska, Niemcy, Ukraina, Słowacja, Czechy, Słowenia, Węgry, Chorwacja, Grecja, Cypr, Rumunia, Bułgaria, Włochy, Francja, Hiszpania, Portugalia, Wyspy Zielonego Przylądka, Wyspy Kanaryjskie, Tunezja, Egipt, Maroko, Gambia, Senegal, Kenia, Emiraty Arabskie, Seszele, Malediwy, Dominikana, Anglia, Szkocja, Turcja, Litwa, Łotwa, Austria, Holandia.</p>
+<p class="reka">50% leżenie, 50% odkrywanie.</p>
+</article>
+</div>
 </section>
-<section id="metoda">
+<section id="galeria" class="on-sekcja">
+<h2>Z naszych podróży</h2>
+<ul class="on-galeria">
+<li><figure class="on-foto "><img src="/img/lot-1.jpg" alt="Malediwy" width="1050" height="1400" loading="lazy" decoding="async"><figcaption>Malediwy</figcaption></figure></li>
+<li><figure class="on-foto "><img src="/img/lot-3.jpg" alt="Sardynia, Włochy" width="1050" height="1400" loading="lazy" decoding="async"><figcaption>Sardynia, Włochy</figcaption></figure></li>
+<li><figure class="on-foto "><img src="/img/lot-5.jpg" alt="Paryż, Francja" width="1050" height="1400" loading="lazy" decoding="async"><figcaption>Paryż, Francja</figcaption></figure></li>
+<li><figure class="on-foto "><img src="/img/lot-6.jpg" alt="Gambia" width="1050" height="1400" loading="lazy" decoding="async"><figcaption>Gambia</figcaption></figure></li>
+</ul>
+</section>
+<section id="kraje" class="on-sekcja">
+<h2>Sprawdziliśmy na własnej skórze: 35 krajów</h2>
+<p class="wstep">Każdy z tych krajów znamy z własnego wyjazdu, nie z katalogu biura podróży.</p>
+<div class="on-kraje">
+<span class="stempel"><b>35</b><span>krajów</span></span>
+<div class="on-grupy"><div><h3>Europa</h3><ul class="on-stemple"><li>Polska</li><li>Niemcy</li><li>Ukraina</li><li>Słowacja</li><li>Czechy</li><li>Słowenia</li><li>Węgry</li><li>Chorwacja</li><li>Grecja</li><li>Cypr</li><li>Rumunia</li><li>Bułgaria</li><li>Włochy</li><li>Francja</li><li>Hiszpania</li><li>Portugalia</li><li>Anglia</li><li>Szkocja</li><li>Litwa</li><li>Łotwa</li><li>Austria</li><li>Holandia</li></ul></div>
+<div><h3>Afryka i wyspy</h3><ul class="on-stemple"><li>Wyspy Zielonego Przylądka</li><li>Wyspy Kanaryjskie</li><li>Tunezja</li><li>Egipt</li><li>Maroko</li><li>Gambia</li><li>Senegal</li><li>Kenia</li><li>Seszele</li></ul></div>
+<div><h3>Azja i Bliski Wschód</h3><ul class="on-stemple"><li>Turcja</li><li>Emiraty Arabskie</li><li>Malediwy</li></ul></div>
+<div><h3>Karaiby</h3><ul class="on-stemple"><li>Dominikana</li></ul></div></div>
+</div>
+</section>
+<section id="metoda" class="on-sekcja">
 <h2>Jak pracujemy: Gołębia Metoda</h2>
-<ol>
-<li>Odczyt zlecenia. Czytamy Twój list zdanie po zdaniu, dopytujemy o braki.</li>
-<li>Zwiad. Sezon, pogoda, ceny, sytuacja na miejscu.</li>
-<li>Selekcja. Porównujemy hotele i restauracje, większość odpada.</li>
-<li>Trasa. Układamy dni tak, żeby się nie nachodzić.</li>
-<li>Pułapki i plan B. Spisujemy, co może pójść nie tak.</li>
-<li>Kontrola i stempel. Lista kontrolna, ceny z datą dnia, wysyłka.</li>
+<p class="wstep">Sześć kroków, przez które przechodzi każdy plan, zanim trafi do Ciebie.</p>
+<ol class="on-trasa">
+<li><strong>Odczyt zlecenia</strong><span>Czytamy Twój list zdanie po zdaniu, dopytujemy o braki.</span></li>
+<li><strong>Zwiad</strong><span>Sezon, pogoda, ceny, sytuacja na miejscu.</span></li>
+<li><strong>Selekcja</strong><span>Porównujemy hotele i restauracje, większość odpada.</span></li>
+<li><strong>Trasa</strong><span>Układamy dni tak, żeby się nie nachodzić.</span></li>
+<li><strong>Pułapki i plan B</strong><span>Spisujemy, co może pójść nie tak.</span></li>
+<li><strong>Kontrola i stempel</strong><span>Lista kontrolna, ceny z datą dnia, wysyłka.</span></li>
 </ol>
 </section>
-<section id="opinie">
+<section id="pakiety">
+<h2>Trzy znaczki do wyboru</h2>
+<p>Płacisz za plan na cały wyjazd, nie za osobę ani za dzień. BLIK, karta albo Klarna. Zwrot 100%, jeśli nie trafimy.</p>
+<div class="g-znaczki">
+<div>
+<span class="nr">Znaczek № 1</span>
+<h3>Podstawowy Lot</h3>
+<p class="cena">399 zł</p>
+<ul><li>Propozycje kierunków z lotami i zorganizowanymi wycieczkami pod Twoje parametry</li><li>Pogoda w Twoim terminie i czy to dobry moment na wyjazd</li><li>Niezbędnik kraju: dokumenty, waluta, napiwki, gniazdka, internet, numery alarmowe</li><li>Ogólna lista możliwych atrakcji i wycieczek w okolicy</li></ul>
+<a class="przycisk jasny" href="/nowy/start?z=onas&amp;pakiet=podstawowy" data-goatcounter-click="plan-pakiet-podstawowy-onas">Wybieram Podstawowy Lot</a>
+</div>
+<div class="wyroznione"><span class="pigulka">Najczęściej wybierany</span>
+<span class="nr">Znaczek № 2</span>
+<h3>Kompletny Lot</h3>
+<p class="cena">899 zł</p>
+<ul><li>Wszystko z Podstawowego Lotu</li><li>Propozycje lotów i hoteli dopasowane do budżetu</li><li>Szczegółowy plan dzień po dniu pod Twoje preferencje, w 5 dni roboczych od rezerwacji</li><li>Rekomendacje restauracji: budżetowo i na bogato</li></ul>
+<a class="przycisk" href="/nowy/start?z=onas&amp;pakiet=kompletny" data-goatcounter-click="plan-pakiet-kompletny-onas">Wybieram Kompletny Lot</a>
+</div>
+<div>
+<span class="nr">Znaczek № 3</span>
+<h3>Lot Premium</h3>
+<p class="cena">od 1 499 zł</p><p class="rozpiska">1 499 zł przy wyjeździe do 10 dni, 1 899 zł przy dłuższym</p>
+<ul><li>Wszystko z Kompletnego Lotu</li><li>Najpełniejszy plan: mapa z trasą na każdy dzień, także offline</li><li>Wsparcie na czacie w trakcie wyjazdu</li><li>Zmiany planu w trakcie wyjazdu: odwołany lot, deszcz, inny hotel</li></ul>
+<a class="przycisk jasny" href="/nowy/start?z=onas&amp;pakiet=premium" data-goatcounter-click="plan-pakiet-premium-onas">Wybieram Lot Premium</a>
+</div>
+</div>
+</section>
+<section id="opinie" class="on-sekcja">
 <h2>Napisali do nas po lądowaniu</h2>
-<blockquote class="opinia"><p>Zaplanowali dla nas dwutygodniową podróż do Japonii, która była jednocześnie naszą podróżą poślubną. Rada dotycząca wysyłania bagaży z hotelu do hotelu: absolutny strzał w dziesiątkę!</p><small>Alicja i Łukasz, podróż poślubna w Japonii</small></blockquote>
-<blockquote class="opinia"><p>Potrzebowałem inspiracji na mototrip po Kaszubach i Pomorzu. Dostałem namiary, jakie punkty związane z II WŚ zwiedzić, gdzie rozbić namiot, gdzie zjeść i jakie jeziora zobaczyć.</p><small>Piotr, mototrip po Polsce</small></blockquote>
-<blockquote class="opinia"><p>Zależało mi na rodzinnych, tanich wakacjach all inclusive z basenami. Dostałam propozycje kierunków i najlepsze propozycje hotelowe, wszystko ekspresowo.</p><small>Paula z Otwocka, wakacje z rodziną</small></blockquote>
-<blockquote class="opinia"><p>Miałem biznesowy wyjazd do południowych Niemiec. Gołębie wskazali, jakie miasteczka po drodze zwiedzić oraz jak spędzić wolny weekend w tych okolicach.</p><small>Tomasz, Niemcy służbowo i po godzinach</small></blockquote>
+<div class="on-pocztowki">
+<blockquote class="pocztowka"><p>Zaplanowali dla nas dwutygodniową podróż do Japonii, która była jednocześnie naszą podróżą poślubną. Rada dotycząca wysyłania bagaży z hotelu do hotelu: absolutny strzał w dziesiątkę!</p><small>Alicja i Łukasz, podróż poślubna w Japonii</small></blockquote>
+<blockquote class="pocztowka"><p>Potrzebowałem inspiracji na mototrip po Kaszubach i Pomorzu. Dostałem namiary, jakie punkty związane z II WŚ zwiedzić, gdzie rozbić namiot, gdzie zjeść i jakie jeziora zobaczyć.</p><small>Piotr, mototrip po Polsce</small></blockquote>
+<blockquote class="pocztowka"><p>Zależało mi na rodzinnych, tanich wakacjach all inclusive z basenami. Dostałam propozycje kierunków i najlepsze propozycje hotelowe, wszystko ekspresowo.</p><small>Paula z Otwocka, wakacje z rodziną</small></blockquote>
+<blockquote class="pocztowka"><p>Miałem biznesowy wyjazd do południowych Niemiec. Gołębie wskazali, jakie miasteczka po drodze zwiedzić oraz jak spędzić wolny weekend w tych okolicach.</p><small>Tomasz, Niemcy służbowo i po godzinach</small></blockquote>
+</div>
 </section>
-<section id="ocena">
-<h2>Jak liczymy ocenę gołębi</h2>
-<p>Ocena 1 do 5 opisuje miesiąc z punktu widzenia wyjazdu, na który najczęściej się tam jedzie. Liczymy ją ze średnich z 30 lat: temperatury w dzień, liczby dni z opadem, godzin słońca i temperatury wody.</p>
-<p>Wyjazd w ciepło (plaże, egzotyka): najwięcej punktów za 22 do 30°C w dzień, najwyżej 5 dni z opadem (każdy kolejny trochę obniża ocenę), dużo słońca i wodę od 22°C. Dlatego Kreta w styczniu dostaje 1, choć na zwiedzanie bywa przyjemnie.</p>
-<p>Zwiedzanie (miasta, góry, północ): najwięcej punktów za 18 do 26°C, mało opadów i słońca co najmniej 7 godzin dziennie. W górach narciarskich w pełni zimy mróz daje 4, w okresie przejściowym 3.</p>
-<p>Ocena to punkt wyjścia, nie wyrok. Przy każdym miesiącu piszemy też liczby, z których powstała.</p>
+<section id="dane" class="on-sekcja">
+<h2>Dane, oceny i pieniądze: bez tajemnic</h2>
+<div class="on-przejrzyste">
+<details id="ocena"><summary>Jak liczymy ocenę gołębi</summary><p>Ocena 1 do 5 opisuje miesiąc z punktu widzenia wyjazdu, na który najczęściej się tam jedzie. Liczymy ją z wieloletnich średnich: temperatury w dzień, liczby dni z opadem, godzin słońca i temperatury wody.</p><p>Wyjazd w ciepło (plaże, egzotyka): najwięcej punktów za 22 do 30°C w dzień, najwyżej 5 dni z opadem (każdy kolejny trochę obniża ocenę), dużo słońca i wodę od 22°C. Dlatego Kreta w styczniu dostaje 1, choć na zwiedzanie bywa przyjemnie.</p><p>Zwiedzanie (miasta, góry, północ): najwięcej punktów za 18 do 26°C, mało opadów i słońca co najmniej 7 godzin dziennie. W górach narciarskich w pełni zimy mróz daje 4, w okresie przejściowym 3.</p><p>Ocena to punkt wyjścia, nie wyrok. Przy każdym miesiącu piszemy też liczby, z których powstała.</p></details>
+<details><summary>Skąd są dane w przewodniku</summary><p>Pogodę liczymy z wieloletnich średnich (Open-Meteo ERA5 i NASA POWER), miejsca bierzemy z Wikidata, ceny lotów z wyszukiwań Aviasales z ostatnich tygodni, formalności sprawdzamy w serwisie MSZ. Przy każdej stronie podajemy źródła i datę. Gdy coś się nie zgadza, napisz: poprawiamy.</p></details>
+<details id="jak-powstaja-strony"><summary>Jak powstają strony przewodnika</summary><p>Strony przewodnika (kierunki, miesiące, kraje, ceny) składa program z szablonów, które piszemy sami. Liczby podstawia z danych: klimat z Open-Meteo i NASA POWER, temperatura wody z NOAA, ceny lotów z wyszukiwań Aviasales przez Travelpayouts, miejsca z Wikidata. Ręcznie sprawdzamy rekomendacje na kartach kierunków i wskazówki podróżników oznaczone „gołębie sprawdziły”. Plany podróży dla klientów piszemy zawsze sami.</p></details>
+<details><summary>Na czym zarabiamy</summary><p>Na planach podróży, które zamawiasz u nas, i na prowizjach partnerów: gdy kupisz bilet albo nocleg przez link ze strony, partner płaci nam część swojej marży, a cena dla Ciebie się nie zmienia. Kolejności i ocen nie sprzedajemy.</p></details>
+</div>
 </section>
-<section id="dane">
-<h2>Skąd są dane w przewodniku</h2>
-<p>Pogodę liczymy z 30 lat pomiarów (Open-Meteo ERA5 i NASA POWER), miejsca bierzemy z Wikidata, ceny lotów z wyszukiwań Aviasales z ostatnich tygodni, formalności sprawdzamy w serwisie MSZ. Przy każdej stronie podajemy źródła i datę. Gdy coś się nie zgadza, napisz: poprawiamy.</p>
-<p id="jak-powstaja-strony">Strony przewodnika (kierunki, miesiące, kraje, ceny) składa program z szablonów, które piszemy sami. Liczby podstawia z danych: klimat z Open-Meteo i NASA POWER, temperatura wody z NOAA, ceny lotów z wyszukiwań Aviasales przez Travelpayouts, miejsca z Wikidata. Ręcznie sprawdzamy rekomendacje na kartach kierunków i wskazówki podróżników oznaczone „gołębie sprawdziły”. Plany podróży dla klientów piszemy zawsze sami.</p>
-<h3>Na czym zarabiamy</h3>
-<p>Na planach podróży, które zamawiasz u nas, i na prowizjach partnerów: gdy kupisz bilet albo nocleg przez link ze strony, partner płaci nam część swojej marży, a cena dla Ciebie się nie zmienia. Kolejności i ocen nie sprzedajemy.</p>
-</section>
-<section id="kontakt">
+<section id="kontakt" class="on-koperta">
+<span class="stempel" aria-hidden="true"><b>Gołębie Latają</b><span>Warszawa</span></span>
 <h2>Kontakt</h2>
-<p>Najszybciej mailem: <a href="mailto:lecimy@golebielataja.pl">lecimy@golebielataja.pl</a>. Wolimy pisać niż dzwonić, ale jeśli wolisz rozmowę: +48 505 981 242, najlepiej od wtorku do czwartku, 17:00 do 18:00.</p>
+<p>Odpisujemy osobiście. Napisz, dokąd chcesz polecieć, a powiemy, czy i jak możemy pomóc.</p>
+<a class="mail" href="mailto:lecimy@golebielataja.pl">lecimy@golebielataja.pl</a>
+<p>Wolimy pisać niż dzwonić, ale jeśli wolisz rozmowę: +48 505 981 242, najlepiej od wtorku do czwartku, 17:00 do 18:00.</p>
+<p class="profile"><strong>Obserwuj nas</strong><a href="https://www.instagram.com/golebie.lataja/" rel="noopener me" target="_blank">Instagram</a><a href="https://www.tiktok.com/@golebielataja1" rel="noopener me" target="_blank">TikTok</a><a href="https://www.facebook.com/golebie.lataja" rel="noopener me" target="_blank">Facebook</a><a href="https://www.youtube.com/@GolebieLataja" rel="noopener me" target="_blank">YouTube</a></p>
 </section>
 </main>
 <section class="pocztowka" id="pocztowka" aria-labelledby="pocztowka-h">
@@ -272,7 +409,7 @@ section.pocztowka p{font-family:var(--sans);font-size:1.05rem;line-height:1.55;f
 <div><p class="tytul">Kiedy wolne</p><ul><li><a href="/majowka/">Majówka</a></li><li><a href="/wielkanoc/">Wielkanoc za granicą</a></li><li><a href="/boze-cialo/">Boże Ciało</a></li><li><a href="/ferie-zimowe/">Ferie zimowe</a></li><li><a href="/sylwester-za-granica/">Sylwester za granicą</a></li><li><a href="/swieta-w-cieple/">Święta w cieple</a></li><li><a href="/wakacje-z-dziecmi/">Wakacje z dziećmi</a></li><li><a href="/podroz-poslubna/">Podróż poślubna</a></li></ul></div>
 <div><p class="tytul">Przydatne</p><ul><li><a href="/poradniki/">Poradniki</a></li><li><a href="/porownanie/">Porównania</a></li><li><a href="/tanie-loty/">Tanie loty</a></li><li><a href="/okazje/">Okazje</a></li><li><a href="/prezent/">Voucher na podróż</a></li><li><a href="/polityka-prywatnosci.html">Polityka prywatności</a></li><li><a href="/regulamin.html">Regulamin</a></li><li><a href="#zgoda" data-cookies="1">Ustawienia cookies</a></li></ul></div>
 </div>
-<p class="drobne">Strony odświeżamy codziennie, a ceny lotów same przy każdym wejściu. Stan na 18 października 2026.</p>
+<p class="drobne">Strony odświeżamy codziennie, a ceny lotów odświeżają się same przy każdym wejściu. Stan na 18 października 2026.</p>
 </footer>
 <div class="pasek"></div>
 <div class="plan-pasek" hidden><p>Plan podróży od 399 zł, propozycje w 48 h</p><a href="/nowy/start?z=onas" data-goatcounter-click="plan-pasek-onas">Zamów</a></div>

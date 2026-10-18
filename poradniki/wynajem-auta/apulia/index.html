@@ -30,7 +30,7 @@
 :root{--paper:#F7F1E4;--paper-deep:#EFE6D1;--cream:#FBF6EA;--white:#FFFDF8;--ink:#2A2C31;--ink-soft:#5E626A;--line:#DDD5C4;--red:#D0402A;--navy:#1F3B6E;--navy-soft:#E6ECF5;--niebo:#DCEAF3;--zielen:#276A4D;--zielen-soft:#E3F1EA;--muted:#5E626A;
 --serif:"Young Serif",Georgia,"Times New Roman",serif;--sans:Nunito,"Nunito zapas","Segoe UI",system-ui,-apple-system,sans-serif;--hand:Caveat,"Segoe Print","Bradley Hand",cursive;--mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;--tekst:66ch}
 *{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{margin:0;font-family:var(--sans);font-weight:500;font-size:1.125rem;line-height:1.65;color:var(--ink);background:var(--paper);font-variant-numeric:lining-nums}
+body{margin:0;font-family:var(--sans);font-weight:500;font-size:1.125rem;line-height:1.65;color:var(--ink);background:var(--paper);font-variant-numeric:lining-nums;overflow-x:clip}
 a{color:var(--navy);text-decoration-thickness:1px;text-underline-offset:.18em}a:hover{text-decoration-thickness:2px}
 :focus-visible{outline:2px solid var(--navy);outline-offset:2px;border-radius:4px}
 .pasek{height:8px;background:repeating-linear-gradient(135deg,var(--red) 0 14px,var(--white) 14px 22px,var(--navy) 22px 36px,var(--white) 36px 44px)}
@@ -96,6 +96,7 @@ ul.lista-rzeczy{list-style:none;padding:0;columns:2;column-gap:28px;max-width:no
 ul.lista-rzeczy li::before{content:"";position:absolute;left:0;top:.3em;width:16px;height:16px;border:2px solid var(--navy);border-radius:4px}
 @media(max-width:640px){ul.lista-rzeczy{columns:1}}
 .pocztowka{background:var(--white);border:1.5px solid var(--ink);border-radius:6px;box-shadow:3px 3px 0 var(--ink);padding:18px 22px 16px;margin:18px 0;max-width:62ch;transform:rotate(-.6deg);position:relative}
+@media(max-width:640px){.pocztowka{transform:rotate(-.6deg) scale(.985)}}
 .pocztowka::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;background:repeating-linear-gradient(135deg,var(--red) 0 10px,var(--white) 10px 16px,var(--navy) 16px 26px,var(--white) 26px 32px);border-radius:5px 5px 0 0}
 .pocztowka p,.reka{font-family:var(--hand);font-size:1.62rem;line-height:1.25;font-weight:600;margin:.25em 0}
 .pocztowka small{display:block;font-family:var(--sans);font-size:.85rem;color:var(--ink-soft);margin-top:6px}
@@ -155,7 +156,7 @@ aside.plan p{margin:0;max-width:60ch}aside.plan strong{display:block;font-family
 @media(min-width:761px){.plan-pasek{display:none}}
 .cta .cena{font-family:var(--serif);font-size:1.3rem;margin:4px 0 2px}.cta .drobne,.cta small{color:#DCE3EE}.cta .czy-sam{margin-top:14px;padding-top:12px;border-top:1px solid rgba(255,253,248,.25)}.cta .czy-sam p{margin:0 0 4px}
 nav.spis a.plan{border-color:var(--red);color:var(--red)}
-.pakiety{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:14px 0}.pakiety>div{background:var(--white);color:var(--ink);border-radius:16px;padding:16px 20px}.pakiety h3{margin:0;color:var(--navy)}.pakiety .cena{font-family:var(--serif);font-size:1.7rem;color:var(--red);margin:2px 0 4px}.pakiety ul{font-size:.95rem;padding-left:1.1em;margin:6px 0 0}
+.pakiety{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:14px 0}.pakiety>div{background:var(--white);color:var(--ink);border-radius:16px;padding:16px 20px}.pakiety h3{margin:0;color:var(--navy)}.pakiety .cena{font-family:var(--serif);font-size:1.7rem;color:var(--red);margin:2px 0 4px}.pakiety ul{font-size:.95rem;padding-left:1.1em;margin:6px 0 0}.pakiety .drobne{color:var(--ink-soft)}
 ul.terminy{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px;max-width:none}ul.terminy li{margin:0;background:var(--white);border:1px solid var(--line);border-radius:16px;padding:12px 14px}ul.terminy strong{font-family:var(--serif);font-weight:400;font-size:1.2rem}
 figure.mini{margin:0 0 8px}figure.mini img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;border-radius:10px;display:block;background:var(--paper-deep)}figure.mini figcaption{font-size:.72rem;color:var(--ink-soft);margin-top:3px}
 .cena-terminu{margin:6px 0 4px;font-weight:800;color:var(--navy)}ul.terminy .partnerzy{display:flex;flex-wrap:wrap;gap:6px}ul.terminy a.partner{min-height:40px;padding:6px 12px;font-size:.92rem}
@@ -172,7 +173,7 @@ section.pocztowka p{font-family:var(--sans);font-size:1.05rem;line-height:1.55;f
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 @media print{.pasek,nav.spis,.partnerzy,.cta,aside.plan,.plan-pasek,section.pocztowka,.gl-zgoda,a[download],nav.gora .linki,.plan-nav,.okruszki{display:none}}</style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Apulia: wynajem samochodu i na co uważać","description":"Wynajem samochodu, Apulia: jak się tu jeździ, kaucja, ubezpieczenie i porównanie wypożyczalni z odbiorem na lotnisku BRI.","inLanguage":"pl-PL","datePublished":"2026-10-05","dateModified":"2026-10-05","mainEntityOfPage":"https://golebielataja.pl/poradniki/wynajem-auta/apulia/","image":"https://golebielataja.pl/img/razem.jpg","author":{"@type":"Organization","name":"Gołębie Latają","url":"https://golebielataja.pl/"},"publisher":{"@type":"Organization","name":"Gołębie Latają","url":"https://golebielataja.pl/","logo":{"@type":"ImageObject","url":"https://golebielataja.pl/img/golab-sygnet.svg"}}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Ile wynosi kaucja za auto?","acceptedAnswer":{"@type":"Answer","text":"Zwykle od kilkuset do ponad tysiąca euro, blokowane na karcie kredytowej kierowcy. Pełne ubezpieczenie z porównywarki jej nie zastępuje, ale zwraca koszt szkody."}},{"@type":"Question","name":"Czy wystarczy polskie prawo jazdy?","acceptedAnswer":{"@type":"Answer","text":"Polskie prawo jazdy wystarcza w całej Unii Europejskiej."}},{"@type":"Question","name":"Apulia: gdzie odebrać auto?","acceptedAnswer":{"@type":"Answer","text":"Najwygodniej na lotnisku BRI, zaraz po przylocie. Odbiór w mieście bywa tańszy, ale zajmuje więcej czasu."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Ile wynosi kaucja za auto?","acceptedAnswer":{"@type":"Answer","text":"Zwykle od kilkuset do ponad tysiąca euro, a wypożyczalnia blokuje tę kwotę na karcie kredytowej kierowcy. Pełne ubezpieczenie z porównywarki jej nie zastępuje, ale zwraca koszt szkody."}},{"@type":"Question","name":"Czy wystarczy polskie prawo jazdy?","acceptedAnswer":{"@type":"Answer","text":"Polskie prawo jazdy wystarcza w całej Unii Europejskiej."}},{"@type":"Question","name":"Apulia: gdzie odebrać auto?","acceptedAnswer":{"@type":"Answer","text":"Najwygodniej na lotnisku BRI, zaraz po przylocie. Odbiór w mieście bywa tańszy, ale zajmuje więcej czasu."}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Gołębie Latają","item":"https://golebielataja.pl/"},{"@type":"ListItem","position":2,"name":"Poradniki","item":"https://golebielataja.pl/poradniki/"},{"@type":"ListItem","position":3,"name":"Wynajem auta za granicą: na co uważać","item":"https://golebielataja.pl/poradniki/wynajem-auta/"},{"@type":"ListItem","position":4,"name":"Apulia","item":"https://golebielataja.pl/poradniki/wynajem-auta/apulia/"}]}</script>
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "dabf88d8ecff46b9af7a1518edc3f5ee"}'></script>
 <script data-goatcounter="https://golebielataja.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
@@ -211,7 +212,7 @@ section.pocztowka p{font-family:var(--sans);font-size:1.05rem;line-height:1.55;f
 </section>
 <section>
 <h2>Dokąd pojechać autem</h2>
-<p>Najpopularniejsze miejsca w okolicy Apulia, do których autem dojedziesz wygodniej niż transportem publicznym:</p>
+<p>Apulia: najpopularniejsze miejsca w okolicy, do których autem dojedziesz wygodniej niż transportem publicznym:</p>
 <ul class="miejsca">
 <li><strong>Bazylika św. Mikołaja w Bari</strong><small>świątynia</small></li>
 <li><strong>Cathedral of Santa Maria Assunta</strong><small>świątynia</small></li>
@@ -244,7 +245,7 @@ section.pocztowka p{font-family:var(--sans);font-size:1.05rem;line-height:1.55;f
 </section>
 <section>
 <h2>Pytania i odpowiedzi</h2>
-<details><summary>Ile wynosi kaucja za auto?</summary><p>Zwykle od kilkuset do ponad tysiąca euro, blokowane na karcie kredytowej kierowcy. Pełne ubezpieczenie z porównywarki jej nie zastępuje, ale zwraca koszt szkody.</p></details>
+<details><summary>Ile wynosi kaucja za auto?</summary><p>Zwykle od kilkuset do ponad tysiąca euro, a wypożyczalnia blokuje tę kwotę na karcie kredytowej kierowcy. Pełne ubezpieczenie z porównywarki jej nie zastępuje, ale zwraca koszt szkody.</p></details>
 <details><summary>Czy wystarczy polskie prawo jazdy?</summary><p>Polskie prawo jazdy wystarcza w całej Unii Europejskiej.</p></details>
 <details><summary>Apulia: gdzie odebrać auto?</summary><p>Najwygodniej na lotnisku BRI, zaraz po przylocie. Odbiór w mieście bywa tańszy, ale zajmuje więcej czasu.</p></details>
 </section>
@@ -294,7 +295,7 @@ section.pocztowka p{font-family:var(--sans);font-size:1.05rem;line-height:1.55;f
 <div><p class="tytul">Kiedy wolne</p><ul><li><a href="/majowka/">Majówka</a></li><li><a href="/wielkanoc/">Wielkanoc za granicą</a></li><li><a href="/boze-cialo/">Boże Ciało</a></li><li><a href="/ferie-zimowe/">Ferie zimowe</a></li><li><a href="/sylwester-za-granica/">Sylwester za granicą</a></li><li><a href="/swieta-w-cieple/">Święta w cieple</a></li><li><a href="/wakacje-z-dziecmi/">Wakacje z dziećmi</a></li><li><a href="/podroz-poslubna/">Podróż poślubna</a></li></ul></div>
 <div><p class="tytul">Przydatne</p><ul><li><a href="/poradniki/">Poradniki</a></li><li><a href="/porownanie/">Porównania</a></li><li><a href="/tanie-loty/">Tanie loty</a></li><li><a href="/okazje/">Okazje</a></li><li><a href="/prezent/">Voucher na podróż</a></li><li><a href="/polityka-prywatnosci.html">Polityka prywatności</a></li><li><a href="/regulamin.html">Regulamin</a></li><li><a href="#zgoda" data-cookies="1">Ustawienia cookies</a></li></ul></div>
 </div>
-<p class="drobne">Strony odświeżamy codziennie, a ceny lotów same przy każdym wejściu. Stan na 18 października 2026.</p>
+<p class="drobne">Strony odświeżamy codziennie, a ceny lotów odświeżają się same przy każdym wejściu. Stan na 18 października 2026.</p>
 </footer>
 <div class="pasek"></div>
 <div class="plan-pasek" hidden><p>Plan podróży od 399 zł, propozycje w 48 h</p><a href="/nowy/start?z=poradnik" data-goatcounter-click="plan-pasek-poradnik">Zamów</a></div>

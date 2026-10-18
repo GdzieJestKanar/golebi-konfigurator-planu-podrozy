@@ -30,7 +30,7 @@
 :root{--paper:#F7F1E4;--paper-deep:#EFE6D1;--cream:#FBF6EA;--white:#FFFDF8;--ink:#2A2C31;--ink-soft:#5E626A;--line:#DDD5C4;--red:#D0402A;--navy:#1F3B6E;--navy-soft:#E6ECF5;--niebo:#DCEAF3;--zielen:#276A4D;--zielen-soft:#E3F1EA;--muted:#5E626A;
 --serif:"Young Serif",Georgia,"Times New Roman",serif;--sans:Nunito,"Nunito zapas","Segoe UI",system-ui,-apple-system,sans-serif;--hand:Caveat,"Segoe Print","Bradley Hand",cursive;--mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;--tekst:66ch}
 *{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{margin:0;font-family:var(--sans);font-weight:500;font-size:1.125rem;line-height:1.65;color:var(--ink);background:var(--paper);font-variant-numeric:lining-nums}
+body{margin:0;font-family:var(--sans);font-weight:500;font-size:1.125rem;line-height:1.65;color:var(--ink);background:var(--paper);font-variant-numeric:lining-nums;overflow-x:clip}
 a{color:var(--navy);text-decoration-thickness:1px;text-underline-offset:.18em}a:hover{text-decoration-thickness:2px}
 :focus-visible{outline:2px solid var(--navy);outline-offset:2px;border-radius:4px}
 .pasek{height:8px;background:repeating-linear-gradient(135deg,var(--red) 0 14px,var(--white) 14px 22px,var(--navy) 22px 36px,var(--white) 36px 44px)}
@@ -96,6 +96,7 @@ ul.lista-rzeczy{list-style:none;padding:0;columns:2;column-gap:28px;max-width:no
 ul.lista-rzeczy li::before{content:"";position:absolute;left:0;top:.3em;width:16px;height:16px;border:2px solid var(--navy);border-radius:4px}
 @media(max-width:640px){ul.lista-rzeczy{columns:1}}
 .pocztowka{background:var(--white);border:1.5px solid var(--ink);border-radius:6px;box-shadow:3px 3px 0 var(--ink);padding:18px 22px 16px;margin:18px 0;max-width:62ch;transform:rotate(-.6deg);position:relative}
+@media(max-width:640px){.pocztowka{transform:rotate(-.6deg) scale(.985)}}
 .pocztowka::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;background:repeating-linear-gradient(135deg,var(--red) 0 10px,var(--white) 10px 16px,var(--navy) 16px 26px,var(--white) 26px 32px);border-radius:5px 5px 0 0}
 .pocztowka p,.reka{font-family:var(--hand);font-size:1.62rem;line-height:1.25;font-weight:600;margin:.25em 0}
 .pocztowka small{display:block;font-family:var(--sans);font-size:.85rem;color:var(--ink-soft);margin-top:6px}
@@ -155,7 +156,7 @@ aside.plan p{margin:0;max-width:60ch}aside.plan strong{display:block;font-family
 @media(min-width:761px){.plan-pasek{display:none}}
 .cta .cena{font-family:var(--serif);font-size:1.3rem;margin:4px 0 2px}.cta .drobne,.cta small{color:#DCE3EE}.cta .czy-sam{margin-top:14px;padding-top:12px;border-top:1px solid rgba(255,253,248,.25)}.cta .czy-sam p{margin:0 0 4px}
 nav.spis a.plan{border-color:var(--red);color:var(--red)}
-.pakiety{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:14px 0}.pakiety>div{background:var(--white);color:var(--ink);border-radius:16px;padding:16px 20px}.pakiety h3{margin:0;color:var(--navy)}.pakiety .cena{font-family:var(--serif);font-size:1.7rem;color:var(--red);margin:2px 0 4px}.pakiety ul{font-size:.95rem;padding-left:1.1em;margin:6px 0 0}
+.pakiety{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:14px 0}.pakiety>div{background:var(--white);color:var(--ink);border-radius:16px;padding:16px 20px}.pakiety h3{margin:0;color:var(--navy)}.pakiety .cena{font-family:var(--serif);font-size:1.7rem;color:var(--red);margin:2px 0 4px}.pakiety ul{font-size:.95rem;padding-left:1.1em;margin:6px 0 0}.pakiety .drobne{color:var(--ink-soft)}
 ul.terminy{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px;max-width:none}ul.terminy li{margin:0;background:var(--white);border:1px solid var(--line);border-radius:16px;padding:12px 14px}ul.terminy strong{font-family:var(--serif);font-weight:400;font-size:1.2rem}
 figure.mini{margin:0 0 8px}figure.mini img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;border-radius:10px;display:block;background:var(--paper-deep)}figure.mini figcaption{font-size:.72rem;color:var(--ink-soft);margin-top:3px}
 .cena-terminu{margin:6px 0 4px;font-weight:800;color:var(--navy)}ul.terminy .partnerzy{display:flex;flex-wrap:wrap;gap:6px}ul.terminy a.partner{min-height:40px;padding:6px 12px;font-size:.92rem}
@@ -292,7 +293,7 @@ section.pocztowka p{font-family:var(--sans);font-size:1.05rem;line-height:1.55;f
 </section>
 <section id="rezerwacje" class="karta">
 <h2>Lot, nocleg, auto</h2>
-<p>Tu masz skróty do wyszukiwarek, z których sami korzystamy. Lot i nocleg otworzą się z przykładowym terminem 9 do 16 października 2027, daty zmienisz na miejscu.</p>
+<p>Tu masz skróty do wyszukiwarek, z których sami korzystamy. Lot i nocleg otworzą się z przykładowymi datami (9 do 16 października 2027), zmienisz je na miejscu.</p>
 <div class="partnerzy"><a class="partner glowny" href="https://www.aviasales.com/search/WAW0910CFU16102?currency=pln&amp;marker=785120.mkorfu10" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-mkorfu10">Znajdź lot na te daty w Aviasales</a><a class="partner" href="https://www.booking.com/searchresults.pl.html?ss=Korfu&amp;latitude=39.62&amp;longitude=19.92&amp;checkin=2027-10-09&amp;checkout=2027-10-16&amp;group_adults=2&amp;no_rooms=1" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-booking-mkorfu10">Szukaj noclegu w Booking.com</a><a class="partner" href="https://www.expedia.pl/Hotel-Search?destination=Korfu&amp;startDate=2027-10-09&amp;endDate=2027-10-16&amp;adults=2" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-expedia-mkorfu10">Więcej noclegów w Expedii</a><a class="partner" href="https://tp.media/r?campaign_id=89&amp;marker=785120&amp;p=2074&amp;trs=581099&amp;u=https%3A%2F%2Fwww.tiqets.com%2Fpl%2Fsearch%3Fq%3DKorfu&amp;sub_id=mkorfu10" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-tiqets-mkorfu10">Bilety do atrakcji w Tiqets</a><a class="partner" href="https://www.getyourguide.pl/s/?q=Korfu&amp;date_from=2027-10-09&amp;date_to=2027-10-16" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-getyourguide-mkorfu10">Wycieczki z przewodnikiem w GetYourGuide</a></div>
 <div class="polecamy"><h3>Tu przyda się auto</h3>
 <p>Na wyspie najładniejsze plaże są zwykle tam, gdzie nie dojeżdża autobus. Porównywarka zbiera oferty wielu wypożyczalni. Bierz pełne ubezpieczenie, przy oddawaniu auta oszczędza nerwów.</p>
@@ -307,12 +308,12 @@ section.pocztowka p{font-family:var(--sans);font-size:1.05rem;line-height:1.55;f
 <thead><tr><th scope="col">Skąd</th><th scope="col">Od</th><th scope="col">Przykładowy wylot</th></tr></thead>
 <tbody>
 <tr><th scope="row"><a href="/tanie-loty/modlin/">Warszawa-Modlin</a></th><td><span class="cena-zywa" data-cena="korfu|modlin|10|mckorfu10modlin" data-at="2026-10-17T13:52:15.535Z" data-c="386"><a class="cena-lot" href="https://www.aviasales.com/search/WMI2010CFU28101?currency=pln&amp;marker=785120.mckorfu10modlin" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-mckorfu10modlin"><strong>od 386 zł</strong></a> <small class="sprawdzono">sprawdzone 17 października</small></span></td><td data-kiedy>20 do 28 października 2026</td></tr>
-<tr><th scope="row"><a href="/tanie-loty/krakow/">Kraków</a></th><td><span class="cena-zywa" data-cena="korfu|krakow|10|mckorfu10krakow" data-at="2026-10-17T13:52:15.535Z" data-c="519"><a class="cena-lot" href="https://www.aviasales.com/search/KRK2010CFU24101?currency=pln&amp;marker=785120.mckorfu10krakow" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-mckorfu10krakow"><strong>od 519 zł</strong></a> <small class="sprawdzono">sprawdzone 17 października</small></span></td><td data-kiedy>20 do 24 października 2026</td></tr>
+<tr><th scope="row"><a href="/tanie-loty/krakow/">Kraków</a></th><td><span class="cena-zywa" data-cena="korfu|krakow|10|mckorfu10krakow" data-at="2026-10-18T09:00:03.195Z" data-c="502"><a class="cena-lot" href="https://www.aviasales.com/search/KRK2210CFU28101?currency=pln&amp;marker=785120.mckorfu10krakow" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-mckorfu10krakow"><strong>od 502 zł</strong></a> <small class="sprawdzono">sprawdzone 18 października</small></span></td><td data-kiedy>22 do 28 października 2026</td></tr>
 <tr><th scope="row"><a href="/tanie-loty/wroclaw/">Wrocław</a></th><td><span class="cena-zywa" data-cena="korfu|wroclaw|10|mckorfu10wroclaw" data-at="2026-10-17T13:52:15.535Z" data-c="756"><a class="cena-lot" href="https://www.aviasales.com/search/WRO2410CFU25101?currency=pln&amp;marker=785120.mckorfu10wroclaw" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-mckorfu10wroclaw"><strong>od 756 zł</strong></a> <small class="sprawdzono">sprawdzone 17 października</small></span></td><td data-kiedy>24 do 25 października 2026</td></tr>
 <tr><th scope="row"><a href="/tanie-loty/poznan/">Poznań</a></th><td><span class="cena-zywa" data-cena="korfu|poznan|10|mckorfu10poznan" data-at="2026-10-11T22:13:36.464Z" data-c="1016"><a class="cena-lot" href="https://www.aviasales.com/search/POZ2410CFU25101?currency=pln&amp;marker=785120.mckorfu10poznan" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-mckorfu10poznan"><strong>od 1016 zł</strong></a> <small class="sprawdzono">sprawdzone 11 października</small></span></td><td data-kiedy>24 do 25 października 2026</td></tr>
 </tbody>
 </table></div>
-<p class="drobne">Cena „od” otwiera Aviasales z tymi samymi datami; ceny zmieniają się co godzinę, więc mogą się różnić. „Zwykle od” to cena sprzed ponad tygodnia, orientacyjna. Ceny sprawdzone 17 października 2026.</p>
+<p class="drobne">Cena „od” otwiera Aviasales z tymi samymi datami; ceny zmieniają się co godzinę, więc mogą się różnić. „Zwykle od” to cena sprzed ponad tygodnia, orientacyjna. Ceny sprawdzone 18 października 2026.</p>
 <p>Z Warszawy to 2,5 h w powietrzu, jeśli trafisz lot bez przesiadki.</p>
 </section>
 <section id="rekomendacja" class="rekomendacja">
@@ -322,7 +323,7 @@ section.pocztowka p{font-family:var(--sans);font-size:1.05rem;line-height:1.55;f
 <div class="kategorie">
 <div class="kat"><h3>Nietypowe</h3>
 <ul class="miejsca">
-<li><strong>Góra Agii Deka</strong><p>Szlak ze szczytem z panoramą wyspy i ląd stały. Dobra opcja, gdy chcesz odpocząć od plaż.</p></li>
+<li><strong>Góra Agii Deka</strong><p>Szlak ze szczytem z panoramą wyspy i lądu stałego. Dobra opcja, gdy chcesz odpocząć od plaż.</p></li>
 </ul></div>
 <div class="kat"><h3>Smaki i trunki</h3>
 <ul class="miejsca">
@@ -394,7 +395,7 @@ section.pocztowka p{font-family:var(--sans);font-size:1.05rem;line-height:1.55;f
 <div><p class="tytul">Kiedy wolne</p><ul><li><a href="/majowka/">Majówka</a></li><li><a href="/wielkanoc/">Wielkanoc za granicą</a></li><li><a href="/boze-cialo/">Boże Ciało</a></li><li><a href="/ferie-zimowe/">Ferie zimowe</a></li><li><a href="/sylwester-za-granica/">Sylwester za granicą</a></li><li><a href="/swieta-w-cieple/">Święta w cieple</a></li><li><a href="/wakacje-z-dziecmi/">Wakacje z dziećmi</a></li><li><a href="/podroz-poslubna/">Podróż poślubna</a></li></ul></div>
 <div><p class="tytul">Przydatne</p><ul><li><a href="/poradniki/">Poradniki</a></li><li><a href="/porownanie/">Porównania</a></li><li><a href="/tanie-loty/">Tanie loty</a></li><li><a href="/okazje/">Okazje</a></li><li><a href="/prezent/">Voucher na podróż</a></li><li><a href="/polityka-prywatnosci.html">Polityka prywatności</a></li><li><a href="/regulamin.html">Regulamin</a></li><li><a href="#zgoda" data-cookies="1">Ustawienia cookies</a></li></ul></div>
 </div>
-<p class="drobne">Strony odświeżamy codziennie, a ceny lotów same przy każdym wejściu. Stan na 18 października 2026.</p>
+<p class="drobne">Strony odświeżamy codziennie, a ceny lotów odświeżają się same przy każdym wejściu. Stan na 18 października 2026.</p>
 </footer>
 <div class="pasek"></div>
 <div class="plan-pasek" hidden><p>Plan podróży od 399 zł, propozycje w 48 h</p><a href="/nowy/start?kierunek=korfu&amp;miesiac=2027-10&amp;z=miesiac" data-goatcounter-click="plan-pasek-miesiac">Zamów</a></div>
