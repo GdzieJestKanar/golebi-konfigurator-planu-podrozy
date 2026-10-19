@@ -141,6 +141,10 @@ ul.wskazowki{list-style:none;padding:0;max-width:var(--tekst)}ul.wskazowki li{ba
 ul.wskazowki strong{display:block;font-family:var(--serif);font-weight:400;font-size:1.16rem}ul.wskazowki p{margin:4px 0 6px}
 .kat-wsk{display:inline-block;font-size:.8rem;font-weight:800;color:var(--navy);background:var(--navy-soft);border-radius:999px;padding:2px 10px;margin-bottom:6px}
 .sprawdzone{color:var(--zielen);font-weight:800;white-space:nowrap}.sprawdzone::before{content:"✓ "}
+ul.pytania{list-style:none;padding:0;max-width:var(--tekst)}ul.pytania>li{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:14px 18px;margin:0 0 14px}
+ul.pytania p.pytanie{font-family:var(--serif);font-size:1.16rem;margin:0 0 2px}ul.odpowiedzi{list-style:none;padding:0;margin:10px 0 0}ul.odpowiedzi li{border-left:3px solid var(--line);padding:2px 0 2px 12px;margin:0 0 10px}
+ul.odpowiedzi li.najlepsza{border-left-color:var(--zielen)}ul.odpowiedzi p{margin:0 0 4px}.pomoglo{display:inline-block;font-size:.8rem;font-weight:800;color:var(--navy);background:var(--navy-soft);border-radius:999px;padding:1px 8px;margin-left:6px}
+ul.czekaja{max-width:var(--tekst)}
 .autorzy{margin-top:36px}
 footer{padding-top:22px;padding-bottom:24px;border-top:2px solid var(--ink);margin-top:12px}footer p{font-size:.9rem;color:var(--ink-soft);max-width:none}
 .stopka{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:18px 36px;margin-bottom:10px}@media(max-width:760px){.stopka{grid-template-columns:1fr 1fr}.stopka .o{grid-column:1 / -1}}
@@ -198,7 +202,12 @@ ol.g-kroki h3{margin:0 0 6px}ol.g-kroki p{margin:0;font-size:1rem}
 .g-znaczki .nr{font-family:var(--mono);font-size:.74rem;color:var(--ink-soft)}.g-znaczki h3{margin:2px 0 0;color:var(--navy)}
 .g-znaczki .cena{font-family:var(--serif);font-size:2rem;line-height:1.1;color:var(--red);margin:6px 0 0}
 .g-znaczki .rozpiska{font-size:.85rem;color:var(--ink-soft);margin:2px 0 0}
-.g-znaczki ul{font-size:.96rem;padding-left:1.1em;margin:12px 0 14px;flex:1}
+.g-znaczki .dla{font-family:var(--hand);font-size:1.32rem;line-height:1.2;color:var(--navy);margin:10px 0 0;max-width:none}
+.g-znaczki .wstep{font-size:.86rem;font-weight:800;color:var(--ink-soft);margin:12px 0 -6px}
+.g-znaczki ul{font-size:.96rem;padding-left:1.1em;margin:12px 0 14px;flex:1}.g-znaczki li{margin:0 0 4px}
+.g-znaczki .poczta{margin:-4px 0 16px;padding:10px 14px 8px;border:6px solid transparent;border-radius:4px;background:linear-gradient(var(--white),var(--white)) padding-box,repeating-linear-gradient(135deg,var(--red) 0 9px,var(--white) 9px 14px,var(--navy) 14px 23px,var(--white) 23px 28px) border-box}
+.g-znaczki .poczta p{font-size:.78rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:var(--red);margin:0;max-width:none}
+.g-znaczki .poczta ul{margin:6px 0 2px;flex:none;font-weight:700}
 .g-znaczki .pigulka{position:absolute;top:-12px;left:18px;background:var(--navy);color:var(--white);font-size:.78rem;font-weight:800;border-radius:999px;padding:3px 12px}
 .g-znaczki .przycisk{margin:0;justify-content:center}
 @media(max-width:760px){.g-znaczki{grid-template-columns:1fr;gap:22px}}
@@ -241,6 +250,7 @@ ol.g-kroki,.g-znaczki{grid-template-columns:1fr}.g-znaczki{gap:22px}.g-opinie,.g
 <a class="plan-nav" href="/nowy/start?z=nav" data-goatcounter-click="plan-nav-glowna">Zamów plan</a>
 <span class="linki">
 <a href="/kierunki/">Kierunki</a>
+<a href="/kierunki/#szukaj">Szukaj kierunku</a>
 <a href="/gdzie-leciec/pazdziernik/">Gdzie lecieć</a>
 <a href="/okazje/">Okazje</a>
 <a href="/tanie-loty/">Tanie loty</a>
@@ -287,21 +297,27 @@ ol.g-kroki,.g-znaczki{grid-template-columns:1fr}.g-znaczki{gap:22px}.g-opinie,.g
 <span class="nr">Znaczek № 1</span>
 <h3>Podstawowy Lot</h3>
 <p class="cena">399 zł</p>
-<ul><li>Propozycje kierunków z lotami i zorganizowanymi wycieczkami pod Twoje parametry</li><li>Pogoda w Twoim terminie i czy to dobry moment na wyjazd</li><li>Niezbędnik kraju: dokumenty, waluta, napiwki, gniazdka, internet, numery alarmowe</li><li>Ogólna lista możliwych atrakcji i wycieczek w okolicy</li></ul>
+<p class="dla">Dla tych, którzy chcą trafić z kierunkiem, a resztę lubią ogarnąć sami.</p>
+<ul><li>Kierunki dobrane do Twojego listu, z lotami i gotowymi wycieczkami</li><li>Pogoda w Twoim terminie: jechać teraz czy przesunąć o tydzień</li><li>Mini-przewodnik po kraju w PDF: dokumenty, waluta, napiwki, gniazdka, zwroty</li><li>Na co uważać i co naprawdę warto zobaczyć</li><li>Lista do spakowania pod kierunek i porę roku</li></ul>
+
 <a class="przycisk jasny" href="/nowy/start?z=glowna&amp;pakiet=podstawowy" data-goatcounter-click="plan-pakiet-podstawowy-glowna">Wybieram Podstawowy Lot</a>
 </div>
 <div class="wyroznione"><span class="pigulka">Najczęściej wybierany</span>
 <span class="nr">Znaczek № 2</span>
 <h3>Kompletny Lot</h3>
 <p class="cena">899 zł</p>
-<ul><li>Wszystko z Podstawowego Lotu</li><li>Propozycje lotów i hoteli dopasowane do budżetu</li><li>Szczegółowy plan dzień po dniu pod Twoje preferencje, w 5 dni roboczych od rezerwacji</li><li>Rekomendacje restauracji: budżetowo i na bogato</li></ul>
+<p class="dla">Dla tych, którzy chcą wsiąść do samolotu z gotowym planem i nie tracić urlopu na szukanie.</p>
+<p class="wstep">Wszystko z Podstawowego, a do tego:</p><ul><li>Loty i hotele dobrane do budżetu, z linkami do rezerwacji</li><li>Plan dzień po dniu: co, kiedy i jak dojechać</li><li>Mapa z trasą na każdy dzień, jednym kliknięciem w Google Maps</li><li>Na co uważać i czego nie przegapić: opinie podróżników i nasze notatki</li><li>Gdzie zjeść: tanio i dobrze oraz na specjalną okazję</li></ul>
+
 <a class="przycisk" href="/nowy/start?z=glowna&amp;pakiet=kompletny" data-goatcounter-click="plan-pakiet-kompletny-glowna">Wybieram Kompletny Lot</a>
 </div>
 <div>
 <span class="nr">Znaczek № 3</span>
 <h3>Lot Premium</h3>
 <p class="cena">od 1 499 zł</p><p class="rozpiska">1 499 zł przy wyjeździe do 10 dni, 1 899 zł przy dłuższym</p>
-<ul><li>Wszystko z Kompletnego Lotu</li><li>Najpełniejszy plan: mapa z trasą na każdy dzień, także offline</li><li>Wsparcie na czacie w trakcie wyjazdu</li><li>Zmiany planu w trakcie wyjazdu: odwołany lot, deszcz, inny hotel</li></ul>
+<p class="dla">Na podróż życia, miesiąc miodowy albo daleką egzotykę, kiedy chcesz mieć nas pod ręką.</p>
+<p class="wstep">Wszystko z Kompletnego, a do tego:</p><ul><li>Gołąb na czacie przez cały wyjazd: odwołany lot albo ulewa i plan zmieniamy na bieżąco</li><li>Sprawdzamy Twoje rezerwacje: daty, imiona jak w paszporcie, wizy, przesiadki</li><li>Mapa offline w aplikacji, działa bez internetu</li></ul>
+<div class="poczta"><p>Przychodzi pocztą do Twojej skrzynki</p><ul><li>Ilustrowana mapa Twojego miasta, wydrukowana</li><li>Kolekcjonerskie wydanie planu z numerem egzemplarza</li><li>Pocztówka ze stemplem od gołębi</li></ul></div>
 <a class="przycisk jasny" href="/nowy/start?z=glowna&amp;pakiet=premium" data-goatcounter-click="plan-pakiet-premium-glowna">Wybieram Lot Premium</a>
 </div>
 </div>
@@ -331,7 +347,7 @@ ol.g-kroki,.g-znaczki{grid-template-columns:1fr}.g-znaczki{gap:22px}.g-opinie,.g
 <h2>Kto pisze Twój plan</h2>
 <div class="g-nadawcy">
 <img src="/img/razem.jpg" alt="Michał i Paulina w podróży" width="1200" height="800" loading="lazy" decoding="async">
-<div><p>Michał i Paulina z Warszawy. Razem sprawdziliśmy na własnej skórze 35 krajów, od Sahary w Tunezji po Malediwy i Gambię. Każdy list czytamy sami i każdy plan sami układamy.</p><p class="dalej"><a href="/o-nas/">Więcej o nas</a></p></div>
+<div><p>Michał i Paulina z Warszawy. Razem byliśmy w 35 krajach, od Sahary w Tunezji po Malediwy i Gambię. Każdy list czytamy i każdy plan układamy sami.</p><p class="dalej"><a href="/o-nas/">Więcej o nas</a></p></div>
 </div>
 </section>
 <section id="przewodnik">

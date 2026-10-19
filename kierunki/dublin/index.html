@@ -141,6 +141,10 @@ ul.wskazowki{list-style:none;padding:0;max-width:var(--tekst)}ul.wskazowki li{ba
 ul.wskazowki strong{display:block;font-family:var(--serif);font-weight:400;font-size:1.16rem}ul.wskazowki p{margin:4px 0 6px}
 .kat-wsk{display:inline-block;font-size:.8rem;font-weight:800;color:var(--navy);background:var(--navy-soft);border-radius:999px;padding:2px 10px;margin-bottom:6px}
 .sprawdzone{color:var(--zielen);font-weight:800;white-space:nowrap}.sprawdzone::before{content:"✓ "}
+ul.pytania{list-style:none;padding:0;max-width:var(--tekst)}ul.pytania>li{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:14px 18px;margin:0 0 14px}
+ul.pytania p.pytanie{font-family:var(--serif);font-size:1.16rem;margin:0 0 2px}ul.odpowiedzi{list-style:none;padding:0;margin:10px 0 0}ul.odpowiedzi li{border-left:3px solid var(--line);padding:2px 0 2px 12px;margin:0 0 10px}
+ul.odpowiedzi li.najlepsza{border-left-color:var(--zielen)}ul.odpowiedzi p{margin:0 0 4px}.pomoglo{display:inline-block;font-size:.8rem;font-weight:800;color:var(--navy);background:var(--navy-soft);border-radius:999px;padding:1px 8px;margin-left:6px}
+ul.czekaja{max-width:var(--tekst)}
 .autorzy{margin-top:36px}
 footer{padding-top:22px;padding-bottom:24px;border-top:2px solid var(--ink);margin-top:12px}footer p{font-size:.9rem;color:var(--ink-soft);max-width:none}
 .stopka{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:18px 36px;margin-bottom:10px}@media(max-width:760px){.stopka{grid-template-columns:1fr 1fr}.stopka .o{grid-column:1 / -1}}
@@ -213,6 +217,7 @@ p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
 <a class="plan-nav" href="/nowy/start?z=nav" data-goatcounter-click="plan-nav-kierunek">Zamów plan</a>
 <span class="linki">
 <a href="/kierunki/">Kierunki</a>
+<a href="/kierunki/#szukaj">Szukaj kierunku</a>
 <a href="/gdzie-leciec/pazdziernik/">Gdzie lecieć</a>
 <a href="/okazje/">Okazje</a>
 <a href="/tanie-loty/">Tanie loty</a>
@@ -228,7 +233,7 @@ p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
 <h1>Dublin</h1>
 <p class="lead">Najcieplej jest w sierpniu, około 18°C w dzień. Najlepiej jechać od czerwca do września. Bilety ostatnio od 139 zł w obie strony (Szczecin). Niżej znajdziesz tanie jedzenie i miejsca spoza przewodników.</p>
 </div>
-<p class="autor-pasek"><img src="/img/razem.jpg" alt="" width="40" height="40" loading="lazy" decoding="async">Przygotowali <a href="/o-nas/">Michał i Paulina</a>, którzy sprawdzili na miejscu 35 krajów.</p>
+<p class="autor-pasek"><img src="/img/razem.jpg" alt="" width="40" height="40" loading="lazy" decoding="async"><span>Przygotowali <a href="/o-nas/">Michał i Paulina</a>, którzy razem odwiedzili 35 krajów.</span></p>
 <aside class="plan" aria-label="Plan podróży od gołębi">
 <p><strong>Nie chcesz liczyć sam?</strong>Michał i Paulina ułożą Ci ten wyjazd: trasa, noclegi, jedzenie, plan B. Od 399 zł, pierwsze propozycje w 48 h, zwrot 100%, jeśli nie trafimy.</p>
 <a class="przycisk" href="/nowy/start?kierunek=dublin&amp;z=kierunek" data-goatcounter-click="plan-blok-kierunek">Zamów plan: Dublin</a>
@@ -284,6 +289,14 @@ p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
 <div class="kat"><h3>Patent</h3>
 <ul class="miejsca">
 <li><strong>Leap Card</strong><p>Kup kartę Leap zamiast płacić gotówką za każdy przejazd. Działa w autobusach, Luasie i DART-cie, a bilety wychodzą taniej.</p></li>
+</ul></div>
+<div class="kat"><h3>Na co uważać</h3>
+<ul class="miejsca">
+<li><strong>Drogie i rzadkie noclegi</strong><p>Ceny hoteli w centrum są bardzo wysokie, a nocleg w ostatniej chwili trudno znaleźć. Rezerwuj od razu po kupieniu biletów lotniczych.</p></li>
+<li><strong>Stoliki w weekend z wyprzedzeniem</strong><p>Na weekendową kolację rezerwuj stolik około dwa tygodnie wcześniej. Niektóre puby w piątek i sobotę też wymagają rezerwacji, bez niej często postoisz.</p></li>
+<li><strong>Autobus bez banknotów i reszty</strong><p>Kierowca Dublin Bus nie przyjmuje banknotów i nie wydaje reszty. Miej odliczone monety albo kup kartę Leap, na której przejazdy są tańsze.</p></li>
+<li><strong>Sprawdź taksówkę w aplikacji</strong><p>Aplikacja TFI Driver Check pokazuje, czy auto jest zarejestrowane, a kierowca ma licencję i zdjęcie. Możesz też wysłać znajomym dane przejazdu.</p></li>
+<li><strong>Kolejki na lotnisku</strong><p>Na lotnisku w Dublinie zdarzały się opóźnienia i spóźnienia na loty. Przyjedź około 2,5 godziny przed lotem w Europie, a z bagażem rejestrowanym jeszcze wcześniej.</p></li>
 </ul></div>
 </div>
 <h3>Od podróżników</h3>
@@ -375,6 +388,7 @@ p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
 </ul>
 <p class="dalej"><a href="/kraje/irlandia/">Więcej o kraju: Irlandia</a> <a href="https://www.gov.pl/web/dyplomacja/informacje-dla-podrozujacych">Serwis MSZ „Polak za granicą”</a></p>
 </section>
+
 <section>
 <h2>Dublin: krótko o najczęstszych pytaniach</h2>
 <details><summary>Dublin: ile trwa lot z Polski?</summary><p>Z Warszawy około 3 h w powietrzu bez przesiadek (w linii prostej około 1826 km). Z przesiadką dolicz czas na zmianę samolotu.</p></details>

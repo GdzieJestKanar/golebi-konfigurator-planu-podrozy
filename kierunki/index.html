@@ -141,6 +141,10 @@ ul.wskazowki{list-style:none;padding:0;max-width:var(--tekst)}ul.wskazowki li{ba
 ul.wskazowki strong{display:block;font-family:var(--serif);font-weight:400;font-size:1.16rem}ul.wskazowki p{margin:4px 0 6px}
 .kat-wsk{display:inline-block;font-size:.8rem;font-weight:800;color:var(--navy);background:var(--navy-soft);border-radius:999px;padding:2px 10px;margin-bottom:6px}
 .sprawdzone{color:var(--zielen);font-weight:800;white-space:nowrap}.sprawdzone::before{content:"✓ "}
+ul.pytania{list-style:none;padding:0;max-width:var(--tekst)}ul.pytania>li{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:14px 18px;margin:0 0 14px}
+ul.pytania p.pytanie{font-family:var(--serif);font-size:1.16rem;margin:0 0 2px}ul.odpowiedzi{list-style:none;padding:0;margin:10px 0 0}ul.odpowiedzi li{border-left:3px solid var(--line);padding:2px 0 2px 12px;margin:0 0 10px}
+ul.odpowiedzi li.najlepsza{border-left-color:var(--zielen)}ul.odpowiedzi p{margin:0 0 4px}.pomoglo{display:inline-block;font-size:.8rem;font-weight:800;color:var(--navy);background:var(--navy-soft);border-radius:999px;padding:1px 8px;margin-left:6px}
+ul.czekaja{max-width:var(--tekst)}
 .autorzy{margin-top:36px}
 footer{padding-top:22px;padding-bottom:24px;border-top:2px solid var(--ink);margin-top:12px}footer p{font-size:.9rem;color:var(--ink-soft);max-width:none}
 .stopka{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:18px 36px;margin-bottom:10px}@media(max-width:760px){.stopka{grid-template-columns:1fr 1fr}.stopka .o{grid-column:1 / -1}}
@@ -171,7 +175,13 @@ section.pocztowka p{font-family:var(--sans);font-size:1.05rem;line-height:1.55;f
 .pocztowka-form button{min-height:46px;padding:10px 20px;border:0;border-radius:999px;background:var(--red);color:#fff;font:inherit;font-weight:800;cursor:pointer}
 .pocztowka-form .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-@media print{.pasek,nav.spis,.partnerzy,.cta,aside.plan,.plan-pasek,section.pocztowka,.gl-zgoda,a[download],nav.gora .linki,.plan-nav,.okruszki{display:none}}</style>
+@media print{.pasek,nav.spis,.partnerzy,.cta,aside.plan,.plan-pasek,section.pocztowka,.gl-zgoda,a[download],nav.gora .linki,.plan-nav,.okruszki{display:none}}.szukaj{margin:22px 0 6px}.szukaj label{display:block;font-weight:600;margin-bottom:6px}
+.szukaj div{display:flex;gap:8px;max-width:520px}
+.szukaj input{flex:1;min-width:0;min-height:48px;padding:10px 16px;border:1.5px solid var(--line);border-radius:12px;font:inherit;background:var(--white);color:var(--ink)}
+.szukaj button{min-height:48px;padding:10px 18px;border:0;border-radius:12px;font:inherit;font-weight:600;background:var(--navy);color:var(--white);cursor:pointer}
+.szukaj input:focus{outline:3px solid var(--niebo);border-color:var(--navy)}
+.szukaj-brak{margin:14px 0}
+main.szukam form.szukaj~:not(section[data-kraj]):not(.szukaj-brak):not(script){display:none}</style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"url":"https://golebielataja.pl/kierunki/barcelona/","name":"Barcelona"},{"@type":"ListItem","position":2,"url":"https://golebielataja.pl/kierunki/madryt/","name":"Madryt"},{"@type":"ListItem","position":3,"url":"https://golebielataja.pl/kierunki/walencja/","name":"Walencja"},{"@type":"ListItem","position":4,"url":"https://golebielataja.pl/kierunki/sewilla/","name":"Sewilla"},{"@type":"ListItem","position":5,"url":"https://golebielataja.pl/kierunki/malaga/","name":"Malaga"},{"@type":"ListItem","position":6,"url":"https://golebielataja.pl/kierunki/andaluzja/","name":"Andaluzja"},{"@type":"ListItem","position":7,"url":"https://golebielataja.pl/kierunki/alicante/","name":"Alicante"},{"@type":"ListItem","position":8,"url":"https://golebielataja.pl/kierunki/costa-brava/","name":"Costa Brava"},{"@type":"ListItem","position":9,"url":"https://golebielataja.pl/kierunki/majorka/","name":"Majorka"},{"@type":"ListItem","position":10,"url":"https://golebielataja.pl/kierunki/ibiza/","name":"Ibiza"},{"@type":"ListItem","position":11,"url":"https://golebielataja.pl/kierunki/teneryfa/","name":"Teneryfa"},{"@type":"ListItem","position":12,"url":"https://golebielataja.pl/kierunki/gran-canaria/","name":"Gran Canaria"},{"@type":"ListItem","position":13,"url":"https://golebielataja.pl/kierunki/lanzarote/","name":"Lanzarote"},{"@type":"ListItem","position":14,"url":"https://golebielataja.pl/kierunki/fuerteventura/","name":"Fuerteventura"},{"@type":"ListItem","position":15,"url":"https://golebielataja.pl/kierunki/lizbona/","name":"Lizbona"},{"@type":"ListItem","position":16,"url":"https://golebielataja.pl/kierunki/porto/","name":"Porto"},{"@type":"ListItem","position":17,"url":"https://golebielataja.pl/kierunki/algarve/","name":"Algarve"},{"@type":"ListItem","position":18,"url":"https://golebielataja.pl/kierunki/madera/","name":"Madera"},{"@type":"ListItem","position":19,"url":"https://golebielataja.pl/kierunki/azory/","name":"Azory"},{"@type":"ListItem","position":20,"url":"https://golebielataja.pl/kierunki/rzym/","name":"Rzym"},{"@type":"ListItem","position":21,"url":"https://golebielataja.pl/kierunki/mediolan/","name":"Mediolan"},{"@type":"ListItem","position":22,"url":"https://golebielataja.pl/kierunki/wenecja/","name":"Wenecja"},{"@type":"ListItem","position":23,"url":"https://golebielataja.pl/kierunki/florencja/","name":"Florencja"},{"@type":"ListItem","position":24,"url":"https://golebielataja.pl/kierunki/toskania/","name":"Toskania"},{"@type":"ListItem","position":25,"url":"https://golebielataja.pl/kierunki/neapol/","name":"Neapol"},{"@type":"ListItem","position":26,"url":"https://golebielataja.pl/kierunki/amalfi/","name":"Wybrzeże Amalfi"},{"@type":"ListItem","position":27,"url":"https://golebielataja.pl/kierunki/sycylia/","name":"Sycylia"},{"@type":"ListItem","position":28,"url":"https://golebielataja.pl/kierunki/sardynia/","name":"Sardynia"},{"@type":"ListItem","position":29,"url":"https://golebielataja.pl/kierunki/apulia/","name":"Apulia"},{"@type":"ListItem","position":30,"url":"https://golebielataja.pl/kierunki/garda/","name":"Jezioro Garda"},{"@type":"ListItem","position":31,"url":"https://golebielataja.pl/kierunki/dolomity/","name":"Dolomity"},{"@type":"ListItem","position":32,"url":"https://golebielataja.pl/kierunki/ateny/","name":"Ateny"},{"@type":"ListItem","position":33,"url":"https://golebielataja.pl/kierunki/saloniki/","name":"Saloniki"},{"@type":"ListItem","position":34,"url":"https://golebielataja.pl/kierunki/kreta/","name":"Kreta"},{"@type":"ListItem","position":35,"url":"https://golebielataja.pl/kierunki/rodos/","name":"Rodos"},{"@type":"ListItem","position":36,"url":"https://golebielataja.pl/kierunki/korfu/","name":"Korfu"},{"@type":"ListItem","position":37,"url":"https://golebielataja.pl/kierunki/zakynthos/","name":"Zakynthos"},{"@type":"ListItem","position":38,"url":"https://golebielataja.pl/kierunki/kefalonia/","name":"Kefalonia"},{"@type":"ListItem","position":39,"url":"https://golebielataja.pl/kierunki/santoryn/","name":"Santoryn"},{"@type":"ListItem","position":40,"url":"https://golebielataja.pl/kierunki/mykonos/","name":"Mykonos"},{"@type":"ListItem","position":41,"url":"https://golebielataja.pl/kierunki/kos/","name":"Kos"},{"@type":"ListItem","position":42,"url":"https://golebielataja.pl/kierunki/chalkidiki/","name":"Chalkidiki"},{"@type":"ListItem","position":43,"url":"https://golebielataja.pl/kierunki/dubrownik/","name":"Dubrownik"},{"@type":"ListItem","position":44,"url":"https://golebielataja.pl/kierunki/split/","name":"Split"},{"@type":"ListItem","position":45,"url":"https://golebielataja.pl/kierunki/zadar/","name":"Zadar"},{"@type":"ListItem","position":46,"url":"https://golebielataja.pl/kierunki/istria/","name":"Istria"},{"@type":"ListItem","position":47,"url":"https://golebielataja.pl/kierunki/zagrzeb/","name":"Zagrzeb"},{"@type":"ListItem","position":48,"url":"https://golebielataja.pl/kierunki/lublana/","name":"Lublana"},{"@type":"ListItem","position":49,"url":"https://golebielataja.pl/kierunki/bled/","name":"Jezioro Bled"},{"@type":"ListItem","position":50,"url":"https://golebielataja.pl/kierunki/czarnogora/","name":"Wybrzeże Czarnogóry"},{"@type":"ListItem","position":51,"url":"https://golebielataja.pl/kierunki/tirana/","name":"Tirana"},{"@type":"ListItem","position":52,"url":"https://golebielataja.pl/kierunki/riwiera-albanska/","name":"Riwiera Albańska"},{"@type":"ListItem","position":53,"url":"https://golebielataja.pl/kierunki/sarajewo/","name":"Sarajewo"},{"@type":"ListItem","position":54,"url":"https://golebielataja.pl/kierunki/belgrad/","name":"Belgrad"},{"@type":"ListItem","position":55,"url":"https://golebielataja.pl/kierunki/ochryda/","name":"Ochryda"},{"@type":"ListItem","position":56,"url":"https://golebielataja.pl/kierunki/sloneczny-brzeg/","name":"Słoneczny Brzeg"},{"@type":"ListItem","position":57,"url":"https://golebielataja.pl/kierunki/warna/","name":"Warna"},{"@type":"ListItem","position":58,"url":"https://golebielataja.pl/kierunki/sofia/","name":"Sofia"},{"@type":"ListItem","position":59,"url":"https://golebielataja.pl/kierunki/bukareszt/","name":"Bukareszt"},{"@type":"ListItem","position":60,"url":"https://golebielataja.pl/kierunki/transylwania/","name":"Transylwania"},{"@type":"ListItem","position":61,"url":"https://golebielataja.pl/kierunki/stambul/","name":"Stambuł"},{"@type":"ListItem","position":62,"url":"https://golebielataja.pl/kierunki/antalya/","name":"Antalya"},{"@type":"ListItem","position":63,"url":"https://golebielataja.pl/kierunki/alanya/","name":"Alanya"},{"@type":"ListItem","position":64,"url":"https://golebielataja.pl/kierunki/side/","name":"Side"},{"@type":"ListItem","position":65,"url":"https://golebielataja.pl/kierunki/bodrum/","name":"Bodrum"},{"@type":"ListItem","position":66,"url":"https://golebielataja.pl/kierunki/marmaris/","name":"Marmaris"},{"@type":"ListItem","position":67,"url":"https://golebielataja.pl/kierunki/kapadocja/","name":"Kapadocja"},{"@type":"ListItem","position":68,"url":"https://golebielataja.pl/kierunki/pafos/","name":"Pafos"},{"@type":"ListItem","position":69,"url":"https://golebielataja.pl/kierunki/larnaka/","name":"Larnaka"},{"@type":"ListItem","position":70,"url":"https://golebielataja.pl/kierunki/ajia-napa/","name":"Ajia Napa"},{"@type":"ListItem","position":71,"url":"https://golebielataja.pl/kierunki/malta/","name":"Malta"},{"@type":"ListItem","position":72,"url":"https://golebielataja.pl/kierunki/paryz/","name":"Paryż"},{"@type":"ListItem","position":73,"url":"https://golebielataja.pl/kierunki/nicea/","name":"Nicea"},{"@type":"ListItem","position":74,"url":"https://golebielataja.pl/kierunki/prowansja/","name":"Prowansja"},{"@type":"ListItem","position":75,"url":"https://golebielataja.pl/kierunki/korsyka/","name":"Korsyka"},{"@type":"ListItem","position":76,"url":"https://golebielataja.pl/kierunki/chamonix/","name":"Chamonix"},{"@type":"ListItem","position":77,"url":"https://golebielataja.pl/kierunki/amsterdam/","name":"Amsterdam"},{"@type":"ListItem","position":78,"url":"https://golebielataja.pl/kierunki/bruksela/","name":"Bruksela"},{"@type":"ListItem","position":79,"url":"https://golebielataja.pl/kierunki/berlin/","name":"Berlin"},{"@type":"ListItem","position":80,"url":"https://golebielataja.pl/kierunki/monachium/","name":"Monachium"},{"@type":"ListItem","position":81,"url":"https://golebielataja.pl/kierunki/wieden/","name":"Wiedeń"},{"@type":"ListItem","position":82,"url":"https://golebielataja.pl/kierunki/salzburg/","name":"Salzburg"},{"@type":"ListItem","position":83,"url":"https://golebielataja.pl/kierunki/tyrol/","name":"Tyrol"},{"@type":"ListItem","position":84,"url":"https://golebielataja.pl/kierunki/zermatt/","name":"Zermatt"},{"@type":"ListItem","position":85,"url":"https://golebielataja.pl/kierunki/praga/","name":"Praga"},{"@type":"ListItem","position":86,"url":"https://golebielataja.pl/kierunki/budapeszt/","name":"Budapeszt"},{"@type":"ListItem","position":87,"url":"https://golebielataja.pl/kierunki/eger/","name":"Eger"},{"@type":"ListItem","position":88,"url":"https://golebielataja.pl/kierunki/tatry-slowackie/","name":"Tatry Słowackie"},{"@type":"ListItem","position":89,"url":"https://golebielataja.pl/kierunki/londyn/","name":"Londyn"},{"@type":"ListItem","position":90,"url":"https://golebielataja.pl/kierunki/edynburg/","name":"Edynburg"},{"@type":"ListItem","position":91,"url":"https://golebielataja.pl/kierunki/highlands/","name":"Szkockie Highlands"},{"@type":"ListItem","position":92,"url":"https://golebielataja.pl/kierunki/dublin/","name":"Dublin"},{"@type":"ListItem","position":93,"url":"https://golebielataja.pl/kierunki/islandia/","name":"Islandia"},{"@type":"ListItem","position":94,"url":"https://golebielataja.pl/kierunki/oslo/","name":"Oslo"},{"@type":"ListItem","position":95,"url":"https://golebielataja.pl/kierunki/fiordy/","name":"Fiordy Norweskie"},{"@type":"ListItem","position":96,"url":"https://golebielataja.pl/kierunki/tromso/","name":"Tromsø"},{"@type":"ListItem","position":97,"url":"https://golebielataja.pl/kierunki/laponia/","name":"Laponia"},{"@type":"ListItem","position":98,"url":"https://golebielataja.pl/kierunki/sztokholm/","name":"Sztokholm"},{"@type":"ListItem","position":99,"url":"https://golebielataja.pl/kierunki/kopenhaga/","name":"Kopenhaga"},{"@type":"ListItem","position":100,"url":"https://golebielataja.pl/kierunki/helsinki/","name":"Helsinki"},{"@type":"ListItem","position":101,"url":"https://golebielataja.pl/kierunki/wilno/","name":"Wilno"},{"@type":"ListItem","position":102,"url":"https://golebielataja.pl/kierunki/ryga/","name":"Ryga"},{"@type":"ListItem","position":103,"url":"https://golebielataja.pl/kierunki/tallin/","name":"Tallin"},{"@type":"ListItem","position":104,"url":"https://golebielataja.pl/kierunki/krakow/","name":"Kraków"},{"@type":"ListItem","position":105,"url":"https://golebielataja.pl/kierunki/gdansk/","name":"Gdańsk"},{"@type":"ListItem","position":106,"url":"https://golebielataja.pl/kierunki/wroclaw/","name":"Wrocław"},{"@type":"ListItem","position":107,"url":"https://golebielataja.pl/kierunki/tatry/","name":"Tatry"},{"@type":"ListItem","position":108,"url":"https://golebielataja.pl/kierunki/mazury/","name":"Mazury"},{"@type":"ListItem","position":109,"url":"https://golebielataja.pl/kierunki/bieszczady/","name":"Bieszczady"},{"@type":"ListItem","position":110,"url":"https://golebielataja.pl/kierunki/hel/","name":"Półwysep Helski"},{"@type":"ListItem","position":111,"url":"https://golebielataja.pl/kierunki/tbilisi/","name":"Tbilisi"},{"@type":"ListItem","position":112,"url":"https://golebielataja.pl/kierunki/kutaisi/","name":"Kutaisi"},{"@type":"ListItem","position":113,"url":"https://golebielataja.pl/kierunki/batumi/","name":"Batumi"},{"@type":"ListItem","position":114,"url":"https://golebielataja.pl/kierunki/erywan/","name":"Erywań"},{"@type":"ListItem","position":115,"url":"https://golebielataja.pl/kierunki/hurghada/","name":"Hurghada"},{"@type":"ListItem","position":116,"url":"https://golebielataja.pl/kierunki/szarm/","name":"Szarm el-Szejk"},{"@type":"ListItem","position":117,"url":"https://golebielataja.pl/kierunki/marsa-alam/","name":"Marsa Alam"},{"@type":"ListItem","position":118,"url":"https://golebielataja.pl/kierunki/kair/","name":"Kair"},{"@type":"ListItem","position":119,"url":"https://golebielataja.pl/kierunki/dzerba/","name":"Dżerba"},{"@type":"ListItem","position":120,"url":"https://golebielataja.pl/kierunki/hammamet/","name":"Hammamet"},{"@type":"ListItem","position":121,"url":"https://golebielataja.pl/kierunki/marrakesz/","name":"Marrakesz"},{"@type":"ListItem","position":122,"url":"https://golebielataja.pl/kierunki/agadir/","name":"Agadir"},{"@type":"ListItem","position":123,"url":"https://golebielataja.pl/kierunki/petra/","name":"Petra i Wadi Rum"},{"@type":"ListItem","position":124,"url":"https://golebielataja.pl/kierunki/dubaj/","name":"Dubaj"},{"@type":"ListItem","position":125,"url":"https://golebielataja.pl/kierunki/abu-zabi/","name":"Abu Zabi"},{"@type":"ListItem","position":126,"url":"https://golebielataja.pl/kierunki/maskat/","name":"Maskat"},{"@type":"ListItem","position":127,"url":"https://golebielataja.pl/kierunki/zanzibar/","name":"Zanzibar"},{"@type":"ListItem","position":128,"url":"https://golebielataja.pl/kierunki/kenia/","name":"Kenia: safari i Diani"},{"@type":"ListItem","position":129,"url":"https://golebielataja.pl/kierunki/gambia/","name":"Gambia"},{"@type":"ListItem","position":130,"url":"https://golebielataja.pl/kierunki/senegal/","name":"Senegal"},{"@type":"ListItem","position":131,"url":"https://golebielataja.pl/kierunki/sal/","name":"Wyspy Zielonego Przylądka"},{"@type":"ListItem","position":132,"url":"https://golebielataja.pl/kierunki/malediwy/","name":"Malediwy"},{"@type":"ListItem","position":133,"url":"https://golebielataja.pl/kierunki/seszele/","name":"Seszele"},{"@type":"ListItem","position":134,"url":"https://golebielataja.pl/kierunki/mauritius/","name":"Mauritius"},{"@type":"ListItem","position":135,"url":"https://golebielataja.pl/kierunki/bangkok/","name":"Bangkok"},{"@type":"ListItem","position":136,"url":"https://golebielataja.pl/kierunki/phuket/","name":"Phuket"},{"@type":"ListItem","position":137,"url":"https://golebielataja.pl/kierunki/krabi/","name":"Krabi"},{"@type":"ListItem","position":138,"url":"https://golebielataja.pl/kierunki/koh-samui/","name":"Koh Samui"},{"@type":"ListItem","position":139,"url":"https://golebielataja.pl/kierunki/chiang-mai/","name":"Chiang Mai"},{"@type":"ListItem","position":140,"url":"https://golebielataja.pl/kierunki/hanoi/","name":"Hanoi"},{"@type":"ListItem","position":141,"url":"https://golebielataja.pl/kierunki/sajgon/","name":"Ho Chi Minh"},{"@type":"ListItem","position":142,"url":"https://golebielataja.pl/kierunki/phu-quoc/","name":"Phu Quoc"},{"@type":"ListItem","position":143,"url":"https://golebielataja.pl/kierunki/da-nang/","name":"Da Nang i Hoi An"},{"@type":"ListItem","position":144,"url":"https://golebielataja.pl/kierunki/sri-lanka/","name":"Sri Lanka"},{"@type":"ListItem","position":145,"url":"https://golebielataja.pl/kierunki/bali/","name":"Bali"},{"@type":"ListItem","position":146,"url":"https://golebielataja.pl/kierunki/goa/","name":"Goa"},{"@type":"ListItem","position":147,"url":"https://golebielataja.pl/kierunki/tokio/","name":"Tokio"},{"@type":"ListItem","position":148,"url":"https://golebielataja.pl/kierunki/kioto/","name":"Kioto"},{"@type":"ListItem","position":149,"url":"https://golebielataja.pl/kierunki/seul/","name":"Seul"},{"@type":"ListItem","position":150,"url":"https://golebielataja.pl/kierunki/singapur/","name":"Singapur"},{"@type":"ListItem","position":151,"url":"https://golebielataja.pl/kierunki/nowy-jork/","name":"Nowy Jork"},{"@type":"ListItem","position":152,"url":"https://golebielataja.pl/kierunki/chicago/","name":"Chicago"},{"@type":"ListItem","position":153,"url":"https://golebielataja.pl/kierunki/floryda/","name":"Floryda"},{"@type":"ListItem","position":154,"url":"https://golebielataja.pl/kierunki/kalifornia/","name":"Kalifornia"},{"@type":"ListItem","position":155,"url":"https://golebielataja.pl/kierunki/las-vegas/","name":"Las Vegas i parki narodowe"},{"@type":"ListItem","position":156,"url":"https://golebielataja.pl/kierunki/toronto/","name":"Toronto"},{"@type":"ListItem","position":157,"url":"https://golebielataja.pl/kierunki/cancun/","name":"Riwiera Maya"},{"@type":"ListItem","position":158,"url":"https://golebielataja.pl/kierunki/meksyk/","name":"Meksyk (miasto)"},{"@type":"ListItem","position":159,"url":"https://golebielataja.pl/kierunki/hawana/","name":"Hawana"},{"@type":"ListItem","position":160,"url":"https://golebielataja.pl/kierunki/varadero/","name":"Varadero"},{"@type":"ListItem","position":161,"url":"https://golebielataja.pl/kierunki/punta-cana/","name":"Punta Cana"},{"@type":"ListItem","position":162,"url":"https://golebielataja.pl/kierunki/rio/","name":"Rio de Janeiro"},{"@type":"ListItem","position":163,"url":"https://golebielataja.pl/kierunki/cusco/","name":"Cusco i Machu Picchu"},{"@type":"ListItem","position":164,"url":"https://golebielataja.pl/kierunki/buenos-aires/","name":"Buenos Aires"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Gołębie Latają","item":"https://golebielataja.pl/"},{"@type":"ListItem","position":2,"name":"Kierunki","item":"https://golebielataja.pl/kierunki/"}]}</script>
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "dabf88d8ecff46b9af7a1518edc3f5ee"}'></script>
@@ -186,6 +196,7 @@ section.pocztowka p{font-family:var(--sans);font-size:1.05rem;line-height:1.55;f
 <a class="plan-nav" href="/nowy/start?z=nav" data-goatcounter-click="plan-nav-katalog">Zamów plan</a>
 <span class="linki">
 <a href="/kierunki/">Kierunki</a>
+<a href="/kierunki/#szukaj">Szukaj kierunku</a>
 <a href="/gdzie-leciec/pazdziernik/">Gdzie lecieć</a>
 <a href="/okazje/">Okazje</a>
 <a href="/tanie-loty/">Tanie loty</a>
@@ -200,515 +211,521 @@ section.pocztowka p{font-family:var(--sans);font-size:1.05rem;line-height:1.55;f
 <h1>Dokąd polecieć</h1>
 <p class="lead">164 kierunków z klimatem miesiąc po miesiącu, cenami lotów z Polski i formalnościami. Wybierz i zaplanuj z gołębiami.</p>
 <p><a href="/gdzie-leciec/pazdziernik/">Gdzie polecieć w październiku</a></p>
-<p class="autor-pasek"><img src="/img/razem.jpg" alt="" width="40" height="40" loading="lazy" decoding="async">Przygotowali <a href="/o-nas/">Michał i Paulina</a>, którzy sprawdzili na miejscu 35 krajów.</p>
+<form class="szukaj" id="szukaj" role="search" action="/kierunki/" data-szukaj hidden>
+<label for="szukaj-q">Szukaj kierunku albo kraju</label>
+<div><input id="szukaj-q" name="q" type="search" placeholder="np. Bali, Hiszpania, Zanzibar" autocomplete="off" enterkeyhint="go"><button type="submit">Szukaj</button></div>
+</form>
+<p class="szukaj-brak" hidden aria-live="polite">Tego miejsca nie ma jeszcze na liście. Gołębie i tak zaplanują Ci tam podróż. <a href="/nowy/start?z=szukaj">Zamów plan</a></p>
+<p class="autor-pasek"><img src="/img/razem.jpg" alt="" width="40" height="40" loading="lazy" decoding="async"><span>Przygotowali <a href="/o-nas/">Michał i Paulina</a>, którzy razem odwiedzili 35 krajów.</span></p>
 <aside class="plan" aria-label="Plan podróży od gołębi">
 <p><strong>Nie chcesz liczyć sam?</strong>Michał i Paulina ułożą Ci ten wyjazd: trasa, noclegi, jedzenie, plan B. Od 399 zł, pierwsze propozycje w 48 h, zwrot 100%, jeśli nie trafimy.</p>
 <a class="przycisk" href="/nowy/start?z=katalog" data-goatcounter-click="plan-blok-katalog">Ułóżcie mi plan</a>
 </aside>
-<section>
+<section data-kraj>
 <h2><a href="/kraje/albania/">Albania</a></h2>
 <ul class="kolumny">
-<li><a href="/kierunki/tirana/">Tirana</a></li>
-<li><a href="/kierunki/riwiera-albanska/">Riwiera Albańska</a></li>
+<li data-s="tirana|тирана|albania|албанія"><a href="/kierunki/tirana/">Tirana</a></li>
+<li data-s="riwiera albanska|albanian riviera|албанська ривєра|saranda|himara|balkany|albania|албанія"><a href="/kierunki/riwiera-albanska/">Riwiera Albańska</a></li>
 </ul>
 </section>
-<section>
+<section data-kraj>
 <h2><a href="/kraje/argentyna/">Argentyna</a></h2>
 <ul class="kolumny">
-<li><a href="/kierunki/buenos-aires/">Buenos Aires</a></li>
+<li data-s="buenos aires|буенос-аирес|argentyna|argentina|аргентина"><a href="/kierunki/buenos-aires/">Buenos Aires</a></li>
 </ul>
 </section>
-<section>
+<section data-kraj>
 <h2><a href="/kraje/armenia/">Armenia</a></h2>
 <ul class="kolumny">
-<li><a href="/kierunki/erywan/">Erywań</a></li>
+<li data-s="erywan|yerevan|єреван|armenia|вірменія"><a href="/kierunki/erywan/">Erywań</a></li>
 </ul>
 </section>
-<section>
+<section data-kraj>
 <h2><a href="/kraje/austria/">Austria</a></h2>
 <ul class="kolumny">
-<li><a href="/kierunki/wieden/">Wiedeń</a></li>
-<li><a href="/kierunki/salzburg/">Salzburg</a></li>
-<li><a href="/kierunki/tyrol/">Tyrol</a></li>
+<li data-s="wieden|vienna|відень|austria|австрія"><a href="/kierunki/wieden/">Wiedeń</a></li>
+<li data-s="salzburg|зальцбург|austria|австрія"><a href="/kierunki/salzburg/">Salzburg</a></li>
+<li data-s="tyrol|тіроль|innsbruck|austria|австрія"><a href="/kierunki/tyrol/">Tyrol</a></li>
 </ul>
 </section>
-<section>
+<section data-kraj>
 <h2><a href="/kraje/belgia/">Belgia</a></h2>
 <ul class="kolumny">
-<li><a href="/kierunki/bruksela/">Bruksela</a></li>
+<li data-s="bruksela|brussels|брюссель|belgia|belgium|бельгія"><a href="/kierunki/bruksela/">Bruksela</a></li>
 </ul>
 </section>
-<section>
+<section data-kraj>
 <h2><a href="/kraje/bosnia-i-hercegowina/">Bośnia i Hercegowina</a></h2>
 <ul class="kolumny">
-<li><a href="/kierunki/sarajewo/">Sarajewo</a></li>
+<li data-s="sarajewo|sarajevo|сараєво|bosnia|bosnia i hercegowina|bosnia and herzegovina|боснія і герцеговина"><a href="/kierunki/sarajewo/">Sarajewo</a></li>
 </ul>
 </section>
-<section>
+<section data-kraj>
 <h2><a href="/kraje/brazylia/">Brazylia</a></h2>
 <ul class="kolumny">
-<li><a href="/kierunki/rio/">Rio de Janeiro</a></li>
+<li data-s="rio de janeiro|ріо-де-жанеиро|brazylia|brazil|бразилія"><a href="/kierunki/rio/">Rio de Janeiro</a></li>
 </ul>
 </section>
-<section>
+<section data-kraj>
 <h2><a href="/kraje/bulgaria/">Bułgaria</a></h2>
 <ul class="kolumny">
-<li><a href="/kierunki/sloneczny-brzeg/">Słoneczny Brzeg</a></li>
-<li><a href="/kierunki/warna/">Warna</a></li>
-<li><a href="/kierunki/sofia/">Sofia</a></li>
+<li data-s="sloneczny brzeg|sunny beach|сонячнии берег|burgas|bulgaria|болгарія"><a href="/kierunki/sloneczny-brzeg/">Słoneczny Brzeg</a></li>
+<li data-s="warna|varna|варна|zlote piaski|bulgaria|болгарія"><a href="/kierunki/warna/">Warna</a></li>
+<li data-s="sofia|софія|bulgaria|болгарія"><a href="/kierunki/sofia/">Sofia</a></li>
 </ul>
 </section>
-<section>
+<section data-kraj>
 <h2><a href="/kraje/chorwacja/">Chorwacja</a></h2>
 <ul class="kolumny">
-<li><a href="/kierunki/dubrownik/">Dubrownik</a></li>
-<li><a href="/kierunki/split/">Split</a></li>
-<li><a href="/kierunki/zadar/">Zadar</a></li>
-<li><a href="/kierunki/istria/">Istria</a></li>
-<li><a href="/kierunki/zagrzeb/">Zagrzeb</a></li>
+<li data-s="dubrownik|dubrovnik|дубровник|dalmacja|chorwacja|croatia|хорватія"><a href="/kierunki/dubrownik/">Dubrownik</a></li>
+<li data-s="split|спліт|dalmacja|chorwacja|croatia|хорватія"><a href="/kierunki/split/">Split</a></li>
+<li data-s="zadar|задар|chorwacja|croatia|хорватія"><a href="/kierunki/zadar/">Zadar</a></li>
+<li data-s="istria|істрія|pula|rovinj|chorwacja|croatia|хорватія"><a href="/kierunki/istria/">Istria</a></li>
+<li data-s="zagrzeb|zagreb|загреб|chorwacja|croatia|хорватія"><a href="/kierunki/zagrzeb/">Zagrzeb</a></li>
 </ul>
 </section>
-<section>
+<section data-kraj>
 <h2><a href="/kraje/cypr/">Cypr</a></h2>
 <ul class="kolumny">
-<li><a href="/kierunki/pafos/">Pafos</a></li>
-<li><a href="/kierunki/larnaka/">Larnaka</a></li>
-<li><a href="/kierunki/ajia-napa/">Ajia Napa</a></li>
+<li data-s="pafos|paphos|пафос|cypr|cyprus|кіпр"><a href="/kierunki/pafos/">Pafos</a></li>
+<li data-s="larnaka|larnaca|ларнака|cypr|cyprus|кіпр"><a href="/kierunki/larnaka/">Larnaka</a></li>
+<li data-s="ajia napa|ayia napa|аия-напа|cypr|cyprus|кіпр"><a href="/kierunki/ajia-napa/">Ajia Napa</a></li>
 </ul>
 </section>
-<section>
+<section data-kraj>
 <h2><a href="/kraje/czarnogora/">Czarnogóra</a></h2>
 <ul class="kolumny">
-<li><a href="/kierunki/czarnogora/">Wybrzeże Czarnogóry</a></li>
+<li data-s="wybrzeze czarnogory|montenegrin coast|узбережжя чорногоріі|kotor|budva|balkany|czarnogora|montenegro|чорногорія"><a href="/kierunki/czarnogora/">Wybrzeże Czarnogóry</a></li>
 </ul>
 </section>
-<section>
+<section data-kraj>
 <h2><a href="/kraje/czechy/">Czechy</a></h2>
 <ul class="kolumny">
-<li><a href="/kierunki/praga/">Praga</a></li>
+<li data-s="praga|prague|прага|czechy|czechia|чехія"><a href="/kierunki/praga/">Praga</a></li>
 </ul>
 </section>
-<section>
+<section data-kraj>
 <h2><a href="/kraje/dania/">Dania</a></h2>
 <ul class="kolumny">
-<li><a href="/kierunki/kopenhaga/">Kopenhaga</a></li>
+<li data-s="kopenhaga|copenhagen|копенгаген|dania|denmark|данія"><a href="/kierunki/kopenhaga/">Kopenhaga</a></li>
 </ul>
 </section>
-<section>
+<section data-kraj>
 <h2><a href="/kraje/dominikana/">Dominikana</a></h2>
 <ul class="kolumny">
-<li><a href="/kierunki/punta-cana/">Punta Cana</a></li>
+<li data-s="punta cana|пунта-кана|dominikana|dominican republic|домініканська республіка"><a href="/kierunki/punta-cana/">Punta Cana</a></li>
 </ul>
 </section>
-<section>
+<section data-kraj>
 <h2><a href="/kraje/egipt/">Egipt</a></h2>
 <ul class="kolumny">
-<li><a href="/kierunki/hurghada/">Hurghada</a></li>
-<li><a href="/kierunki/szarm/">Szarm el-Szejk</a></li>
-<li><a href="/kierunki/marsa-alam/">Marsa Alam</a></li>
-<li><a href="/kierunki/kair/">Kair</a></li>
+<li data-s="hurghada|хургада|egipt|morze czerwone|egypt|єгипет"><a href="/kierunki/hurghada/">Hurghada</a></li>
+<li data-s="szarm el-szejk|sharm el sheikh|шарм-ель-шеих|egipt|synaj|egypt|єгипет"><a href="/kierunki/szarm/">Szarm el-Szejk</a></li>
+<li data-s="marsa alam|марса-алам|egipt|egypt|єгипет"><a href="/kierunki/marsa-alam/">Marsa Alam</a></li>
+<li data-s="kair|cairo|каір|egipt|piramidy|egypt|єгипет"><a href="/kierunki/kair/">Kair</a></li>
 </ul>
 </section>
-<section>
+<section data-kraj>
 <h2><a href="/kraje/estonia/">Estonia</a></h2>
 <ul class="kolumny">
-<li><a href="/kierunki/tallin/">Tallin</a></li>
+<li data-s="tallin|tallinn|таллінн|estonia|естонія"><a href="/kierunki/tallin/">Tallin</a></li>
 </ul>
 </section>
-<section>
+<section data-kraj>
 <h2><a href="/kraje/finlandia/">Finlandia</a></h2>
 <ul class="kolumny">
-<li><a href="/kierunki/laponia/">Laponia</a></li>
-<li><a href="/kierunki/helsinki/">Helsinki</a></li>
+<li data-s="laponia|lapland|лапландія|rovaniemi|finlandia|finland|фінляндія"><a href="/kierunki/laponia/">Laponia</a></li>
+<li data-s="helsinki|гельсінкі|finlandia|finland|фінляндія"><a href="/kierunki/helsinki/">Helsinki</a></li>
 </ul>
 </section>
-<section>
+<section data-kraj>
 <h2><a href="/kraje/francja/">Francja</a></h2>
 <ul class="kolumny">
-<li><a href="/kierunki/paryz/">Paryż</a></li>
-<li><a href="/kierunki/nicea/">Nicea</a></li>
-<li><a href="/kierunki/prowansja/">Prowansja</a></li>
-<li><a href="/kierunki/korsyka/">Korsyka</a></li>
-<li><a href="/kierunki/chamonix/">Chamonix</a></li>
+<li data-s="paryz|paris|париж|francja|france|франція"><a href="/kierunki/paryz/">Paryż</a></li>
+<li data-s="nicea|nice|ніцца|lazurowe wybrzeze|francja|france|франція"><a href="/kierunki/nicea/">Nicea</a></li>
+<li data-s="prowansja|provence|прованс|marsylia|francja|france|франція"><a href="/kierunki/prowansja/">Prowansja</a></li>
+<li data-s="korsyka|corsica|корсика|francja|france|франція"><a href="/kierunki/korsyka/">Korsyka</a></li>
+<li data-s="chamonix|шамоні|alpy francuskie|mont blanc|francja|france|франція"><a href="/kierunki/chamonix/">Chamonix</a></li>
 </ul>
 </section>
-<section>
+<section data-kraj>
 <h2><a href="/kraje/gambia/">Gambia</a></h2>
 <ul class="kolumny">
-<li><a href="/kierunki/gambia/">Gambia</a></li>
+<li data-s="gambia|гамбія"><a href="/kierunki/gambia/">Gambia</a></li>
 </ul>
 </section>
-<section>
+<section data-kraj>
 <h2><a href="/kraje/grecja/">Grecja</a></h2>
 <ul class="kolumny">
-<li><a href="/kierunki/ateny/">Ateny</a></li>
-<li><a href="/kierunki/saloniki/">Saloniki</a></li>
-<li><a href="/kierunki/kreta/">Kreta</a></li>
-<li><a href="/kierunki/rodos/">Rodos</a></li>
-<li><a href="/kierunki/korfu/">Korfu</a></li>
-<li><a href="/kierunki/zakynthos/">Zakynthos</a></li>
-<li><a href="/kierunki/kefalonia/">Kefalonia</a></li>
-<li><a href="/kierunki/santoryn/">Santoryn</a></li>
-<li><a href="/kierunki/mykonos/">Mykonos</a></li>
-<li><a href="/kierunki/kos/">Kos</a></li>
-<li><a href="/kierunki/chalkidiki/">Chalkidiki</a></li>
+<li data-s="ateny|athens|афіни|grecja|greece|греція"><a href="/kierunki/ateny/">Ateny</a></li>
+<li data-s="saloniki|thessaloniki|салоніки|grecja|greece|греція"><a href="/kierunki/saloniki/">Saloniki</a></li>
+<li data-s="kreta|crete|крит|heraklion|chania|grecja|greece|греція"><a href="/kierunki/kreta/">Kreta</a></li>
+<li data-s="rodos|rhodes|родос|grecja|greece|греція"><a href="/kierunki/rodos/">Rodos</a></li>
+<li data-s="korfu|corfu|корфу|grecja|greece|греція"><a href="/kierunki/korfu/">Korfu</a></li>
+<li data-s="zakynthos|закінф|grecja|greece|греція"><a href="/kierunki/zakynthos/">Zakynthos</a></li>
+<li data-s="kefalonia|кефалонія|grecja|greece|греція"><a href="/kierunki/kefalonia/">Kefalonia</a></li>
+<li data-s="santoryn|santorini|санторіні|cyklady|grecja|greece|греція"><a href="/kierunki/santoryn/">Santoryn</a></li>
+<li data-s="mykonos|міконос|cyklady|grecja|greece|греція"><a href="/kierunki/mykonos/">Mykonos</a></li>
+<li data-s="kos|кос|grecja|greece|греція"><a href="/kierunki/kos/">Kos</a></li>
+<li data-s="chalkidiki|halkidiki|халкідіки|grecja|greece|греція"><a href="/kierunki/chalkidiki/">Chalkidiki</a></li>
 </ul>
 </section>
-<section>
+<section data-kraj>
 <h2><a href="/kraje/gruzja/">Gruzja</a></h2>
 <ul class="kolumny">
-<li><a href="/kierunki/tbilisi/">Tbilisi</a></li>
-<li><a href="/kierunki/kutaisi/">Kutaisi</a></li>
-<li><a href="/kierunki/batumi/">Batumi</a></li>
+<li data-s="tbilisi|тбілісі|gruzja|georgia|грузія"><a href="/kierunki/tbilisi/">Tbilisi</a></li>
+<li data-s="kutaisi|кутаісі|gruzja|imeretia|georgia|грузія"><a href="/kierunki/kutaisi/">Kutaisi</a></li>
+<li data-s="batumi|батумі|gruzja|georgia|грузія"><a href="/kierunki/batumi/">Batumi</a></li>
 </ul>
 </section>
-<section>
+<section data-kraj>
 <h2><a href="/kraje/hiszpania/">Hiszpania</a></h2>
 <ul class="kolumny">
-<li><a href="/kierunki/barcelona/">Barcelona</a></li>
-<li><a href="/kierunki/madryt/">Madryt</a></li>
-<li><a href="/kierunki/walencja/">Walencja</a></li>
-<li><a href="/kierunki/sewilla/">Sewilla</a></li>
-<li><a href="/kierunki/malaga/">Malaga</a></li>
-<li><a href="/kierunki/andaluzja/">Andaluzja</a></li>
-<li><a href="/kierunki/alicante/">Alicante</a></li>
-<li><a href="/kierunki/costa-brava/">Costa Brava</a></li>
-<li><a href="/kierunki/majorka/">Majorka</a></li>
-<li><a href="/kierunki/ibiza/">Ibiza</a></li>
-<li><a href="/kierunki/teneryfa/">Teneryfa</a></li>
-<li><a href="/kierunki/gran-canaria/">Gran Canaria</a></li>
-<li><a href="/kierunki/lanzarote/">Lanzarote</a></li>
-<li><a href="/kierunki/fuerteventura/">Fuerteventura</a></li>
+<li data-s="barcelona|барселона|hiszpania|spain|іспанія"><a href="/kierunki/barcelona/">Barcelona</a></li>
+<li data-s="madryt|madrid|мадрид|hiszpania|spain|іспанія"><a href="/kierunki/madryt/">Madryt</a></li>
+<li data-s="walencja|valencia|валенсія|hiszpania|spain|іспанія"><a href="/kierunki/walencja/">Walencja</a></li>
+<li data-s="sewilla|seville|севілья|hiszpania|spain|іспанія"><a href="/kierunki/sewilla/">Sewilla</a></li>
+<li data-s="malaga|малага|costa del sol|hiszpania|spain|іспанія"><a href="/kierunki/malaga/">Malaga</a></li>
+<li data-s="andaluzja|andalusia|андалусія|granada|kordoba|hiszpania|spain|іспанія"><a href="/kierunki/andaluzja/">Andaluzja</a></li>
+<li data-s="alicante|аліканте|costa blanca|hiszpania|spain|іспанія"><a href="/kierunki/alicante/">Alicante</a></li>
+<li data-s="costa brava|коста-брава|hiszpania|spain|іспанія"><a href="/kierunki/costa-brava/">Costa Brava</a></li>
+<li data-s="majorka|mallorca|маиорка|baleary|palma|hiszpania|spain|іспанія"><a href="/kierunki/majorka/">Majorka</a></li>
+<li data-s="ibiza|ібіца|baleary|hiszpania|spain|іспанія"><a href="/kierunki/ibiza/">Ibiza</a></li>
+<li data-s="teneryfa|tenerife|тенерифе|wyspy kanaryjskie|kanary|hiszpania|spain|іспанія"><a href="/kierunki/teneryfa/">Teneryfa</a></li>
+<li data-s="gran canaria|гран-канарія|wyspy kanaryjskie|kanary|hiszpania|spain|іспанія"><a href="/kierunki/gran-canaria/">Gran Canaria</a></li>
+<li data-s="lanzarote|лансароте|wyspy kanaryjskie|kanary|hiszpania|spain|іспанія"><a href="/kierunki/lanzarote/">Lanzarote</a></li>
+<li data-s="fuerteventura|фуертевентура|wyspy kanaryjskie|kanary|hiszpania|spain|іспанія"><a href="/kierunki/fuerteventura/">Fuerteventura</a></li>
 </ul>
 </section>
-<section>
+<section data-kraj>
 <h2><a href="/kraje/holandia/">Holandia</a></h2>
 <ul class="kolumny">
-<li><a href="/kierunki/amsterdam/">Amsterdam</a></li>
+<li data-s="amsterdam|амстердам|holandia|netherlands|нідерланди"><a href="/kierunki/amsterdam/">Amsterdam</a></li>
 </ul>
 </section>
-<section>
+<section data-kraj>
 <h2><a href="/kraje/indie/">Indie</a></h2>
 <ul class="kolumny">
-<li><a href="/kierunki/goa/">Goa</a></li>
+<li data-s="goa|гоа|indie|india|індія"><a href="/kierunki/goa/">Goa</a></li>
 </ul>
 </section>
-<section>
+<section data-kraj>
 <h2><a href="/kraje/indonezja/">Indonezja</a></h2>
 <ul class="kolumny">
-<li><a href="/kierunki/bali/">Bali</a></li>
+<li data-s="bali|балі|indonezja|indonesia|індонезія"><a href="/kierunki/bali/">Bali</a></li>
 </ul>
 </section>
-<section>
+<section data-kraj>
 <h2><a href="/kraje/irlandia/">Irlandia</a></h2>
 <ul class="kolumny">
-<li><a href="/kierunki/dublin/">Dublin</a></li>
+<li data-s="dublin|дублін|irlandia|ireland|ірландія"><a href="/kierunki/dublin/">Dublin</a></li>
 </ul>
 </section>
-<section>
+<section data-kraj>
 <h2><a href="/kraje/islandia/">Islandia</a></h2>
 <ul class="kolumny">
-<li><a href="/kierunki/islandia/">Islandia</a></li>
+<li data-s="islandia|iceland|ісландія|reykjavik"><a href="/kierunki/islandia/">Islandia</a></li>
 </ul>
 </section>
-<section>
+<section data-kraj>
 <h2><a href="/kraje/japonia/">Japonia</a></h2>
 <ul class="kolumny">
-<li><a href="/kierunki/tokio/">Tokio</a></li>
-<li><a href="/kierunki/kioto/">Kioto</a></li>
+<li data-s="tokio|tokyo|токіо|japonia|japan|японія"><a href="/kierunki/tokio/">Tokio</a></li>
+<li data-s="kioto|kyoto|кіото|japonia|osaka|japan|японія"><a href="/kierunki/kioto/">Kioto</a></li>
 </ul>
 </section>
-<section>
+<section data-kraj>
 <h2><a href="/kraje/jordania/">Jordania</a></h2>
 <ul class="kolumny">
-<li><a href="/kierunki/petra/">Petra i Wadi Rum</a></li>
+<li data-s="petra i wadi rum|petra and wadi rum|петра і ваді-рам|jordania|akaba|jordan|иорданія"><a href="/kierunki/petra/">Petra i Wadi Rum</a></li>
 </ul>
 </section>
-<section>
+<section data-kraj>
 <h2><a href="/kraje/kanada/">Kanada</a></h2>
 <ul class="kolumny">
-<li><a href="/kierunki/toronto/">Toronto</a></li>
+<li data-s="toronto|торонто|kanada|niagara|canada|канада"><a href="/kierunki/toronto/">Toronto</a></li>
 </ul>
 </section>
-<section>
+<section data-kraj>
 <h2><a href="/kraje/kenia/">Kenia</a></h2>
 <ul class="kolumny">
-<li><a href="/kierunki/kenia/">Kenia: safari i Diani</a></li>
+<li data-s="kenia: safari i diani|kenya: safari and diani|кенія: сафарі та діані|kenia|mombasa|kenya|кенія"><a href="/kierunki/kenia/">Kenia: safari i Diani</a></li>
 </ul>
 </section>
-<section>
+<section data-kraj>
 <h2><a href="/kraje/korea-poludniowa/">Korea Południowa</a></h2>
 <ul class="kolumny">
-<li><a href="/kierunki/seul/">Seul</a></li>
+<li data-s="seul|seoul|сеул|korea|korea poludniowa|south korea|південна корея"><a href="/kierunki/seul/">Seul</a></li>
 </ul>
 </section>
-<section>
+<section data-kraj>
 <h2><a href="/kraje/kuba/">Kuba</a></h2>
 <ul class="kolumny">
-<li><a href="/kierunki/hawana/">Hawana</a></li>
-<li><a href="/kierunki/varadero/">Varadero</a></li>
+<li data-s="hawana|havana|гавана|kuba|cuba|куба"><a href="/kierunki/hawana/">Hawana</a></li>
+<li data-s="varadero|варадеро|kuba|cuba|куба"><a href="/kierunki/varadero/">Varadero</a></li>
 </ul>
 </section>
-<section>
+<section data-kraj>
 <h2><a href="/kraje/litwa/">Litwa</a></h2>
 <ul class="kolumny">
-<li><a href="/kierunki/wilno/">Wilno</a></li>
+<li data-s="wilno|vilnius|вільнюс|litwa|lithuania|литва"><a href="/kierunki/wilno/">Wilno</a></li>
 </ul>
 </section>
-<section>
+<section data-kraj>
 <h2><a href="/kraje/lotwa/">Łotwa</a></h2>
 <ul class="kolumny">
-<li><a href="/kierunki/ryga/">Ryga</a></li>
+<li data-s="ryga|riga|рига|lotwa|latvia|латвія"><a href="/kierunki/ryga/">Ryga</a></li>
 </ul>
 </section>
-<section>
+<section data-kraj>
 <h2><a href="/kraje/macedonia-polnocna/">Macedonia Północna</a></h2>
 <ul class="kolumny">
-<li><a href="/kierunki/ochryda/">Ochryda</a></li>
+<li data-s="ochryda|ohrid|охрид|macedonia|balkany|macedonia polnocna|north macedonia|північна македонія"><a href="/kierunki/ochryda/">Ochryda</a></li>
 </ul>
 </section>
-<section>
+<section data-kraj>
 <h2><a href="/kraje/malediwy/">Malediwy</a></h2>
 <ul class="kolumny">
-<li><a href="/kierunki/malediwy/">Malediwy</a></li>
+<li data-s="malediwy|maldives|мальдіви"><a href="/kierunki/malediwy/">Malediwy</a></li>
 </ul>
 </section>
-<section>
+<section data-kraj>
 <h2><a href="/kraje/malta/">Malta</a></h2>
 <ul class="kolumny">
-<li><a href="/kierunki/malta/">Malta</a></li>
+<li data-s="malta|мальта|valletta|gozo"><a href="/kierunki/malta/">Malta</a></li>
 </ul>
 </section>
-<section>
+<section data-kraj>
 <h2><a href="/kraje/maroko/">Maroko</a></h2>
 <ul class="kolumny">
-<li><a href="/kierunki/marrakesz/">Marrakesz</a></li>
-<li><a href="/kierunki/agadir/">Agadir</a></li>
+<li data-s="marrakesz|marrakesh|марракеш|maroko|morocco|марокко"><a href="/kierunki/marrakesz/">Marrakesz</a></li>
+<li data-s="agadir|агадір|maroko|morocco|марокко"><a href="/kierunki/agadir/">Agadir</a></li>
 </ul>
 </section>
-<section>
+<section data-kraj>
 <h2><a href="/kraje/mauritius/">Mauritius</a></h2>
 <ul class="kolumny">
-<li><a href="/kierunki/mauritius/">Mauritius</a></li>
+<li data-s="mauritius|маврикіи"><a href="/kierunki/mauritius/">Mauritius</a></li>
 </ul>
 </section>
-<section>
+<section data-kraj>
 <h2><a href="/kraje/meksyk/">Meksyk</a></h2>
 <ul class="kolumny">
-<li><a href="/kierunki/cancun/">Riwiera Maya</a></li>
-<li><a href="/kierunki/meksyk/">Meksyk (miasto)</a></li>
+<li data-s="riwiera maya|riviera maya|ривєра-маия|meksyk|cancun|tulum|mexico|мексика"><a href="/kierunki/cancun/">Riwiera Maya</a></li>
+<li data-s="meksyk (miasto)|mexico city|мехіко|meksyk|mexico|мексика"><a href="/kierunki/meksyk/">Meksyk (miasto)</a></li>
 </ul>
 </section>
-<section>
+<section data-kraj>
 <h2><a href="/kraje/niemcy/">Niemcy</a></h2>
 <ul class="kolumny">
-<li><a href="/kierunki/berlin/">Berlin</a></li>
-<li><a href="/kierunki/monachium/">Monachium</a></li>
+<li data-s="berlin|берлін|niemcy|germany|німеччина"><a href="/kierunki/berlin/">Berlin</a></li>
+<li data-s="monachium|munich|мюнхен|bawaria|niemcy|germany|німеччина"><a href="/kierunki/monachium/">Monachium</a></li>
 </ul>
 </section>
-<section>
+<section data-kraj>
 <h2><a href="/kraje/norwegia/">Norwegia</a></h2>
 <ul class="kolumny">
-<li><a href="/kierunki/oslo/">Oslo</a></li>
-<li><a href="/kierunki/fiordy/">Fiordy Norweskie</a></li>
-<li><a href="/kierunki/tromso/">Tromsø</a></li>
+<li data-s="oslo|осло|norwegia|norway|норвегія"><a href="/kierunki/oslo/">Oslo</a></li>
+<li data-s="fiordy norweskie|norwegian fjords|норвезькі фіорди|norwegia|bergen|norway|норвегія"><a href="/kierunki/fiordy/">Fiordy Norweskie</a></li>
+<li data-s="tromsø|тромсе|norwegia|zorza polarna|tromso|norway|норвегія"><a href="/kierunki/tromso/">Tromsø</a></li>
 </ul>
 </section>
-<section>
+<section data-kraj>
 <h2><a href="/kraje/oman/">Oman</a></h2>
 <ul class="kolumny">
-<li><a href="/kierunki/maskat/">Maskat</a></li>
+<li data-s="maskat|muscat|маскат|oman|оман"><a href="/kierunki/maskat/">Maskat</a></li>
 </ul>
 </section>
-<section>
+<section data-kraj>
 <h2><a href="/kraje/peru/">Peru</a></h2>
 <ul class="kolumny">
-<li><a href="/kierunki/cusco/">Cusco i Machu Picchu</a></li>
+<li data-s="cusco i machu picchu|cusco and machu picchu|куско і мачу-пікчу|peru|перу"><a href="/kierunki/cusco/">Cusco i Machu Picchu</a></li>
 </ul>
 </section>
-<section>
+<section data-kraj>
 <h2><a href="/kraje/polska/">Polska</a></h2>
 <ul class="kolumny">
-<li><a href="/kierunki/krakow/">Kraków</a></li>
-<li><a href="/kierunki/gdansk/">Gdańsk</a></li>
-<li><a href="/kierunki/wroclaw/">Wrocław</a></li>
-<li><a href="/kierunki/tatry/">Tatry</a></li>
-<li><a href="/kierunki/mazury/">Mazury</a></li>
-<li><a href="/kierunki/bieszczady/">Bieszczady</a></li>
-<li><a href="/kierunki/hel/">Półwysep Helski</a></li>
+<li data-s="krakow|краків|polska|poland|польща"><a href="/kierunki/krakow/">Kraków</a></li>
+<li data-s="gdansk|гданськ|trojmiasto|baltyk|sopot|polska|poland|польща"><a href="/kierunki/gdansk/">Gdańsk</a></li>
+<li data-s="wroclaw|вроцлав|polska|poland|польща"><a href="/kierunki/wroclaw/">Wrocław</a></li>
+<li data-s="tatry|tatra mountains|татри|zakopane|polska|poland|польща"><a href="/kierunki/tatry/">Tatry</a></li>
+<li data-s="mazury|masuria|мазури|gizycko|mikolajki|polska|poland|польща"><a href="/kierunki/mazury/">Mazury</a></li>
+<li data-s="bieszczady|бещади|polska|poland|польща"><a href="/kierunki/bieszczady/">Bieszczady</a></li>
+<li data-s="polwysep helski|hel peninsula|гельськии півострів|baltyk|jastarnia|polska|poland|польща"><a href="/kierunki/hel/">Półwysep Helski</a></li>
 </ul>
 </section>
-<section>
+<section data-kraj>
 <h2><a href="/kraje/portugalia/">Portugalia</a></h2>
 <ul class="kolumny">
-<li><a href="/kierunki/lizbona/">Lizbona</a></li>
-<li><a href="/kierunki/porto/">Porto</a></li>
-<li><a href="/kierunki/algarve/">Algarve</a></li>
-<li><a href="/kierunki/madera/">Madera</a></li>
-<li><a href="/kierunki/azory/">Azory</a></li>
+<li data-s="lizbona|lisbon|лісабон|portugalia|portugal|португалія"><a href="/kierunki/lizbona/">Lizbona</a></li>
+<li data-s="porto|порту|portugalia|portugal|португалія"><a href="/kierunki/porto/">Porto</a></li>
+<li data-s="algarve|алгарве|portugalia|portugal|португалія"><a href="/kierunki/algarve/">Algarve</a></li>
+<li data-s="madera|madeira|мадеира|funchal|portugalia|portugal|португалія"><a href="/kierunki/madera/">Madera</a></li>
+<li data-s="azory|azores|азорські острови|sao miguel|portugalia|portugal|португалія"><a href="/kierunki/azory/">Azory</a></li>
 </ul>
 </section>
-<section>
+<section data-kraj>
 <h2><a href="/kraje/republika-zielonego-przyladka/">Republika Zielonego Przylądka</a></h2>
 <ul class="kolumny">
-<li><a href="/kierunki/sal/">Wyspy Zielonego Przylądka</a></li>
+<li data-s="wyspy zielonego przyladka|cape verde islands|острови кабо-верде|sal|boa vista|cabo verde|republika zielonego przyladka|cape verde|кабо-верде"><a href="/kierunki/sal/">Wyspy Zielonego Przylądka</a></li>
 </ul>
 </section>
-<section>
+<section data-kraj>
 <h2><a href="/kraje/rumunia/">Rumunia</a></h2>
 <ul class="kolumny">
-<li><a href="/kierunki/bukareszt/">Bukareszt</a></li>
-<li><a href="/kierunki/transylwania/">Transylwania</a></li>
+<li data-s="bukareszt|bucharest|бухарест|rumunia|romania|румунія"><a href="/kierunki/bukareszt/">Bukareszt</a></li>
+<li data-s="transylwania|transylvania|трансильванія|braszow|sybin|rumunia|romania|румунія"><a href="/kierunki/transylwania/">Transylwania</a></li>
 </ul>
 </section>
-<section>
+<section data-kraj>
 <h2><a href="/kraje/senegal/">Senegal</a></h2>
 <ul class="kolumny">
-<li><a href="/kierunki/senegal/">Senegal</a></li>
+<li data-s="senegal|сенегал|dakar"><a href="/kierunki/senegal/">Senegal</a></li>
 </ul>
 </section>
-<section>
+<section data-kraj>
 <h2><a href="/kraje/serbia/">Serbia</a></h2>
 <ul class="kolumny">
-<li><a href="/kierunki/belgrad/">Belgrad</a></li>
+<li data-s="belgrad|belgrade|белград|serbia|сербія"><a href="/kierunki/belgrad/">Belgrad</a></li>
 </ul>
 </section>
-<section>
+<section data-kraj>
 <h2><a href="/kraje/seszele/">Seszele</a></h2>
 <ul class="kolumny">
-<li><a href="/kierunki/seszele/">Seszele</a></li>
+<li data-s="seszele|seychelles|сеишели"><a href="/kierunki/seszele/">Seszele</a></li>
 </ul>
 </section>
-<section>
+<section data-kraj>
 <h2><a href="/kraje/singapur/">Singapur</a></h2>
 <ul class="kolumny">
-<li><a href="/kierunki/singapur/">Singapur</a></li>
+<li data-s="singapur|singapore|сінгапур"><a href="/kierunki/singapur/">Singapur</a></li>
 </ul>
 </section>
-<section>
+<section data-kraj>
 <h2><a href="/kraje/slowacja/">Słowacja</a></h2>
 <ul class="kolumny">
-<li><a href="/kierunki/tatry-slowackie/">Tatry Słowackie</a></li>
+<li data-s="tatry slowackie|slovak tatras|словацькі татри|slowacja|poprad|slovakia|словаччина"><a href="/kierunki/tatry-slowackie/">Tatry Słowackie</a></li>
 </ul>
 </section>
-<section>
+<section data-kraj>
 <h2><a href="/kraje/slowenia/">Słowenia</a></h2>
 <ul class="kolumny">
-<li><a href="/kierunki/lublana/">Lublana</a></li>
-<li><a href="/kierunki/bled/">Jezioro Bled</a></li>
+<li data-s="lublana|ljubljana|любляна|slowenia|slovenia|словенія"><a href="/kierunki/lublana/">Lublana</a></li>
+<li data-s="jezioro bled|lake bled|озеро блед|alpy julijskie|slowenia|slovenia|словенія"><a href="/kierunki/bled/">Jezioro Bled</a></li>
 </ul>
 </section>
-<section>
+<section data-kraj>
 <h2><a href="/kraje/sri-lanka/">Sri Lanka</a></h2>
 <ul class="kolumny">
-<li><a href="/kierunki/sri-lanka/">Sri Lanka</a></li>
+<li data-s="sri lanka|шрі-ланка|kolombo|kandy"><a href="/kierunki/sri-lanka/">Sri Lanka</a></li>
 </ul>
 </section>
-<section>
+<section data-kraj>
 <h2><a href="/kraje/stany-zjednoczone/">Stany Zjednoczone</a></h2>
 <ul class="kolumny">
-<li><a href="/kierunki/nowy-jork/">Nowy Jork</a></li>
-<li><a href="/kierunki/chicago/">Chicago</a></li>
-<li><a href="/kierunki/floryda/">Floryda</a></li>
-<li><a href="/kierunki/kalifornia/">Kalifornia</a></li>
-<li><a href="/kierunki/las-vegas/">Las Vegas i parki narodowe</a></li>
+<li data-s="nowy jork|new york|нью-иорк|usa|stany zjednoczone|united states|сполучені штати"><a href="/kierunki/nowy-jork/">Nowy Jork</a></li>
+<li data-s="chicago|чикаго|usa|stany zjednoczone|united states|сполучені штати"><a href="/kierunki/chicago/">Chicago</a></li>
+<li data-s="floryda|florida|флорида|usa|miami|orlando|stany zjednoczone|united states|сполучені штати"><a href="/kierunki/floryda/">Floryda</a></li>
+<li data-s="kalifornia|california|каліфорнія|usa|los angeles|san francisco|stany zjednoczone|united states|сполучені штати"><a href="/kierunki/kalifornia/">Kalifornia</a></li>
+<li data-s="las vegas i parki narodowe|las vegas and national parks|лас-вегас і національні парки|usa|wielki kanion|stany zjednoczone|united states|сполучені штати"><a href="/kierunki/las-vegas/">Las Vegas i parki narodowe</a></li>
 </ul>
 </section>
-<section>
+<section data-kraj>
 <h2><a href="/kraje/szwajcaria/">Szwajcaria</a></h2>
 <ul class="kolumny">
-<li><a href="/kierunki/zermatt/">Zermatt</a></li>
+<li data-s="zermatt|церматт|alpy szwajcarskie|matterhorn|szwajcaria|switzerland|швеицарія"><a href="/kierunki/zermatt/">Zermatt</a></li>
 </ul>
 </section>
-<section>
+<section data-kraj>
 <h2><a href="/kraje/szwecja/">Szwecja</a></h2>
 <ul class="kolumny">
-<li><a href="/kierunki/sztokholm/">Sztokholm</a></li>
+<li data-s="sztokholm|stockholm|стокгольм|szwecja|sweden|швеція"><a href="/kierunki/sztokholm/">Sztokholm</a></li>
 </ul>
 </section>
-<section>
+<section data-kraj>
 <h2><a href="/kraje/tajlandia/">Tajlandia</a></h2>
 <ul class="kolumny">
-<li><a href="/kierunki/bangkok/">Bangkok</a></li>
-<li><a href="/kierunki/phuket/">Phuket</a></li>
-<li><a href="/kierunki/krabi/">Krabi</a></li>
-<li><a href="/kierunki/koh-samui/">Koh Samui</a></li>
-<li><a href="/kierunki/chiang-mai/">Chiang Mai</a></li>
+<li data-s="bangkok|бангкок|tajlandia|thailand|таіланд"><a href="/kierunki/bangkok/">Bangkok</a></li>
+<li data-s="phuket|пхукет|tajlandia|thailand|таіланд"><a href="/kierunki/phuket/">Phuket</a></li>
+<li data-s="krabi|крабі|tajlandia|thailand|таіланд"><a href="/kierunki/krabi/">Krabi</a></li>
+<li data-s="koh samui|ко самуі|tajlandia|thailand|таіланд"><a href="/kierunki/koh-samui/">Koh Samui</a></li>
+<li data-s="chiang mai|чіангмаи|tajlandia|thailand|таіланд"><a href="/kierunki/chiang-mai/">Chiang Mai</a></li>
 </ul>
 </section>
-<section>
+<section data-kraj>
 <h2><a href="/kraje/tanzania/">Tanzania</a></h2>
 <ul class="kolumny">
-<li><a href="/kierunki/zanzibar/">Zanzibar</a></li>
+<li data-s="zanzibar|занзібар|tanzania|танзанія"><a href="/kierunki/zanzibar/">Zanzibar</a></li>
 </ul>
 </section>
-<section>
+<section data-kraj>
 <h2><a href="/kraje/tunezja/">Tunezja</a></h2>
 <ul class="kolumny">
-<li><a href="/kierunki/dzerba/">Dżerba</a></li>
-<li><a href="/kierunki/hammamet/">Hammamet</a></li>
+<li data-s="dzerba|djerba|джерба|tunezja|tunisia|туніс"><a href="/kierunki/dzerba/">Dżerba</a></li>
+<li data-s="hammamet|хаммамет|tunezja|tunisia|туніс"><a href="/kierunki/hammamet/">Hammamet</a></li>
 </ul>
 </section>
-<section>
+<section data-kraj>
 <h2><a href="/kraje/turcja/">Turcja</a></h2>
 <ul class="kolumny">
-<li><a href="/kierunki/stambul/">Stambuł</a></li>
-<li><a href="/kierunki/antalya/">Antalya</a></li>
-<li><a href="/kierunki/alanya/">Alanya</a></li>
-<li><a href="/kierunki/side/">Side</a></li>
-<li><a href="/kierunki/bodrum/">Bodrum</a></li>
-<li><a href="/kierunki/marmaris/">Marmaris</a></li>
-<li><a href="/kierunki/kapadocja/">Kapadocja</a></li>
+<li data-s="stambul|istanbul|стамбул|turcja|turkey|туреччина"><a href="/kierunki/stambul/">Stambuł</a></li>
+<li data-s="antalya|анталія|riwiera turecka|turcja|turkey|туреччина"><a href="/kierunki/antalya/">Antalya</a></li>
+<li data-s="alanya|аланія|riwiera turecka|turcja|turkey|туреччина"><a href="/kierunki/alanya/">Alanya</a></li>
+<li data-s="side|сіде|riwiera turecka|turcja|turkey|туреччина"><a href="/kierunki/side/">Side</a></li>
+<li data-s="bodrum|бодрум|riwiera egejska|turcja|turkey|туреччина"><a href="/kierunki/bodrum/">Bodrum</a></li>
+<li data-s="marmaris|мармарис|turcja|turkey|туреччина"><a href="/kierunki/marmaris/">Marmaris</a></li>
+<li data-s="kapadocja|cappadocia|каппадокія|goreme|turcja|turkey|туреччина"><a href="/kierunki/kapadocja/">Kapadocja</a></li>
 </ul>
 </section>
-<section>
+<section data-kraj>
 <h2><a href="/kraje/wegry/">Węgry</a></h2>
 <ul class="kolumny">
-<li><a href="/kierunki/budapeszt/">Budapeszt</a></li>
-<li><a href="/kierunki/eger/">Eger</a></li>
+<li data-s="budapeszt|budapest|будапешт|wegry|hungary|угорщина"><a href="/kierunki/budapeszt/">Budapeszt</a></li>
+<li data-s="eger|егер|wegry|hungary|угорщина"><a href="/kierunki/eger/">Eger</a></li>
 </ul>
 </section>
-<section>
+<section data-kraj>
 <h2><a href="/kraje/wielka-brytania/">Wielka Brytania</a></h2>
 <ul class="kolumny">
-<li><a href="/kierunki/londyn/">Londyn</a></li>
-<li><a href="/kierunki/edynburg/">Edynburg</a></li>
-<li><a href="/kierunki/highlands/">Szkockie Highlands</a></li>
+<li data-s="londyn|london|лондон|anglia|wielka brytania|united kingdom|велика британія"><a href="/kierunki/londyn/">Londyn</a></li>
+<li data-s="edynburg|edinburgh|единбург|szkocja|wielka brytania|united kingdom|велика британія"><a href="/kierunki/edynburg/">Edynburg</a></li>
+<li data-s="szkockie highlands|scottish highlands|шотландське високогіря|szkocja|inverness|wielka brytania|united kingdom|велика британія"><a href="/kierunki/highlands/">Szkockie Highlands</a></li>
 </ul>
 </section>
-<section>
+<section data-kraj>
 <h2><a href="/kraje/wietnam/">Wietnam</a></h2>
 <ul class="kolumny">
-<li><a href="/kierunki/hanoi/">Hanoi</a></li>
-<li><a href="/kierunki/sajgon/">Ho Chi Minh</a></li>
-<li><a href="/kierunki/phu-quoc/">Phu Quoc</a></li>
-<li><a href="/kierunki/da-nang/">Da Nang i Hoi An</a></li>
+<li data-s="hanoi|ханои|wietnam|zatoka ha long|vietnam|вєтнам"><a href="/kierunki/hanoi/">Hanoi</a></li>
+<li data-s="ho chi minh|ho chi minh city|хошимін|wietnam|sajgon|vietnam|вєтнам"><a href="/kierunki/sajgon/">Ho Chi Minh</a></li>
+<li data-s="phu quoc|фукуок|wietnam|vietnam|вєтнам"><a href="/kierunki/phu-quoc/">Phu Quoc</a></li>
+<li data-s="da nang i hoi an|da nang and hoi an|дананг і хоиан|wietnam|vietnam|вєтнам"><a href="/kierunki/da-nang/">Da Nang i Hoi An</a></li>
 </ul>
 </section>
-<section>
+<section data-kraj>
 <h2><a href="/kraje/wlochy/">Włochy</a></h2>
 <ul class="kolumny">
-<li><a href="/kierunki/rzym/">Rzym</a></li>
-<li><a href="/kierunki/mediolan/">Mediolan</a></li>
-<li><a href="/kierunki/wenecja/">Wenecja</a></li>
-<li><a href="/kierunki/florencja/">Florencja</a></li>
-<li><a href="/kierunki/toskania/">Toskania</a></li>
-<li><a href="/kierunki/neapol/">Neapol</a></li>
-<li><a href="/kierunki/amalfi/">Wybrzeże Amalfi</a></li>
-<li><a href="/kierunki/sycylia/">Sycylia</a></li>
-<li><a href="/kierunki/sardynia/">Sardynia</a></li>
-<li><a href="/kierunki/apulia/">Apulia</a></li>
-<li><a href="/kierunki/garda/">Jezioro Garda</a></li>
-<li><a href="/kierunki/dolomity/">Dolomity</a></li>
+<li data-s="rzym|rome|рим|wlochy|italy|італія"><a href="/kierunki/rzym/">Rzym</a></li>
+<li data-s="mediolan|milan|мілан|wlochy|italy|італія"><a href="/kierunki/mediolan/">Mediolan</a></li>
+<li data-s="wenecja|venice|венеція|wlochy|italy|італія"><a href="/kierunki/wenecja/">Wenecja</a></li>
+<li data-s="florencja|florence|флоренція|wlochy|italy|італія"><a href="/kierunki/florencja/">Florencja</a></li>
+<li data-s="toskania|tuscany|тоскана|siena|piza|wlochy|italy|італія"><a href="/kierunki/toskania/">Toskania</a></li>
+<li data-s="neapol|naples|неаполь|wlochy|italy|італія"><a href="/kierunki/neapol/">Neapol</a></li>
+<li data-s="wybrzeze amalfi|amalfi coast|амальфітанське узбережжя|amalfi|positano|sorrento|wlochy|italy|італія"><a href="/kierunki/amalfi/">Wybrzeże Amalfi</a></li>
+<li data-s="sycylia|sicily|сицилія|katania|palermo|wlochy|italy|італія"><a href="/kierunki/sycylia/">Sycylia</a></li>
+<li data-s="sardynia|sardinia|сардинія|cagliari|olbia|wlochy|italy|італія"><a href="/kierunki/sardynia/">Sardynia</a></li>
+<li data-s="apulia|апулія|bari|puglia|wlochy|italy|італія"><a href="/kierunki/apulia/">Apulia</a></li>
+<li data-s="jezioro garda|lake garda|озеро гарда|werona|wlochy|italy|італія"><a href="/kierunki/garda/">Jezioro Garda</a></li>
+<li data-s="dolomity|dolomites|доломіти|wlochy|italy|італія"><a href="/kierunki/dolomity/">Dolomity</a></li>
 </ul>
 </section>
-<section>
+<section data-kraj>
 <h2><a href="/kraje/zjednoczone-emiraty-arabskie/">Zjednoczone Emiraty Arabskie</a></h2>
 <ul class="kolumny">
-<li><a href="/kierunki/dubaj/">Dubaj</a></li>
-<li><a href="/kierunki/abu-zabi/">Abu Zabi</a></li>
+<li data-s="dubaj|dubai|дубаи|emiraty arabskie|zjednoczone emiraty arabskie|united arab emirates|обєднані арабські емірати"><a href="/kierunki/dubaj/">Dubaj</a></li>
+<li data-s="abu zabi|abu dhabi|абу-дабі|emiraty arabskie|zjednoczone emiraty arabskie|united arab emirates|обєднані арабські емірати"><a href="/kierunki/abu-zabi/">Abu Zabi</a></li>
 </ul>
 </section>
+<script src="/szukaj.js" defer></script>
 </main>
 <section class="pocztowka" id="pocztowka" aria-labelledby="pocztowka-h">
 <h2 id="pocztowka-h">Pocztówka od gołębi</h2>

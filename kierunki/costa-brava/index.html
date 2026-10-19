@@ -141,6 +141,10 @@ ul.wskazowki{list-style:none;padding:0;max-width:var(--tekst)}ul.wskazowki li{ba
 ul.wskazowki strong{display:block;font-family:var(--serif);font-weight:400;font-size:1.16rem}ul.wskazowki p{margin:4px 0 6px}
 .kat-wsk{display:inline-block;font-size:.8rem;font-weight:800;color:var(--navy);background:var(--navy-soft);border-radius:999px;padding:2px 10px;margin-bottom:6px}
 .sprawdzone{color:var(--zielen);font-weight:800;white-space:nowrap}.sprawdzone::before{content:"✓ "}
+ul.pytania{list-style:none;padding:0;max-width:var(--tekst)}ul.pytania>li{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:14px 18px;margin:0 0 14px}
+ul.pytania p.pytanie{font-family:var(--serif);font-size:1.16rem;margin:0 0 2px}ul.odpowiedzi{list-style:none;padding:0;margin:10px 0 0}ul.odpowiedzi li{border-left:3px solid var(--line);padding:2px 0 2px 12px;margin:0 0 10px}
+ul.odpowiedzi li.najlepsza{border-left-color:var(--zielen)}ul.odpowiedzi p{margin:0 0 4px}.pomoglo{display:inline-block;font-size:.8rem;font-weight:800;color:var(--navy);background:var(--navy-soft);border-radius:999px;padding:1px 8px;margin-left:6px}
+ul.czekaja{max-width:var(--tekst)}
 .autorzy{margin-top:36px}
 footer{padding-top:22px;padding-bottom:24px;border-top:2px solid var(--ink);margin-top:12px}footer p{font-size:.9rem;color:var(--ink-soft);max-width:none}
 .stopka{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:18px 36px;margin-bottom:10px}@media(max-width:760px){.stopka{grid-template-columns:1fr 1fr}.stopka .o{grid-column:1 / -1}}
@@ -213,6 +217,7 @@ p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
 <a class="plan-nav" href="/nowy/start?z=nav" data-goatcounter-click="plan-nav-kierunek">Zamów plan</a>
 <span class="linki">
 <a href="/kierunki/">Kierunki</a>
+<a href="/kierunki/#szukaj">Szukaj kierunku</a>
 <a href="/gdzie-leciec/pazdziernik/">Gdzie lecieć</a>
 <a href="/okazje/">Okazje</a>
 <a href="/tanie-loty/">Tanie loty</a>
@@ -228,7 +233,7 @@ p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
 <h1>Costa Brava</h1>
 <p class="lead">Gołębie poleciałyby od czerwca do września. W sierpniu termometr dochodzi do 28°C, a morze ma około 27°C. Z Warszawy lecisz około 3 h. Gdzie zjeść za grosze i co zobaczyć poza przewodnikiem, jest niżej.</p>
 </div>
-<p class="autor-pasek"><img src="/img/razem.jpg" alt="" width="40" height="40" loading="lazy" decoding="async">Przygotowali <a href="/o-nas/">Michał i Paulina</a>, którzy sprawdzili na miejscu 35 krajów.</p>
+<p class="autor-pasek"><img src="/img/razem.jpg" alt="" width="40" height="40" loading="lazy" decoding="async"><span>Przygotowali <a href="/o-nas/">Michał i Paulina</a>, którzy razem odwiedzili 35 krajów.</span></p>
 <aside class="plan" aria-label="Plan podróży od gołębi">
 <p><strong>Nie chcesz liczyć sam?</strong>Michał i Paulina ułożą Ci ten wyjazd: trasa, noclegi, jedzenie, plan B. Od 399 zł, pierwsze propozycje w 48 h, zwrot 100%, jeśli nie trafimy.</p>
 <a class="przycisk" href="/nowy/start?kierunek=costa-brava&amp;z=kierunek" data-goatcounter-click="plan-blok-kierunek">Zamów plan: Costa Brava</a>
@@ -325,6 +330,14 @@ p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
 <ul class="miejsca">
 <li><strong>Camí de Ronda zamiast samochodu</strong><small>Calella de Palafrugell</small><p>Nadmorska ścieżka łączy zatoczki, więc pieszo lub kajakiem dotrzesz tam, gdzie nie ma parkingów.</p></li>
 </ul></div>
+<div class="kat"><h3>Na co uważać</h3>
+<ul class="miejsca">
+<li><strong>Palenie na plażach Lloret de Mar</strong><small>Lloret de Mar</small><p>W Lloret de Mar palenie jest zakazane na wszystkich plażach i w zatoczkach, a za odmowę zgaszenia papierosa grozi do 750 euro. Zapal dopiero po zejściu z plaży.</p></li>
+<li><strong>Uciążliwe wieczory kawalerskie</strong><small>Lloret de Mar</small><p>Lloret wprowadza kary do 750 euro za wieczory kawalerskie, które przeszkadzają mieszkańcom i przechodniom. Bawcie się w lokalu, a nie na ulicy.</p></li>
+<li><strong>Cap de Creus bez samochodu</strong><small>Cap de Creus</small><p>Latem na przylądek Cap de Creus wjeżdża się tylko pieszo, rowerem lub busem wahadłowym, a wielu kierowców dowiaduje się o tym na miejscu. Sprawdź aktualne zasady przed wyjazdem.</p></li>
+<li><strong>Rachunek za akcję ratunkową</strong><p>Katalonia obciąża kosztami ratunku osoby, które wezwały pomoc przez własną lekkomyślność w górach czy na szlaku. Na nadmorskie ścieżki zabierz wodę, dobre buty i sprawdź pogodę.</p></li>
+<li><strong>Ryzyko pożaru w lasach</strong><p>Latem pożary są częste, a nieumyślne wywołanie ognia jest przestępstwem. Nie rozpalaj grilla w lesie i nie zostawiaj butelek, które mogą skupić słońce.</p></li>
+</ul></div>
 </div>
 <h3>Od podróżników</h3>
 <p>Tu pojawią się wskazówki od osób, które wróciły z wyjazdu. Na razie pusto.</p>
@@ -381,6 +394,7 @@ p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
 </ul>
 <p class="dalej"><a href="/kraje/hiszpania/">Więcej o kraju: Hiszpania</a> <a href="https://www.gov.pl/web/dyplomacja/informacje-dla-podrozujacych">Serwis MSZ „Polak za granicą”</a></p>
 </section>
+
 <section>
 <h2>Costa Brava: krótko o najczęstszych pytaniach</h2>
 <details><summary>Costa Brava: ile trwa lot z Polski?</summary><p>Z Warszawy około 3 h w powietrzu bez przesiadek (w linii prostej około 1771 km). Z przesiadką dolicz czas na zmianę samolotu.</p></details>

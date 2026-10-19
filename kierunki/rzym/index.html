@@ -141,6 +141,10 @@ ul.wskazowki{list-style:none;padding:0;max-width:var(--tekst)}ul.wskazowki li{ba
 ul.wskazowki strong{display:block;font-family:var(--serif);font-weight:400;font-size:1.16rem}ul.wskazowki p{margin:4px 0 6px}
 .kat-wsk{display:inline-block;font-size:.8rem;font-weight:800;color:var(--navy);background:var(--navy-soft);border-radius:999px;padding:2px 10px;margin-bottom:6px}
 .sprawdzone{color:var(--zielen);font-weight:800;white-space:nowrap}.sprawdzone::before{content:"✓ "}
+ul.pytania{list-style:none;padding:0;max-width:var(--tekst)}ul.pytania>li{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:14px 18px;margin:0 0 14px}
+ul.pytania p.pytanie{font-family:var(--serif);font-size:1.16rem;margin:0 0 2px}ul.odpowiedzi{list-style:none;padding:0;margin:10px 0 0}ul.odpowiedzi li{border-left:3px solid var(--line);padding:2px 0 2px 12px;margin:0 0 10px}
+ul.odpowiedzi li.najlepsza{border-left-color:var(--zielen)}ul.odpowiedzi p{margin:0 0 4px}.pomoglo{display:inline-block;font-size:.8rem;font-weight:800;color:var(--navy);background:var(--navy-soft);border-radius:999px;padding:1px 8px;margin-left:6px}
+ul.czekaja{max-width:var(--tekst)}
 .autorzy{margin-top:36px}
 footer{padding-top:22px;padding-bottom:24px;border-top:2px solid var(--ink);margin-top:12px}footer p{font-size:.9rem;color:var(--ink-soft);max-width:none}
 .stopka{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:18px 36px;margin-bottom:10px}@media(max-width:760px){.stopka{grid-template-columns:1fr 1fr}.stopka .o{grid-column:1 / -1}}
@@ -213,6 +217,7 @@ p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
 <a class="plan-nav" href="/nowy/start?z=nav" data-goatcounter-click="plan-nav-kierunek">Zamów plan</a>
 <span class="linki">
 <a href="/kierunki/">Kierunki</a>
+<a href="/kierunki/#szukaj">Szukaj kierunku</a>
 <a href="/gdzie-leciec/pazdziernik/">Gdzie lecieć</a>
 <a href="/okazje/">Okazje</a>
 <a href="/tanie-loty/">Tanie loty</a>
@@ -228,7 +233,7 @@ p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
 <h1>Rzym</h1>
 <p class="lead">Najcieplej jest w lipcu, około 31°C w dzień. Najprzyjemniej jest tu od marca do listopada. Bilety ostatnio od 174 zł w obie strony (Katowice). Niżej znajdziesz tanie jedzenie i miejsca spoza przewodników.</p>
 </div>
-<p class="autor-pasek"><img src="/img/razem.jpg" alt="" width="40" height="40" loading="lazy" decoding="async">Przygotowali <a href="/o-nas/">Michał i Paulina</a>, którzy sprawdzili na miejscu 35 krajów.</p>
+<p class="autor-pasek"><img src="/img/razem.jpg" alt="" width="40" height="40" loading="lazy" decoding="async"><span>Przygotowali <a href="/o-nas/">Michał i Paulina</a>, którzy razem odwiedzili 35 krajów.</span></p>
 <aside class="plan" aria-label="Plan podróży od gołębi">
 <p><strong>Nie chcesz liczyć sam?</strong>Michał i Paulina ułożą Ci ten wyjazd: trasa, noclegi, jedzenie, plan B. Od 399 zł, pierwsze propozycje w 48 h, zwrot 100%, jeśli nie trafimy.</p>
 <a class="przycisk" href="/nowy/start?kierunek=rzym&amp;z=kierunek" data-goatcounter-click="plan-blok-kierunek">Zamów plan: Rzym</a>
@@ -287,6 +292,14 @@ p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
 <div class="kat"><h3>Patent</h3>
 <ul class="miejsca">
 <li><strong>Kawa przy barze</strong><p>Espresso i cornetto na stojąco przy ladzie są zwykle znacznie tańsze niż przy stoliku. Unikaj knajp z wielojęzycznymi menu przy atrakcjach.</p></li>
+</ul></div>
+<div class="kat"><h3>Na co uważać</h3>
+<ul class="miejsca">
+<li><strong>Fontanna di Trevi z biletem</strong><p>Od 2 lutego 2026 wejście do strefy tuż przy fontannie kosztuje 2 euro, codziennie od 9:00 do 22:00. Przy wejściu płacisz tylko kartą, więc możesz kupić bilet wcześniej online.</p></li>
+<li><strong>Nie siadaj na Schodach Hiszpańskich</strong><p>Siedzenie i leżenie na Schodach Hiszpańskich jest zakazane, a mandaty zaczynają się od 250 euro. Zrób zdjęcie na stojąco i odpocznij w pobliskiej kawiarni.</p></li>
+<li><strong>Kieszonkowcy w autobusie 64</strong><p>Linia 64 jeździ obok największych atrakcji i przyciąga złodziei, którzy chowają rękę pod kurtką. Torbę trzymaj zapiętą i przed sobą.</p></li>
+<li><strong>Fałszywi policjanci przy sklepach</strong><p>Oszuści w cywilu zaczepiają przy wyjściu ze sklepu, twierdzą, że paragon jest nieważny i żądają mandatu. Poproś o legitymację, zadzwoń pod 112 i płać tylko na komisariacie.</p></li>
+<li><strong>Restauracja „bez menu”</strong><p>Niektóre lokale twierdzą, że skończyły się karty, a potem liczą dwa razy więcej. Zanim zamówisz, poproś o ceny: „posso vedere i prezzi?” albo wyjdź.</p></li>
 </ul></div>
 </div>
 <h3>Od podróżników</h3>
@@ -359,7 +372,7 @@ p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
 <tbody>
 <tr><th scope="row">Katowice</th><td><span class="cena-zywa" data-cena="rzym|katowice|12|kcrzymkatowice" data-at="2026-10-18T20:12:30.827Z" data-c="174"><a class="cena-lot" href="https://www.aviasales.com/search/KTW0612FCO11121?currency=pln&amp;marker=785120.kcrzymkatowice" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-kcrzymkatowice"><strong>od 174 zł</strong></a> <small class="sprawdzono">sprawdzone 18 października</small></span></td><td data-kiedy>6 do 11 grudnia 2026</td></tr>
 <tr><th scope="row">Gdańsk</th><td><span class="cena-zywa" data-cena="rzym|gdansk|12|kcrzymgdansk" data-at="2026-10-17T16:07:05.634Z" data-c="253"><a class="cena-lot" href="https://www.aviasales.com/search/GDN1212FCO22121?currency=pln&amp;marker=785120.kcrzymgdansk" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-kcrzymgdansk"><strong>od 253 zł</strong></a> <small class="sprawdzono">sprawdzone 17 października</small></span></td><td data-kiedy>12 do 22 grudnia 2026</td></tr>
-<tr><th scope="row">Warszawa</th><td><span class="cena-zywa" data-cena="rzym|warszawa|11|kcrzymwarszawa" data-at="2026-10-18T15:36:53.565Z" data-c="349"><a class="cena-lot" href="https://www.aviasales.com/search/WAW1411FCO21111?currency=pln&amp;marker=785120.kcrzymwarszawa" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-kcrzymwarszawa"><strong>od 349 zł</strong></a> <small class="sprawdzono">sprawdzone 18 października</small></span></td><td data-kiedy>14 do 21 listopada 2026</td></tr>
+<tr><th scope="row">Warszawa</th><td><span class="cena-zywa" data-cena="rzym|warszawa|11|kcrzymwarszawa" data-at="2026-10-19T18:22:52.349Z" data-c="301"><a class="cena-lot" href="https://www.aviasales.com/search/WAW1411FCO21111?currency=pln&amp;marker=785120.kcrzymwarszawa" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-kcrzymwarszawa"><strong>od 301 zł</strong></a> <small class="sprawdzono">sprawdzone 19 października</small></span></td><td data-kiedy>14 do 21 listopada 2026</td></tr>
 </tbody>
 </table></div>
 <p class="drobne">Cena „od” otwiera Aviasales z tymi samymi datami; ceny zmieniają się co godzinę, więc mogą się różnić. „Zwykle od” to cena sprzed ponad tygodnia, orientacyjna.</p>
@@ -375,6 +388,7 @@ p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
 </ul>
 <p class="dalej"><a href="/kraje/wlochy/">Więcej o kraju: Włochy</a> <a href="https://www.gov.pl/web/dyplomacja/informacje-dla-podrozujacych">Serwis MSZ „Polak za granicą”</a></p>
 </section>
+
 <section>
 <h2>Rzym: krótko o najczęstszych pytaniach</h2>
 <details><summary>Rzym: ile trwa lot z Polski?</summary><p>Z Warszawy około 2 h w powietrzu bez przesiadek (w linii prostej około 1307 km). Z przesiadką dolicz czas na zmianę samolotu.</p></details>

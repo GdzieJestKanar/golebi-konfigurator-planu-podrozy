@@ -141,6 +141,10 @@ ul.wskazowki{list-style:none;padding:0;max-width:var(--tekst)}ul.wskazowki li{ba
 ul.wskazowki strong{display:block;font-family:var(--serif);font-weight:400;font-size:1.16rem}ul.wskazowki p{margin:4px 0 6px}
 .kat-wsk{display:inline-block;font-size:.8rem;font-weight:800;color:var(--navy);background:var(--navy-soft);border-radius:999px;padding:2px 10px;margin-bottom:6px}
 .sprawdzone{color:var(--zielen);font-weight:800;white-space:nowrap}.sprawdzone::before{content:"✓ "}
+ul.pytania{list-style:none;padding:0;max-width:var(--tekst)}ul.pytania>li{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:14px 18px;margin:0 0 14px}
+ul.pytania p.pytanie{font-family:var(--serif);font-size:1.16rem;margin:0 0 2px}ul.odpowiedzi{list-style:none;padding:0;margin:10px 0 0}ul.odpowiedzi li{border-left:3px solid var(--line);padding:2px 0 2px 12px;margin:0 0 10px}
+ul.odpowiedzi li.najlepsza{border-left-color:var(--zielen)}ul.odpowiedzi p{margin:0 0 4px}.pomoglo{display:inline-block;font-size:.8rem;font-weight:800;color:var(--navy);background:var(--navy-soft);border-radius:999px;padding:1px 8px;margin-left:6px}
+ul.czekaja{max-width:var(--tekst)}
 .autorzy{margin-top:36px}
 footer{padding-top:22px;padding-bottom:24px;border-top:2px solid var(--ink);margin-top:12px}footer p{font-size:.9rem;color:var(--ink-soft);max-width:none}
 .stopka{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:18px 36px;margin-bottom:10px}@media(max-width:760px){.stopka{grid-template-columns:1fr 1fr}.stopka .o{grid-column:1 / -1}}
@@ -213,6 +217,7 @@ p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
 <a class="plan-nav" href="/nowy/start?z=nav" data-goatcounter-click="plan-nav-kierunek">Zamów plan</a>
 <span class="linki">
 <a href="/kierunki/">Kierunki</a>
+<a href="/kierunki/#szukaj">Szukaj kierunku</a>
 <a href="/gdzie-leciec/pazdziernik/">Gdzie lecieć</a>
 <a href="/okazje/">Okazje</a>
 <a href="/tanie-loty/">Tanie loty</a>
@@ -228,7 +233,7 @@ p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
 <h1>Wyspy Zielonego Przylądka</h1>
 <p class="lead">Najcieplej jest we wrześniu, około 27°C w dzień, a morze ma około 28°C. Najprzyjemniej jest tu od października do sierpnia. Bilety ostatnio od 1109 zł w obie strony (Warszawa). Niżej znajdziesz tanie jedzenie i miejsca spoza przewodników.</p>
 </div>
-<p class="autor-pasek"><img src="/img/razem.jpg" alt="" width="40" height="40" loading="lazy" decoding="async">Przygotowali <a href="/o-nas/">Michał i Paulina</a>, którzy sprawdzili na miejscu 35 krajów.</p>
+<p class="autor-pasek"><img src="/img/razem.jpg" alt="" width="40" height="40" loading="lazy" decoding="async"><span>Przygotowali <a href="/o-nas/">Michał i Paulina</a>, którzy razem odwiedzili 35 krajów.</span></p>
 <aside class="plan" aria-label="Plan podróży od gołębi">
 <p><strong>Nie chcesz liczyć sam?</strong>Michał i Paulina ułożą Ci ten wyjazd: trasa, noclegi, jedzenie, plan B. Od 399 zł, pierwsze propozycje w 48 h, zwrot 100%, jeśli nie trafimy.</p>
 <a class="przycisk" href="/nowy/start?kierunek=sal&amp;z=kierunek" data-goatcounter-click="plan-blok-kierunek">Zamów plan: Wyspy Zielonego Przylądka</a>
@@ -317,6 +322,15 @@ p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
 <li><strong>Pedra de Lume</strong><small>Pedra de Lume</small><p>Słone jezioro w wygasłym kraterze wulkanu, w którym unosisz się jak w Morzu Martwym. Zabierz ręcznik i stare kąpielówki.</p></li>
 <li><strong>Buracona i Blue Eye</strong><small>Buracona</small><p>Laguna z Niebieskim Okiem, które lśni, gdy trafi w nie słońce. Przyjedź, gdy słońce stoi wysoko, inaczej efekt przepada.</p></li>
 </ul></div>
+<div class="kat"><h3>Na co uważać</h3>
+<ul class="miejsca">
+<li><strong>Kolory flag na plaży</strong><p>Czerwona flaga oznacza zakaz wchodzenia do wody, żółta pozwala tylko brodzić bez pływania, a zielona oznacza bezpieczną kąpiel. Sprawdzaj flagę za każdym razem.</p></li>
+<li><strong>Silne prądy i fale</strong><p>Pływy i prądy wokół wysp są bardzo silne, a fale nieprzewidywalne z mocnym prądem wstecznym. Kąp się tylko tam, gdzie pracuje ratownik.</p></li>
+<li><strong>Niebiesko-żółte taksówki</strong><small>Sal i Boa Vista</small><p>Autoryzowane taksówki na Sal i Boa Vista są niebiesko-żółte. Bierz je z postoju albo poproś hotel o zamówienie.</p></li>
+<li><strong>Quad to sport ekstremalny</strong><p>Kask na skuterze i quadzie jest obowiązkowy, a jazda bez prawa jazdy kończy się aresztem. Pamiętaj, że opieka medyczna na wyspach jest bardzo podstawowa.</p></li>
+<li><strong>Pył bruma seca zimą</strong><p>Od grudnia do lutego zdarzają się burze pyłowe zwane bruma seca, które potrafią zakłócić loty, szczególnie na Boa Vista. Zostaw zapas czasu przed lotem powrotnym.</p></li>
+<li><strong>Puste plaże po zmroku</strong><p>Na Sal i Boa Vista zdarzają się kradzieże i napady. Po zmroku omijaj nieoświetlone, odludne miejsca i słabo widoczne plaże.</p></li>
+</ul></div>
 </div>
 <h3>Od podróżników</h3>
 <p>Tu pojawią się wskazówki od osób, które wróciły z wyjazdu. Na razie pusto.</p>
@@ -364,6 +378,7 @@ p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
 </ul>
 <p class="dalej"><a href="/kraje/republika-zielonego-przyladka/">Więcej o kraju: Republika Zielonego Przylądka</a> <a href="https://www.gov.pl/web/dyplomacja/informacje-dla-podrozujacych">Serwis MSZ „Polak za granicą”</a></p>
 </section>
+
 <section>
 <h2>Wyspy Zielonego Przylądka: krótko o najczęstszych pytaniach</h2>
 <details><summary>Wyspy Zielonego Przylądka: ile trwa lot z Polski?</summary><p>Z Warszawy około 7,5 h w powietrzu bez przesiadek (w linii prostej około 5495 km). Z przesiadką dolicz czas na zmianę samolotu.</p></details>

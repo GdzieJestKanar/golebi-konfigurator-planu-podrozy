@@ -1,14 +1,14 @@
 # Gołębie Latają
 
-> Gołębie Latają to dwuosobowa pracownia planów podróży na zamówienie z Warszawy (Michał i Paulina) i darmowy przewodnik podróżny (164 kierunki): pogoda miesiąc po miesiącu, ceny lotów z polskich lotnisk, długie weekendy i porównania.
+> Gołębie Latają to dwuosobowa pracownia planów podróży na zamówienie z Warszawy (Michał i Paulina) i darmowy przewodnik podróżny (164 kierunki): pogoda miesiąc po miesiącu, ceny lotów z polskich lotnisk, codziennie sprawdzane okazje last minute, długie weekendy i porównania.
 
 Nie jesteśmy biurem podróży i nie sprzedajemy wycieczek. Układamy indywidualny plan wyjazdu: loty, noclegi, trasa dzień po dniu, restauracje, pułapki i plan B. Pierwsze propozycje są gotowe w 48 godzin, pełny plan w 5 dni roboczych od rezerwacji. Wszystkie teksty po polsku.
 
 ## Plan podróży na zamówienie
 
-- Podstawowy Lot, 399 zł: Wiesz, dokąd i kiedy
+- Podstawowy Lot, 399 zł: Wiesz, dokąd i kiedy lecieć
 - Kompletny Lot, 899 zł: Plan gotowy dzień po dniu
-- Lot Premium, 1 499 zł przy wyjeździe do 10 dni, 1 899 zł przy dłuższym: Najpełniejszy plan i opieka w trakcie
+- Lot Premium, 1 499 zł przy wyjeździe do 10 dni, 1 899 zł przy dłuższym: Najlepszy plan, gołąb pod ręką i koperta pocztą
 - [Zamów plan](https://golebielataja.pl/nowy/start?z=llms): formularz zamówienia (kierunek, termin, budżet, styl podróży)
 - [Przykładowy plan (PDF)](https://golebielataja.pl/przyklad-plan.pdf)
 - [O nas](https://golebielataja.pl/o-nas/): kim jesteśmy, jak pracujemy, opinie klientów, na czym zarabiamy
@@ -19,6 +19,7 @@ Nie jesteśmy biurem podróży i nie sprzedajemy wycieczek. Układamy indywidual
 - [Gdzie lecieć w danym miesiącu](https://golebielataja.pl/gdzie-leciec/)
 - [Kraje](https://golebielataja.pl/kraje/): formalności, waluta, gniazdka, roaming
 - [Długie weekendy z kierunkami na każdy termin](https://golebielataja.pl/dlugie-weekendy/)
+- [Okazje](https://golebielataja.pl/okazje/): najlepsze last minute, czartery i najtańsze wakacje z polskich lotnisk, sprawdzane codziennie, każda z datą ważności
 - [Tanie loty z polskich lotnisk](https://golebielataja.pl/tanie-loty/)
 - [Tanie loty last minute z polskich lotnisk w najbliższe 2 tygodnie](https://golebielataja.pl/tanie-loty/last-minute/)
 - [Poradniki](https://golebielataja.pl/poradniki/)

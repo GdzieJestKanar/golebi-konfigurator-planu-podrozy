@@ -141,6 +141,10 @@ ul.wskazowki{list-style:none;padding:0;max-width:var(--tekst)}ul.wskazowki li{ba
 ul.wskazowki strong{display:block;font-family:var(--serif);font-weight:400;font-size:1.16rem}ul.wskazowki p{margin:4px 0 6px}
 .kat-wsk{display:inline-block;font-size:.8rem;font-weight:800;color:var(--navy);background:var(--navy-soft);border-radius:999px;padding:2px 10px;margin-bottom:6px}
 .sprawdzone{color:var(--zielen);font-weight:800;white-space:nowrap}.sprawdzone::before{content:"✓ "}
+ul.pytania{list-style:none;padding:0;max-width:var(--tekst)}ul.pytania>li{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:14px 18px;margin:0 0 14px}
+ul.pytania p.pytanie{font-family:var(--serif);font-size:1.16rem;margin:0 0 2px}ul.odpowiedzi{list-style:none;padding:0;margin:10px 0 0}ul.odpowiedzi li{border-left:3px solid var(--line);padding:2px 0 2px 12px;margin:0 0 10px}
+ul.odpowiedzi li.najlepsza{border-left-color:var(--zielen)}ul.odpowiedzi p{margin:0 0 4px}.pomoglo{display:inline-block;font-size:.8rem;font-weight:800;color:var(--navy);background:var(--navy-soft);border-radius:999px;padding:1px 8px;margin-left:6px}
+ul.czekaja{max-width:var(--tekst)}
 .autorzy{margin-top:36px}
 footer{padding-top:22px;padding-bottom:24px;border-top:2px solid var(--ink);margin-top:12px}footer p{font-size:.9rem;color:var(--ink-soft);max-width:none}
 .stopka{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:18px 36px;margin-bottom:10px}@media(max-width:760px){.stopka{grid-template-columns:1fr 1fr}.stopka .o{grid-column:1 / -1}}
@@ -213,6 +217,7 @@ p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
 <a class="plan-nav" href="/nowy/start?z=nav" data-goatcounter-click="plan-nav-kierunek">Zamów plan</a>
 <span class="linki">
 <a href="/kierunki/">Kierunki</a>
+<a href="/kierunki/#szukaj">Szukaj kierunku</a>
 <a href="/gdzie-leciec/pazdziernik/">Gdzie lecieć</a>
 <a href="/okazje/">Okazje</a>
 <a href="/tanie-loty/">Tanie loty</a>
@@ -228,7 +233,7 @@ p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
 <h1>Apulia</h1>
 <p class="lead">Najcieplej jest w sierpniu, około 29°C w dzień, a morze ma około 28°C. Najprzyjemniej jest tu od czerwca do września. Bilety ostatnio od 149 zł w obie strony (Warszawa). Niżej znajdziesz tanie jedzenie i miejsca spoza przewodników.</p>
 </div>
-<p class="autor-pasek"><img src="/img/razem.jpg" alt="" width="40" height="40" loading="lazy" decoding="async">Przygotowali <a href="/o-nas/">Michał i Paulina</a>, którzy sprawdzili na miejscu 35 krajów.</p>
+<p class="autor-pasek"><img src="/img/razem.jpg" alt="" width="40" height="40" loading="lazy" decoding="async"><span>Przygotowali <a href="/o-nas/">Michał i Paulina</a>, którzy razem odwiedzili 35 krajów.</span></p>
 <aside class="plan" aria-label="Plan podróży od gołębi">
 <p><strong>Nie chcesz liczyć sam?</strong>Michał i Paulina ułożą Ci ten wyjazd: trasa, noclegi, jedzenie, plan B. Od 399 zł, pierwsze propozycje w 48 h, zwrot 100%, jeśli nie trafimy.</p>
 <a class="przycisk" href="/nowy/start?kierunek=apulia&amp;z=kierunek" data-goatcounter-click="plan-blok-kierunek">Zamów plan: Apulia</a>
@@ -320,6 +325,15 @@ p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
 <ul class="miejsca">
 <li><strong>Lunch przy ladzie w Lecce</strong><small>Lecce</small><p>W Lecce szukaj lokali z gotowymi daniami przy ladzie, jak Prendici Gusto. Zjesz tanio i bez menu turystycznego.</p></li>
 </ul></div>
+<div class="kat"><h3>Na co uważać</h3>
+<ul class="miejsca">
+<li><strong>Strefy ZTL w starych miastach</strong><p>Wjazd do oznaczonej „Zona a traffico limitato” może skończyć się wysokim mandatem. Parkuj przed historycznym centrum i wchodź pieszo.</p></li>
+<li><strong>Lipiec i sierpień: tłok i ceny</strong><p>Latem miasteczka i plaże są zatłoczone, ceny rosną, a upał w kamiennych miastach daje się we znaki. Jeśli możesz, przyjedź w czerwcu lub we wrześniu.</p></li>
+<li><strong>Popołudniowa sjesta</strong><p>Sklepy i wiele atrakcji bywa zamkniętych od południa do około 17:00. Zakupy i zwiedzanie zaplanuj na rano i wieczór.</p></li>
+<li><strong>Strój kąpielowy nie w centrum</strong><p>Część miasteczek zakazuje chodzenia w stroju kąpielowym po centrum. Po plaży narzuć coś na siebie, zanim wejdziesz do miasta.</p></li>
+<li><strong>Bilety kupuj w trafice</strong><p>Bilet kupiony w autobusie lub pociągu może być droższy. Kupuj go wcześniej w tabaccherii lub kiosku edicola.</p></li>
+<li><strong>Rezerwuj leżaki w lido</strong><p>W sezonie miejsca w płatnych klubach plażowych z leżakami szybko się kończą. Zarezerwuj je wcześniej albo zabierz własny sprzęt na wolną plażę.</p></li>
+</ul></div>
 </div>
 <h3>Od podróżników</h3>
 <p>Nikt jeszcze nie dodał wskazówki z wyjazdu. Możesz być pierwszy.</p>
@@ -376,6 +390,7 @@ p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
 </ul>
 <p class="dalej"><a href="/kraje/wlochy/">Więcej o kraju: Włochy</a> <a href="https://www.gov.pl/web/dyplomacja/informacje-dla-podrozujacych">Serwis MSZ „Polak za granicą”</a></p>
 </section>
+
 <section>
 <h2>Apulia: krótko o najczęstszych pytaniach</h2>
 <details><summary>Apulia: ile trwa lot z Polski?</summary><p>Z Warszawy około 2 h w powietrzu bez przesiadek (w linii prostej około 1267 km). Z przesiadką dolicz czas na zmianę samolotu.</p></details>

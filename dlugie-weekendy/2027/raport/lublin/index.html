@@ -141,6 +141,10 @@ ul.wskazowki{list-style:none;padding:0;max-width:var(--tekst)}ul.wskazowki li{ba
 ul.wskazowki strong{display:block;font-family:var(--serif);font-weight:400;font-size:1.16rem}ul.wskazowki p{margin:4px 0 6px}
 .kat-wsk{display:inline-block;font-size:.8rem;font-weight:800;color:var(--navy);background:var(--navy-soft);border-radius:999px;padding:2px 10px;margin-bottom:6px}
 .sprawdzone{color:var(--zielen);font-weight:800;white-space:nowrap}.sprawdzone::before{content:"✓ "}
+ul.pytania{list-style:none;padding:0;max-width:var(--tekst)}ul.pytania>li{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:14px 18px;margin:0 0 14px}
+ul.pytania p.pytanie{font-family:var(--serif);font-size:1.16rem;margin:0 0 2px}ul.odpowiedzi{list-style:none;padding:0;margin:10px 0 0}ul.odpowiedzi li{border-left:3px solid var(--line);padding:2px 0 2px 12px;margin:0 0 10px}
+ul.odpowiedzi li.najlepsza{border-left-color:var(--zielen)}ul.odpowiedzi p{margin:0 0 4px}.pomoglo{display:inline-block;font-size:.8rem;font-weight:800;color:var(--navy);background:var(--navy-soft);border-radius:999px;padding:1px 8px;margin-left:6px}
+ul.czekaja{max-width:var(--tekst)}
 .autorzy{margin-top:36px}
 footer{padding-top:22px;padding-bottom:24px;border-top:2px solid var(--ink);margin-top:12px}footer p{font-size:.9rem;color:var(--ink-soft);max-width:none}
 .stopka{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:18px 36px;margin-bottom:10px}@media(max-width:760px){.stopka{grid-template-columns:1fr 1fr}.stopka .o{grid-column:1 / -1}}
@@ -172,7 +176,7 @@ section.pocztowka p{font-family:var(--sans);font-size:1.05rem;line-height:1.55;f
 .pocztowka-form .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 @media print{.pasek,nav.spis,.partnerzy,.cta,aside.plan,.plan-pasek,section.pocztowka,.gl-zgoda,a[download],nav.gora .linki,.plan-nav,.okruszki{display:none}}</style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Report","headline":"Długie weekendy 2027: dokąd polecieć z Lublina i za ile","description":"Długie weekendy 2027 i najtańsze loty z Lublina na każdy termin, do kierunków z dobrą pogodą. Raport Gołębi Latają z danymi do cytowania.","inLanguage":"pl-PL","datePublished":"2026-10-19","dateModified":"2026-10-18","mainEntityOfPage":"https://golebielataja.pl/dlugie-weekendy/2027/raport/lublin/","image":"https://golebielataja.pl/img/razem.jpg","author":{"@type":"Organization","name":"Gołębie Latają","url":"https://golebielataja.pl/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Report","headline":"Długie weekendy 2027: dokąd polecieć z Lublina i za ile","description":"Długie weekendy 2027 i najtańsze loty z Lublina na każdy termin, do kierunków z dobrą pogodą. Raport Gołębi Latają z danymi do cytowania.","inLanguage":"pl-PL","datePublished":"2026-10-19","dateModified":"2026-10-19","mainEntityOfPage":"https://golebielataja.pl/dlugie-weekendy/2027/raport/lublin/","image":"https://golebielataja.pl/img/razem.jpg","author":{"@type":"Organization","name":"Gołębie Latają","url":"https://golebielataja.pl/"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Gołębie Latają","item":"https://golebielataja.pl/"},{"@type":"ListItem","position":2,"name":"Długie weekendy","item":"https://golebielataja.pl/dlugie-weekendy/"},{"@type":"ListItem","position":3,"name":"2027","item":"https://golebielataja.pl/dlugie-weekendy/2027/"},{"@type":"ListItem","position":4,"name":"Raport","item":"https://golebielataja.pl/dlugie-weekendy/2027/raport/"},{"@type":"ListItem","position":5,"name":"Lublin","item":"https://golebielataja.pl/dlugie-weekendy/2027/raport/lublin/"}]}</script>
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "dabf88d8ecff46b9af7a1518edc3f5ee"}'></script>
 <script data-goatcounter="https://golebielataja.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
@@ -186,6 +190,7 @@ section.pocztowka p{font-family:var(--sans);font-size:1.05rem;line-height:1.55;f
 <a class="plan-nav" href="/nowy/start?z=nav" data-goatcounter-click="plan-nav-weekend">Zamów plan</a>
 <span class="linki">
 <a href="/kierunki/">Kierunki</a>
+<a href="/kierunki/#szukaj">Szukaj kierunku</a>
 <a href="/gdzie-leciec/pazdziernik/">Gdzie lecieć</a>
 <a href="/okazje/">Okazje</a>
 <a href="/tanie-loty/">Tanie loty</a>
@@ -200,7 +205,7 @@ section.pocztowka p{font-family:var(--sans);font-size:1.05rem;line-height:1.55;f
 <h1>Długie weekendy 2027: dokąd polecieć z Lublina i za ile</h1>
 <p class="lead">Wersja raportu dla lotniska: do każdego długiego weekendu najtańszy znaleziony lot z Lublina w tym miesiącu, tylko do miejsc z dobrą pogodą (ocena gołębi co najmniej 3 na 5). Liczby można cytować z podaniem źródła: golebielataja.pl.</p>
 <p><a class="partner glowny" href="/dlugie-weekendy/2027/raport/lublin/raport.pdf" download>Pobierz raport w PDF</a></p>
-<p class="autor-pasek"><img src="/img/razem.jpg" alt="" width="40" height="40" loading="lazy" decoding="async">Przygotowali <a href="/o-nas/">Michał i Paulina</a>, którzy sprawdzili na miejscu 35 krajów.</p>
+<p class="autor-pasek"><img src="/img/razem.jpg" alt="" width="40" height="40" loading="lazy" decoding="async"><span>Przygotowali <a href="/o-nas/">Michał i Paulina</a>, którzy razem odwiedzili 35 krajów.</span></p>
 <aside class="plan" aria-label="Plan podróży od gołębi">
 <p><strong>Plan na długi weekend od gołębi</strong>Trasa, noclegi i jedzenie na wolne dni, ułożone przez Michała i Paulinę. Od 399 zł, zwrot 100%, jeśli nie trafimy.</p>
 <a class="przycisk" href="/nowy/start?z=weekend" data-goatcounter-click="plan-blok-weekend">Ułóżcie mi plan</a>

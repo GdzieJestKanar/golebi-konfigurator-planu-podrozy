@@ -145,6 +145,10 @@ ul.wskazowki{list-style:none;padding:0;max-width:var(--tekst)}ul.wskazowki li{ba
 ul.wskazowki strong{display:block;font-family:var(--serif);font-weight:400;font-size:1.16rem}ul.wskazowki p{margin:4px 0 6px}
 .kat-wsk{display:inline-block;font-size:.8rem;font-weight:800;color:var(--navy);background:var(--navy-soft);border-radius:999px;padding:2px 10px;margin-bottom:6px}
 .sprawdzone{color:var(--zielen);font-weight:800;white-space:nowrap}.sprawdzone::before{content:"✓ "}
+ul.pytania{list-style:none;padding:0;max-width:var(--tekst)}ul.pytania>li{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:14px 18px;margin:0 0 14px}
+ul.pytania p.pytanie{font-family:var(--serif);font-size:1.16rem;margin:0 0 2px}ul.odpowiedzi{list-style:none;padding:0;margin:10px 0 0}ul.odpowiedzi li{border-left:3px solid var(--line);padding:2px 0 2px 12px;margin:0 0 10px}
+ul.odpowiedzi li.najlepsza{border-left-color:var(--zielen)}ul.odpowiedzi p{margin:0 0 4px}.pomoglo{display:inline-block;font-size:.8rem;font-weight:800;color:var(--navy);background:var(--navy-soft);border-radius:999px;padding:1px 8px;margin-left:6px}
+ul.czekaja{max-width:var(--tekst)}
 .autorzy{margin-top:36px}
 footer{padding-top:22px;padding-bottom:24px;border-top:2px solid var(--ink);margin-top:12px}footer p{font-size:.9rem;color:var(--ink-soft);max-width:none}
 .stopka{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:18px 36px;margin-bottom:10px}@media(max-width:760px){.stopka{grid-template-columns:1fr 1fr}.stopka .o{grid-column:1 / -1}}
@@ -210,7 +214,7 @@ h1,h2,h3{font-weight:600}
 <div class="przewin"><table>
 <thead><tr><th scope="col">Напрямок</th><th scope="col">Дати</th><th scope="col">Ціна</th><th scope="col">Погода тоді</th><th scope="col">Пошук</th></tr></thead>
 <tbody>
-<tr><td><strong>Венеція</strong> <small>2 год</small></td><td>з 26 жовтня до 2 листопада</td><td><strong>130 зл</strong> <small class="sprawdzono">перевірено 18 жовтня</small></td><td>18°C, погода 4/5</td><td><a class="partner glowny" href="https://www.aviasales.com/search/WAW2610VCE02111?currency=pln&amp;marker=785120.ukwarszawawenecja" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-ukwarszawawenecja">Перевірити в Aviasales</a></td></tr>
+<tr><td><strong>Венеція</strong> <small>2 год</small></td><td>з 26 жовтня до 2 листопада</td><td><strong>130 зл</strong> <small class="sprawdzono">перевірено 19 жовтня</small></td><td>18°C, погода 4/5</td><td><a class="partner glowny" href="https://www.aviasales.com/search/WAW2610VCE02111?currency=pln&amp;marker=785120.ukwarszawawenecja" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-ukwarszawawenecja">Перевірити в Aviasales</a></td></tr>
 <tr><td><strong>Софія</strong> <small>2 год</small></td><td>з 16 до 20 листопада</td><td><strong>135 зл</strong> <small class="sprawdzono">перевірено 12 жовтня</small></td><td>11°C, погода 3/5</td><td><a class="partner glowny" href="https://www.aviasales.com/search/WAW1611SOF20111?currency=pln&amp;marker=785120.ukwarszawasofia" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-ukwarszawasofia">Перевірити в Aviasales</a></td></tr>
 <tr><td><strong>Тирана</strong> <small>2 год</small></td><td>з 27 до 30 листопада</td><td><strong class="cena-zwykle">зазвичай від 144 зл</strong></td><td>13°C, погода 2/5</td><td></td></tr>
 <tr><td><strong>Будапешт</strong> <small>1 год</small></td><td>з 30 листопада до 4 грудня</td><td><strong class="cena-zwykle">зазвичай від 145 зл</strong></td><td>9°C, погода 2/5</td><td></td></tr>
@@ -272,7 +276,7 @@ h1,h2,h3{font-weight:600}
 <tr><td>Сицилія</td><td>187</td><td>217</td><td>234</td><td>174</td><td>244</td><td>350</td><td>375</td><td>483</td><td>396</td><td>409</td><td>386</td><td>·</td></tr>
 <tr><td>Мальта</td><td>188</td><td>175</td><td>213</td><td>231</td><td>471</td><td>·</td><td>363</td><td>348</td><td>379</td><td>460</td><td>526</td><td>492</td></tr>
 <tr><td>Мадрид</td><td>248</td><td>197</td><td>230</td><td>297</td><td>286</td><td>309</td><td>559</td><td>555</td><td>·</td><td>464</td><td>523</td><td>652</td></tr>
-<tr><td>Тоскана</td><td>308</td><td>253</td><td>214</td><td>198</td><td>235</td><td>297</td><td>·</td><td>843</td><td>493</td><td>·</td><td>424</td><td>585</td></tr>
+<tr><td>Тоскана</td><td>300</td><td>253</td><td>214</td><td>198</td><td>235</td><td>297</td><td>·</td><td>843</td><td>493</td><td>·</td><td>424</td><td>585</td></tr>
 <tr><td>Таллінн</td><td>249</td><td>199</td><td>284</td><td>·</td><td>·</td><td>284</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td></tr>
 <tr><td>Барселона</td><td>360</td><td>202</td><td>225</td><td>275</td><td>295</td><td>309</td><td>432</td><td>469</td><td>431</td><td>534</td><td>476</td><td>561</td></tr>
 <tr><td>Словацькі Татри</td><td>332</td><td>286</td><td>213</td><td>·</td><td>253</td><td>·</td><td>245</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td></tr>
@@ -290,11 +294,11 @@ h1,h2,h3{font-weight:600}
 <tr><td>Майорка</td><td>434</td><td>350</td><td>292</td><td>424</td><td>569</td><td>521</td><td>653</td><td>651</td><td>476</td><td>525</td><td>782</td><td>660</td></tr>
 <tr><td>Валенсія</td><td>295</td><td>316</td><td>497</td><td>317</td><td>492</td><td>367</td><td>467</td><td>585</td><td>462</td><td>546</td><td>531</td><td>487</td></tr>
 <tr><td>Севілья</td><td>310</td><td>355</td><td>323</td><td>325</td><td>363</td><td>298</td><td>·</td><td>472</td><td>629</td><td>·</td><td>·</td><td>·</td></tr>
+<tr><td>Рим</td><td>·</td><td>301</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td></tr>
 <tr><td>Лісабон</td><td>559</td><td>307</td><td>496</td><td>394</td><td>464</td><td>614</td><td>689</td><td>716</td><td>703</td><td>1017</td><td>816</td><td>760</td></tr>
 <tr><td>Спліт</td><td>·</td><td>·</td><td>1048</td><td>·</td><td>·</td><td>·</td><td>320</td><td>459</td><td>635</td><td>834</td><td>468</td><td>638</td></tr>
 <tr><td>Ніцца</td><td>325</td><td>398</td><td>325</td><td>487</td><td>334</td><td>·</td><td>358</td><td>568</td><td>487</td><td>657</td><td>922</td><td>501</td></tr>
 <tr><td>Відень</td><td>340</td><td>389</td><td>416</td><td>458</td><td>455</td><td>442</td><td>408</td><td>399</td><td>398</td><td>397</td><td>407</td><td>935</td></tr>
-<tr><td>Рим</td><td>·</td><td>349</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td></tr>
 <tr><td>Марракеш</td><td>568</td><td>374</td><td>450</td><td>1345</td><td>745</td><td>600</td><td>665</td><td>892</td><td>·</td><td>·</td><td>·</td><td>·</td></tr>
 <tr><td>Рига</td><td>·</td><td>409</td><td>717</td><td>·</td><td>665</td><td>·</td><td>423</td><td>741</td><td>·</td><td>·</td><td>828</td><td>·</td></tr>
 <tr><td>Белград</td><td>621</td><td>422</td><td>455</td><td>413</td><td>630</td><td>578</td><td>631</td><td>738</td><td>565</td><td>613</td><td>728</td><td>611</td></tr>

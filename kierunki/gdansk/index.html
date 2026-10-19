@@ -141,6 +141,10 @@ ul.wskazowki{list-style:none;padding:0;max-width:var(--tekst)}ul.wskazowki li{ba
 ul.wskazowki strong{display:block;font-family:var(--serif);font-weight:400;font-size:1.16rem}ul.wskazowki p{margin:4px 0 6px}
 .kat-wsk{display:inline-block;font-size:.8rem;font-weight:800;color:var(--navy);background:var(--navy-soft);border-radius:999px;padding:2px 10px;margin-bottom:6px}
 .sprawdzone{color:var(--zielen);font-weight:800;white-space:nowrap}.sprawdzone::before{content:"✓ "}
+ul.pytania{list-style:none;padding:0;max-width:var(--tekst)}ul.pytania>li{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:14px 18px;margin:0 0 14px}
+ul.pytania p.pytanie{font-family:var(--serif);font-size:1.16rem;margin:0 0 2px}ul.odpowiedzi{list-style:none;padding:0;margin:10px 0 0}ul.odpowiedzi li{border-left:3px solid var(--line);padding:2px 0 2px 12px;margin:0 0 10px}
+ul.odpowiedzi li.najlepsza{border-left-color:var(--zielen)}ul.odpowiedzi p{margin:0 0 4px}.pomoglo{display:inline-block;font-size:.8rem;font-weight:800;color:var(--navy);background:var(--navy-soft);border-radius:999px;padding:1px 8px;margin-left:6px}
+ul.czekaja{max-width:var(--tekst)}
 .autorzy{margin-top:36px}
 footer{padding-top:22px;padding-bottom:24px;border-top:2px solid var(--ink);margin-top:12px}footer p{font-size:.9rem;color:var(--ink-soft);max-width:none}
 .stopka{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:18px 36px;margin-bottom:10px}@media(max-width:760px){.stopka{grid-template-columns:1fr 1fr}.stopka .o{grid-column:1 / -1}}
@@ -212,6 +216,7 @@ p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
 <a class="plan-nav" href="/nowy/start?z=nav" data-goatcounter-click="plan-nav-kierunek">Zamów plan</a>
 <span class="linki">
 <a href="/kierunki/">Kierunki</a>
+<a href="/kierunki/#szukaj">Szukaj kierunku</a>
 <a href="/gdzie-leciec/pazdziernik/">Gdzie lecieć</a>
 <a href="/okazje/">Okazje</a>
 <a href="/tanie-loty/">Tanie loty</a>
@@ -227,7 +232,7 @@ p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
 <h1>Gdańsk</h1>
 <p class="lead">Najcieplej jest w sierpniu, około 21°C w dzień, a morze ma około 20°C. Gołębie poleciałyby od lipca do sierpnia. Samolot nie jest potrzebny, dojedziesz lądem. Niżej znajdziesz tanie jedzenie i miejsca spoza przewodników.</p>
 </div>
-<p class="autor-pasek"><img src="/img/razem.jpg" alt="" width="40" height="40" loading="lazy" decoding="async">Przygotowali <a href="/o-nas/">Michał i Paulina</a>, którzy sprawdzili na miejscu 35 krajów.</p>
+<p class="autor-pasek"><img src="/img/razem.jpg" alt="" width="40" height="40" loading="lazy" decoding="async"><span>Przygotowali <a href="/o-nas/">Michał i Paulina</a>, którzy razem odwiedzili 35 krajów.</span></p>
 <aside class="plan" aria-label="Plan podróży od gołębi">
 <p><strong>Nie chcesz liczyć sam?</strong>Michał i Paulina ułożą Ci ten wyjazd: trasa, noclegi, jedzenie, plan B. Od 399 zł, pierwsze propozycje w 48 h, zwrot 100%, jeśli nie trafimy.</p>
 <a class="przycisk" href="/nowy/start?kierunek=gdansk&amp;z=kierunek" data-goatcounter-click="plan-blok-kierunek">Zamów plan: Gdańsk</a>
@@ -316,6 +321,13 @@ p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
 <li><strong>Baby pruskie</strong><small>Gdańsk</small><p>Rzadkie kamienne rzeźby, jeden z ostatnich materialnych śladów kultury dawnych Prusów na Pomorzu.</p></li>
 <li><strong>Twierdza Wisłoujście</strong><small>Wisłoujście</small><p>Siedemsetletnia twierdza przy ujściu Wisły, jeden z najciekawszych i najmniej zatłoczonych zabytków miasta.</p></li>
 </ul></div>
+<div class="kat"><h3>Na co uważać</h3>
+<ul class="miejsca">
+<li><strong>Nocny zakaz sprzedaży alkoholu</strong><p>Od 1 września 2025 w całym Gdańsku sklepy i stacje paliw nie sprzedają alkoholu od 22:00 do 6:00. Restauracje, bary i puby działają normalnie.</p></li>
+<li><strong>Sinice na kąpieliskach</strong><p>Latem kąpieliska w Brzeźnie i Jelitkowie bywają zamykane z powodu sinic. Przed wejściem do wody sprawdź komunikaty GIS na sk.gis.gov.pl.</p></li>
+<li><strong>Podróbki bursztynu</strong><p>Na straganach trafiają się kopal, szkło i plastik udające bursztyn, a bursztyn prasowany musi być tak opisany. Przy droższym zakupie poproś o certyfikat autentyczności.</p></li>
+<li><strong>Jarmark św. Dominika</strong><p>Jarmark trwa trzy tygodnie od drugiej połowy lipca i zajmuje uliczki Głównego Miasta, a w jego strefie wyłączone są hulajnogi. Nie wjeżdżaj autem do centrum, zostaw je na parkingu poza nim.</p></li>
+</ul></div>
 </div>
 <h3>Od podróżników</h3>
 <p>Nikt jeszcze nie dodał wskazówki z wyjazdu. Możesz być pierwszy.</p>
@@ -358,6 +370,7 @@ p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
 </ul>
 <p class="dalej"><a href="/kraje/polska/">Więcej o kraju: Polska</a> <a href="https://www.gov.pl/web/dyplomacja/informacje-dla-podrozujacych">Serwis MSZ „Polak za granicą”</a></p>
 </section>
+
 <section>
 <h2>Gdańsk: krótko o najczęstszych pytaniach</h2>
 <details><summary>Gdańsk: ile trwa lot z Polski?</summary><p>Z Polski dojedziesz tu lądem, samolot nie jest potrzebny.</p></details>

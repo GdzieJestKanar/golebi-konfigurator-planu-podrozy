@@ -141,6 +141,10 @@ ul.wskazowki{list-style:none;padding:0;max-width:var(--tekst)}ul.wskazowki li{ba
 ul.wskazowki strong{display:block;font-family:var(--serif);font-weight:400;font-size:1.16rem}ul.wskazowki p{margin:4px 0 6px}
 .kat-wsk{display:inline-block;font-size:.8rem;font-weight:800;color:var(--navy);background:var(--navy-soft);border-radius:999px;padding:2px 10px;margin-bottom:6px}
 .sprawdzone{color:var(--zielen);font-weight:800;white-space:nowrap}.sprawdzone::before{content:"✓ "}
+ul.pytania{list-style:none;padding:0;max-width:var(--tekst)}ul.pytania>li{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:14px 18px;margin:0 0 14px}
+ul.pytania p.pytanie{font-family:var(--serif);font-size:1.16rem;margin:0 0 2px}ul.odpowiedzi{list-style:none;padding:0;margin:10px 0 0}ul.odpowiedzi li{border-left:3px solid var(--line);padding:2px 0 2px 12px;margin:0 0 10px}
+ul.odpowiedzi li.najlepsza{border-left-color:var(--zielen)}ul.odpowiedzi p{margin:0 0 4px}.pomoglo{display:inline-block;font-size:.8rem;font-weight:800;color:var(--navy);background:var(--navy-soft);border-radius:999px;padding:1px 8px;margin-left:6px}
+ul.czekaja{max-width:var(--tekst)}
 .autorzy{margin-top:36px}
 footer{padding-top:22px;padding-bottom:24px;border-top:2px solid var(--ink);margin-top:12px}footer p{font-size:.9rem;color:var(--ink-soft);max-width:none}
 .stopka{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:18px 36px;margin-bottom:10px}@media(max-width:760px){.stopka{grid-template-columns:1fr 1fr}.stopka .o{grid-column:1 / -1}}
@@ -213,6 +217,7 @@ p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
 <a class="plan-nav" href="/nowy/start?z=nav" data-goatcounter-click="plan-nav-kierunek">Zamów plan</a>
 <span class="linki">
 <a href="/kierunki/">Kierunki</a>
+<a href="/kierunki/#szukaj">Szukaj kierunku</a>
 <a href="/gdzie-leciec/pazdziernik/">Gdzie lecieć</a>
 <a href="/okazje/">Okazje</a>
 <a href="/tanie-loty/">Tanie loty</a>
@@ -228,7 +233,7 @@ p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
 <h1>Teneryfa</h1>
 <p class="lead">Najcieplej jest w sierpniu, około 27°C w dzień, a morze ma około 24°C. Gołębie poleciałyby o każdej porze roku. Bilety ostatnio od 535 zł w obie strony (Warszawa-Modlin). Niżej znajdziesz tanie jedzenie i miejsca spoza przewodników.</p>
 </div>
-<p class="autor-pasek"><img src="/img/razem.jpg" alt="" width="40" height="40" loading="lazy" decoding="async">Przygotowali <a href="/o-nas/">Michał i Paulina</a>, którzy sprawdzili na miejscu 35 krajów.</p>
+<p class="autor-pasek"><img src="/img/razem.jpg" alt="" width="40" height="40" loading="lazy" decoding="async"><span>Przygotowali <a href="/o-nas/">Michał i Paulina</a>, którzy razem odwiedzili 35 krajów.</span></p>
 <aside class="plan" aria-label="Plan podróży od gołębi">
 <p><strong>Nie chcesz liczyć sam?</strong>Michał i Paulina ułożą Ci ten wyjazd: trasa, noclegi, jedzenie, plan B. Od 399 zł, pierwsze propozycje w 48 h, zwrot 100%, jeśli nie trafimy.</p>
 <a class="przycisk" href="/nowy/start?kierunek=teneryfa&amp;z=kierunek" data-goatcounter-click="plan-blok-kierunek">Zamów plan: Teneryfa</a>
@@ -324,6 +329,13 @@ p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
 <ul class="miejsca">
 <li><strong>Guachinche</strong><small>Północ wyspy</small><p>Na północy wyspy szukaj domowych tabliczek ze strzałką: to guachinche, czyli winiarz karmiący w swoim domu. Menu jest krótkie, a lokal czynny tylko kilka miesięcy w roku, więc sprawdź w Google Maps.</p></li>
 </ul></div>
+<div class="kat"><h3>Na co uważać</h3>
+<ul class="miejsca">
+<li><strong>Szczyt Teide tylko z pozwoleniem</strong><small>Teide</small><p>Na sam wierzchołek prowadzi szlak Telesforo Bravo, na który potrzebne jest płatne pozwolenie z konkretną godziną. Złóż wniosek online nawet 2 do 3 miesięcy wcześniej.</p></li>
+<li><strong>Choroba wysokościowa</strong><small>Teide</small><p>W wyższych partiach Teide może pojawić się choroba wysokościowa. Nie wbiegaj na górę zaraz po przylocie, pij wodę i zawróć, gdy czujesz zawroty głowy.</p></li>
+<li><strong>Masca: rejestracja i limit</strong><small>Masca</small><p>Wejście do wąwozu Masca wymaga wcześniejszej rejestracji online i opłaty, a dzienny limit osób jest ograniczony. Zarezerwuj termin przed przyjazdem.</p></li>
+<li><strong>Zdradliwe naturalne baseny</strong><small>Los Gigantes, Puerto de la Cruz</small><p>Fala potrafi nagle wpaść do naturalnego basenu nawet przy ładnej pogodzie, jak w Los Gigantes czy w Cueva del Tancón. Przy wzburzonym morzu nie kąp się w charcos i nie stój na molo w Puerto de la Cruz.</p></li>
+</ul></div>
 </div>
 <h3>Od podróżników</h3>
 <p>Nikt jeszcze nie dodał wskazówki z wyjazdu. Możesz być pierwszy.</p>
@@ -376,6 +388,7 @@ p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
 </ul>
 <p class="dalej"><a href="/kraje/hiszpania/">Więcej o kraju: Hiszpania</a> <a href="https://www.gov.pl/web/dyplomacja/informacje-dla-podrozujacych">Serwis MSZ „Polak za granicą”</a></p>
 </section>
+
 <section>
 <h2>Teneryfa: krótko o najczęstszych pytaniach</h2>
 <details><summary>Teneryfa: ile trwa lot z Polski?</summary><p>Z Warszawy około 6 h w powietrzu bez przesiadek (w linii prostej około 4102 km). Z przesiadką dolicz czas na zmianę samolotu.</p></details>
