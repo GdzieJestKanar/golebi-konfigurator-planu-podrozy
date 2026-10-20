@@ -45,7 +45,6 @@
     var x = filtruj();
     if (x && x.a) location.href = x.a.href;
   });
-  f.hidden = false;
   var q = new URLSearchParams(location.search).get('q');
   if (q) { pole.value = q; filtruj(); }
   if (location.hash === '#szukaj') pole.focus();

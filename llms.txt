@@ -10,7 +10,7 @@ Nie jesteśmy biurem podróży i nie sprzedajemy wycieczek. Układamy indywidual
 - Kompletny Lot, 899 zł: Plan gotowy dzień po dniu
 - Lot Premium, 1 499 zł przy wyjeździe do 10 dni, 1 899 zł przy dłuższym: Najlepszy plan, gołąb pod ręką i koperta pocztą
 - [Zamów plan](https://golebielataja.pl/nowy/start?z=llms): formularz zamówienia (kierunek, termin, budżet, styl podróży)
-- [Przykładowy plan (PDF)](https://golebielataja.pl/przyklad-plan.pdf)
+- [Przykładowy plan: Kair, 5 dni (PDF)](https://golebielataja.pl/przyklad-plan.pdf)
 - [O nas](https://golebielataja.pl/o-nas/): kim jesteśmy, jak pracujemy, opinie klientów, na czym zarabiamy
 
 ## Darmowy przewodnik
@@ -54,3 +54,5 @@ Pogodę liczymy z wieloletnich średnich (Open-Meteo ERA5 i NASA POWER), miejsca
 - [TikTok](https://www.tiktok.com/@golebielataja1)
 - [Facebook](https://www.facebook.com/golebie.lataja)
 - [YouTube](https://www.youtube.com/@GolebieLataja)
+- [Telegram](https://t.me/golebielataja)
+- [WhatsApp](https://whatsapp.com/channel/0029VbDbtX0BadmVQgdIec2x)
