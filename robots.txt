@@ -2,6 +2,8 @@ User-agent: *
 Allow: /
 Disallow: /dziekujemy.html
 Disallow: /pin/
+Disallow: /nowy/
+Disallow: /start
 
 User-agent: OAI-SearchBot
 User-agent: ChatGPT-User
@@ -18,5 +20,7 @@ User-agent: bingbot
 Allow: /
 Disallow: /dziekujemy.html
 Disallow: /pin/
+Disallow: /nowy/
+Disallow: /start
 
 Sitemap: https://golebielataja.pl/sitemap.xml
