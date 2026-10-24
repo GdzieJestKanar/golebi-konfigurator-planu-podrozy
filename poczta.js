@@ -1,4 +1,5 @@
 (function () {
+  var API = "https://api.golebielataja.pl";
   var f = document.querySelector('.pocztowka-form');
   if (!f) return;
   var s = f.parentNode.querySelector('[data-status]');
@@ -11,8 +12,8 @@
     b.disabled = true;
     var tekst = b.textContent;
     b.textContent = f.dataset.wysylam;
-    var body = new URLSearchParams({ access_key: f.dataset.k, subject: 'Nowy zapis na pocztówki', email: email, message: 'Zapis na pocztówki: ' + location.pathname });
-    fetch('https://splitforms.com/api/submit', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded', Accept: 'application/json' }, body: body.toString() })
+    var body = new URLSearchParams({ email: email, zrodlo: location.pathname, firma: f.firma.value });
+    fetch(API + '/pocztowka/zapis', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded', Accept: 'application/json' }, body: body.toString() })
       .then(function (r) {
         if (!r.ok) throw new Error(String(r.status));
         f.reset();
