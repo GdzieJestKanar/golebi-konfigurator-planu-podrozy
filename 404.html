@@ -17,6 +17,11 @@
   if (location.search.indexOf("sciezka=") !== -1) return;
   if (baza === "/" && p.indexOf("/zlecenie") === 0) p = p.slice("/zlecenie".length) || "/";
   if (p.indexOf(baza) !== 0) return;
+  /* Audyt 15.11.2026: przy bazie "/" do appki odsyłamy tylko adresy jej ekranów (pierwszy człon adresu z listy poniżej).
+     Literówka w adresie przewodnika zostaje na tej lekkiej stronie z wyszukiwarką kierunków, zamiast ładować całą appkę
+     po to, żeby pokazać 404. Lista to nazwy z apps/mobile/src/app; test w apps/mobile pilnuje zgodności. */
+  var EKRANY = ["biurko", "dev", "dokadkolwiek", "dolacz", "jak-sortujemy", "kierunki", "konto", "lot", "nowy", "o-nas", "obserwowane", "odkrywaj", "okazje", "p", "podroze", "podroznik", "premium", "prezent", "profil", "punkty", "rodzina", "spolecznosc", "start", "szkic", "wolne-dni", "wspolne", "zaloguj", "zapytaj"];
+  if (baza === "/" && EKRANY.indexOf(p.split("/")[1]) === -1) return;
   if (p === baza || p === baza + "index.html") {
     if (p !== location.pathname) location.replace(baza + location.search + location.hash);
     return;
@@ -51,7 +56,16 @@ main{flex:1;display:grid;place-items:center;padding:48px 20px;text-align:center}
 .stempel b{display:block;font-family:"Young Serif",Georgia,serif;font-weight:400;font-size:2.6rem}
 .stempel span{display:block;font-family:"IBM Plex Mono",monospace;font-size:.72rem}
 h1{font-family:"Young Serif",Georgia,serif;font-weight:400;color:var(--navy);font-size:clamp(2.1rem,6vw,3rem);line-height:1.08;margin-bottom:14px}
-p{margin-bottom:26px}
+p{margin-bottom:22px}
+form{margin:0 auto 22px;max-width:420px;text-align:left}
+label{display:block;font-weight:800;font-size:.95rem;margin-bottom:6px}
+.pole{display:flex;gap:8px}
+input{flex:1;min-width:0;font:inherit;color:var(--ink);background:var(--white);border:1.5px solid var(--navy);border-radius:14px;padding:10px 14px;min-height:48px}
+button{font:inherit;font-weight:800;color:var(--white);background:var(--red);border:0;border-radius:14px;padding:10px 20px;min-height:48px;cursor:pointer}
+button:hover{background:#B8361F}
+input:focus-visible,button:focus-visible,.linki a:focus-visible{outline:2px solid var(--navy);outline-offset:3px}
+.linki{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 22px;margin-bottom:0}
+.linki a{color:var(--navy);font-weight:800}
 .back{display:inline-block;font-weight:800;background:var(--red);color:var(--white);text-decoration:none;border-radius:16px;padding:12px 24px;min-height:48px}
 .back:hover{background:#B8361F}
 .back:focus-visible{outline:2px solid var(--navy);outline-offset:3px}
@@ -63,10 +77,27 @@ p{margin-bottom:26px}
   <div class="box">
     <div class="stempel" role="img" aria-label="Błąd 404, adresat nieznany"><span>zwrot do nadawcy</span><b>404</b><span>adresat nieznany</span></div>
     <h1>Gołąb zabłądził</h1>
-    <p>Strona, której szukasz, nie istnieje albo zmieniła adres. Lot trwa dalej, a plan czeka pod właściwym adresem.</p>
-    <a class="back" href="/">Wróć na stronę główną</a>
+    <p>Strona, której szukasz, nie istnieje albo zmieniła adres. Wpisz kierunek, a znajdziemy właściwą stronę.</p>
+    <form role="search" action="/kierunki/">
+      <label for="q">Dokąd chcesz lecieć?</label>
+      <div class="pole"><input id="q" name="q" type="search" placeholder="np. Majorka, Grecja, Rzym" autocomplete="off" enterkeyhint="search"><button type="submit">Szukaj</button></div>
+    </form>
+    <p class="linki"><a href="/">Strona główna</a><a href="/kierunki/">Wszystkie kierunki</a><a href="/okazje/">Okazje</a></p>
   </div>
 </main>
 <div class="strip" aria-hidden="true"></div>
+<script>
+/* Podpowiedź z błędnego adresu: /kierunki-majorka albo /majorka/ wpisuje „majorka” w pole szukania. */
+(function () {
+  var q = document.getElementById("q");
+  if (!q || q.value) return;
+  var czesci = location.pathname.split("/").filter(Boolean);
+  var ostatni = czesci[czesci.length - 1] || "";
+  try { ostatni = decodeURIComponent(ostatni); } catch (e) {}
+  var s = ostatni.replace(/\.html?$/, "").replace(/^(kierunki|kierunek|kraje|kraj)-/, "").replace(/[-_]+/g, " ").trim();
+  /* Tylko jedno albo dwa słowa: dłuższy adres to tytuł tekstu, nie nazwa kierunku. */
+  if (location.search.indexOf("sciezka=") === -1 && /^[a-zA-Z\u00C0-\u017F]{3,20}( [a-zA-Z\u00C0-\u017F]{2,20})?$/.test(s)) q.value = s;
+})();
+</script>
 </body>
 </html>
