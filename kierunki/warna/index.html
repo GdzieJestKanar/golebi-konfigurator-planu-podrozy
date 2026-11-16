@@ -105,6 +105,7 @@ ul.lista-rzeczy li::before{content:"";position:absolute;left:0;top:.3em;width:16
 table{border-collapse:collapse;width:100%;font-size:.98rem;font-variant-numeric:tabular-nums lining-nums}
 th,td{padding:8px 10px;text-align:left;border-bottom:1px solid var(--line)}thead th{font-weight:800;font-size:.88rem;color:var(--ink-soft);border-bottom:2px solid var(--ink)}tbody th{font-weight:700;color:var(--ink)}
 tbody tr:nth-child(even){background:rgba(255,253,248,.7)}.przewin{overflow-x:auto;-webkit-overflow-scrolling:touch}
+@media(max-width:480px){.przewin th,.przewin td{padding-left:5px;padding-right:5px}table.ceny td[data-kiedy]{font-size:.92rem}table.ceny .sprawdzono{white-space:normal}}
 table.mapa td,table.mapa th{text-align:center;padding:6px 3px;font-size:.84rem}table.mapa td:first-child,table.mapa th:first-child{text-align:left;white-space:nowrap}
 table.fakty th[scope=row]{width:34%;font-family:var(--mono);font-weight:500;font-size:.8rem;color:var(--ink-soft);border-bottom:1px dashed var(--line);vertical-align:top;padding-top:11px}table.fakty td{border-bottom:1px dashed var(--line)}
 .o1{background:#F3DED8}.o2{background:#F0E3CC}.o3{background:#E6E8C8}.o4{background:#C8E0C0}.o5{background:#9ACB98}
@@ -125,7 +126,7 @@ nav.spis{position:sticky;top:0;z-index:5;background:var(--paper);margin:12px -20
 nav.spis ol{display:flex;gap:8px;list-style:none;margin:0;padding:0;overflow-x:auto;scrollbar-width:none}nav.spis li{margin:0}
 nav.spis a{display:block;white-space:nowrap;padding:6px 14px;border:1.5px solid var(--line);border-radius:999px;background:var(--white);text-decoration:none;font-size:.92rem;font-weight:700;color:var(--ink)}
 nav.spis a[aria-current]{background:var(--navy);border-color:var(--navy);color:var(--white)}
-@media(min-width:1400px){nav.spis{position:fixed;top:24px;left:calc(50% + 560px);width:200px;margin:0;padding:14px;border:0;border-radius:16px;background:var(--white)}
+@media(min-width:1560px){nav.spis{position:fixed;top:24px;left:calc(50% + 560px);width:200px;margin:0;padding:14px;border:0;border-radius:16px;background:var(--white)}
 nav.spis .spis-tytul{display:block;margin:0 0 6px 10px;font-weight:800;font-size:.85rem;color:var(--ink-soft)}
 nav.spis ol{flex-direction:column;gap:2px;overflow:visible}nav.spis a{border:0;border-radius:10px;background:none;font-weight:600;white-space:normal;padding:6px 10px}
 nav.spis a[aria-current]{background:var(--paper);color:var(--navy);font-weight:800}section[id]{scroll-margin-top:16px}}
@@ -203,9 +204,19 @@ section.archiwum li{padding:12px 16px;border:1px solid var(--line);border-radius
 section.archiwum li strong{display:block}section.archiwum .cena{font-family:var(--serif);color:var(--ink);font-size:1.1rem}
 section.archiwum .cena small{font-family:var(--sans);color:var(--zielen,#2f7a4b);margin-left:8px;font-size:.88rem}
 section.archiwum .kiedy{display:block;margin-top:2px;font-size:.85rem;color:var(--ink-soft)}
-p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
+p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}
+.okazje-filtr{margin:18px 0 4px;display:grid;gap:10px}.okazje-filtr p{margin:0;font-weight:800;font-size:.9rem;color:var(--ink-soft)}
+.okazje-filtr .chipy{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding:2px 0}.okazje-filtr .chipy::-webkit-scrollbar{display:none}
+.okazje-filtr button{flex:none;font:inherit;font-size:.92rem;font-weight:700;white-space:nowrap;min-height:40px;padding:6px 14px;border:1.5px solid var(--line);border-radius:999px;background:var(--white);color:var(--ink);cursor:pointer}
+.okazje-filtr button[aria-pressed=true]{background:var(--navy);border-color:var(--navy);color:var(--white)}
+.okazje-filtr button:focus-visible,button.okazje-wiecej:focus-visible{outline:3px solid var(--navy);outline-offset:2px}
+article.okazja[hidden]{display:none}
+article.okazja .okazja-foto{display:block;margin:0 0 12px}article.okazja .okazja-foto img{display:block;width:100%;height:150px;object-fit:cover;border-radius:10px;background:var(--paper-deep)}
+@media(min-width:700px){article.okazja .okazja-foto{float:right;width:220px;margin:0 0 10px 18px}article.okazja .okazja-foto img{height:146px}article.okazja::after{content:"";display:block;clear:both}}
+p.okazje-foto-zrodla{font-size:.72rem;color:var(--ink-soft);margin:0;max-width:none}p.okazje-foto-zrodla a{color:var(--ink-soft)}
+button.okazje-wiecej{justify-self:start;font:inherit;font-weight:700;min-height:44px;padding:8px 20px;border:1.5px solid var(--navy);border-radius:999px;background:var(--white);color:var(--navy);cursor:pointer}</style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"TouristDestination","name":"Warna","description":"Warna (Bułgaria): najlepiej od czerwca do września, około 2 h lotu z Warszawy. Pogoda co miesiąc, ceny lotów i co zobaczyć.","url":"https://golebielataja.pl/kierunki/warna/","geo":{"@type":"GeoCoordinates","latitude":43.214,"longitude":27.914},"containedInPlace":{"@type":"Country","name":"Bułgaria"},"includesAttraction":[{"@type":"TouristAttraction","name":"Warna (archeologia)","sameAs":"https://www.wikidata.org/wiki/Q946052"},{"@type":"TouristAttraction","name":"Jezioro Warneńskie","sameAs":"https://www.wikidata.org/wiki/Q1070423"},{"@type":"TouristAttraction","name":"Termy rzymskie w Warnie","sameAs":"https://www.wikidata.org/wiki/Q12292389"},{"@type":"TouristAttraction","name":"Aładża","sameAs":"https://www.wikidata.org/wiki/Q1767605"},{"@type":"TouristAttraction","name":"Dryzki","sameAs":"https://www.wikidata.org/wiki/Q3251089"},{"@type":"TouristAttraction","name":"Akwarium w Warnie","sameAs":"https://www.wikidata.org/wiki/Q3657749"},{"@type":"TouristAttraction","name":"Boris Georgiev City Art Gallery","sameAs":"https://www.wikidata.org/wiki/Q4945258"},{"@type":"TouristAttraction","name":"Odessos","sameAs":"https://www.wikidata.org/wiki/Q11796095"}]}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Warna: ile trwa lot z Polski?","acceptedAnswer":{"@type":"Answer","text":"Z Warszawy około 2 h w powietrzu bez przesiadek (w linii prostej około 1122 km). Z przesiadką dolicz czas na zmianę samolotu."}},{"@type":"Question","name":"Warna: kiedy najlepiej lecieć?","acceptedAnswer":{"@type":"Answer","text":"Najlepiej od czerwca do września. Najcieplej jest w sierpniu, około 27°C w dzień."}},{"@type":"Question","name":"Warna: paszport czy dowód?","acceptedAnswer":{"@type":"Answer","text":"Wystarczy dowód osobisty. Przed wyjazdem sprawdź aktualne zasady w serwisie MSZ."}},{"@type":"Question","name":"Warna: ile kosztuje dzień na miejscu?","acceptedAnswer":{"@type":"Answer","text":"Bez lotu i noclegu oszczędnie około 80 zł, średnio 150 zł, wygodnie 300 zł na osobę dziennie: jedzenie, transport lokalny i bilety wstępu. Tydzień średnio to około 1050 zł na osobę. Do tego lot: ostatnio od 299 zł w obie strony (Katowice)."}},{"@type":"Question","name":"Warna: gdzie to jest?","acceptedAnswer":{"@type":"Answer","text":"Kraj: Bułgaria. Od Warszawy w linii prostej około 1122 km."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Warna: ile trwa lot z Polski?","acceptedAnswer":{"@type":"Answer","text":"Z Warszawy około 2 h w powietrzu bez przesiadek (w linii prostej około 1122 km). Z przesiadką dolicz czas na zmianę samolotu."}},{"@type":"Question","name":"Warna: kiedy najlepiej lecieć?","acceptedAnswer":{"@type":"Answer","text":"Najlepiej od czerwca do września. Najcieplej jest w sierpniu, około 27°C w dzień."}},{"@type":"Question","name":"Warna: paszport czy dowód?","acceptedAnswer":{"@type":"Answer","text":"Wystarczy dowód osobisty. Przed wyjazdem sprawdź aktualne zasady w serwisie MSZ."}},{"@type":"Question","name":"Warna: ile kosztuje dzień na miejscu?","acceptedAnswer":{"@type":"Answer","text":"Bez lotu i noclegu oszczędnie około 80 zł, średnio 150 zł, wygodnie 300 zł na osobę dziennie: jedzenie, transport lokalny i bilety wstępu. Tydzień średnio to około 1050 zł na osobę. Do tego lot: ostatnio od 290 zł w obie strony (Katowice)."}},{"@type":"Question","name":"Warna: gdzie to jest?","acceptedAnswer":{"@type":"Answer","text":"Kraj: Bułgaria. Od Warszawy w linii prostej około 1122 km."}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Gołębie Latają","item":"https://golebielataja.pl/"},{"@type":"ListItem","position":2,"name":"Kierunki","item":"https://golebielataja.pl/kierunki/"},{"@type":"ListItem","position":3,"name":"Warna","item":"https://golebielataja.pl/kierunki/warna/"}]}</script>
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "dabf88d8ecff46b9af7a1518edc3f5ee"}'></script>
 <script data-goatcounter="https://golebielataja1.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
@@ -236,7 +247,7 @@ p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
 <h1>Warna</h1>
 <p class="lead">Najprzyjemniej jest tu od czerwca do września. W sierpniu termometr dochodzi do 27°C, a morze ma około 26°C. W powietrzu spędzisz około 2 h. Gdzie zjeść za grosze i co zobaczyć poza przewodnikiem, jest niżej.</p>
 </div>
-<p class="autor-pasek"><img src="/img/razem.jpg" alt="" width="40" height="40" loading="lazy" decoding="async"><span>Przygotowali <a href="/o-nas/">Michał i Paulina</a>, którzy razem odwiedzili 35 krajów.</span></p>
+<p class="autor-pasek"><img src="/img/autorzy-80.webp" alt="" width="40" height="40" loading="lazy" decoding="async"><span>Przygotowali <a href="/o-nas/">Michał i Paulina</a>, którzy razem odwiedzili 35 krajów.</span></p>
 <aside class="plan" aria-label="Plan podróży od gołębi">
 <p><strong>Nie chcesz liczyć sam?</strong>Michał i Paulina ułożą Ci ten wyjazd: trasa, noclegi, jedzenie, plan B. Od 399 zł, pierwsze propozycje w 48 h, zwrot 100%, jeśli nie trafimy.</p>
 <a class="przycisk" href="/nowy/start?kierunek=warna&amp;z=kierunek" data-goatcounter-click="plan-blok-kierunek">Zamów plan: Warna</a>
@@ -249,7 +260,7 @@ p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
 <div><dt>Najcieplejsza woda</dt><dd>sierpień, 26°C</dd></div>
 <div><dt>Wjazd</dt><dd>dowód osobisty</dd></div>
 <div><dt>Waluta</dt><dd>EUR</dd></div>
-<div><dt>Lot od</dt><dd>299 zł</dd></div>
+<div><dt>Lot od</dt><dd>290 zł</dd></div>
 <div><dt>Dzień na miejscu</dt><dd>od około 80 zł na osobę</dd></div>
 </dl>
 <aside class="okazja-kierunku" data-okazje-k="warna" aria-label="Okazja na ten kierunek" hidden></aside>
@@ -348,9 +359,7 @@ p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
 <li><strong>Głośne letnie noce</strong><p>Latem Warna przyciąga głównie osoby w wieku od 18 do 30 lat i nocami bywa bardzo głośno. Jeśli szukasz spokoju, wybierz nocleg z dala od centrum imprezowego.</p></li>
 </ul></div>
 </div>
-<h3>Od podróżników</h3>
-<p>Nikt jeszcze nie dodał wskazówki z wyjazdu. Możesz być pierwszy.</p>
-<p><a class="przycisk jasny" href="/start?sciezka=%2Fkierunki%2Fwarna%2Fwskazowka" rel="nofollow">Byłeś tam? Dodaj wskazówkę</a></p>
+<p class="dalej"><a href="/start?sciezka=%2Fkierunki%2Fwarna%2Fwskazowka" rel="nofollow">Byłeś tam? Dodaj wskazówkę</a></p>
 </section>
 <section id="ceny">
 <h2>Ceny lotów</h2>
@@ -358,11 +367,11 @@ p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
 <div class="przewin"><table class="ceny">
 <thead><tr><th scope="col">Skąd</th><th scope="col">Od</th><th scope="col">Przykładowy wylot</th></tr></thead>
 <tbody>
-<tr><th scope="row">Katowice</th><td><span class="cena-zywa" data-cena="warna|katowice|06|kcwarnakatowice" data-at="2026-11-14T09:15:49.754Z" data-c="299"><a class="cena-lot" href="https://www.aviasales.com/search/KTW2006VAR25061?currency=pln&amp;marker=785120.kcwarnakatowice" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-kcwarnakatowice"><strong>od 299 zł</strong></a> <small class="sprawdzono">sprawdzone 14 listopada</small></span></td><td data-kiedy>20 do 25 czerwca 2027</td></tr>
-<tr><th scope="row">Warszawa</th><td><span class="cena-zywa" data-cena="warna|warszawa|07|kcwarnawarszawa" data-at="2026-11-09T01:25:17.340Z" data-c="491"><a class="cena-lot" href="https://www.aviasales.com/search/WAW0107VAR15071?currency=pln&amp;marker=785120.kcwarnawarszawa" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-kcwarnawarszawa"><strong>od 491 zł</strong></a> <small class="sprawdzono">sprawdzone 9 listopada</small></span></td><td data-kiedy>1 do 15 lipca 2027</td></tr>
+<tr><th scope="row">Katowice</th><td><span class="cena-zywa" data-cena="warna|katowice|06|kcwarnakatowice" data-at="2026-11-16T07:33:34.750Z" data-c="290"><a class="cena-lot" href="https://www.aviasales.com/search/KTW2006VAR25061?currency=pln&amp;marker=785120.kcwarnakatowice" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-kcwarnakatowice"><strong>od 290 zł</strong></a> <small class="sprawdzono">sprawdzone 16 listopada</small></span></td><td data-kiedy>20 do 25 czerwca 2027</td></tr>
+<tr><th scope="row">Warszawa</th><td><span class="cena-zywa" data-cena="warna|warszawa|07|kcwarnawarszawa" data-at="2026-11-09T22:02:06.324Z" data-c="491"><a class="cena-lot" href="https://www.aviasales.com/search/WAW0107VAR15071?currency=pln&amp;marker=785120.kcwarnawarszawa" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-kcwarnawarszawa"><strong>od 491 zł</strong></a> <small class="sprawdzono">sprawdzone 9 listopada</small></span></td><td data-kiedy>1 do 15 lipca 2027</td></tr>
 <tr><th scope="row">Poznań</th><td><strong class="cena-zwykle" data-cena="warna|poznan|11|kcwarnapoznan">zwykle od 758 zł</strong></td><td data-kiedy>22 do 26 listopada 2026</td></tr>
 <tr><th scope="row">Kraków</th><td><span class="cena-zywa" data-cena="warna|krakow|07|kcwarnakrakow" data-at="2026-11-15T01:15:50.076Z" data-c="961"><a class="cena-lot" href="https://www.aviasales.com/search/KRK1507VAR20071?currency=pln&amp;marker=785120.kcwarnakrakow" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-kcwarnakrakow"><strong>od 961 zł</strong></a> <small class="sprawdzono">sprawdzone 15 listopada</small></span></td><td data-kiedy>15 do 20 lipca 2027</td></tr>
-<tr><th scope="row">Gdańsk</th><td><span class="cena-zywa" data-cena="warna|gdansk|05|kcwarnagdansk" data-at="2026-11-09T00:55:17.335Z" data-c="1033"><a class="cena-lot" href="https://www.aviasales.com/search/GDN1305VAR27051?currency=pln&amp;marker=785120.kcwarnagdansk" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-kcwarnagdansk"><strong>od 1033 zł</strong></a> <small class="sprawdzono">sprawdzone 9 listopada</small></span></td><td data-kiedy>13 do 27 maja 2027</td></tr>
+<tr><th scope="row">Gdańsk</th><td><span class="cena-zywa" data-cena="warna|gdansk|05|kcwarnagdansk" data-at="2026-11-09T21:32:06.322Z" data-c="1033"><a class="cena-lot" href="https://www.aviasales.com/search/GDN1305VAR27051?currency=pln&amp;marker=785120.kcwarnagdansk" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-kcwarnagdansk"><strong>od 1033 zł</strong></a> <small class="sprawdzono">sprawdzone 9 listopada</small></span></td><td data-kiedy>13 do 27 maja 2027</td></tr>
 <tr><th scope="row">Wrocław</th><td><span class="cena-zywa" data-cena="warna|wroclaw|12|kcwarnawroclaw" data-at="2026-11-12T23:28:25.477Z" data-c="1378"><a class="cena-lot" href="https://www.aviasales.com/search/WRO2212VAR02011?currency=pln&amp;marker=785120.kcwarnawroclaw" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-kcwarnawroclaw"><strong>od 1378 zł</strong></a> <small class="sprawdzono">sprawdzone 12 listopada</small></span></td><td data-kiedy>22 grudnia 2026 do 2 stycznia 2027</td></tr>
 </tbody>
 </table></div>
@@ -380,14 +389,14 @@ p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
 <section id="co-zobaczyc">
 <h2>Zabytki i muzea</h2>
 <ul class="kolumny">
-<li><a href="https://www.wikidata.org/wiki/Q946052">Warna (archeologia)</a> <small>Zabytek</small></li>
-<li><a href="https://www.wikidata.org/wiki/Q1070423">Jezioro Warneńskie</a> <small>Natura</small></li>
-<li><a href="https://www.wikidata.org/wiki/Q12292389">Termy rzymskie w Warnie</a> <small>Muzeum</small></li>
-<li><a href="https://www.wikidata.org/wiki/Q1767605">Aładża</a> <small>Muzeum</small></li>
-<li><a href="https://www.wikidata.org/wiki/Q3251089">Dryzki</a> <small>Muzeum</small></li>
-<li><a href="https://www.wikidata.org/wiki/Q3657749">Akwarium w Warnie</a> <small>Muzeum</small></li>
-<li><a href="https://www.wikidata.org/wiki/Q4945258">Boris Georgiev City Art Gallery</a> <small>Muzeum</small></li>
-<li><a href="https://www.wikidata.org/wiki/Q11796095">Odessos</a> <small>Zabytek</small></li>
+<li><a href="https://www.google.com/maps/search/?api=1&amp;query=Warna%20(archeologia)%2C%20Warna" rel="nofollow noopener">Warna (archeologia)</a> <small>Zabytek</small></li>
+<li><a href="https://www.google.com/maps/search/?api=1&amp;query=Jezioro%20Warne%C5%84skie%2C%20Warna" rel="nofollow noopener">Jezioro Warneńskie</a> <small>Natura</small></li>
+<li><a href="https://www.google.com/maps/search/?api=1&amp;query=Termy%20rzymskie%20w%20Warnie%2C%20Warna" rel="nofollow noopener">Termy rzymskie w Warnie</a> <small>Muzeum</small></li>
+<li><a href="https://www.google.com/maps/search/?api=1&amp;query=A%C5%82ad%C5%BCa%2C%20Warna" rel="nofollow noopener">Aładża</a> <small>Muzeum</small></li>
+<li><a href="https://www.google.com/maps/search/?api=1&amp;query=Dryzki%2C%20Warna" rel="nofollow noopener">Dryzki</a> <small>Muzeum</small></li>
+<li><a href="https://www.google.com/maps/search/?api=1&amp;query=Akwarium%20w%20Warnie%2C%20Warna" rel="nofollow noopener">Akwarium w Warnie</a> <small>Muzeum</small></li>
+<li><a href="https://www.google.com/maps/search/?api=1&amp;query=Boris%20Georgiev%20City%20Art%20Gallery%2C%20Warna" rel="nofollow noopener">Boris Georgiev City Art Gallery</a> <small>Muzeum</small></li>
+<li><a href="https://www.google.com/maps/search/?api=1&amp;query=Odessos%2C%20Warna" rel="nofollow noopener">Odessos</a> <small>Zabytek</small></li>
 </ul>
 <p><a href="https://www.openstreetmap.org/?mlat=43.214&amp;mlon=27.914#map=11/43.214/27.914">Zobacz na mapie OpenStreetMap</a></p>
 </section>
@@ -421,7 +430,7 @@ p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
 <details><summary>Warna: ile trwa lot z Polski?</summary><p>Z Warszawy około 2 h w powietrzu bez przesiadek (w linii prostej około 1122 km). Z przesiadką dolicz czas na zmianę samolotu.</p></details>
 <details><summary>Warna: kiedy najlepiej lecieć?</summary><p>Najlepiej od czerwca do września. Najcieplej jest w sierpniu, około 27°C w dzień.</p></details>
 <details><summary>Warna: paszport czy dowód?</summary><p>Wystarczy dowód osobisty. Przed wyjazdem sprawdź aktualne zasady w serwisie MSZ.</p></details>
-<details><summary>Warna: ile kosztuje dzień na miejscu?</summary><p>Bez lotu i noclegu oszczędnie około 80 zł, średnio 150 zł, wygodnie 300 zł na osobę dziennie: jedzenie, transport lokalny i bilety wstępu. Tydzień średnio to około 1050 zł na osobę. Do tego lot: ostatnio od 299 zł w obie strony (Katowice).</p></details>
+<details><summary>Warna: ile kosztuje dzień na miejscu?</summary><p>Bez lotu i noclegu oszczędnie około 80 zł, średnio 150 zł, wygodnie 300 zł na osobę dziennie: jedzenie, transport lokalny i bilety wstępu. Tydzień średnio to około 1050 zł na osobę. Do tego lot: ostatnio od 290 zł w obie strony (Katowice).</p></details>
 <details><summary>Warna: gdzie to jest?</summary><p>Kraj: Bułgaria. Od Warszawy w linii prostej około 1122 km.</p></details>
 </section>
 
@@ -429,9 +438,9 @@ p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
 <h2>Wolisz gotowy plan?</h2>
 <p>Gołębie przejrzą loty i noclegi za Ciebie i ułożą trasę. Pierwsze propozycje masz w 48 godzin.</p>
 <p class="cena">Od 399 zł za cały plan. Płacisz dopiero na końcu zamówienia.</p>
-<p class="drobne">BLIK, karta albo Klarna. Zwrot 100%, jeśli nie trafimy. Propozycje z lotami i hotelami w 48 h. Pełny plan dzień po dniu w 5 dni roboczych od rezerwacji.</p>
+<p class="drobne">BLIK, karta albo Klarna. Zwrot 100%, jeśli nie trafimy z propozycjami. Propozycje z lotami i hotelami w 48 h. Pełny plan dzień po dniu w 5 dni roboczych od rezerwacji.</p>
 <p><a class="przycisk" href="/nowy/start?kierunek=warna&amp;z=kierunek" data-goatcounter-click="plan-koniec-kierunek">Zamów plan: Warna</a><a class="przycisk jasny" href="/start?sciezka=%2Fkierunki%2Fwarna" rel="nofollow">Otwórz w aplikacji</a></p>
-<p><a href="/przyklad-plan.pdf" data-goatcounter-click="plan-pdf-kierunek">Zobacz przykładowy plan: Kair, 5 dni (PDF)</a></p>
+<p><a href="/przykladowy-plan/" data-goatcounter-click="plan-pdf-kierunek">Zobacz przykładowy plan: Kair, 5 dni</a></p>
 <blockquote class="opinia"><p>Miałem biznesowy wyjazd do południowych Niemiec. Gołębie wskazali, jakie miasteczka po drodze zwiedzić oraz jak spędzić wolny weekend w tych okolicach.</p><small>Tomasz, Niemcy służbowo i po godzinach</small></blockquote>
 <div class="czy-sam"><p><strong>Gotowy plan czy sam?</strong></p><p><a href="/porownanie/biuro-podrozy/">Plan od gołębi czy biuro podróży</a></p><p><a href="/porownanie/plan-z-ai/">Plan od gołębi czy plan z AI</a></p><p><a href="/porownanie/itaka-rainbow-tui/">Itaka, Rainbow czy TUI? Porównanie biur</a></p></div>
 </section>
@@ -455,7 +464,7 @@ p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
 <div><p class="tytul">Kiedy wolne</p><ul><li><a href="/majowka/">Majówka</a></li><li><a href="/wielkanoc/">Wielkanoc za granicą</a></li><li><a href="/boze-cialo/">Boże Ciało</a></li><li><a href="/ferie-zimowe/">Ferie zimowe</a></li><li><a href="/sylwester-za-granica/">Sylwester za granicą</a></li><li><a href="/swieta-w-cieple/">Święta w cieple</a></li><li><a href="/wakacje-z-dziecmi/">Wakacje z dziećmi</a></li><li><a href="/podroz-poslubna/">Podróż poślubna</a></li></ul></div>
 <div><p class="tytul">Przydatne</p><ul><li><a href="/aktualnosci/">Aktualności</a></li><li><a href="/poradniki/">Poradniki</a></li><li><a href="/porownanie/">Porównania</a></li><li><a href="/tanie-loty/">Tanie loty</a></li><li><a href="/okazje/">Okazje</a></li><li><a href="/prezent/">Voucher na podróż</a></li><li><a href="https://t.me/golebielataja" rel="noopener" target="_blank">Okazje lotnicze na Telegramie</a></li><li><a href="https://whatsapp.com/channel/0029VbDbtX0BadmVQgdIec2x" rel="noopener" target="_blank">Okazje na WhatsAppie</a></li><li><a href="/polityka-prywatnosci.html">Polityka prywatności</a></li><li><a href="/regulamin.html">Regulamin</a></li><li><a href="#zgoda" data-cookies="1">Ustawienia cookies</a></li></ul></div>
 </div>
-<p class="drobne">Strony odświeżamy codziennie, a ceny lotów odświeżają się same przy każdym wejściu. Stan na 15 listopada 2026.</p>
+<p class="drobne">Strony odświeżamy codziennie, a ceny lotów odświeżają się same przy każdym wejściu. Stan na 16 listopada 2026.</p>
 </footer>
 <div class="pasek"></div>
 <div class="plan-pasek" hidden><p>Plan podróży od 399 zł, propozycje w 48 h</p><a href="/nowy/start?kierunek=warna&amp;z=kierunek" data-goatcounter-click="plan-pasek-kierunek">Zamów</a></div>

@@ -106,6 +106,7 @@ ul.lista-rzeczy li::before{content:"";position:absolute;left:0;top:.3em;width:16
 table{border-collapse:collapse;width:100%;font-size:.98rem;font-variant-numeric:tabular-nums lining-nums}
 th,td{padding:8px 10px;text-align:left;border-bottom:1px solid var(--line)}thead th{font-weight:800;font-size:.88rem;color:var(--ink-soft);border-bottom:2px solid var(--ink)}tbody th{font-weight:700;color:var(--ink)}
 tbody tr:nth-child(even){background:rgba(255,253,248,.7)}.przewin{overflow-x:auto;-webkit-overflow-scrolling:touch}
+@media(max-width:480px){.przewin th,.przewin td{padding-left:5px;padding-right:5px}table.ceny td[data-kiedy]{font-size:.92rem}table.ceny .sprawdzono{white-space:normal}}
 table.mapa td,table.mapa th{text-align:center;padding:6px 3px;font-size:.84rem}table.mapa td:first-child,table.mapa th:first-child{text-align:left;white-space:nowrap}
 table.fakty th[scope=row]{width:34%;font-family:var(--mono);font-weight:500;font-size:.8rem;color:var(--ink-soft);border-bottom:1px dashed var(--line);vertical-align:top;padding-top:11px}table.fakty td{border-bottom:1px dashed var(--line)}
 .o1{background:#F3DED8}.o2{background:#F0E3CC}.o3{background:#E6E8C8}.o4{background:#C8E0C0}.o5{background:#9ACB98}
@@ -126,7 +127,7 @@ nav.spis{position:sticky;top:0;z-index:5;background:var(--paper);margin:12px -20
 nav.spis ol{display:flex;gap:8px;list-style:none;margin:0;padding:0;overflow-x:auto;scrollbar-width:none}nav.spis li{margin:0}
 nav.spis a{display:block;white-space:nowrap;padding:6px 14px;border:1.5px solid var(--line);border-radius:999px;background:var(--white);text-decoration:none;font-size:.92rem;font-weight:700;color:var(--ink)}
 nav.spis a[aria-current]{background:var(--navy);border-color:var(--navy);color:var(--white)}
-@media(min-width:1400px){nav.spis{position:fixed;top:24px;left:calc(50% + 560px);width:200px;margin:0;padding:14px;border:0;border-radius:16px;background:var(--white)}
+@media(min-width:1560px){nav.spis{position:fixed;top:24px;left:calc(50% + 560px);width:200px;margin:0;padding:14px;border:0;border-radius:16px;background:var(--white)}
 nav.spis .spis-tytul{display:block;margin:0 0 6px 10px;font-weight:800;font-size:.85rem;color:var(--ink-soft)}
 nav.spis ol{flex-direction:column;gap:2px;overflow:visible}nav.spis a{border:0;border-radius:10px;background:none;font-weight:600;white-space:normal;padding:6px 10px}
 nav.spis a[aria-current]{background:var(--paper);color:var(--navy);font-weight:800}section[id]{scroll-margin-top:16px}}
@@ -216,6 +217,14 @@ ol.g-kroki h3{margin:0 0 6px}ol.g-kroki p{margin:0;font-size:1rem}
 .g-znaczki .przycisk{margin:0;justify-content:center}
 @media(max-width:760px){.g-znaczki{grid-template-columns:1fr;gap:22px}}
 
+.g-strony{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin:18px 0 8px;padding:6px 4px 12px}
+.g-strony a{display:block;text-decoration:none;color:var(--ink)}
+.g-strony img{display:block;width:100%;height:auto;background:var(--white);border:1px solid var(--line);border-radius:4px;box-shadow:0 10px 24px -14px rgba(30,58,109,.55)}
+.g-strony a:nth-child(1) img{transform:rotate(-1.2deg)}.g-strony a:nth-child(2) img{transform:rotate(.7deg)}.g-strony a:nth-child(3) img{transform:rotate(-.5deg)}
+.g-strony a:hover img,.g-strony a:focus-visible img{transform:none}
+.g-strony span{display:block;margin-top:10px;font-weight:700;font-size:.95rem}
+@media(prefers-reduced-motion:no-preference){.g-strony img{transition:transform .2s}}
+@media(max-width:640px){.g-strony{grid-template-columns:repeat(3,72%);gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}.g-strony::-webkit-scrollbar{display:none}.g-strony a{scroll-snap-align:start}}
 ul.g-miesiac{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:14px;padding:0;margin:14px 0 6px;max-width:none}
 ul.g-miesiac li{margin:0}ul.g-miesiac a.karta{display:block;text-decoration:none;color:var(--ink);background:var(--white);border:1px solid var(--line);border-radius:16px;padding:10px 10px 12px;height:100%}
 ul.g-miesiac a.karta:hover{border-color:var(--navy)}ul.g-miesiac strong{display:block;font-family:var(--serif);font-weight:400;font-size:1.18rem;color:var(--navy);margin:4px 2px 0}
@@ -223,6 +232,7 @@ ul.g-miesiac .fakty{display:block;font-size:.88rem;color:var(--ink-soft);margin:
 ul.g-miesiac img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;border-radius:10px;display:block;background:var(--paper-deep)}
 ul.g-miesiac .bez-foto{display:grid;place-items:center;aspect-ratio:3/2;border-radius:10px;background:var(--niebo);font-family:var(--serif);font-size:2.2rem;color:var(--navy)}
 .g-foto-zrodla{font-size:.72rem;color:var(--ink-soft);margin:4px 0 0;max-width:none}.g-foto-zrodla a{color:var(--ink-soft)}
+@media(max-width:900px){ul.g-miesiac{grid-template-columns:repeat(2,1fr)}}
 .g-opinie{display:grid;grid-template-columns:1fr 1fr;gap:6px 26px}.g-opinie .pocztowka p{font-family:var(--sans);font-size:1.06rem;line-height:1.6;font-weight:600;color:var(--ink)}.g-opinie .pocztowka p::before{content:"„"}.g-opinie .pocztowka p::after{content:"”"}.g-opinie .pocztowka small{font-weight:700}.g-opinie .pocztowka{margin:12px 0}.g-opinie .pocztowka:nth-child(even){transform:rotate(.7deg)}
 .g-nadawcy{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:20px 34px;align-items:center}
 .g-nadawcy img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;border-radius:20px;display:block;background:var(--paper-deep)}
@@ -231,7 +241,7 @@ section.cta.g-koniec{text-align:left}section.cta.g-koniec p{max-width:56ch}
 ul.g-mies{list-style:none;display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:4px 0 0;max-width:none}ul.g-mies li{margin:0}ul.g-mies a{display:inline-block;padding:6px 14px;border:1.5px solid var(--navy);border-radius:999px;font-weight:800;color:var(--navy);text-decoration:none;background:var(--white)}ul.g-mies a:hover{background:var(--navy);color:var(--white)}
 #przewodnik h3{margin:22px 0 8px}
 nav.gora a.twoje-loty{order:3;font-weight:800;color:var(--navy)}nav.gora a.twoje-loty[hidden]{display:none}
-@media(max-width:900px){ul.g-miesiac{grid-template-columns:repeat(2,1fr)}}
+
 @media(max-width:760px){.g-hero{grid-template-columns:1fr;gap:26px;margin-top:12px}.g-list{transform:rotate(.8deg);padding:24px 20px 20px;border-width:8px}.g-list blockquote{padding-right:70px}.g-list blockquote p{font-size:1.45rem}
 .g-znaczek{width:62px;top:14px;right:14px}.g-znaczek span{height:72px}.g-znaczek img{width:32px;height:32px}
 ol.g-kroki,.g-znaczki{grid-template-columns:1fr}.g-znaczki{gap:22px}.g-opinie,.g-nadawcy{grid-template-columns:1fr}}
@@ -240,7 +250,7 @@ ol.g-kroki,.g-znaczki{grid-template-columns:1fr}.g-znaczki{gap:22px}.g-opinie,.g
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Gołębie Latają","url":"https://golebielataja.pl/","inLanguage":"pl","publisher":{"@id":"https://golebielataja.pl/#organization"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","@id":"https://golebielataja.pl/#organization","name":"Gołębie Latają","url":"https://golebielataja.pl","description":"Gołębie Latają to Michał i Paulina z Warszawy. Układamy plany podróży szyte na miarę i prowadzimy przewodnik: pogoda miesiąc po miesiącu, ceny lotów z polskich lotnisk i długie weekendy. Wszystko, co tu czytasz, piszemy sami.","logo":{"@type":"ImageObject","url":"https://golebielataja.pl/img/icon-512.png"},"image":"https://golebielataja.pl/img/razem.jpg","email":"lecimy@golebielataja.pl","address":{"@type":"PostalAddress","addressLocality":"Warszawa","addressCountry":"PL"},"sameAs":["https://www.instagram.com/golebie.lataja/","https://www.tiktok.com/@golebielataja1","https://www.facebook.com/golebie.lataja","https://www.youtube.com/@GolebieLataja","https://t.me/golebielataja","https://whatsapp.com/channel/0029VbDbtX0BadmVQgdIec2x"],"founder":[{"@type":"Person","name":"Michał Gołąb","url":"https://golebielataja.pl/o-nas/","image":"https://golebielataja.pl/img/michal.jpg"},{"@type":"Person","name":"Paulina","url":"https://golebielataja.pl/o-nas/","image":"https://golebielataja.pl/img/paulina.jpg"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Plan podróży na zamówienie. Propozycje w 48 godzin","serviceType":"Planowanie podróży na zamówienie","description":"Opowiedz w dwie minuty, jak chcesz wypocząć, a Michał i Paulina ułożą Ci plan podróży: kierunki, loty, noclegi i trasę. Od 399 zł, zwrot, jeśli nie trafimy.","provider":{"@id":"https://golebielataja.pl/#organization"},"areaServed":{"@type":"Country","name":"Polska"},"offers":{"@type":"AggregateOffer","priceCurrency":"PLN","lowPrice":399,"highPrice":1899,"offerCount":3}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Ile kosztuje plan podróży?","acceptedAnswer":{"@type":"Answer","text":"Podstawowy Lot 399 zł, Kompletny Lot 899 zł, Lot Premium 1 499 zł przy wyjeździe do 10 dni, 1 899 zł przy dłuższym. To cena planu na cały wyjazd, bez względu na liczbę osób i dni."}},{"@type":"Question","name":"Jak szybko dostanę plan?","acceptedAnswer":{"@type":"Answer","text":"Pierwsze propozycje kierunków wysyłamy w ciągu 48 godzin od opłacenia. Gdy zarezerwujesz lot i hotel, pełny plan dzień po dniu dosyłamy w 5 dni roboczych, najpóźniej 3 dni przed wylotem."}},{"@type":"Question","name":"Czy rezerwujecie loty i hotele?","acceptedAnswer":{"@type":"Answer","text":"Nie. Wskazujemy konkretne loty i noclegi z linkami, a rezerwujesz je sam, bezpośrednio u przewoźnika i w hotelu. Masz pełną kontrolę i nie płacisz marży biura."}},{"@type":"Question","name":"Co, jeśli propozycje mi nie podejdą?","acceptedAnswer":{"@type":"Answer","text":"Przygotujemy nowe w ramach tej samej opłaty albo oddamy pieniądze."}},{"@type":"Question","name":"Czy muszę zakładać konto?","acceptedAnswer":{"@type":"Answer","text":"Nie. Podajesz e-mail i płacisz. Po opłaceniu dostajesz link, który otwiera Twoje zlecenie bez hasła i bez kodu."}},{"@type":"Question","name":"Jak mogę zapłacić?","acceptedAnswer":{"@type":"Answer","text":"BLIK-iem, kartą, przez Przelewy24 albo Klarną, także później. Płatność obsługuje Stripe."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Ile kosztuje plan podróży?","acceptedAnswer":{"@type":"Answer","text":"Podstawowy Lot 399 zł, Kompletny Lot 899 zł, Lot Premium 1 499 zł przy wyjeździe do 10 dni, 1 899 zł przy dłuższym. To cena planu na cały wyjazd, bez względu na liczbę osób i dni."}},{"@type":"Question","name":"Jak szybko dostanę plan?","acceptedAnswer":{"@type":"Answer","text":"Pierwsze propozycje kierunków wysyłamy w ciągu 48 godzin od opłacenia. Gdy zarezerwujesz lot i hotel, pełny plan dzień po dniu dosyłamy w 5 dni roboczych, najpóźniej 3 dni przed wylotem."}},{"@type":"Question","name":"Czy rezerwujecie loty i hotele?","acceptedAnswer":{"@type":"Answer","text":"Nie. Wskazujemy konkretne loty i noclegi z linkami, a rezerwujesz je sam, bezpośrednio u przewoźnika i w hotelu. Masz pełną kontrolę i nie płacisz marży biura."}},{"@type":"Question","name":"Co, jeśli propozycje mi nie podejdą?","acceptedAnswer":{"@type":"Answer","text":"Przygotujemy nowe w ramach tej samej opłaty. Jeśli i one nie trafią, masz 72 godziny na rezygnację i oddajemy 100% opłaty. Gwarancja działa do czasu, aż dostaniesz pełny plan podróży (punkt 6 regulaminu)."}},{"@type":"Question","name":"Czy muszę zakładać konto?","acceptedAnswer":{"@type":"Answer","text":"Nie. Podajesz e-mail i płacisz. Po opłaceniu dostajesz link, który otwiera Twoje zlecenie bez hasła i bez kodu."}},{"@type":"Question","name":"Jak mogę zapłacić?","acceptedAnswer":{"@type":"Answer","text":"BLIK-iem, kartą albo Klarną, także później. Płatność obsługuje Stripe."}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Gołębie Latają","item":"https://golebielataja.pl/"}]}</script>
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "dabf88d8ecff46b9af7a1518edc3f5ee"}'></script>
 <script data-goatcounter="https://golebielataja1.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
@@ -270,7 +280,7 @@ ol.g-kroki,.g-znaczki{grid-template-columns:1fr}.g-znaczki{gap:22px}.g-opinie,.g
 <div>
 <h1>Plan podróży na zamówienie. Propozycje w 48 godzin</h1>
 <p class="lead">Opowiadasz w dwie minuty, dokąd i jak chcesz jechać. My szukamy, liczymy i piszemy plan, który pasuje do Ciebie, a nie do katalogu biura podróży.</p>
-<p class="g-cta"><a class="przycisk g-dwie" href="/nowy/start?z=glowna" data-goatcounter-click="plan-hero-glowna"><span>Zamów plan podróży</span><small>czyli wyślij gołębia, odpiszemy w 48 h</small></a><a class="link" href="/przyklad-plan.pdf" data-goatcounter-click="plan-pdf-glowna">Zobacz przykładowy plan: Kair, 5 dni</a></p>
+<p class="g-cta"><a class="przycisk g-dwie" href="/nowy/start?z=glowna" data-goatcounter-click="plan-hero-glowna"><span>Zamów plan podróży</span><small>od 399 zł, odpiszemy w 48 h</small></a><a class="link" href="/przykladowy-plan/" data-goatcounter-click="plan-przyklad-hero">Zobacz przykładowy plan: Kair, 5 dni</a></p>
 <p class="drobne">Płacisz dopiero na końcu: BLIK, karta albo Klarna. Konto nie jest potrzebne.</p>
 </div>
 <figure class="g-list" aria-label="Przykładowy list do gołębi">
@@ -283,7 +293,7 @@ ol.g-kroki,.g-znaczki{grid-template-columns:1fr}.g-znaczki{gap:22px}.g-opinie,.g
 <div><dt>krajów sprawdzonych na sobie</dt><dd>35</dd></div>
 <div><dt>kierunki w przewodniku</dt><dd>164</dd></div>
 <div><dt>do pierwszych propozycji</dt><dd>48 h</dd></div>
-<div><dt>gdy nie trafimy</dt><dd>zwrot 100%</dd></div>
+<div><dt>gdy propozycje nie trafią</dt><dd>zwrot 100%</dd></div>
 </dl>
 <section id="jak">
 <h2>Jak to działa</h2>
@@ -293,9 +303,19 @@ ol.g-kroki,.g-znaczki{grid-template-columns:1fr}.g-znaczki{gap:22px}.g-opinie,.g
 <li><h3>Rezerwujesz, my piszemy plan</h3><p>Rezerwujesz lot i hotel z propozycji, a w 5 dni roboczych dostajesz pełny plan dzień po dniu, z jedzeniem i planem B.</p></li>
 </ol>
 </section>
+<section id="przyklad">
+<h2>Zobacz, co dostajesz</h2>
+<p>Prawdziwy plan od gołębi: Kair na 5 dni dla dwojga, 10 stron. Twój będzie o Twoim kierunku.</p>
+<div class="g-strony">
+<a href="/przykladowy-plan/#strona-1" data-goatcounter-click="plan-przyklad-glowna-1"><img src="/img/plan/kair-01-m.webp" alt="Przykładowy plan podróży do Kairu, strona 1 z 10: Okładka" width="480" height="679" loading="lazy" decoding="async"><span>Okładka</span></a>
+<a href="/przykladowy-plan/#strona-3" data-goatcounter-click="plan-przyklad-glowna-3"><img src="/img/plan/kair-03-m.webp" alt="Przykładowy plan podróży do Kairu, strona 3 z 10: Dzień po dniu: lądowanie i islamski Kair" width="480" height="679" loading="lazy" decoding="async"><span>Dzień po dniu: lądowanie i islamski Kair</span></a>
+<a href="/przykladowy-plan/#strona-10" data-goatcounter-click="plan-przyklad-glowna-10"><img src="/img/plan/kair-10-m.webp" alt="Przykładowy plan podróży do Kairu, strona 10 z 10: Ile to kosztuje" width="480" height="679" loading="lazy" decoding="async"><span>Ile to kosztuje</span></a>
+</div>
+<p><a class="przycisk jasny" href="/przykladowy-plan/" data-goatcounter-click="plan-przyklad-glowna">Obejrzyj cały plan, 10 stron</a></p>
+</section>
 <section id="pakiety">
 <h2>Trzy znaczki do wyboru</h2>
-<p>Płacisz za plan na cały wyjazd, nie za osobę ani za dzień. BLIK, karta albo Klarna. Zwrot 100%, jeśli nie trafimy.</p>
+<p>Płacisz za plan na cały wyjazd, nie za osobę ani za dzień. BLIK, karta albo Klarna. Zwrot 100%, jeśli nie trafimy z propozycjami.</p>
 <div class="g-znaczki">
 <div>
 <span class="nr">Znaczek № 1</span>
@@ -358,12 +378,12 @@ ol.g-kroki,.g-znaczki{grid-template-columns:1fr}.g-znaczki{gap:22px}.g-opinie,.g
 <h2>Wolisz poszperać sam?</h2>
 <p>Darmowy przewodnik gołębi: pogoda miesiąc po miesiącu, ceny lotów z polskich lotnisk i formalności dla 164 kierunków.</p>
 <ul class="siatka">
+<li><a href="/prezent/"><strong>Voucher na podróż pod choinkę</strong><span>PDF od razu na e-mail, koperta pocztą w 3 dni robocze</span></a></li>
 <li><a href="/kierunki/"><strong>Kierunki</strong><span>kiedy lecieć, pogoda, co zobaczyć</span></a></li>
 <li><a href="/gdzie-leciec/listopad/"><strong>Gdzie lecieć</strong><span>najlepsze kierunki w każdym miesiącu</span></a></li>
 <li><a href="/tanie-loty/"><strong>Tanie loty</strong><span>najtańsze trasy z polskich lotnisk</span></a></li>
 <li><a href="/dlugie-weekendy/"><strong>Długie weekendy</strong><span>ile urlopu, ile wolnego</span></a></li>
 <li><a href="/na-dowod-osobisty/"><strong>Gdzie polecieć na dowód osobisty</strong><span>lista krajów bez paszportu</span></a></li>
-<li><a href="/poradniki/"><strong>Poradniki</strong><span>eSIM, auto, pakowanie, loty do 4 h</span></a></li>
 </ul>
 <h3>Dokąd lecieć w każdym miesiącu</h3>
 <ul class="g-mies"><li><a href="/gdzie-leciec/styczen/">W styczniu</a></li><li><a href="/gdzie-leciec/luty/">W lutym</a></li><li><a href="/gdzie-leciec/marzec/">W marcu</a></li><li><a href="/gdzie-leciec/kwiecien/">W kwietniu</a></li><li><a href="/gdzie-leciec/maj/">W maju</a></li><li><a href="/gdzie-leciec/czerwiec/">W czerwcu</a></li><li><a href="/gdzie-leciec/lipiec/">W lipcu</a></li><li><a href="/gdzie-leciec/sierpien/">W sierpniu</a></li><li><a href="/gdzie-leciec/wrzesien/">We wrześniu</a></li><li><a href="/gdzie-leciec/pazdziernik/">W październiku</a></li><li><a href="/gdzie-leciec/listopad/">W listopadzie</a></li><li><a href="/gdzie-leciec/grudzien/">W grudniu</a></li></ul>
@@ -379,14 +399,14 @@ ol.g-kroki,.g-znaczki{grid-template-columns:1fr}.g-znaczki{gap:22px}.g-opinie,.g
 <details><summary>Ile kosztuje plan podróży?</summary><p>Podstawowy Lot 399 zł, Kompletny Lot 899 zł, Lot Premium 1 499 zł przy wyjeździe do 10 dni, 1 899 zł przy dłuższym. To cena planu na cały wyjazd, bez względu na liczbę osób i dni.</p></details>
 <details><summary>Jak szybko dostanę plan?</summary><p>Pierwsze propozycje kierunków wysyłamy w ciągu 48 godzin od opłacenia. Gdy zarezerwujesz lot i hotel, pełny plan dzień po dniu dosyłamy w 5 dni roboczych, najpóźniej 3 dni przed wylotem.</p></details>
 <details><summary>Czy rezerwujecie loty i hotele?</summary><p>Nie. Wskazujemy konkretne loty i noclegi z linkami, a rezerwujesz je sam, bezpośrednio u przewoźnika i w hotelu. Masz pełną kontrolę i nie płacisz marży biura.</p></details>
-<details><summary>Co, jeśli propozycje mi nie podejdą?</summary><p>Przygotujemy nowe w ramach tej samej opłaty albo oddamy pieniądze.</p></details>
+<details><summary>Co, jeśli propozycje mi nie podejdą?</summary><p>Przygotujemy nowe w ramach tej samej opłaty. Jeśli i one nie trafią, masz 72 godziny na rezygnację i oddajemy 100% opłaty. Gwarancja działa do czasu, aż dostaniesz pełny plan podróży (punkt 6 regulaminu).</p></details>
 <details><summary>Czy muszę zakładać konto?</summary><p>Nie. Podajesz e-mail i płacisz. Po opłaceniu dostajesz link, który otwiera Twoje zlecenie bez hasła i bez kodu.</p></details>
-<details><summary>Jak mogę zapłacić?</summary><p>BLIK-iem, kartą, przez Przelewy24 albo Klarną, także później. Płatność obsługuje Stripe.</p></details>
+<details><summary>Jak mogę zapłacić?</summary><p>BLIK-iem, kartą albo Klarną, także później. Płatność obsługuje Stripe.</p></details>
 </section>
 <section class="cta g-koniec">
 <h2>Gotowy wysłać gołębia?</h2>
-<p>Dwie minuty pytań dziś, propozycje w skrzynce za 48 godzin. BLIK, karta albo Klarna. Zwrot 100%, jeśli nie trafimy.</p>
-<p><a class="przycisk jasny g-dwie" href="/nowy/start?z=glowna" data-goatcounter-click="plan-koniec-glowna"><span>Zamów plan podróży</span><small>czyli wyślij gołębia, odpiszemy w 48 h</small></a></p>
+<p>Dwie minuty pytań dziś, propozycje w skrzynce za 48 godzin. BLIK, karta albo Klarna. Zwrot 100%, jeśli nie trafimy z propozycjami.</p>
+<p><a class="przycisk jasny g-dwie" href="/nowy/start?z=glowna" data-goatcounter-click="plan-koniec-glowna"><span>Zamów plan podróży</span><small>od 399 zł, odpiszemy w 48 h</small></a></p>
 </section>
 <script>try{if(localStorage.getItem('gl-zalogowany')==='1')document.querySelector('a.twoje-loty').hidden=false}catch(e){}</script>
 <script>if(/[?&]sciezka=/.test(location.search))location.replace('/start'+location.search+location.hash)</script>
@@ -409,7 +429,7 @@ ol.g-kroki,.g-znaczki{grid-template-columns:1fr}.g-znaczki{gap:22px}.g-opinie,.g
 <div><p class="tytul">Kiedy wolne</p><ul><li><a href="/majowka/">Majówka</a></li><li><a href="/wielkanoc/">Wielkanoc za granicą</a></li><li><a href="/boze-cialo/">Boże Ciało</a></li><li><a href="/ferie-zimowe/">Ferie zimowe</a></li><li><a href="/sylwester-za-granica/">Sylwester za granicą</a></li><li><a href="/swieta-w-cieple/">Święta w cieple</a></li><li><a href="/wakacje-z-dziecmi/">Wakacje z dziećmi</a></li><li><a href="/podroz-poslubna/">Podróż poślubna</a></li></ul></div>
 <div><p class="tytul">Przydatne</p><ul><li><a href="/aktualnosci/">Aktualności</a></li><li><a href="/poradniki/">Poradniki</a></li><li><a href="/porownanie/">Porównania</a></li><li><a href="/tanie-loty/">Tanie loty</a></li><li><a href="/okazje/">Okazje</a></li><li><a href="/prezent/">Voucher na podróż</a></li><li><a href="https://t.me/golebielataja" rel="noopener" target="_blank">Okazje lotnicze na Telegramie</a></li><li><a href="https://whatsapp.com/channel/0029VbDbtX0BadmVQgdIec2x" rel="noopener" target="_blank">Okazje na WhatsAppie</a></li><li><a href="/polityka-prywatnosci.html">Polityka prywatności</a></li><li><a href="/regulamin.html">Regulamin</a></li><li><a href="#zgoda" data-cookies="1">Ustawienia cookies</a></li></ul></div>
 </div>
-<p class="drobne">Strony odświeżamy codziennie, a ceny lotów odświeżają się same przy każdym wejściu. Stan na 15 listopada 2026.</p>
+<p class="drobne">Strony odświeżamy codziennie, a ceny lotów odświeżają się same przy każdym wejściu. Stan na 16 listopada 2026.</p>
 </footer>
 <div class="pasek"></div>
 <div class="plan-pasek" hidden><p>Plan podróży od 399 zł, propozycje w 48 h</p><a href="/nowy/start?z=glowna" data-goatcounter-click="plan-pasek-glowna">Zamów</a></div>

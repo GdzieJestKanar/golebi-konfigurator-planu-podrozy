@@ -105,6 +105,7 @@ ul.lista-rzeczy li::before{content:"";position:absolute;left:0;top:.3em;width:16
 table{border-collapse:collapse;width:100%;font-size:.98rem;font-variant-numeric:tabular-nums lining-nums}
 th,td{padding:8px 10px;text-align:left;border-bottom:1px solid var(--line)}thead th{font-weight:800;font-size:.88rem;color:var(--ink-soft);border-bottom:2px solid var(--ink)}tbody th{font-weight:700;color:var(--ink)}
 tbody tr:nth-child(even){background:rgba(255,253,248,.7)}.przewin{overflow-x:auto;-webkit-overflow-scrolling:touch}
+@media(max-width:480px){.przewin th,.przewin td{padding-left:5px;padding-right:5px}table.ceny td[data-kiedy]{font-size:.92rem}table.ceny .sprawdzono{white-space:normal}}
 table.mapa td,table.mapa th{text-align:center;padding:6px 3px;font-size:.84rem}table.mapa td:first-child,table.mapa th:first-child{text-align:left;white-space:nowrap}
 table.fakty th[scope=row]{width:34%;font-family:var(--mono);font-weight:500;font-size:.8rem;color:var(--ink-soft);border-bottom:1px dashed var(--line);vertical-align:top;padding-top:11px}table.fakty td{border-bottom:1px dashed var(--line)}
 .o1{background:#F3DED8}.o2{background:#F0E3CC}.o3{background:#E6E8C8}.o4{background:#C8E0C0}.o5{background:#9ACB98}
@@ -125,7 +126,7 @@ nav.spis{position:sticky;top:0;z-index:5;background:var(--paper);margin:12px -20
 nav.spis ol{display:flex;gap:8px;list-style:none;margin:0;padding:0;overflow-x:auto;scrollbar-width:none}nav.spis li{margin:0}
 nav.spis a{display:block;white-space:nowrap;padding:6px 14px;border:1.5px solid var(--line);border-radius:999px;background:var(--white);text-decoration:none;font-size:.92rem;font-weight:700;color:var(--ink)}
 nav.spis a[aria-current]{background:var(--navy);border-color:var(--navy);color:var(--white)}
-@media(min-width:1400px){nav.spis{position:fixed;top:24px;left:calc(50% + 560px);width:200px;margin:0;padding:14px;border:0;border-radius:16px;background:var(--white)}
+@media(min-width:1560px){nav.spis{position:fixed;top:24px;left:calc(50% + 560px);width:200px;margin:0;padding:14px;border:0;border-radius:16px;background:var(--white)}
 nav.spis .spis-tytul{display:block;margin:0 0 6px 10px;font-weight:800;font-size:.85rem;color:var(--ink-soft)}
 nav.spis ol{flex-direction:column;gap:2px;overflow:visible}nav.spis a{border:0;border-radius:10px;background:none;font-weight:600;white-space:normal;padding:6px 10px}
 nav.spis a[aria-current]{background:var(--paper);color:var(--navy);font-weight:800}section[id]{scroll-margin-top:16px}}
@@ -203,7 +204,17 @@ section.archiwum li{padding:12px 16px;border:1px solid var(--line);border-radius
 section.archiwum li strong{display:block}section.archiwum .cena{font-family:var(--serif);color:var(--ink);font-size:1.1rem}
 section.archiwum .cena small{font-family:var(--sans);color:var(--zielen,#2f7a4b);margin-left:8px;font-size:.88rem}
 section.archiwum .kiedy{display:block;margin-top:2px;font-size:.85rem;color:var(--ink-soft)}
-p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
+p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}
+.okazje-filtr{margin:18px 0 4px;display:grid;gap:10px}.okazje-filtr p{margin:0;font-weight:800;font-size:.9rem;color:var(--ink-soft)}
+.okazje-filtr .chipy{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding:2px 0}.okazje-filtr .chipy::-webkit-scrollbar{display:none}
+.okazje-filtr button{flex:none;font:inherit;font-size:.92rem;font-weight:700;white-space:nowrap;min-height:40px;padding:6px 14px;border:1.5px solid var(--line);border-radius:999px;background:var(--white);color:var(--ink);cursor:pointer}
+.okazje-filtr button[aria-pressed=true]{background:var(--navy);border-color:var(--navy);color:var(--white)}
+.okazje-filtr button:focus-visible,button.okazje-wiecej:focus-visible{outline:3px solid var(--navy);outline-offset:2px}
+article.okazja[hidden]{display:none}
+article.okazja .okazja-foto{display:block;margin:0 0 12px}article.okazja .okazja-foto img{display:block;width:100%;height:150px;object-fit:cover;border-radius:10px;background:var(--paper-deep)}
+@media(min-width:700px){article.okazja .okazja-foto{float:right;width:220px;margin:0 0 10px 18px}article.okazja .okazja-foto img{height:146px}article.okazja::after{content:"";display:block;clear:both}}
+p.okazje-foto-zrodla{font-size:.72rem;color:var(--ink-soft);margin:0;max-width:none}p.okazje-foto-zrodla a{color:var(--ink-soft)}
+button.okazje-wiecej{justify-self:start;font:inherit;font-weight:700;min-height:44px;padding:8px 20px;border:1.5px solid var(--navy);border-radius:999px;background:var(--white);color:var(--navy);cursor:pointer}</style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"TouristDestination","name":"Praga","description":"Praga (Czechy): najlepiej od kwietnia do października, około 1 h lotu z Warszawy. Pogoda co miesiąc, ceny lotów i co zobaczyć.","url":"https://golebielataja.pl/kierunki/praga/","geo":{"@type":"GeoCoordinates","latitude":50.075,"longitude":14.438},"containedInPlace":{"@type":"Country","name":"Czechy"},"includesAttraction":[{"@type":"TouristAttraction","name":"Zamek Praski","sameAs":"https://www.wikidata.org/wiki/Q193369"},{"@type":"TouristAttraction","name":"Muzeum Narodowe w Pradze","sameAs":"https://www.wikidata.org/wiki/Q188112"},{"@type":"TouristAttraction","name":"Plac Wacława","sameAs":"https://www.wikidata.org/wiki/Q847613"},{"@type":"TouristAttraction","name":"Rynek Staromiejski","sameAs":"https://www.wikidata.org/wiki/Q421678"},{"@type":"TouristAttraction","name":"Kościół Najświętszej Marii Panny przed Tynem","sameAs":"https://www.wikidata.org/wiki/Q1453427"},{"@type":"TouristAttraction","name":"Brama Prochowa w Pradze","sameAs":"https://www.wikidata.org/wiki/Q1488700"},{"@type":"TouristAttraction","name":"Bazylika św. Jerzego w Pradze","sameAs":"https://www.wikidata.org/wiki/Q1437065"},{"@type":"TouristAttraction","name":"Ogród zoologiczny w Pradze","sameAs":"https://www.wikidata.org/wiki/Q220086"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Praga: ile trwa lot z Polski?","acceptedAnswer":{"@type":"Answer","text":"Z Warszawy około 1 h w powietrzu bez przesiadek (w linii prostej około 511 km). Z przesiadką dolicz czas na zmianę samolotu."}},{"@type":"Question","name":"Praga: kiedy najlepiej lecieć?","acceptedAnswer":{"@type":"Answer","text":"Najlepiej od kwietnia do października. Najcieplej jest w sierpniu, około 25°C w dzień."}},{"@type":"Question","name":"Praga: paszport czy dowód?","acceptedAnswer":{"@type":"Answer","text":"Wystarczy dowód osobisty. Przed wyjazdem sprawdź aktualne zasady w serwisie MSZ."}},{"@type":"Question","name":"Praga: ile kosztuje dzień na miejscu?","acceptedAnswer":{"@type":"Answer","text":"Bez lotu i noclegu oszczędnie około 130 zł, średnio 230 zł, wygodnie 450 zł na osobę dziennie: jedzenie, transport lokalny i bilety wstępu. Tydzień średnio to około 1610 zł na osobę. Do tego lot: ostatnio od 154 zł w obie strony (Gdańsk)."}},{"@type":"Question","name":"Praga: gdzie to jest?","acceptedAnswer":{"@type":"Answer","text":"Kraj: Czechy. Od Warszawy w linii prostej około 511 km."}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Gołębie Latają","item":"https://golebielataja.pl/"},{"@type":"ListItem","position":2,"name":"Kierunki","item":"https://golebielataja.pl/kierunki/"},{"@type":"ListItem","position":3,"name":"Praga","item":"https://golebielataja.pl/kierunki/praga/"}]}</script>
@@ -236,7 +247,7 @@ p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
 <h1>Praga</h1>
 <p class="lead">Najprzyjemniej jest tu od kwietnia do października. Najchłodniej jest w styczniu, około 1°C w dzień. Z Warszawy lecisz około 1 h. Gdzie zjeść za grosze i co zobaczyć poza przewodnikiem, jest niżej.</p>
 </div>
-<p class="autor-pasek"><img src="/img/razem.jpg" alt="" width="40" height="40" loading="lazy" decoding="async"><span>Przygotowali <a href="/o-nas/">Michał i Paulina</a>, którzy razem odwiedzili 35 krajów.</span></p>
+<p class="autor-pasek"><img src="/img/autorzy-80.webp" alt="" width="40" height="40" loading="lazy" decoding="async"><span>Przygotowali <a href="/o-nas/">Michał i Paulina</a>, którzy razem odwiedzili 35 krajów.</span></p>
 <aside class="plan" aria-label="Plan podróży od gołębi">
 <p><strong>Nie chcesz liczyć sam?</strong>Michał i Paulina ułożą Ci ten wyjazd: trasa, noclegi, jedzenie, plan B. Od 399 zł, pierwsze propozycje w 48 h, zwrot 100%, jeśli nie trafimy.</p>
 <a class="przycisk" href="/nowy/start?kierunek=praga&amp;z=kierunek" data-goatcounter-click="plan-blok-kierunek">Zamów plan: Praga</a>
@@ -307,21 +318,19 @@ p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
 <li><strong>Karty konsumpcyjne w klubach</strong><p>W nocnych klubach dostaniesz czasem kartę, na którą nabija się zamówienia. Pilnuj jej, bo za zgubienie przed zapłatą grożą wysokie opłaty, i sprawdzaj ceny przed zamówieniem.</p></li>
 </ul></div>
 </div>
-<h3>Od podróżników</h3>
-<p>Nikt jeszcze nie dodał wskazówki z wyjazdu. Możesz być pierwszy.</p>
-<p><a class="przycisk jasny" href="/start?sciezka=%2Fkierunki%2Fpraga%2Fwskazowka" rel="nofollow">Byłeś tam? Dodaj wskazówkę</a></p>
+<p class="dalej"><a href="/start?sciezka=%2Fkierunki%2Fpraga%2Fwskazowka" rel="nofollow">Byłeś tam? Dodaj wskazówkę</a></p>
 </section>
 <section id="co-zobaczyc">
 <h2>Zabytki i muzea</h2>
 <ul class="kolumny">
-<li><a href="https://www.wikidata.org/wiki/Q193369">Zamek Praski</a> <small>Zabytek</small></li>
-<li><a href="https://www.wikidata.org/wiki/Q188112">Muzeum Narodowe w Pradze</a> <small>Muzeum</small></li>
-<li><a href="https://www.wikidata.org/wiki/Q847613">Plac Wacława</a> <small>Zabytek</small></li>
-<li><a href="https://www.wikidata.org/wiki/Q421678">Rynek Staromiejski</a> <small>Zabytek</small></li>
-<li><a href="https://www.wikidata.org/wiki/Q1453427">Kościół Najświętszej Marii Panny przed Tynem</a> <small>Świątynia</small></li>
-<li><a href="https://www.wikidata.org/wiki/Q1488700">Brama Prochowa w Pradze</a> <small>Muzeum</small></li>
-<li><a href="https://www.wikidata.org/wiki/Q1437065">Bazylika św. Jerzego w Pradze</a> <small>Świątynia</small></li>
-<li><a href="https://www.wikidata.org/wiki/Q220086">Ogród zoologiczny w Pradze</a> <small>Atrakcja</small></li>
+<li><a href="https://www.google.com/maps/search/?api=1&amp;query=Zamek%20Praski%2C%20Praga" rel="nofollow noopener">Zamek Praski</a> <small>Zabytek</small></li>
+<li><a href="https://www.google.com/maps/search/?api=1&amp;query=Muzeum%20Narodowe%20w%20Pradze%2C%20Praga" rel="nofollow noopener">Muzeum Narodowe w Pradze</a> <small>Muzeum</small></li>
+<li><a href="https://www.google.com/maps/search/?api=1&amp;query=Plac%20Wac%C5%82awa%2C%20Praga" rel="nofollow noopener">Plac Wacława</a> <small>Zabytek</small></li>
+<li><a href="https://www.google.com/maps/search/?api=1&amp;query=Rynek%20Staromiejski%2C%20Praga" rel="nofollow noopener">Rynek Staromiejski</a> <small>Zabytek</small></li>
+<li><a href="https://www.google.com/maps/search/?api=1&amp;query=Ko%C5%9Bci%C3%B3%C5%82%20Naj%C5%9Bwi%C4%99tszej%20Marii%20Panny%20przed%20Tynem%2C%20Praga" rel="nofollow noopener">Kościół Najświętszej Marii Panny przed Tynem</a> <small>Świątynia</small></li>
+<li><a href="https://www.google.com/maps/search/?api=1&amp;query=Brama%20Prochowa%20w%20Pradze%2C%20Praga" rel="nofollow noopener">Brama Prochowa w Pradze</a> <small>Muzeum</small></li>
+<li><a href="https://www.google.com/maps/search/?api=1&amp;query=Bazylika%20%C5%9Bw.%20Jerzego%20w%20Pradze%2C%20Praga" rel="nofollow noopener">Bazylika św. Jerzego w Pradze</a> <small>Świątynia</small></li>
+<li><a href="https://www.google.com/maps/search/?api=1&amp;query=Ogr%C3%B3d%20zoologiczny%20w%20Pradze%2C%20Praga" rel="nofollow noopener">Ogród zoologiczny w Pradze</a> <small>Atrakcja</small></li>
 </ul>
 <p><a href="https://www.openstreetmap.org/?mlat=50.075&amp;mlon=14.438#map=11/50.075/14.438">Zobacz na mapie OpenStreetMap</a></p>
 </section>
@@ -383,7 +392,7 @@ p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
 <tbody>
 <tr><th scope="row">Gdańsk</th><td><span class="cena-zywa" data-cena="praga|gdansk|11|kcpragagdansk" data-at="2026-11-11T09:59:11.128Z" data-c="154"><a class="cena-lot" href="https://www.aviasales.com/search/GDN2111PRG28111?currency=pln&amp;marker=785120.kcpragagdansk" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-kcpragagdansk"><strong>od 154 zł</strong></a> <small class="sprawdzono">sprawdzone 11 listopada</small></span></td><td data-kiedy>21 do 28 listopada 2026</td></tr>
 <tr><th scope="row">Kraków</th><td><span class="cena-zywa" data-cena="praga|krakow|03|kcpragakrakow" data-at="2026-11-09T20:32:06.293Z" data-c="241"><a class="cena-lot" href="https://www.aviasales.com/search/KRK2703PRG30031?currency=pln&amp;marker=785120.kcpragakrakow" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-kcpragakrakow"><strong>od 241 zł</strong></a> <small class="sprawdzono">sprawdzone 9 listopada</small></span></td><td data-kiedy>27 do 30 marca 2027</td></tr>
-<tr><th scope="row">Warszawa</th><td><span class="cena-zywa" data-cena="praga|warszawa|03|kcpragawarszawa" data-at="2026-11-11T14:16:03.883Z" data-c="473"><a class="cena-lot" href="https://www.aviasales.com/search/WAW2203PRG27031?currency=pln&amp;marker=785120.kcpragawarszawa" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-kcpragawarszawa"><strong>od 473 zł</strong></a> <small class="sprawdzono">sprawdzone 11 listopada</small></span></td><td data-kiedy>22 do 27 marca 2027</td></tr>
+<tr><th scope="row">Warszawa</th><td><span class="cena-zywa" data-cena="praga|warszawa|02|kcpragawarszawa" data-at="2026-11-15T23:51:01.642Z" data-c="383"><a class="cena-lot" href="https://www.aviasales.com/search/WAW0602PRG10021?currency=pln&amp;marker=785120.kcpragawarszawa" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-kcpragawarszawa"><strong>od 383 zł</strong></a> <small class="sprawdzono">sprawdzone 15 listopada</small></span></td><td data-kiedy>6 do 10 lutego 2027</td></tr>
 <tr><th scope="row">Wrocław</th><td><span class="cena-zywa" data-cena="praga|wroclaw|02|kcpragawroclaw" data-at="2026-11-10T23:53:28.750Z" data-c="615"><a class="cena-lot" href="https://www.aviasales.com/search/WRO2702PRG27021?currency=pln&amp;marker=785120.kcpragawroclaw" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-kcpragawroclaw"><strong>od 615 zł</strong></a> <small class="sprawdzono">sprawdzone 10 listopada</small></span></td><td data-kiedy>27 do 27 lutego 2027</td></tr>
 <tr><th scope="row">Poznań</th><td><span class="cena-zywa" data-cena="praga|poznan|12|kcpragapoznan" data-at="2026-11-13T23:15:49.561Z" data-c="643"><a class="cena-lot" href="https://www.aviasales.com/search/POZ1212PRG13121?currency=pln&amp;marker=785120.kcpragapoznan" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-kcpragapoznan"><strong>od 643 zł</strong></a> <small class="sprawdzono">sprawdzone 13 listopada</small></span></td><td data-kiedy>12 do 13 grudnia 2026</td></tr>
 <tr><th scope="row">Rzeszów</th><td><strong class="cena-zwykle" data-cena="praga|rzeszow|11|kcpragarzeszow">zwykle od 716 zł</strong></td><td data-kiedy>24 do 25 listopada 2026</td></tr>
@@ -425,9 +434,9 @@ p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
 <h2>Plan od gołębi, propozycje w 48 godzin</h2>
 <p>Ty mówisz, dokąd i za ile. My szukamy, porównujemy i piszemy plan, z którego od razu skorzystasz.</p>
 <p class="cena">Od 399 zł za cały plan. Płacisz dopiero na końcu zamówienia.</p>
-<p class="drobne">BLIK, karta albo Klarna. Zwrot 100%, jeśli nie trafimy. Propozycje z lotami i hotelami w 48 h. Pełny plan dzień po dniu w 5 dni roboczych od rezerwacji.</p>
+<p class="drobne">BLIK, karta albo Klarna. Zwrot 100%, jeśli nie trafimy z propozycjami. Propozycje z lotami i hotelami w 48 h. Pełny plan dzień po dniu w 5 dni roboczych od rezerwacji.</p>
 <p><a class="przycisk" href="/nowy/start?kierunek=praga&amp;z=kierunek" data-goatcounter-click="plan-koniec-kierunek">Zamów plan: Praga</a><a class="przycisk jasny" href="/start?sciezka=%2Fkierunki%2Fpraga" rel="nofollow">Otwórz w aplikacji</a></p>
-<p><a href="/przyklad-plan.pdf" data-goatcounter-click="plan-pdf-kierunek">Zobacz przykładowy plan: Kair, 5 dni (PDF)</a></p>
+<p><a href="/przykladowy-plan/" data-goatcounter-click="plan-pdf-kierunek">Zobacz przykładowy plan: Kair, 5 dni</a></p>
 <blockquote class="opinia"><p>Potrzebowałem inspiracji na mototrip po Kaszubach i Pomorzu. Dostałem namiary, jakie punkty związane z II WŚ zwiedzić, gdzie rozbić namiot, gdzie zjeść i jakie jeziora zobaczyć.</p><small>Piotr, mototrip po Polsce</small></blockquote>
 <div class="czy-sam"><p><strong>Gotowy plan czy sam?</strong></p><p><a href="/porownanie/biuro-podrozy/">Plan od gołębi czy biuro podróży</a></p><p><a href="/porownanie/plan-z-ai/">Plan od gołębi czy plan z AI</a></p><p><a href="/porownanie/itaka-rainbow-tui/">Itaka, Rainbow czy TUI? Porównanie biur</a></p></div>
 </section>
@@ -457,7 +466,7 @@ p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
 <div><p class="tytul">Kiedy wolne</p><ul><li><a href="/majowka/">Majówka</a></li><li><a href="/wielkanoc/">Wielkanoc za granicą</a></li><li><a href="/boze-cialo/">Boże Ciało</a></li><li><a href="/ferie-zimowe/">Ferie zimowe</a></li><li><a href="/sylwester-za-granica/">Sylwester za granicą</a></li><li><a href="/swieta-w-cieple/">Święta w cieple</a></li><li><a href="/wakacje-z-dziecmi/">Wakacje z dziećmi</a></li><li><a href="/podroz-poslubna/">Podróż poślubna</a></li></ul></div>
 <div><p class="tytul">Przydatne</p><ul><li><a href="/aktualnosci/">Aktualności</a></li><li><a href="/poradniki/">Poradniki</a></li><li><a href="/porownanie/">Porównania</a></li><li><a href="/tanie-loty/">Tanie loty</a></li><li><a href="/okazje/">Okazje</a></li><li><a href="/prezent/">Voucher na podróż</a></li><li><a href="https://t.me/golebielataja" rel="noopener" target="_blank">Okazje lotnicze na Telegramie</a></li><li><a href="https://whatsapp.com/channel/0029VbDbtX0BadmVQgdIec2x" rel="noopener" target="_blank">Okazje na WhatsAppie</a></li><li><a href="/polityka-prywatnosci.html">Polityka prywatności</a></li><li><a href="/regulamin.html">Regulamin</a></li><li><a href="#zgoda" data-cookies="1">Ustawienia cookies</a></li></ul></div>
 </div>
-<p class="drobne">Strony odświeżamy codziennie, a ceny lotów odświeżają się same przy każdym wejściu. Stan na 15 listopada 2026.</p>
+<p class="drobne">Strony odświeżamy codziennie, a ceny lotów odświeżają się same przy każdym wejściu. Stan na 16 listopada 2026.</p>
 </footer>
 <div class="pasek"></div>
 <div class="plan-pasek" hidden><p>Plan podróży od 399 zł, propozycje w 48 h</p><a href="/nowy/start?kierunek=praga&amp;z=kierunek" data-goatcounter-click="plan-pasek-kierunek">Zamów</a></div>

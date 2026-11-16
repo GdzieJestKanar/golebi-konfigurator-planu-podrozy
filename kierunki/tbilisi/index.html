@@ -105,6 +105,7 @@ ul.lista-rzeczy li::before{content:"";position:absolute;left:0;top:.3em;width:16
 table{border-collapse:collapse;width:100%;font-size:.98rem;font-variant-numeric:tabular-nums lining-nums}
 th,td{padding:8px 10px;text-align:left;border-bottom:1px solid var(--line)}thead th{font-weight:800;font-size:.88rem;color:var(--ink-soft);border-bottom:2px solid var(--ink)}tbody th{font-weight:700;color:var(--ink)}
 tbody tr:nth-child(even){background:rgba(255,253,248,.7)}.przewin{overflow-x:auto;-webkit-overflow-scrolling:touch}
+@media(max-width:480px){.przewin th,.przewin td{padding-left:5px;padding-right:5px}table.ceny td[data-kiedy]{font-size:.92rem}table.ceny .sprawdzono{white-space:normal}}
 table.mapa td,table.mapa th{text-align:center;padding:6px 3px;font-size:.84rem}table.mapa td:first-child,table.mapa th:first-child{text-align:left;white-space:nowrap}
 table.fakty th[scope=row]{width:34%;font-family:var(--mono);font-weight:500;font-size:.8rem;color:var(--ink-soft);border-bottom:1px dashed var(--line);vertical-align:top;padding-top:11px}table.fakty td{border-bottom:1px dashed var(--line)}
 .o1{background:#F3DED8}.o2{background:#F0E3CC}.o3{background:#E6E8C8}.o4{background:#C8E0C0}.o5{background:#9ACB98}
@@ -125,7 +126,7 @@ nav.spis{position:sticky;top:0;z-index:5;background:var(--paper);margin:12px -20
 nav.spis ol{display:flex;gap:8px;list-style:none;margin:0;padding:0;overflow-x:auto;scrollbar-width:none}nav.spis li{margin:0}
 nav.spis a{display:block;white-space:nowrap;padding:6px 14px;border:1.5px solid var(--line);border-radius:999px;background:var(--white);text-decoration:none;font-size:.92rem;font-weight:700;color:var(--ink)}
 nav.spis a[aria-current]{background:var(--navy);border-color:var(--navy);color:var(--white)}
-@media(min-width:1400px){nav.spis{position:fixed;top:24px;left:calc(50% + 560px);width:200px;margin:0;padding:14px;border:0;border-radius:16px;background:var(--white)}
+@media(min-width:1560px){nav.spis{position:fixed;top:24px;left:calc(50% + 560px);width:200px;margin:0;padding:14px;border:0;border-radius:16px;background:var(--white)}
 nav.spis .spis-tytul{display:block;margin:0 0 6px 10px;font-weight:800;font-size:.85rem;color:var(--ink-soft)}
 nav.spis ol{flex-direction:column;gap:2px;overflow:visible}nav.spis a{border:0;border-radius:10px;background:none;font-weight:600;white-space:normal;padding:6px 10px}
 nav.spis a[aria-current]{background:var(--paper);color:var(--navy);font-weight:800}section[id]{scroll-margin-top:16px}}
@@ -203,9 +204,19 @@ section.archiwum li{padding:12px 16px;border:1px solid var(--line);border-radius
 section.archiwum li strong{display:block}section.archiwum .cena{font-family:var(--serif);color:var(--ink);font-size:1.1rem}
 section.archiwum .cena small{font-family:var(--sans);color:var(--zielen,#2f7a4b);margin-left:8px;font-size:.88rem}
 section.archiwum .kiedy{display:block;margin-top:2px;font-size:.85rem;color:var(--ink-soft)}
-p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
+p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}
+.okazje-filtr{margin:18px 0 4px;display:grid;gap:10px}.okazje-filtr p{margin:0;font-weight:800;font-size:.9rem;color:var(--ink-soft)}
+.okazje-filtr .chipy{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding:2px 0}.okazje-filtr .chipy::-webkit-scrollbar{display:none}
+.okazje-filtr button{flex:none;font:inherit;font-size:.92rem;font-weight:700;white-space:nowrap;min-height:40px;padding:6px 14px;border:1.5px solid var(--line);border-radius:999px;background:var(--white);color:var(--ink);cursor:pointer}
+.okazje-filtr button[aria-pressed=true]{background:var(--navy);border-color:var(--navy);color:var(--white)}
+.okazje-filtr button:focus-visible,button.okazje-wiecej:focus-visible{outline:3px solid var(--navy);outline-offset:2px}
+article.okazja[hidden]{display:none}
+article.okazja .okazja-foto{display:block;margin:0 0 12px}article.okazja .okazja-foto img{display:block;width:100%;height:150px;object-fit:cover;border-radius:10px;background:var(--paper-deep)}
+@media(min-width:700px){article.okazja .okazja-foto{float:right;width:220px;margin:0 0 10px 18px}article.okazja .okazja-foto img{height:146px}article.okazja::after{content:"";display:block;clear:both}}
+p.okazje-foto-zrodla{font-size:.72rem;color:var(--ink-soft);margin:0;max-width:none}p.okazje-foto-zrodla a{color:var(--ink-soft)}
+button.okazje-wiecej{justify-self:start;font:inherit;font-weight:700;min-height:44px;padding:8px 20px;border:1.5px solid var(--navy);border-radius:999px;background:var(--white);color:var(--navy);cursor:pointer}</style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"TouristDestination","name":"Tbilisi","description":"Tbilisi (Gruzja): najlepiej od kwietnia do czerwca i od września do października, około 3 h lotu z Warszawy. Pogoda co miesiąc, ceny lotów i co zobaczyć.","url":"https://golebielataja.pl/kierunki/tbilisi/","geo":{"@type":"GeoCoordinates","latitude":41.716,"longitude":44.783},"containedInPlace":{"@type":"Country","name":"Gruzja"},"includesAttraction":[{"@type":"TouristAttraction","name":"Narikala","sameAs":"https://www.wikidata.org/wiki/Q155453"},{"@type":"TouristAttraction","name":"Tawisuplebis Moedani","sameAs":"https://www.wikidata.org/wiki/Q36998"},{"@type":"TouristAttraction","name":"Lisi Lake","sameAs":"https://www.wikidata.org/wiki/Q2371265"},{"@type":"TouristAttraction","name":"Muzeum Okupacji Sowieckiej","sameAs":"https://www.wikidata.org/wiki/Q2562904"},{"@type":"TouristAttraction","name":"Jezioro Żółwie","sameAs":"https://www.wikidata.org/wiki/Q1474801"},{"@type":"TouristAttraction","name":"Narodowe Muzeum Sztuk Pięknych im. Szalwy Amiranaszwilego","sameAs":"https://www.wikidata.org/wiki/Q2028327"},{"@type":"TouristAttraction","name":"Kaszweti","sameAs":"https://www.wikidata.org/wiki/Q1734896"},{"@type":"TouristAttraction","name":"Simon Janashia Museum of Georgia","sameAs":"https://www.wikidata.org/wiki/Q2899707"}]}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Tbilisi: ile trwa lot z Polski?","acceptedAnswer":{"@type":"Answer","text":"Z Warszawy około 3 h w powietrzu bez przesiadek (w linii prostej około 2134 km). Z przesiadką dolicz czas na zmianę samolotu."}},{"@type":"Question","name":"Tbilisi: kiedy najlepiej lecieć?","acceptedAnswer":{"@type":"Answer","text":"Najlepiej od kwietnia do czerwca i od września do października. Najcieplej jest w sierpniu, około 33°C w dzień."}},{"@type":"Question","name":"Tbilisi: paszport czy dowód?","acceptedAnswer":{"@type":"Answer","text":"Wystarczy dowód osobisty. Przed wyjazdem sprawdź aktualne zasady w serwisie MSZ."}},{"@type":"Question","name":"Tbilisi: ile kosztuje dzień na miejscu?","acceptedAnswer":{"@type":"Answer","text":"Bez lotu i noclegu oszczędnie około 80 zł, średnio 150 zł, wygodnie 300 zł na osobę dziennie: jedzenie, transport lokalny i bilety wstępu. Tydzień średnio to około 1050 zł na osobę. Do tego lot: ostatnio od 636 zł w obie strony (Warszawa)."}},{"@type":"Question","name":"Tbilisi: gdzie to jest?","acceptedAnswer":{"@type":"Answer","text":"Kraj: Gruzja. Od Warszawy w linii prostej około 2134 km."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Tbilisi: ile trwa lot z Polski?","acceptedAnswer":{"@type":"Answer","text":"Z Warszawy około 3 h w powietrzu bez przesiadek (w linii prostej około 2134 km). Z przesiadką dolicz czas na zmianę samolotu."}},{"@type":"Question","name":"Tbilisi: kiedy najlepiej lecieć?","acceptedAnswer":{"@type":"Answer","text":"Najlepiej od kwietnia do czerwca i od września do października. Najcieplej jest w sierpniu, około 33°C w dzień."}},{"@type":"Question","name":"Tbilisi: paszport czy dowód?","acceptedAnswer":{"@type":"Answer","text":"Wystarczy dowód osobisty. Przed wyjazdem sprawdź aktualne zasady w serwisie MSZ."}},{"@type":"Question","name":"Tbilisi: ile kosztuje dzień na miejscu?","acceptedAnswer":{"@type":"Answer","text":"Bez lotu i noclegu oszczędnie około 80 zł, średnio 150 zł, wygodnie 300 zł na osobę dziennie: jedzenie, transport lokalny i bilety wstępu. Tydzień średnio to około 1050 zł na osobę. Do tego lot: ostatnio od 759 zł w obie strony (Warszawa)."}},{"@type":"Question","name":"Tbilisi: gdzie to jest?","acceptedAnswer":{"@type":"Answer","text":"Kraj: Gruzja. Od Warszawy w linii prostej około 2134 km."}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Gołębie Latają","item":"https://golebielataja.pl/"},{"@type":"ListItem","position":2,"name":"Kierunki","item":"https://golebielataja.pl/kierunki/"},{"@type":"ListItem","position":3,"name":"Tbilisi","item":"https://golebielataja.pl/kierunki/tbilisi/"}]}</script>
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "dabf88d8ecff46b9af7a1518edc3f5ee"}'></script>
 <script data-goatcounter="https://golebielataja1.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
@@ -234,9 +245,9 @@ p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
 <main>
 <div class="hero bez-stempla">
 <h1>Tbilisi</h1>
-<p class="lead">Najcieplej jest w sierpniu, około 33°C w dzień. Najlepiej jechać od kwietnia do czerwca i od września do października. Bilety ostatnio od 636 zł w obie strony (Warszawa). Niżej znajdziesz tanie jedzenie i miejsca spoza przewodników.</p>
+<p class="lead">Najcieplej jest w sierpniu, około 33°C w dzień. Najlepiej jechać od kwietnia do czerwca i od września do października. Bilety ostatnio od 759 zł w obie strony (Warszawa). Niżej znajdziesz tanie jedzenie i miejsca spoza przewodników.</p>
 </div>
-<p class="autor-pasek"><img src="/img/razem.jpg" alt="" width="40" height="40" loading="lazy" decoding="async"><span>Przygotowali <a href="/o-nas/">Michał i Paulina</a>, którzy razem odwiedzili 35 krajów.</span></p>
+<p class="autor-pasek"><img src="/img/autorzy-80.webp" alt="" width="40" height="40" loading="lazy" decoding="async"><span>Przygotowali <a href="/o-nas/">Michał i Paulina</a>, którzy razem odwiedzili 35 krajów.</span></p>
 <aside class="plan" aria-label="Plan podróży od gołębi">
 <p><strong>Nie chcesz liczyć sam?</strong>Michał i Paulina ułożą Ci ten wyjazd: trasa, noclegi, jedzenie, plan B. Od 399 zł, pierwsze propozycje w 48 h, zwrot 100%, jeśli nie trafimy.</p>
 <a class="przycisk" href="/nowy/start?kierunek=tbilisi&amp;z=kierunek" data-goatcounter-click="plan-blok-kierunek">Zamów plan: Tbilisi</a>
@@ -248,7 +259,7 @@ p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
 <div><dt>Najcieplej</dt><dd>sierpień, 33°C</dd></div>
 <div><dt>Wjazd</dt><dd>dowód osobisty</dd></div>
 <div><dt>Waluta</dt><dd>GEL</dd></div>
-<div><dt>Lot od</dt><dd>636 zł</dd></div>
+<div><dt>Lot od</dt><dd>759 zł</dd></div>
 <div><dt>Dzień na miejscu</dt><dd>od około 80 zł na osobę</dd></div>
 </dl>
 <aside class="okazja-kierunku" data-okazje-k="tbilisi" aria-label="Okazja na ten kierunek" hidden></aside>
@@ -301,21 +312,19 @@ p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
 <li><strong>Surowe kary za narkotyki</strong><p>Za przestępstwa narkotykowe grozi od 5 do 25 lat więzienia i wysoka grzywna. Pakuj bagaż sam i nie przewoź niczego dla innych.</p></li>
 </ul></div>
 </div>
-<h3>Od podróżników</h3>
-<p>Nikt jeszcze nie dodał wskazówki z wyjazdu. Możesz być pierwszy.</p>
-<p><a class="przycisk jasny" href="/start?sciezka=%2Fkierunki%2Ftbilisi%2Fwskazowka" rel="nofollow">Byłeś tam? Dodaj wskazówkę</a></p>
+<p class="dalej"><a href="/start?sciezka=%2Fkierunki%2Ftbilisi%2Fwskazowka" rel="nofollow">Byłeś tam? Dodaj wskazówkę</a></p>
 </section>
 <section id="co-zobaczyc">
 <h2>Zabytki i muzea</h2>
 <ul class="kolumny">
-<li><a href="https://www.wikidata.org/wiki/Q155453">Narikala</a> <small>Zabytek</small></li>
-<li><a href="https://www.wikidata.org/wiki/Q36998">Tawisuplebis Moedani</a> <small>Zabytek</small></li>
-<li><a href="https://www.wikidata.org/wiki/Q2371265">Lisi Lake</a> <small>Natura</small></li>
-<li><a href="https://www.wikidata.org/wiki/Q2562904">Muzeum Okupacji Sowieckiej</a> <small>Muzeum</small></li>
-<li><a href="https://www.wikidata.org/wiki/Q1474801">Jezioro Żółwie</a> <small>Natura</small></li>
-<li><a href="https://www.wikidata.org/wiki/Q2028327">Narodowe Muzeum Sztuk Pięknych im. Szalwy Amiranaszwilego</a> <small>Muzeum</small></li>
-<li><a href="https://www.wikidata.org/wiki/Q1734896">Kaszweti</a> <small>Świątynia</small></li>
-<li><a href="https://www.wikidata.org/wiki/Q2899707">Simon Janashia Museum of Georgia</a> <small>Muzeum</small></li>
+<li><a href="https://www.google.com/maps/search/?api=1&amp;query=Narikala%2C%20Tbilisi" rel="nofollow noopener">Narikala</a> <small>Zabytek</small></li>
+<li><a href="https://www.google.com/maps/search/?api=1&amp;query=Tawisuplebis%20Moedani%2C%20Tbilisi" rel="nofollow noopener">Tawisuplebis Moedani</a> <small>Zabytek</small></li>
+<li><a href="https://www.google.com/maps/search/?api=1&amp;query=Lisi%20Lake%2C%20Tbilisi" rel="nofollow noopener">Lisi Lake</a> <small>Natura</small></li>
+<li><a href="https://www.google.com/maps/search/?api=1&amp;query=Muzeum%20Okupacji%20Sowieckiej%2C%20Tbilisi" rel="nofollow noopener">Muzeum Okupacji Sowieckiej</a> <small>Muzeum</small></li>
+<li><a href="https://www.google.com/maps/search/?api=1&amp;query=Jezioro%20%C5%BB%C3%B3%C5%82wie%2C%20Tbilisi" rel="nofollow noopener">Jezioro Żółwie</a> <small>Natura</small></li>
+<li><a href="https://www.google.com/maps/search/?api=1&amp;query=Narodowe%20Muzeum%20Sztuk%20Pi%C4%99knych%20im.%20Szalwy%20Amiranaszwilego%2C%20Tbilisi" rel="nofollow noopener">Narodowe Muzeum Sztuk Pięknych im. Szalwy Amiranaszwilego</a> <small>Muzeum</small></li>
+<li><a href="https://www.google.com/maps/search/?api=1&amp;query=Kaszweti%2C%20Tbilisi" rel="nofollow noopener">Kaszweti</a> <small>Świątynia</small></li>
+<li><a href="https://www.google.com/maps/search/?api=1&amp;query=Simon%20Janashia%20Museum%20of%20Georgia%2C%20Tbilisi" rel="nofollow noopener">Simon Janashia Museum of Georgia</a> <small>Muzeum</small></li>
 </ul>
 <p><a href="https://www.openstreetmap.org/?mlat=41.716&amp;mlon=44.783#map=11/41.716/44.783">Zobacz na mapie OpenStreetMap</a></p>
 </section>
@@ -371,7 +380,7 @@ p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
 <div class="przewin"><table class="ceny">
 <thead><tr><th scope="col">Skąd</th><th scope="col">Od</th><th scope="col">Przykładowy wylot</th></tr></thead>
 <tbody>
-<tr><th scope="row">Warszawa</th><td><span class="cena-zywa" data-cena="tbilisi|warszawa|12|kctbilisiwarszawa" data-at="2026-11-08T23:25:17.318Z" data-c="636"><a class="cena-lot" href="https://www.aviasales.com/search/WAW0712TBS15121?currency=pln&amp;marker=785120.kctbilisiwarszawa" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-kctbilisiwarszawa"><strong>od 636 zł</strong></a> <small class="sprawdzono">sprawdzone 8 listopada</small></span></td><td data-kiedy>7 do 15 grudnia 2026</td></tr>
+<tr><th scope="row">Warszawa</th><td><span class="cena-zywa" data-cena="tbilisi|warszawa|12|kctbilisiwarszawa" data-at="2026-11-09T23:17:06.348Z" data-c="759"><a class="cena-lot" href="https://www.aviasales.com/search/WAW1112TBS17121?currency=pln&amp;marker=785120.kctbilisiwarszawa" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-kctbilisiwarszawa"><strong>od 759 zł</strong></a> <small class="sprawdzono">sprawdzone 9 listopada</small></span></td><td data-kiedy>11 do 17 grudnia 2026</td></tr>
 <tr><th scope="row">Kraków</th><td><span class="cena-zywa" data-cena="tbilisi|krakow|01|kctbilisikrakow" data-at="2026-11-14T23:30:50.040Z" data-c="804"><a class="cena-lot" href="https://www.aviasales.com/search/KRK2301TBS01021?currency=pln&amp;marker=785120.kctbilisikrakow" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-kctbilisikrakow"><strong>od 804 zł</strong></a> <small class="sprawdzono">sprawdzone 14 listopada</small></span></td><td data-kiedy>23 stycznia do 1 lutego 2027</td></tr>
 <tr><th scope="row">Wrocław</th><td><span class="cena-zywa" data-cena="tbilisi|wroclaw|01|kctbilisiwroclaw" data-at="2026-11-09T23:32:06.366Z" data-c="842"><a class="cena-lot" href="https://www.aviasales.com/search/WRO1601TBS21011?currency=pln&amp;marker=785120.kctbilisiwroclaw" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-kctbilisiwroclaw"><strong>od 842 zł</strong></a> <small class="sprawdzono">sprawdzone 9 listopada</small></span></td><td data-kiedy>16 do 21 stycznia 2027</td></tr>
 <tr><th scope="row">Poznań</th><td><span class="cena-zywa" data-cena="tbilisi|poznan|11|kctbilisipoznan" data-at="2026-11-10T23:08:28.706Z" data-c="1091"><a class="cena-lot" href="https://www.aviasales.com/search/POZ2311TBS28111?currency=pln&amp;marker=785120.kctbilisipoznan" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-kctbilisipoznan"><strong>od 1091 zł</strong></a> <small class="sprawdzono">sprawdzone 10 listopada</small></span></td><td data-kiedy>23 do 28 listopada 2026</td></tr>
@@ -398,7 +407,7 @@ p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
 <details><summary>Tbilisi: ile trwa lot z Polski?</summary><p>Z Warszawy około 3 h w powietrzu bez przesiadek (w linii prostej około 2134 km). Z przesiadką dolicz czas na zmianę samolotu.</p></details>
 <details><summary>Tbilisi: kiedy najlepiej lecieć?</summary><p>Najlepiej od kwietnia do czerwca i od września do października. Najcieplej jest w sierpniu, około 33°C w dzień.</p></details>
 <details><summary>Tbilisi: paszport czy dowód?</summary><p>Wystarczy dowód osobisty. Przed wyjazdem sprawdź aktualne zasady w serwisie MSZ.</p></details>
-<details><summary>Tbilisi: ile kosztuje dzień na miejscu?</summary><p>Bez lotu i noclegu oszczędnie około 80 zł, średnio 150 zł, wygodnie 300 zł na osobę dziennie: jedzenie, transport lokalny i bilety wstępu. Tydzień średnio to około 1050 zł na osobę. Do tego lot: ostatnio od 636 zł w obie strony (Warszawa).</p></details>
+<details><summary>Tbilisi: ile kosztuje dzień na miejscu?</summary><p>Bez lotu i noclegu oszczędnie około 80 zł, średnio 150 zł, wygodnie 300 zł na osobę dziennie: jedzenie, transport lokalny i bilety wstępu. Tydzień średnio to około 1050 zł na osobę. Do tego lot: ostatnio od 759 zł w obie strony (Warszawa).</p></details>
 <details><summary>Tbilisi: gdzie to jest?</summary><p>Kraj: Gruzja. Od Warszawy w linii prostej około 2134 km.</p></details>
 </section>
 
@@ -406,9 +415,9 @@ p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
 <h2>Mało czasu na szukanie?</h2>
 <p>Opisz wyjazd w dwie minuty. Loty, noclegi i plan dzień po dniu bierzemy na siebie.</p>
 <p class="cena">Od 399 zł za cały plan. Płacisz dopiero na końcu zamówienia.</p>
-<p class="drobne">BLIK, karta albo Klarna. Zwrot 100%, jeśli nie trafimy. Propozycje z lotami i hotelami w 48 h. Pełny plan dzień po dniu w 5 dni roboczych od rezerwacji.</p>
+<p class="drobne">BLIK, karta albo Klarna. Zwrot 100%, jeśli nie trafimy z propozycjami. Propozycje z lotami i hotelami w 48 h. Pełny plan dzień po dniu w 5 dni roboczych od rezerwacji.</p>
 <p><a class="przycisk" href="/nowy/start?kierunek=tbilisi&amp;z=kierunek" data-goatcounter-click="plan-koniec-kierunek">Zamów plan: Tbilisi</a><a class="przycisk jasny" href="/start?sciezka=%2Fkierunki%2Ftbilisi" rel="nofollow">Otwórz w aplikacji</a></p>
-<p><a href="/przyklad-plan.pdf" data-goatcounter-click="plan-pdf-kierunek">Zobacz przykładowy plan: Kair, 5 dni (PDF)</a></p>
+<p><a href="/przykladowy-plan/" data-goatcounter-click="plan-pdf-kierunek">Zobacz przykładowy plan: Kair, 5 dni</a></p>
 <blockquote class="opinia"><p>Zaplanowali dla nas dwutygodniową podróż do Japonii, która była jednocześnie naszą podróżą poślubną. Rada dotycząca wysyłania bagaży z hotelu do hotelu: absolutny strzał w dziesiątkę!</p><small>Alicja i Łukasz, podróż poślubna w Japonii</small></blockquote>
 <div class="czy-sam"><p><strong>Gotowy plan czy sam?</strong></p><p><a href="/porownanie/biuro-podrozy/">Plan od gołębi czy biuro podróży</a></p><p><a href="/porownanie/plan-z-ai/">Plan od gołębi czy plan z AI</a></p><p><a href="/porownanie/itaka-rainbow-tui/">Itaka, Rainbow czy TUI? Porównanie biur</a></p></div>
 </section>
@@ -432,7 +441,7 @@ p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
 <div><p class="tytul">Kiedy wolne</p><ul><li><a href="/majowka/">Majówka</a></li><li><a href="/wielkanoc/">Wielkanoc za granicą</a></li><li><a href="/boze-cialo/">Boże Ciało</a></li><li><a href="/ferie-zimowe/">Ferie zimowe</a></li><li><a href="/sylwester-za-granica/">Sylwester za granicą</a></li><li><a href="/swieta-w-cieple/">Święta w cieple</a></li><li><a href="/wakacje-z-dziecmi/">Wakacje z dziećmi</a></li><li><a href="/podroz-poslubna/">Podróż poślubna</a></li></ul></div>
 <div><p class="tytul">Przydatne</p><ul><li><a href="/aktualnosci/">Aktualności</a></li><li><a href="/poradniki/">Poradniki</a></li><li><a href="/porownanie/">Porównania</a></li><li><a href="/tanie-loty/">Tanie loty</a></li><li><a href="/okazje/">Okazje</a></li><li><a href="/prezent/">Voucher na podróż</a></li><li><a href="https://t.me/golebielataja" rel="noopener" target="_blank">Okazje lotnicze na Telegramie</a></li><li><a href="https://whatsapp.com/channel/0029VbDbtX0BadmVQgdIec2x" rel="noopener" target="_blank">Okazje na WhatsAppie</a></li><li><a href="/polityka-prywatnosci.html">Polityka prywatności</a></li><li><a href="/regulamin.html">Regulamin</a></li><li><a href="#zgoda" data-cookies="1">Ustawienia cookies</a></li></ul></div>
 </div>
-<p class="drobne">Strony odświeżamy codziennie, a ceny lotów odświeżają się same przy każdym wejściu. Stan na 15 listopada 2026.</p>
+<p class="drobne">Strony odświeżamy codziennie, a ceny lotów odświeżają się same przy każdym wejściu. Stan na 16 listopada 2026.</p>
 </footer>
 <div class="pasek"></div>
 <div class="plan-pasek" hidden><p>Plan podróży od 399 zł, propozycje w 48 h</p><a href="/nowy/start?kierunek=tbilisi&amp;z=kierunek" data-goatcounter-click="plan-pasek-kierunek">Zamów</a></div>

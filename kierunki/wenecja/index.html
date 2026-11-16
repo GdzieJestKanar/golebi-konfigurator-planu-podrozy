@@ -105,6 +105,7 @@ ul.lista-rzeczy li::before{content:"";position:absolute;left:0;top:.3em;width:16
 table{border-collapse:collapse;width:100%;font-size:.98rem;font-variant-numeric:tabular-nums lining-nums}
 th,td{padding:8px 10px;text-align:left;border-bottom:1px solid var(--line)}thead th{font-weight:800;font-size:.88rem;color:var(--ink-soft);border-bottom:2px solid var(--ink)}tbody th{font-weight:700;color:var(--ink)}
 tbody tr:nth-child(even){background:rgba(255,253,248,.7)}.przewin{overflow-x:auto;-webkit-overflow-scrolling:touch}
+@media(max-width:480px){.przewin th,.przewin td{padding-left:5px;padding-right:5px}table.ceny td[data-kiedy]{font-size:.92rem}table.ceny .sprawdzono{white-space:normal}}
 table.mapa td,table.mapa th{text-align:center;padding:6px 3px;font-size:.84rem}table.mapa td:first-child,table.mapa th:first-child{text-align:left;white-space:nowrap}
 table.fakty th[scope=row]{width:34%;font-family:var(--mono);font-weight:500;font-size:.8rem;color:var(--ink-soft);border-bottom:1px dashed var(--line);vertical-align:top;padding-top:11px}table.fakty td{border-bottom:1px dashed var(--line)}
 .o1{background:#F3DED8}.o2{background:#F0E3CC}.o3{background:#E6E8C8}.o4{background:#C8E0C0}.o5{background:#9ACB98}
@@ -125,7 +126,7 @@ nav.spis{position:sticky;top:0;z-index:5;background:var(--paper);margin:12px -20
 nav.spis ol{display:flex;gap:8px;list-style:none;margin:0;padding:0;overflow-x:auto;scrollbar-width:none}nav.spis li{margin:0}
 nav.spis a{display:block;white-space:nowrap;padding:6px 14px;border:1.5px solid var(--line);border-radius:999px;background:var(--white);text-decoration:none;font-size:.92rem;font-weight:700;color:var(--ink)}
 nav.spis a[aria-current]{background:var(--navy);border-color:var(--navy);color:var(--white)}
-@media(min-width:1400px){nav.spis{position:fixed;top:24px;left:calc(50% + 560px);width:200px;margin:0;padding:14px;border:0;border-radius:16px;background:var(--white)}
+@media(min-width:1560px){nav.spis{position:fixed;top:24px;left:calc(50% + 560px);width:200px;margin:0;padding:14px;border:0;border-radius:16px;background:var(--white)}
 nav.spis .spis-tytul{display:block;margin:0 0 6px 10px;font-weight:800;font-size:.85rem;color:var(--ink-soft)}
 nav.spis ol{flex-direction:column;gap:2px;overflow:visible}nav.spis a{border:0;border-radius:10px;background:none;font-weight:600;white-space:normal;padding:6px 10px}
 nav.spis a[aria-current]{background:var(--paper);color:var(--navy);font-weight:800}section[id]{scroll-margin-top:16px}}
@@ -203,7 +204,17 @@ section.archiwum li{padding:12px 16px;border:1px solid var(--line);border-radius
 section.archiwum li strong{display:block}section.archiwum .cena{font-family:var(--serif);color:var(--ink);font-size:1.1rem}
 section.archiwum .cena small{font-family:var(--sans);color:var(--zielen,#2f7a4b);margin-left:8px;font-size:.88rem}
 section.archiwum .kiedy{display:block;margin-top:2px;font-size:.85rem;color:var(--ink-soft)}
-p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
+p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}
+.okazje-filtr{margin:18px 0 4px;display:grid;gap:10px}.okazje-filtr p{margin:0;font-weight:800;font-size:.9rem;color:var(--ink-soft)}
+.okazje-filtr .chipy{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding:2px 0}.okazje-filtr .chipy::-webkit-scrollbar{display:none}
+.okazje-filtr button{flex:none;font:inherit;font-size:.92rem;font-weight:700;white-space:nowrap;min-height:40px;padding:6px 14px;border:1.5px solid var(--line);border-radius:999px;background:var(--white);color:var(--ink);cursor:pointer}
+.okazje-filtr button[aria-pressed=true]{background:var(--navy);border-color:var(--navy);color:var(--white)}
+.okazje-filtr button:focus-visible,button.okazje-wiecej:focus-visible{outline:3px solid var(--navy);outline-offset:2px}
+article.okazja[hidden]{display:none}
+article.okazja .okazja-foto{display:block;margin:0 0 12px}article.okazja .okazja-foto img{display:block;width:100%;height:150px;object-fit:cover;border-radius:10px;background:var(--paper-deep)}
+@media(min-width:700px){article.okazja .okazja-foto{float:right;width:220px;margin:0 0 10px 18px}article.okazja .okazja-foto img{height:146px}article.okazja::after{content:"";display:block;clear:both}}
+p.okazje-foto-zrodla{font-size:.72rem;color:var(--ink-soft);margin:0;max-width:none}p.okazje-foto-zrodla a{color:var(--ink-soft)}
+button.okazje-wiecej{justify-self:start;font:inherit;font-weight:700;min-height:44px;padding:8px 20px;border:1.5px solid var(--navy);border-radius:999px;background:var(--white);color:var(--navy);cursor:pointer}</style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"TouristDestination","name":"Wenecja","description":"Wenecja (Włochy): najlepiej od kwietnia do października, około 2 h lotu z Warszawy. Pogoda co miesiąc, ceny lotów i co zobaczyć.","url":"https://golebielataja.pl/kierunki/wenecja/","geo":{"@type":"GeoCoordinates","latitude":45.44,"longitude":12.316},"containedInPlace":{"@type":"Country","name":"Włochy"},"includesAttraction":[{"@type":"TouristAttraction","name":"Bazylika św. Marka w Wenecji","sameAs":"https://www.wikidata.org/wiki/Q172988"},{"@type":"TouristAttraction","name":"Pałac Dożów","sameAs":"https://www.wikidata.org/wiki/Q189883"},{"@type":"TouristAttraction","name":"Plac św. Marka w Wenecji","sameAs":"https://www.wikidata.org/wiki/Q217527"},{"@type":"TouristAttraction","name":"Gallerie dell'Accademia","sameAs":"https://www.wikidata.org/wiki/Q338330"},{"@type":"TouristAttraction","name":"Ca' d'Oro","sameAs":"https://www.wikidata.org/wiki/Q820872"},{"@type":"TouristAttraction","name":"Kościół San Giorgio Maggiore","sameAs":"https://www.wikidata.org/wiki/Q713558"},{"@type":"TouristAttraction","name":"Bazylika Santi Giovanni e Paolo w Wenecji","sameAs":"https://www.wikidata.org/wiki/Q155225"},{"@type":"TouristAttraction","name":"Ca' Rezzonico","sameAs":"https://www.wikidata.org/wiki/Q1052171"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Wenecja: ile trwa lot z Polski?","acceptedAnswer":{"@type":"Answer","text":"Z Warszawy około 2 h w powietrzu bez przesiadek (w linii prostej około 979 km). Z przesiadką dolicz czas na zmianę samolotu."}},{"@type":"Question","name":"Wenecja: kiedy najlepiej lecieć?","acceptedAnswer":{"@type":"Answer","text":"Najlepiej od kwietnia do października. Najcieplej jest w lipcu, około 28°C w dzień."}},{"@type":"Question","name":"Wenecja: paszport czy dowód?","acceptedAnswer":{"@type":"Answer","text":"Wystarczy dowód osobisty. Przed wyjazdem sprawdź aktualne zasady w serwisie MSZ."}},{"@type":"Question","name":"Wenecja: ile kosztuje dzień na miejscu?","acceptedAnswer":{"@type":"Answer","text":"Bez lotu i noclegu oszczędnie około 190 zł, średnio 340 zł, wygodnie 650 zł na osobę dziennie: jedzenie, transport lokalny i bilety wstępu. Tydzień średnio to około 2380 zł na osobę. Do tego lot: ostatnio od 130 zł w obie strony (Warszawa)."}},{"@type":"Question","name":"Wenecja: gdzie to jest?","acceptedAnswer":{"@type":"Answer","text":"Kraj: Włochy. Od Warszawy w linii prostej około 979 km."}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Gołębie Latają","item":"https://golebielataja.pl/"},{"@type":"ListItem","position":2,"name":"Kierunki","item":"https://golebielataja.pl/kierunki/"},{"@type":"ListItem","position":3,"name":"Wenecja","item":"https://golebielataja.pl/kierunki/wenecja/"}]}</script>
@@ -236,7 +247,7 @@ p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
 <h1>Wenecja</h1>
 <p class="lead">Gołębie poleciałyby od kwietnia do października. W lipcu termometr dochodzi do 28°C. Lot z Polski trwa około 2 h bez przesiadek. Gdzie zjeść za grosze i co zobaczyć poza przewodnikiem, jest niżej.</p>
 </div>
-<p class="autor-pasek"><img src="/img/razem.jpg" alt="" width="40" height="40" loading="lazy" decoding="async"><span>Przygotowali <a href="/o-nas/">Michał i Paulina</a>, którzy razem odwiedzili 35 krajów.</span></p>
+<p class="autor-pasek"><img src="/img/autorzy-80.webp" alt="" width="40" height="40" loading="lazy" decoding="async"><span>Przygotowali <a href="/o-nas/">Michał i Paulina</a>, którzy razem odwiedzili 35 krajów.</span></p>
 <aside class="plan" aria-label="Plan podróży od gołębi">
 <p><strong>Nie chcesz liczyć sam?</strong>Michał i Paulina ułożą Ci ten wyjazd: trasa, noclegi, jedzenie, plan B. Od 399 zł, pierwsze propozycje w 48 h, zwrot 100%, jeśli nie trafimy.</p>
 <a class="przycisk" href="/nowy/start?kierunek=wenecja&amp;z=kierunek" data-goatcounter-click="plan-blok-kierunek">Zamów plan: Wenecja</a>
@@ -308,21 +319,19 @@ p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
 <li><strong>Podróbki od ulicznych handlarzy</strong><p>Kupowanie od nielicencjonowanych sprzedawców ulicznych jest we Włoszech nielegalne i grozi mandatem także kupującemu. Torebki i okulary kupuj w sklepach.</p></li>
 </ul></div>
 </div>
-<h3>Od podróżników</h3>
-<p>Nikt jeszcze nie dodał wskazówki z wyjazdu. Możesz być pierwszy.</p>
-<p><a class="przycisk jasny" href="/start?sciezka=%2Fkierunki%2Fwenecja%2Fwskazowka" rel="nofollow">Byłeś tam? Dodaj wskazówkę</a></p>
+<p class="dalej"><a href="/start?sciezka=%2Fkierunki%2Fwenecja%2Fwskazowka" rel="nofollow">Byłeś tam? Dodaj wskazówkę</a></p>
 </section>
 <section id="co-zobaczyc">
 <h2>Zabytki i muzea</h2>
 <ul class="kolumny">
-<li><a href="https://www.wikidata.org/wiki/Q172988">Bazylika św. Marka w Wenecji</a> <small>Świątynia</small></li>
-<li><a href="https://www.wikidata.org/wiki/Q189883">Pałac Dożów</a> <small>Muzeum</small></li>
-<li><a href="https://www.wikidata.org/wiki/Q217527">Plac św. Marka w Wenecji</a> <small>Zabytek</small></li>
-<li><a href="https://www.wikidata.org/wiki/Q338330">Gallerie dell&#39;Accademia</a> <small>Muzeum</small></li>
-<li><a href="https://www.wikidata.org/wiki/Q820872">Ca&#39; d&#39;Oro</a> <small>Muzeum</small></li>
-<li><a href="https://www.wikidata.org/wiki/Q713558">Kościół San Giorgio Maggiore</a> <small>Świątynia</small></li>
-<li><a href="https://www.wikidata.org/wiki/Q155225">Bazylika Santi Giovanni e Paolo w Wenecji</a> <small>Świątynia</small></li>
-<li><a href="https://www.wikidata.org/wiki/Q1052171">Ca&#39; Rezzonico</a> <small>Muzeum</small></li>
+<li><a href="https://www.google.com/maps/search/?api=1&amp;query=Bazylika%20%C5%9Bw.%20Marka%20w%20Wenecji%2C%20Wenecja" rel="nofollow noopener">Bazylika św. Marka w Wenecji</a> <small>Świątynia</small></li>
+<li><a href="https://www.google.com/maps/search/?api=1&amp;query=Pa%C5%82ac%20Do%C5%BC%C3%B3w%2C%20Wenecja" rel="nofollow noopener">Pałac Dożów</a> <small>Muzeum</small></li>
+<li><a href="https://www.google.com/maps/search/?api=1&amp;query=Plac%20%C5%9Bw.%20Marka%20w%20Wenecji%2C%20Wenecja" rel="nofollow noopener">Plac św. Marka w Wenecji</a> <small>Zabytek</small></li>
+<li><a href="https://www.google.com/maps/search/?api=1&amp;query=Gallerie%20dell&#39;Accademia%2C%20Wenecja" rel="nofollow noopener">Gallerie dell&#39;Accademia</a> <small>Muzeum</small></li>
+<li><a href="https://www.google.com/maps/search/?api=1&amp;query=Ca&#39;%20d&#39;Oro%2C%20Wenecja" rel="nofollow noopener">Ca&#39; d&#39;Oro</a> <small>Muzeum</small></li>
+<li><a href="https://www.google.com/maps/search/?api=1&amp;query=Ko%C5%9Bci%C3%B3%C5%82%20San%20Giorgio%20Maggiore%2C%20Wenecja" rel="nofollow noopener">Kościół San Giorgio Maggiore</a> <small>Świątynia</small></li>
+<li><a href="https://www.google.com/maps/search/?api=1&amp;query=Bazylika%20Santi%20Giovanni%20e%20Paolo%20w%20Wenecji%2C%20Wenecja" rel="nofollow noopener">Bazylika Santi Giovanni e Paolo w Wenecji</a> <small>Świątynia</small></li>
+<li><a href="https://www.google.com/maps/search/?api=1&amp;query=Ca&#39;%20Rezzonico%2C%20Wenecja" rel="nofollow noopener">Ca&#39; Rezzonico</a> <small>Muzeum</small></li>
 </ul>
 <p><a href="https://www.openstreetmap.org/?mlat=45.44&amp;mlon=12.316#map=11/45.44/12.316">Zobacz na mapie OpenStreetMap</a></p>
 </section>
@@ -383,11 +392,11 @@ p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
 <thead><tr><th scope="col">Skąd</th><th scope="col">Od</th><th scope="col">Przykładowy wylot</th></tr></thead>
 <tbody>
 <tr><th scope="row">Warszawa</th><td><span class="cena-zywa" data-cena="wenecja|warszawa|12|kcwenecjawarszawa" data-at="2026-11-09T20:02:06.266Z" data-c="130"><a class="cena-lot" href="https://www.aviasales.com/search/WAW0212VCE09121?currency=pln&amp;marker=785120.kcwenecjawarszawa" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-kcwenecjawarszawa"><strong>od 130 zł</strong></a> <small class="sprawdzono">sprawdzone 9 listopada</small></span></td><td data-kiedy>2 do 9 grudnia 2026</td></tr>
-<tr><th scope="row">Kraków</th><td><span class="cena-zywa" data-cena="wenecja|krakow|01|kcwenecjakrakow" data-at="2026-11-08T23:40:17.320Z" data-c="154"><a class="cena-lot" href="https://www.aviasales.com/search/KRK2801VCE30011?currency=pln&amp;marker=785120.kcwenecjakrakow" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-kcwenecjakrakow"><strong>od 154 zł</strong></a> <small class="sprawdzono">sprawdzone 8 listopada</small></span></td><td data-kiedy>28 do 30 stycznia 2027</td></tr>
+<tr><th scope="row">Kraków</th><td><span class="cena-zywa" data-cena="wenecja|krakow|01|kcwenecjakrakow" data-at="2026-11-09T20:17:06.269Z" data-c="154"><a class="cena-lot" href="https://www.aviasales.com/search/KRK2801VCE30011?currency=pln&amp;marker=785120.kcwenecjakrakow" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-kcwenecjakrakow"><strong>od 154 zł</strong></a> <small class="sprawdzono">sprawdzone 9 listopada</small></span></td><td data-kiedy>28 do 30 stycznia 2027</td></tr>
 <tr><th scope="row">Gdańsk</th><td><span class="cena-zywa" data-cena="wenecja|gdansk|01|kcwenecjagdansk" data-at="2026-11-12T23:43:25.478Z" data-c="174"><a class="cena-lot" href="https://www.aviasales.com/search/GDN2401VCE31011?currency=pln&amp;marker=785120.kcwenecjagdansk" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-kcwenecjagdansk"><strong>od 174 zł</strong></a> <small class="sprawdzono">sprawdzone 12 listopada</small></span></td><td data-kiedy>24 do 31 stycznia 2027</td></tr>
 <tr><th scope="row">Katowice</th><td><span class="cena-zywa" data-cena="wenecja|katowice|05|kcwenecjakatowice" data-at="2026-11-14T00:45:49.580Z" data-c="235"><a class="cena-lot" href="https://www.aviasales.com/search/KTW0505VCE12051?currency=pln&amp;marker=785120.kcwenecjakatowice" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-kcwenecjakatowice"><strong>od 235 zł</strong></a> <small class="sprawdzono">sprawdzone 14 listopada</small></span></td><td data-kiedy>5 do 12 maja 2027</td></tr>
 <tr><th scope="row">Wrocław</th><td><span class="cena-zywa" data-cena="wenecja|wroclaw|12|kcwenecjawroclaw" data-at="2026-11-13T23:15:49.561Z" data-c="235"><a class="cena-lot" href="https://www.aviasales.com/search/WRO1112VCE13121?currency=pln&amp;marker=785120.kcwenecjawroclaw" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-kcwenecjawroclaw"><strong>od 235 zł</strong></a> <small class="sprawdzono">sprawdzone 13 listopada</small></span></td><td data-kiedy>11 do 13 grudnia 2026</td></tr>
-<tr><th scope="row">Poznań</th><td><span class="cena-zywa" data-cena="wenecja|poznan|04|kcwenecjapoznan" data-at="2026-11-09T00:40:17.333Z" data-c="533"><a class="cena-lot" href="https://www.aviasales.com/search/POZ2504VCE30041?currency=pln&amp;marker=785120.kcwenecjapoznan" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-kcwenecjapoznan"><strong>od 533 zł</strong></a> <small class="sprawdzono">sprawdzone 9 listopada</small></span></td><td data-kiedy>25 do 30 kwietnia 2027</td></tr>
+<tr><th scope="row">Poznań</th><td><span class="cena-zywa" data-cena="wenecja|poznan|04|kcwenecjapoznan" data-at="2026-11-09T21:17:06.325Z" data-c="533"><a class="cena-lot" href="https://www.aviasales.com/search/POZ2504VCE30041?currency=pln&amp;marker=785120.kcwenecjapoznan" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-kcwenecjapoznan"><strong>od 533 zł</strong></a> <small class="sprawdzono">sprawdzone 9 listopada</small></span></td><td data-kiedy>25 do 30 kwietnia 2027</td></tr>
 </tbody>
 </table></div>
 <p class="drobne">Cena „od” otwiera Aviasales z tymi samymi datami; ceny zmieniają się co godzinę, więc mogą się różnić. „Zwykle od” to cena sprzed ponad tygodnia, orientacyjna.</p>
@@ -426,9 +435,9 @@ p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
 <h2>Nie chcesz układać tego sam?</h2>
 <p>Napisz, czego szukasz. W 48 godzin dostajesz propozycje z lotami i noclegami, a po rezerwacji plan dzień po dniu.</p>
 <p class="cena">Od 399 zł za cały plan. Płacisz dopiero na końcu zamówienia.</p>
-<p class="drobne">BLIK, karta albo Klarna. Zwrot 100%, jeśli nie trafimy. Propozycje z lotami i hotelami w 48 h. Pełny plan dzień po dniu w 5 dni roboczych od rezerwacji.</p>
+<p class="drobne">BLIK, karta albo Klarna. Zwrot 100%, jeśli nie trafimy z propozycjami. Propozycje z lotami i hotelami w 48 h. Pełny plan dzień po dniu w 5 dni roboczych od rezerwacji.</p>
 <p><a class="przycisk" href="/nowy/start?kierunek=wenecja&amp;z=kierunek" data-goatcounter-click="plan-koniec-kierunek">Zamów plan: Wenecja</a><a class="przycisk jasny" href="/start?sciezka=%2Fkierunki%2Fwenecja" rel="nofollow">Otwórz w aplikacji</a></p>
-<p><a href="/przyklad-plan.pdf" data-goatcounter-click="plan-pdf-kierunek">Zobacz przykładowy plan: Kair, 5 dni (PDF)</a></p>
+<p><a href="/przykladowy-plan/" data-goatcounter-click="plan-pdf-kierunek">Zobacz przykładowy plan: Kair, 5 dni</a></p>
 <blockquote class="opinia"><p>Miałem biznesowy wyjazd do południowych Niemiec. Gołębie wskazali, jakie miasteczka po drodze zwiedzić oraz jak spędzić wolny weekend w tych okolicach.</p><small>Tomasz, Niemcy służbowo i po godzinach</small></blockquote>
 <div class="czy-sam"><p><strong>Gotowy plan czy sam?</strong></p><p><a href="/porownanie/biuro-podrozy/">Plan od gołębi czy biuro podróży</a></p><p><a href="/porownanie/plan-z-ai/">Plan od gołębi czy plan z AI</a></p><p><a href="/porownanie/itaka-rainbow-tui/">Itaka, Rainbow czy TUI? Porównanie biur</a></p></div>
 </section>
@@ -459,7 +468,7 @@ p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
 <div><p class="tytul">Kiedy wolne</p><ul><li><a href="/majowka/">Majówka</a></li><li><a href="/wielkanoc/">Wielkanoc za granicą</a></li><li><a href="/boze-cialo/">Boże Ciało</a></li><li><a href="/ferie-zimowe/">Ferie zimowe</a></li><li><a href="/sylwester-za-granica/">Sylwester za granicą</a></li><li><a href="/swieta-w-cieple/">Święta w cieple</a></li><li><a href="/wakacje-z-dziecmi/">Wakacje z dziećmi</a></li><li><a href="/podroz-poslubna/">Podróż poślubna</a></li></ul></div>
 <div><p class="tytul">Przydatne</p><ul><li><a href="/aktualnosci/">Aktualności</a></li><li><a href="/poradniki/">Poradniki</a></li><li><a href="/porownanie/">Porównania</a></li><li><a href="/tanie-loty/">Tanie loty</a></li><li><a href="/okazje/">Okazje</a></li><li><a href="/prezent/">Voucher na podróż</a></li><li><a href="https://t.me/golebielataja" rel="noopener" target="_blank">Okazje lotnicze na Telegramie</a></li><li><a href="https://whatsapp.com/channel/0029VbDbtX0BadmVQgdIec2x" rel="noopener" target="_blank">Okazje na WhatsAppie</a></li><li><a href="/polityka-prywatnosci.html">Polityka prywatności</a></li><li><a href="/regulamin.html">Regulamin</a></li><li><a href="#zgoda" data-cookies="1">Ustawienia cookies</a></li></ul></div>
 </div>
-<p class="drobne">Strony odświeżamy codziennie, a ceny lotów odświeżają się same przy każdym wejściu. Stan na 15 listopada 2026.</p>
+<p class="drobne">Strony odświeżamy codziennie, a ceny lotów odświeżają się same przy każdym wejściu. Stan na 16 listopada 2026.</p>
 </footer>
 <div class="pasek"></div>
 <div class="plan-pasek" hidden><p>Plan podróży od 399 zł, propozycje w 48 h</p><a href="/nowy/start?kierunek=wenecja&amp;z=kierunek" data-goatcounter-click="plan-pasek-kierunek">Zamów</a></div>

@@ -105,6 +105,7 @@ ul.lista-rzeczy li::before{content:"";position:absolute;left:0;top:.3em;width:16
 table{border-collapse:collapse;width:100%;font-size:.98rem;font-variant-numeric:tabular-nums lining-nums}
 th,td{padding:8px 10px;text-align:left;border-bottom:1px solid var(--line)}thead th{font-weight:800;font-size:.88rem;color:var(--ink-soft);border-bottom:2px solid var(--ink)}tbody th{font-weight:700;color:var(--ink)}
 tbody tr:nth-child(even){background:rgba(255,253,248,.7)}.przewin{overflow-x:auto;-webkit-overflow-scrolling:touch}
+@media(max-width:480px){.przewin th,.przewin td{padding-left:5px;padding-right:5px}table.ceny td[data-kiedy]{font-size:.92rem}table.ceny .sprawdzono{white-space:normal}}
 table.mapa td,table.mapa th{text-align:center;padding:6px 3px;font-size:.84rem}table.mapa td:first-child,table.mapa th:first-child{text-align:left;white-space:nowrap}
 table.fakty th[scope=row]{width:34%;font-family:var(--mono);font-weight:500;font-size:.8rem;color:var(--ink-soft);border-bottom:1px dashed var(--line);vertical-align:top;padding-top:11px}table.fakty td{border-bottom:1px dashed var(--line)}
 .o1{background:#F3DED8}.o2{background:#F0E3CC}.o3{background:#E6E8C8}.o4{background:#C8E0C0}.o5{background:#9ACB98}
@@ -125,7 +126,7 @@ nav.spis{position:sticky;top:0;z-index:5;background:var(--paper);margin:12px -20
 nav.spis ol{display:flex;gap:8px;list-style:none;margin:0;padding:0;overflow-x:auto;scrollbar-width:none}nav.spis li{margin:0}
 nav.spis a{display:block;white-space:nowrap;padding:6px 14px;border:1.5px solid var(--line);border-radius:999px;background:var(--white);text-decoration:none;font-size:.92rem;font-weight:700;color:var(--ink)}
 nav.spis a[aria-current]{background:var(--navy);border-color:var(--navy);color:var(--white)}
-@media(min-width:1400px){nav.spis{position:fixed;top:24px;left:calc(50% + 560px);width:200px;margin:0;padding:14px;border:0;border-radius:16px;background:var(--white)}
+@media(min-width:1560px){nav.spis{position:fixed;top:24px;left:calc(50% + 560px);width:200px;margin:0;padding:14px;border:0;border-radius:16px;background:var(--white)}
 nav.spis .spis-tytul{display:block;margin:0 0 6px 10px;font-weight:800;font-size:.85rem;color:var(--ink-soft)}
 nav.spis ol{flex-direction:column;gap:2px;overflow:visible}nav.spis a{border:0;border-radius:10px;background:none;font-weight:600;white-space:normal;padding:6px 10px}
 nav.spis a[aria-current]{background:var(--paper);color:var(--navy);font-weight:800}section[id]{scroll-margin-top:16px}}
@@ -203,9 +204,19 @@ section.archiwum li{padding:12px 16px;border:1px solid var(--line);border-radius
 section.archiwum li strong{display:block}section.archiwum .cena{font-family:var(--serif);color:var(--ink);font-size:1.1rem}
 section.archiwum .cena small{font-family:var(--sans);color:var(--zielen,#2f7a4b);margin-left:8px;font-size:.88rem}
 section.archiwum .kiedy{display:block;margin-top:2px;font-size:.85rem;color:var(--ink-soft)}
-p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
+p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}
+.okazje-filtr{margin:18px 0 4px;display:grid;gap:10px}.okazje-filtr p{margin:0;font-weight:800;font-size:.9rem;color:var(--ink-soft)}
+.okazje-filtr .chipy{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding:2px 0}.okazje-filtr .chipy::-webkit-scrollbar{display:none}
+.okazje-filtr button{flex:none;font:inherit;font-size:.92rem;font-weight:700;white-space:nowrap;min-height:40px;padding:6px 14px;border:1.5px solid var(--line);border-radius:999px;background:var(--white);color:var(--ink);cursor:pointer}
+.okazje-filtr button[aria-pressed=true]{background:var(--navy);border-color:var(--navy);color:var(--white)}
+.okazje-filtr button:focus-visible,button.okazje-wiecej:focus-visible{outline:3px solid var(--navy);outline-offset:2px}
+article.okazja[hidden]{display:none}
+article.okazja .okazja-foto{display:block;margin:0 0 12px}article.okazja .okazja-foto img{display:block;width:100%;height:150px;object-fit:cover;border-radius:10px;background:var(--paper-deep)}
+@media(min-width:700px){article.okazja .okazja-foto{float:right;width:220px;margin:0 0 10px 18px}article.okazja .okazja-foto img{height:146px}article.okazja::after{content:"";display:block;clear:both}}
+p.okazje-foto-zrodla{font-size:.72rem;color:var(--ink-soft);margin:0;max-width:none}p.okazje-foto-zrodla a{color:var(--ink-soft)}
+button.okazje-wiecej{justify-self:start;font:inherit;font-weight:700;min-height:44px;padding:8px 20px;border:1.5px solid var(--navy);border-radius:999px;background:var(--white);color:var(--navy);cursor:pointer}</style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"TouristDestination","name":"Koh Samui","description":"Koh Samui (Tajlandia): najlepiej od stycznia do kwietnia, około 11,5 h lotu z Warszawy. Pogoda co miesiąc, ceny lotów i co zobaczyć.","url":"https://golebielataja.pl/kierunki/koh-samui/","geo":{"@type":"GeoCoordinates","latitude":9.53,"longitude":100.06},"containedInPlace":{"@type":"Country","name":"Tajlandia"},"includesAttraction":[{"@type":"TouristAttraction","name":"Nathon","sameAs":"https://www.wikidata.org/wiki/Q14216076"},{"@type":"TouristAttraction","name":"Chaweng","sameAs":"https://www.wikidata.org/wiki/Q2094487"},{"@type":"TouristAttraction","name":"Bo Phut","sameAs":"https://www.wikidata.org/wiki/Q90023166"},{"@type":"TouristAttraction","name":"Choeng Mon","sameAs":"https://www.wikidata.org/wiki/Q14211506"},{"@type":"TouristAttraction","name":"Chalok Lam","sameAs":"https://www.wikidata.org/wiki/Q14210773"},{"@type":"TouristAttraction","name":"Haad Chao Phao","sameAs":"https://www.wikidata.org/wiki/Q14210851"},{"@type":"TouristAttraction","name":"Hat Khuat","sameAs":"https://www.wikidata.org/wiki/Q5636460"},{"@type":"TouristAttraction","name":"Ban Kai","sameAs":"https://www.wikidata.org/wiki/Q14205109"}]}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Koh Samui: ile trwa lot z Polski?","acceptedAnswer":{"@type":"Answer","text":"Z Warszawy około 11,5 h w powietrzu bez przesiadek (w linii prostej około 8429 km). Z przesiadką dolicz czas na zmianę samolotu."}},{"@type":"Question","name":"Koh Samui: kiedy najlepiej lecieć?","acceptedAnswer":{"@type":"Answer","text":"Najlepiej od stycznia do kwietnia. Najcieplej jest w maju, około 30°C w dzień."}},{"@type":"Question","name":"Koh Samui: paszport czy dowód?","acceptedAnswer":{"@type":"Answer","text":"Bez wizy, z zezwoleniem online przed wylotem. Przed wyjazdem sprawdź aktualne zasady w serwisie MSZ."}},{"@type":"Question","name":"Koh Samui: ile kosztuje dzień na miejscu?","acceptedAnswer":{"@type":"Answer","text":"Bez lotu i noclegu oszczędnie około 80 zł, średnio 150 zł, wygodnie 300 zł na osobę dziennie: jedzenie, transport lokalny i bilety wstępu. Tydzień średnio to około 1050 zł na osobę. Do tego lot: ostatnio od 3777 zł w obie strony (Warszawa)."}},{"@type":"Question","name":"Koh Samui: gdzie to jest?","acceptedAnswer":{"@type":"Answer","text":"Kraj: Tajlandia. Od Warszawy w linii prostej około 8429 km."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Koh Samui: ile trwa lot z Polski?","acceptedAnswer":{"@type":"Answer","text":"Z Warszawy około 11,5 h w powietrzu bez przesiadek (w linii prostej około 8429 km). Z przesiadką dolicz czas na zmianę samolotu."}},{"@type":"Question","name":"Koh Samui: kiedy najlepiej lecieć?","acceptedAnswer":{"@type":"Answer","text":"Najlepiej od stycznia do kwietnia. Najcieplej jest w maju, około 30°C w dzień."}},{"@type":"Question","name":"Koh Samui: paszport czy dowód?","acceptedAnswer":{"@type":"Answer","text":"Bez wizy, z zezwoleniem online przed wylotem. Przed wyjazdem sprawdź aktualne zasady w serwisie MSZ."}},{"@type":"Question","name":"Koh Samui: ile kosztuje dzień na miejscu?","acceptedAnswer":{"@type":"Answer","text":"Bez lotu i noclegu oszczędnie około 80 zł, średnio 150 zł, wygodnie 300 zł na osobę dziennie: jedzenie, transport lokalny i bilety wstępu. Tydzień średnio to około 1050 zł na osobę. Do tego lot: ostatnio od 4166 zł w obie strony (Warszawa)."}},{"@type":"Question","name":"Koh Samui: gdzie to jest?","acceptedAnswer":{"@type":"Answer","text":"Kraj: Tajlandia. Od Warszawy w linii prostej około 8429 km."}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Gołębie Latają","item":"https://golebielataja.pl/"},{"@type":"ListItem","position":2,"name":"Kierunki","item":"https://golebielataja.pl/kierunki/"},{"@type":"ListItem","position":3,"name":"Koh Samui","item":"https://golebielataja.pl/kierunki/koh-samui/"}]}</script>
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "dabf88d8ecff46b9af7a1518edc3f5ee"}'></script>
 <script data-goatcounter="https://golebielataja1.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
@@ -234,9 +245,9 @@ p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
 <main>
 <div class="hero bez-stempla">
 <h1>Koh Samui</h1>
-<p class="lead">Najcieplej jest w maju, około 30°C w dzień, a morze ma około 31°C. Najlepiej jechać od stycznia do kwietnia. Bilety ostatnio od 3777 zł w obie strony (Warszawa). Niżej znajdziesz tanie jedzenie i miejsca spoza przewodników.</p>
+<p class="lead">Najcieplej jest w maju, około 30°C w dzień, a morze ma około 31°C. Najlepiej jechać od stycznia do kwietnia. Bilety ostatnio od 4166 zł w obie strony (Warszawa). Niżej znajdziesz tanie jedzenie i miejsca spoza przewodników.</p>
 </div>
-<p class="autor-pasek"><img src="/img/razem.jpg" alt="" width="40" height="40" loading="lazy" decoding="async"><span>Przygotowali <a href="/o-nas/">Michał i Paulina</a>, którzy razem odwiedzili 35 krajów.</span></p>
+<p class="autor-pasek"><img src="/img/autorzy-80.webp" alt="" width="40" height="40" loading="lazy" decoding="async"><span>Przygotowali <a href="/o-nas/">Michał i Paulina</a>, którzy razem odwiedzili 35 krajów.</span></p>
 <aside class="plan" aria-label="Plan podróży od gołębi">
 <p><strong>Nie chcesz liczyć sam?</strong>Michał i Paulina ułożą Ci ten wyjazd: trasa, noclegi, jedzenie, plan B. Od 399 zł, pierwsze propozycje w 48 h, zwrot 100%, jeśli nie trafimy.</p>
 <a class="przycisk" href="/nowy/start?kierunek=koh-samui&amp;z=kierunek" data-goatcounter-click="plan-blok-kierunek">Zamów plan: Koh Samui</a>
@@ -249,7 +260,7 @@ p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
 <div><dt>Najcieplejsza woda</dt><dd>kwiecień, 31°C</dd></div>
 <div><dt>Wjazd</dt><dd>paszport i zezwolenie online</dd></div>
 <div><dt>Waluta</dt><dd>THB</dd></div>
-<div><dt>Lot od</dt><dd>3777 zł</dd></div>
+<div><dt>Lot od</dt><dd>4166 zł</dd></div>
 <div><dt>Dzień na miejscu</dt><dd>od około 80 zł na osobę</dd></div>
 </dl>
 <aside class="okazja-kierunku" data-okazje-k="koh-samui" aria-label="Okazja na ten kierunek" hidden></aside>
@@ -343,9 +354,7 @@ p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
 <li><strong>Metanol w tanich drinkach</strong><p>Nawet niewielka ilość metanolu może zabić, a nie da się go wyczuć smakiem ani zapachem. Pij alkohol z zamkniętych butelek w sprawdzonych lokalach i nie przyjmuj drinków od obcych.</p></li>
 </ul></div>
 </div>
-<h3>Od podróżników</h3>
-<p>Tu pojawią się wskazówki od osób, które wróciły z wyjazdu. Na razie pusto.</p>
-<p><a class="przycisk jasny" href="/start?sciezka=%2Fkierunki%2Fkoh-samui%2Fwskazowka" rel="nofollow">Byłeś tam? Dodaj wskazówkę</a></p>
+<p class="dalej"><a href="/start?sciezka=%2Fkierunki%2Fkoh-samui%2Fwskazowka" rel="nofollow">Byłeś tam? Dodaj wskazówkę</a></p>
 </section>
 <section id="rezerwacje" class="karta">
 <h2>Szukasz na własną rękę?</h2>
@@ -364,7 +373,7 @@ p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
 <div class="przewin"><table class="ceny">
 <thead><tr><th scope="col">Skąd</th><th scope="col">Od</th><th scope="col">Przykładowy wylot</th></tr></thead>
 <tbody>
-<tr><th scope="row">Warszawa</th><td><span class="cena-zywa" data-cena="koh-samui|warszawa|02|kckohsamuiwarszawa" data-at="2026-11-08T23:55:17.332Z" data-c="3777"><a class="cena-lot" href="https://www.aviasales.com/search/WAW2202USM08031?currency=pln&amp;marker=785120.kckohsamuiwarszawa" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-kckohsamuiwarszawa"><strong>od 3777 zł</strong></a> <small class="sprawdzono">sprawdzone 8 listopada</small></span></td><td data-kiedy>22 lutego do 8 marca 2027</td></tr>
+<tr><th scope="row">Warszawa</th><td><span class="cena-zywa" data-cena="koh-samui|warszawa|01|kckohsamuiwarszawa" data-at="2026-11-11T23:43:24.882Z" data-c="4166"><a class="cena-lot" href="https://www.aviasales.com/search/WAW0701USM31011?currency=pln&amp;marker=785120.kckohsamuiwarszawa" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-kckohsamuiwarszawa"><strong>od 4166 zł</strong></a> <small class="sprawdzono">sprawdzone 11 listopada</small></span></td><td data-kiedy>7 do 31 stycznia 2027</td></tr>
 <tr><th scope="row">Kraków</th><td><strong class="cena-zwykle" data-cena="koh-samui|krakow|07|kckohsamuikrakow">zwykle od 4533 zł</strong></td><td data-kiedy>10 do 20 lipca 2027</td></tr>
 </tbody>
 </table></div>
@@ -373,14 +382,14 @@ p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
 <section id="co-zobaczyc">
 <h2>Zabytki i muzea</h2>
 <ul class="kolumny">
-<li><a href="https://www.wikidata.org/wiki/Q14216076">Nathon</a> <small>Plaża</small></li>
-<li><a href="https://www.wikidata.org/wiki/Q2094487">Chaweng</a> <small>Plaża</small></li>
-<li><a href="https://www.wikidata.org/wiki/Q90023166">Bo Phut</a> <small>Plaża</small></li>
-<li><a href="https://www.wikidata.org/wiki/Q14211506">Choeng Mon</a> <small>Plaża</small></li>
-<li><a href="https://www.wikidata.org/wiki/Q14210773">Chalok Lam</a> <small>Plaża</small></li>
-<li><a href="https://www.wikidata.org/wiki/Q14210851">Haad Chao Phao</a> <small>Plaża</small></li>
-<li><a href="https://www.wikidata.org/wiki/Q5636460">Hat Khuat</a> <small>Plaża</small></li>
-<li><a href="https://www.wikidata.org/wiki/Q14205109">Ban Kai</a> <small>Plaża</small></li>
+<li><a href="https://www.google.com/maps/search/?api=1&amp;query=Nathon%2C%20Koh%20Samui" rel="nofollow noopener">Nathon</a> <small>Plaża</small></li>
+<li><a href="https://www.google.com/maps/search/?api=1&amp;query=Chaweng%2C%20Koh%20Samui" rel="nofollow noopener">Chaweng</a> <small>Plaża</small></li>
+<li><a href="https://www.google.com/maps/search/?api=1&amp;query=Bo%20Phut%2C%20Koh%20Samui" rel="nofollow noopener">Bo Phut</a> <small>Plaża</small></li>
+<li><a href="https://www.google.com/maps/search/?api=1&amp;query=Choeng%20Mon%2C%20Koh%20Samui" rel="nofollow noopener">Choeng Mon</a> <small>Plaża</small></li>
+<li><a href="https://www.google.com/maps/search/?api=1&amp;query=Chalok%20Lam%2C%20Koh%20Samui" rel="nofollow noopener">Chalok Lam</a> <small>Plaża</small></li>
+<li><a href="https://www.google.com/maps/search/?api=1&amp;query=Haad%20Chao%20Phao%2C%20Koh%20Samui" rel="nofollow noopener">Haad Chao Phao</a> <small>Plaża</small></li>
+<li><a href="https://www.google.com/maps/search/?api=1&amp;query=Hat%20Khuat%2C%20Koh%20Samui" rel="nofollow noopener">Hat Khuat</a> <small>Plaża</small></li>
+<li><a href="https://www.google.com/maps/search/?api=1&amp;query=Ban%20Kai%2C%20Koh%20Samui" rel="nofollow noopener">Ban Kai</a> <small>Plaża</small></li>
 </ul>
 <p><a href="https://www.openstreetmap.org/?mlat=9.53&amp;mlon=100.06#map=11/9.53/100.06">Zobacz na mapie OpenStreetMap</a></p>
 </section>
@@ -401,7 +410,7 @@ p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
 <details><summary>Koh Samui: ile trwa lot z Polski?</summary><p>Z Warszawy około 11,5 h w powietrzu bez przesiadek (w linii prostej około 8429 km). Z przesiadką dolicz czas na zmianę samolotu.</p></details>
 <details><summary>Koh Samui: kiedy najlepiej lecieć?</summary><p>Najlepiej od stycznia do kwietnia. Najcieplej jest w maju, około 30°C w dzień.</p></details>
 <details><summary>Koh Samui: paszport czy dowód?</summary><p>Bez wizy, z zezwoleniem online przed wylotem. Przed wyjazdem sprawdź aktualne zasady w serwisie MSZ.</p></details>
-<details><summary>Koh Samui: ile kosztuje dzień na miejscu?</summary><p>Bez lotu i noclegu oszczędnie około 80 zł, średnio 150 zł, wygodnie 300 zł na osobę dziennie: jedzenie, transport lokalny i bilety wstępu. Tydzień średnio to około 1050 zł na osobę. Do tego lot: ostatnio od 3777 zł w obie strony (Warszawa).</p></details>
+<details><summary>Koh Samui: ile kosztuje dzień na miejscu?</summary><p>Bez lotu i noclegu oszczędnie około 80 zł, średnio 150 zł, wygodnie 300 zł na osobę dziennie: jedzenie, transport lokalny i bilety wstępu. Tydzień średnio to około 1050 zł na osobę. Do tego lot: ostatnio od 4166 zł w obie strony (Warszawa).</p></details>
 <details><summary>Koh Samui: gdzie to jest?</summary><p>Kraj: Tajlandia. Od Warszawy w linii prostej około 8429 km.</p></details>
 </section>
 
@@ -409,9 +418,9 @@ p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
 <h2>Zostaw szukanie nam</h2>
 <p>Plany układamy ręcznie, we dwoje, nie automatem. Propozycje dostajesz w 48 godzin.</p>
 <p class="cena">Od 399 zł za cały plan. Płacisz dopiero na końcu zamówienia.</p>
-<p class="drobne">BLIK, karta albo Klarna. Zwrot 100%, jeśli nie trafimy. Propozycje z lotami i hotelami w 48 h. Pełny plan dzień po dniu w 5 dni roboczych od rezerwacji.</p>
+<p class="drobne">BLIK, karta albo Klarna. Zwrot 100%, jeśli nie trafimy z propozycjami. Propozycje z lotami i hotelami w 48 h. Pełny plan dzień po dniu w 5 dni roboczych od rezerwacji.</p>
 <p><a class="przycisk" href="/nowy/start?kierunek=koh-samui&amp;z=kierunek" data-goatcounter-click="plan-koniec-kierunek">Zamów plan: Koh Samui</a><a class="przycisk jasny" href="/start?sciezka=%2Fkierunki%2Fkoh-samui" rel="nofollow">Otwórz w aplikacji</a></p>
-<p><a href="/przyklad-plan.pdf" data-goatcounter-click="plan-pdf-kierunek">Zobacz przykładowy plan: Kair, 5 dni (PDF)</a></p>
+<p><a href="/przykladowy-plan/" data-goatcounter-click="plan-pdf-kierunek">Zobacz przykładowy plan: Kair, 5 dni</a></p>
 <blockquote class="opinia"><p>Zaplanowali dla nas dwutygodniową podróż do Japonii, która była jednocześnie naszą podróżą poślubną. Rada dotycząca wysyłania bagaży z hotelu do hotelu: absolutny strzał w dziesiątkę!</p><small>Alicja i Łukasz, podróż poślubna w Japonii</small></blockquote>
 <div class="czy-sam"><p><strong>Gotowy plan czy sam?</strong></p><p><a href="/porownanie/biuro-podrozy/">Plan od gołębi czy biuro podróży</a></p><p><a href="/porownanie/plan-z-ai/">Plan od gołębi czy plan z AI</a></p><p><a href="/porownanie/itaka-rainbow-tui/">Itaka, Rainbow czy TUI? Porównanie biur</a></p></div>
 </section>
@@ -435,7 +444,7 @@ p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
 <div><p class="tytul">Kiedy wolne</p><ul><li><a href="/majowka/">Majówka</a></li><li><a href="/wielkanoc/">Wielkanoc za granicą</a></li><li><a href="/boze-cialo/">Boże Ciało</a></li><li><a href="/ferie-zimowe/">Ferie zimowe</a></li><li><a href="/sylwester-za-granica/">Sylwester za granicą</a></li><li><a href="/swieta-w-cieple/">Święta w cieple</a></li><li><a href="/wakacje-z-dziecmi/">Wakacje z dziećmi</a></li><li><a href="/podroz-poslubna/">Podróż poślubna</a></li></ul></div>
 <div><p class="tytul">Przydatne</p><ul><li><a href="/aktualnosci/">Aktualności</a></li><li><a href="/poradniki/">Poradniki</a></li><li><a href="/porownanie/">Porównania</a></li><li><a href="/tanie-loty/">Tanie loty</a></li><li><a href="/okazje/">Okazje</a></li><li><a href="/prezent/">Voucher na podróż</a></li><li><a href="https://t.me/golebielataja" rel="noopener" target="_blank">Okazje lotnicze na Telegramie</a></li><li><a href="https://whatsapp.com/channel/0029VbDbtX0BadmVQgdIec2x" rel="noopener" target="_blank">Okazje na WhatsAppie</a></li><li><a href="/polityka-prywatnosci.html">Polityka prywatności</a></li><li><a href="/regulamin.html">Regulamin</a></li><li><a href="#zgoda" data-cookies="1">Ustawienia cookies</a></li></ul></div>
 </div>
-<p class="drobne">Strony odświeżamy codziennie, a ceny lotów odświeżają się same przy każdym wejściu. Stan na 15 listopada 2026.</p>
+<p class="drobne">Strony odświeżamy codziennie, a ceny lotów odświeżają się same przy każdym wejściu. Stan na 16 listopada 2026.</p>
 </footer>
 <div class="pasek"></div>
 <div class="plan-pasek" hidden><p>Plan podróży od 399 zł, propozycje w 48 h</p><a href="/nowy/start?kierunek=koh-samui&amp;z=kierunek" data-goatcounter-click="plan-pasek-kierunek">Zamów</a></div>

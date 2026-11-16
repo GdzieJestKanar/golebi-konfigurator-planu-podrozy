@@ -105,6 +105,7 @@ ul.lista-rzeczy li::before{content:"";position:absolute;left:0;top:.3em;width:16
 table{border-collapse:collapse;width:100%;font-size:.98rem;font-variant-numeric:tabular-nums lining-nums}
 th,td{padding:8px 10px;text-align:left;border-bottom:1px solid var(--line)}thead th{font-weight:800;font-size:.88rem;color:var(--ink-soft);border-bottom:2px solid var(--ink)}tbody th{font-weight:700;color:var(--ink)}
 tbody tr:nth-child(even){background:rgba(255,253,248,.7)}.przewin{overflow-x:auto;-webkit-overflow-scrolling:touch}
+@media(max-width:480px){.przewin th,.przewin td{padding-left:5px;padding-right:5px}table.ceny td[data-kiedy]{font-size:.92rem}table.ceny .sprawdzono{white-space:normal}}
 table.mapa td,table.mapa th{text-align:center;padding:6px 3px;font-size:.84rem}table.mapa td:first-child,table.mapa th:first-child{text-align:left;white-space:nowrap}
 table.fakty th[scope=row]{width:34%;font-family:var(--mono);font-weight:500;font-size:.8rem;color:var(--ink-soft);border-bottom:1px dashed var(--line);vertical-align:top;padding-top:11px}table.fakty td{border-bottom:1px dashed var(--line)}
 .o1{background:#F3DED8}.o2{background:#F0E3CC}.o3{background:#E6E8C8}.o4{background:#C8E0C0}.o5{background:#9ACB98}
@@ -125,7 +126,7 @@ nav.spis{position:sticky;top:0;z-index:5;background:var(--paper);margin:12px -20
 nav.spis ol{display:flex;gap:8px;list-style:none;margin:0;padding:0;overflow-x:auto;scrollbar-width:none}nav.spis li{margin:0}
 nav.spis a{display:block;white-space:nowrap;padding:6px 14px;border:1.5px solid var(--line);border-radius:999px;background:var(--white);text-decoration:none;font-size:.92rem;font-weight:700;color:var(--ink)}
 nav.spis a[aria-current]{background:var(--navy);border-color:var(--navy);color:var(--white)}
-@media(min-width:1400px){nav.spis{position:fixed;top:24px;left:calc(50% + 560px);width:200px;margin:0;padding:14px;border:0;border-radius:16px;background:var(--white)}
+@media(min-width:1560px){nav.spis{position:fixed;top:24px;left:calc(50% + 560px);width:200px;margin:0;padding:14px;border:0;border-radius:16px;background:var(--white)}
 nav.spis .spis-tytul{display:block;margin:0 0 6px 10px;font-weight:800;font-size:.85rem;color:var(--ink-soft)}
 nav.spis ol{flex-direction:column;gap:2px;overflow:visible}nav.spis a{border:0;border-radius:10px;background:none;font-weight:600;white-space:normal;padding:6px 10px}
 nav.spis a[aria-current]{background:var(--paper);color:var(--navy);font-weight:800}section[id]{scroll-margin-top:16px}}
@@ -203,9 +204,19 @@ section.archiwum li{padding:12px 16px;border:1px solid var(--line);border-radius
 section.archiwum li strong{display:block}section.archiwum .cena{font-family:var(--serif);color:var(--ink);font-size:1.1rem}
 section.archiwum .cena small{font-family:var(--sans);color:var(--zielen,#2f7a4b);margin-left:8px;font-size:.88rem}
 section.archiwum .kiedy{display:block;margin-top:2px;font-size:.85rem;color:var(--ink-soft)}
-p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
+p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}
+.okazje-filtr{margin:18px 0 4px;display:grid;gap:10px}.okazje-filtr p{margin:0;font-weight:800;font-size:.9rem;color:var(--ink-soft)}
+.okazje-filtr .chipy{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding:2px 0}.okazje-filtr .chipy::-webkit-scrollbar{display:none}
+.okazje-filtr button{flex:none;font:inherit;font-size:.92rem;font-weight:700;white-space:nowrap;min-height:40px;padding:6px 14px;border:1.5px solid var(--line);border-radius:999px;background:var(--white);color:var(--ink);cursor:pointer}
+.okazje-filtr button[aria-pressed=true]{background:var(--navy);border-color:var(--navy);color:var(--white)}
+.okazje-filtr button:focus-visible,button.okazje-wiecej:focus-visible{outline:3px solid var(--navy);outline-offset:2px}
+article.okazja[hidden]{display:none}
+article.okazja .okazja-foto{display:block;margin:0 0 12px}article.okazja .okazja-foto img{display:block;width:100%;height:150px;object-fit:cover;border-radius:10px;background:var(--paper-deep)}
+@media(min-width:700px){article.okazja .okazja-foto{float:right;width:220px;margin:0 0 10px 18px}article.okazja .okazja-foto img{height:146px}article.okazja::after{content:"";display:block;clear:both}}
+p.okazje-foto-zrodla{font-size:.72rem;color:var(--ink-soft);margin:0;max-width:none}p.okazje-foto-zrodla a{color:var(--ink-soft)}
+button.okazje-wiecej{justify-self:start;font:inherit;font-weight:700;min-height:44px;padding:8px 20px;border:1.5px solid var(--navy);border-radius:999px;background:var(--white);color:var(--navy);cursor:pointer}</style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"TouristDestination","name":"Oslo","description":"Oslo (Norwegia): najlepiej od czerwca do września, około 2 h lotu z Warszawy. Pogoda co miesiąc, ceny lotów i co zobaczyć.","url":"https://golebielataja.pl/kierunki/oslo/","geo":{"@type":"GeoCoordinates","latitude":59.913,"longitude":10.752},"containedInPlace":{"@type":"Country","name":"Norwegia"},"includesAttraction":[{"@type":"TouristAttraction","name":"Munch-museet","sameAs":"https://www.wikidata.org/wiki/Q844926"},{"@type":"TouristAttraction","name":"Twierdza Akershus","sameAs":"https://www.wikidata.org/wiki/Q644464"},{"@type":"TouristAttraction","name":"Narodowe Muzeum Sztuki, Architektury i Projektowania","sameAs":"https://www.wikidata.org/wiki/Q1132918"},{"@type":"TouristAttraction","name":"Frammuseet","sameAs":"https://www.wikidata.org/wiki/Q941250"},{"@type":"TouristAttraction","name":"Nobel Peace Center","sameAs":"https://www.wikidata.org/wiki/Q941120"},{"@type":"TouristAttraction","name":"Muzeum Kon-Tiki","sameAs":"https://www.wikidata.org/wiki/Q1415972"},{"@type":"TouristAttraction","name":"Galeria Narodowa","sameAs":"https://www.wikidata.org/wiki/Q3330707"},{"@type":"TouristAttraction","name":"Park Vigelanda","sameAs":"https://www.wikidata.org/wiki/Q1126911"}]}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Oslo: ile trwa lot z Polski?","acceptedAnswer":{"@type":"Answer","text":"Z Warszawy około 2 h w powietrzu bez przesiadek (w linii prostej około 1067 km). Z przesiadką dolicz czas na zmianę samolotu."}},{"@type":"Question","name":"Oslo: kiedy najlepiej lecieć?","acceptedAnswer":{"@type":"Answer","text":"Najlepiej od czerwca do września. Najcieplej jest w lipcu, około 20°C w dzień."}},{"@type":"Question","name":"Oslo: paszport czy dowód?","acceptedAnswer":{"@type":"Answer","text":"Wystarczy dowód osobisty. Przed wyjazdem sprawdź aktualne zasady w serwisie MSZ."}},{"@type":"Question","name":"Oslo: ile kosztuje dzień na miejscu?","acceptedAnswer":{"@type":"Answer","text":"Bez lotu i noclegu oszczędnie około 260 zł, średnio 460 zł, wygodnie 900 zł na osobę dziennie: jedzenie, transport lokalny i bilety wstępu. Tydzień średnio to około 3220 zł na osobę. Do tego lot: ostatnio od 141 zł w obie strony (Gdańsk)."}},{"@type":"Question","name":"Oslo: gdzie to jest?","acceptedAnswer":{"@type":"Answer","text":"Kraj: Norwegia. Od Warszawy w linii prostej około 1067 km."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Oslo: ile trwa lot z Polski?","acceptedAnswer":{"@type":"Answer","text":"Z Warszawy około 2 h w powietrzu bez przesiadek (w linii prostej około 1067 km). Z przesiadką dolicz czas na zmianę samolotu."}},{"@type":"Question","name":"Oslo: kiedy najlepiej lecieć?","acceptedAnswer":{"@type":"Answer","text":"Najlepiej od czerwca do września. Najcieplej jest w lipcu, około 20°C w dzień."}},{"@type":"Question","name":"Oslo: paszport czy dowód?","acceptedAnswer":{"@type":"Answer","text":"Wystarczy dowód osobisty. Przed wyjazdem sprawdź aktualne zasady w serwisie MSZ."}},{"@type":"Question","name":"Oslo: ile kosztuje dzień na miejscu?","acceptedAnswer":{"@type":"Answer","text":"Bez lotu i noclegu oszczędnie około 260 zł, średnio 460 zł, wygodnie 900 zł na osobę dziennie: jedzenie, transport lokalny i bilety wstępu. Tydzień średnio to około 3220 zł na osobę. Do tego lot: ostatnio od 132 zł w obie strony (Gdańsk)."}},{"@type":"Question","name":"Oslo: gdzie to jest?","acceptedAnswer":{"@type":"Answer","text":"Kraj: Norwegia. Od Warszawy w linii prostej około 1067 km."}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Gołębie Latają","item":"https://golebielataja.pl/"},{"@type":"ListItem","position":2,"name":"Kierunki","item":"https://golebielataja.pl/kierunki/"},{"@type":"ListItem","position":3,"name":"Oslo","item":"https://golebielataja.pl/kierunki/oslo/"}]}</script>
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "dabf88d8ecff46b9af7a1518edc3f5ee"}'></script>
 <script data-goatcounter="https://golebielataja1.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
@@ -236,7 +247,7 @@ p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
 <h1>Oslo</h1>
 <p class="lead">Gołębie poleciałyby od czerwca do września. W lipcu termometr dochodzi do 20°C. Lot z Polski trwa około 2 h bez przesiadek. Gdzie zjeść za grosze i co zobaczyć poza przewodnikiem, jest niżej.</p>
 </div>
-<p class="autor-pasek"><img src="/img/razem.jpg" alt="" width="40" height="40" loading="lazy" decoding="async"><span>Przygotowali <a href="/o-nas/">Michał i Paulina</a>, którzy razem odwiedzili 35 krajów.</span></p>
+<p class="autor-pasek"><img src="/img/autorzy-80.webp" alt="" width="40" height="40" loading="lazy" decoding="async"><span>Przygotowali <a href="/o-nas/">Michał i Paulina</a>, którzy razem odwiedzili 35 krajów.</span></p>
 <aside class="plan" aria-label="Plan podróży od gołębi">
 <p><strong>Nie chcesz liczyć sam?</strong>Michał i Paulina ułożą Ci ten wyjazd: trasa, noclegi, jedzenie, plan B. Od 399 zł, pierwsze propozycje w 48 h, zwrot 100%, jeśli nie trafimy.</p>
 <a class="przycisk" href="/nowy/start?kierunek=oslo&amp;z=kierunek" data-goatcounter-click="plan-blok-kierunek">Zamów plan: Oslo</a>
@@ -248,7 +259,7 @@ p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
 <div><dt>Najcieplej</dt><dd>lipiec, 20°C</dd></div>
 <div><dt>Wjazd</dt><dd>dowód osobisty</dd></div>
 <div><dt>Waluta</dt><dd>NOK</dd></div>
-<div><dt>Lot od</dt><dd>141 zł</dd></div>
+<div><dt>Lot od</dt><dd>132 zł</dd></div>
 <div><dt>Dzień na miejscu</dt><dd>od około 260 zł na osobę</dd></div>
 </dl>
 <aside class="okazja-kierunku" data-okazje-k="oslo" aria-label="Okazja na ten kierunek" hidden></aside>
@@ -307,21 +318,19 @@ p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
 <li><strong>Drobne kradzieże na dworcach</strong><p>Kieszonkowcy działają głównie na lotnisku i dworcach kolejowych w Oslo i okolicach. Na stacjach trzymaj bagaż przy sobie i nie odkładaj telefonu na stolik.</p></li>
 </ul></div>
 </div>
-<h3>Od podróżników</h3>
-<p>Wróciłeś stąd niedawno? Twoja wskazówka może być tu pierwsza.</p>
-<p><a class="przycisk jasny" href="/start?sciezka=%2Fkierunki%2Foslo%2Fwskazowka" rel="nofollow">Byłeś tam? Dodaj wskazówkę</a></p>
+<p class="dalej"><a href="/start?sciezka=%2Fkierunki%2Foslo%2Fwskazowka" rel="nofollow">Byłeś tam? Dodaj wskazówkę</a></p>
 </section>
 <section id="co-zobaczyc">
 <h2>Zabytki i muzea</h2>
 <ul class="kolumny">
-<li><a href="https://www.wikidata.org/wiki/Q844926">Munch-museet</a> <small>Muzeum</small></li>
-<li><a href="https://www.wikidata.org/wiki/Q644464">Twierdza Akershus</a> <small>Muzeum</small></li>
-<li><a href="https://www.wikidata.org/wiki/Q1132918">Narodowe Muzeum Sztuki, Architektury i Projektowania</a> <small>Muzeum</small></li>
-<li><a href="https://www.wikidata.org/wiki/Q941250">Frammuseet</a> <small>Muzeum</small></li>
-<li><a href="https://www.wikidata.org/wiki/Q941120">Nobel Peace Center</a> <small>Muzeum</small></li>
-<li><a href="https://www.wikidata.org/wiki/Q1415972">Muzeum Kon-Tiki</a> <small>Muzeum</small></li>
-<li><a href="https://www.wikidata.org/wiki/Q3330707">Galeria Narodowa</a> <small>Muzeum</small></li>
-<li><a href="https://www.wikidata.org/wiki/Q1126911">Park Vigelanda</a> <small>Natura</small></li>
+<li><a href="https://www.google.com/maps/search/?api=1&amp;query=Munch-museet%2C%20Oslo" rel="nofollow noopener">Munch-museet</a> <small>Muzeum</small></li>
+<li><a href="https://www.google.com/maps/search/?api=1&amp;query=Twierdza%20Akershus%2C%20Oslo" rel="nofollow noopener">Twierdza Akershus</a> <small>Muzeum</small></li>
+<li><a href="https://www.google.com/maps/search/?api=1&amp;query=Narodowe%20Muzeum%20Sztuki%2C%20Architektury%20i%20Projektowania%2C%20Oslo" rel="nofollow noopener">Narodowe Muzeum Sztuki, Architektury i Projektowania</a> <small>Muzeum</small></li>
+<li><a href="https://www.google.com/maps/search/?api=1&amp;query=Frammuseet%2C%20Oslo" rel="nofollow noopener">Frammuseet</a> <small>Muzeum</small></li>
+<li><a href="https://www.google.com/maps/search/?api=1&amp;query=Nobel%20Peace%20Center%2C%20Oslo" rel="nofollow noopener">Nobel Peace Center</a> <small>Muzeum</small></li>
+<li><a href="https://www.google.com/maps/search/?api=1&amp;query=Muzeum%20Kon-Tiki%2C%20Oslo" rel="nofollow noopener">Muzeum Kon-Tiki</a> <small>Muzeum</small></li>
+<li><a href="https://www.google.com/maps/search/?api=1&amp;query=Galeria%20Narodowa%2C%20Oslo" rel="nofollow noopener">Galeria Narodowa</a> <small>Muzeum</small></li>
+<li><a href="https://www.google.com/maps/search/?api=1&amp;query=Park%20Vigelanda%2C%20Oslo" rel="nofollow noopener">Park Vigelanda</a> <small>Natura</small></li>
 </ul>
 <p><a href="https://www.openstreetmap.org/?mlat=59.913&amp;mlon=10.752#map=11/59.913/10.752">Zobacz na mapie OpenStreetMap</a></p>
 </section>
@@ -376,12 +385,12 @@ p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
 <div class="przewin"><table class="ceny">
 <thead><tr><th scope="col">Skąd</th><th scope="col">Od</th><th scope="col">Przykładowy wylot</th></tr></thead>
 <tbody>
-<tr><th scope="row">Gdańsk</th><td><span class="cena-zywa" data-cena="oslo|gdansk|12|kcoslogdansk" data-at="2026-11-08T23:25:17.318Z" data-c="141"><a class="cena-lot" href="https://www.aviasales.com/search/GDN1112OSL14121?currency=pln&amp;marker=785120.kcoslogdansk" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-kcoslogdansk"><strong>od 141 zł</strong></a> <small class="sprawdzono">sprawdzone 8 listopada</small></span></td><td data-kiedy>11 do 14 grudnia 2026</td></tr>
+<tr><th scope="row">Gdańsk</th><td><span class="cena-zywa" data-cena="oslo|gdansk|12|kcoslogdansk" data-at="2026-11-15T15:21:01.388Z" data-c="132"><a class="cena-lot" href="https://www.aviasales.com/search/GDN0512OSL06121?currency=pln&amp;marker=785120.kcoslogdansk" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-kcoslogdansk"><strong>od 132 zł</strong></a> <small class="sprawdzono">sprawdzone 15 listopada</small></span></td><td data-kiedy>5 do 6 grudnia 2026</td></tr>
 <tr><th scope="row">Kraków</th><td><span class="cena-zywa" data-cena="oslo|krakow|12|kcoslokrakow" data-at="2026-11-09T23:17:06.348Z" data-c="150"><a class="cena-lot" href="https://www.aviasales.com/search/KRK1712OSL07011?currency=pln&amp;marker=785120.kcoslokrakow" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-kcoslokrakow"><strong>od 150 zł</strong></a> <small class="sprawdzono">sprawdzone 9 listopada</small></span></td><td data-kiedy>17 grudnia 2026 do 7 stycznia 2027</td></tr>
 <tr><th scope="row">Warszawa</th><td><span class="cena-zywa" data-cena="oslo|warszawa|01|kcoslowarszawa" data-at="2026-11-11T23:43:24.882Z" data-c="186"><a class="cena-lot" href="https://www.aviasales.com/search/WAW2201OSL25011?currency=pln&amp;marker=785120.kcoslowarszawa" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-kcoslowarszawa"><strong>od 186 zł</strong></a> <small class="sprawdzono">sprawdzone 11 listopada</small></span></td><td data-kiedy>22 do 25 stycznia 2027</td></tr>
-<tr><th scope="row">Katowice</th><td><span class="cena-zywa" data-cena="oslo|katowice|04|kcoslokatowice" data-at="2026-11-08T12:55:17.204Z" data-c="233"><a class="cena-lot" href="https://www.aviasales.com/search/KTW0804OSL16041?currency=pln&amp;marker=785120.kcoslokatowice" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-kcoslokatowice"><strong>od 233 zł</strong></a> <small class="sprawdzono">sprawdzone 8 listopada</small></span></td><td data-kiedy>8 do 16 kwietnia 2027</td></tr>
-<tr><th scope="row">Szczecin</th><td><span class="cena-zywa" data-cena="oslo|szczecin|12|kcosloszczecin" data-at="2026-11-08T23:25:17.318Z" data-c="273"><a class="cena-lot" href="https://www.aviasales.com/search/SZZ1112OSL14121?currency=pln&amp;marker=785120.kcosloszczecin" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-kcosloszczecin"><strong>od 273 zł</strong></a> <small class="sprawdzono">sprawdzone 8 listopada</small></span></td><td data-kiedy>11 do 14 grudnia 2026</td></tr>
-<tr><th scope="row">Wrocław</th><td><span class="cena-zywa" data-cena="oslo|wroclaw|12|kcoslowroclaw" data-at="2026-11-08T23:25:17.318Z" data-c="323"><a class="cena-lot" href="https://www.aviasales.com/search/WRO2012OSL27121?currency=pln&amp;marker=785120.kcoslowroclaw" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-kcoslowroclaw"><strong>od 323 zł</strong></a> <small class="sprawdzono">sprawdzone 8 listopada</small></span></td><td data-kiedy>20 do 27 grudnia 2026</td></tr>
+<tr><th scope="row">Katowice</th><td><span class="cena-zywa" data-cena="oslo|katowice|04|kcoslokatowice" data-at="2026-11-09T12:55:17.611Z" data-c="233"><a class="cena-lot" href="https://www.aviasales.com/search/KTW0804OSL16041?currency=pln&amp;marker=785120.kcoslokatowice" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-kcoslokatowice"><strong>od 233 zł</strong></a> <small class="sprawdzono">sprawdzone 9 listopada</small></span></td><td data-kiedy>8 do 16 kwietnia 2027</td></tr>
+<tr><th scope="row">Szczecin</th><td><span class="cena-zywa" data-cena="oslo|szczecin|12|kcosloszczecin" data-at="2026-11-09T20:02:06.266Z" data-c="273"><a class="cena-lot" href="https://www.aviasales.com/search/SZZ1112OSL14121?currency=pln&amp;marker=785120.kcosloszczecin" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-kcosloszczecin"><strong>od 273 zł</strong></a> <small class="sprawdzono">sprawdzone 9 listopada</small></span></td><td data-kiedy>11 do 14 grudnia 2026</td></tr>
+<tr><th scope="row">Wrocław</th><td><span class="cena-zywa" data-cena="oslo|wroclaw|12|kcoslowroclaw" data-at="2026-11-09T20:02:06.266Z" data-c="323"><a class="cena-lot" href="https://www.aviasales.com/search/WRO2012OSL27121?currency=pln&amp;marker=785120.kcoslowroclaw" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-kcoslowroclaw"><strong>od 323 zł</strong></a> <small class="sprawdzono">sprawdzone 9 listopada</small></span></td><td data-kiedy>20 do 27 grudnia 2026</td></tr>
 </tbody>
 </table></div>
 <p class="drobne">Cena „od” otwiera Aviasales z tymi samymi datami; ceny zmieniają się co godzinę, więc mogą się różnić. „Zwykle od” to cena sprzed ponad tygodnia, orientacyjna.</p>
@@ -412,7 +421,7 @@ p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
 <details><summary>Oslo: ile trwa lot z Polski?</summary><p>Z Warszawy około 2 h w powietrzu bez przesiadek (w linii prostej około 1067 km). Z przesiadką dolicz czas na zmianę samolotu.</p></details>
 <details><summary>Oslo: kiedy najlepiej lecieć?</summary><p>Najlepiej od czerwca do września. Najcieplej jest w lipcu, około 20°C w dzień.</p></details>
 <details><summary>Oslo: paszport czy dowód?</summary><p>Wystarczy dowód osobisty. Przed wyjazdem sprawdź aktualne zasady w serwisie MSZ.</p></details>
-<details><summary>Oslo: ile kosztuje dzień na miejscu?</summary><p>Bez lotu i noclegu oszczędnie około 260 zł, średnio 460 zł, wygodnie 900 zł na osobę dziennie: jedzenie, transport lokalny i bilety wstępu. Tydzień średnio to około 3220 zł na osobę. Do tego lot: ostatnio od 141 zł w obie strony (Gdańsk).</p></details>
+<details><summary>Oslo: ile kosztuje dzień na miejscu?</summary><p>Bez lotu i noclegu oszczędnie około 260 zł, średnio 460 zł, wygodnie 900 zł na osobę dziennie: jedzenie, transport lokalny i bilety wstępu. Tydzień średnio to około 3220 zł na osobę. Do tego lot: ostatnio od 132 zł w obie strony (Gdańsk).</p></details>
 <details><summary>Oslo: gdzie to jest?</summary><p>Kraj: Norwegia. Od Warszawy w linii prostej około 1067 km.</p></details>
 </section>
 
@@ -420,9 +429,9 @@ p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
 <h2>Mało czasu na szukanie?</h2>
 <p>Opisz wyjazd w dwie minuty. Loty, noclegi i plan dzień po dniu bierzemy na siebie.</p>
 <p class="cena">Od 399 zł za cały plan. Płacisz dopiero na końcu zamówienia.</p>
-<p class="drobne">BLIK, karta albo Klarna. Zwrot 100%, jeśli nie trafimy. Propozycje z lotami i hotelami w 48 h. Pełny plan dzień po dniu w 5 dni roboczych od rezerwacji.</p>
+<p class="drobne">BLIK, karta albo Klarna. Zwrot 100%, jeśli nie trafimy z propozycjami. Propozycje z lotami i hotelami w 48 h. Pełny plan dzień po dniu w 5 dni roboczych od rezerwacji.</p>
 <p><a class="przycisk" href="/nowy/start?kierunek=oslo&amp;z=kierunek" data-goatcounter-click="plan-koniec-kierunek">Zamów plan: Oslo</a><a class="przycisk jasny" href="/start?sciezka=%2Fkierunki%2Foslo" rel="nofollow">Otwórz w aplikacji</a></p>
-<p><a href="/przyklad-plan.pdf" data-goatcounter-click="plan-pdf-kierunek">Zobacz przykładowy plan: Kair, 5 dni (PDF)</a></p>
+<p><a href="/przykladowy-plan/" data-goatcounter-click="plan-pdf-kierunek">Zobacz przykładowy plan: Kair, 5 dni</a></p>
 <blockquote class="opinia"><p>Potrzebowałem inspiracji na mototrip po Kaszubach i Pomorzu. Dostałem namiary, jakie punkty związane z II WŚ zwiedzić, gdzie rozbić namiot, gdzie zjeść i jakie jeziora zobaczyć.</p><small>Piotr, mototrip po Polsce</small></blockquote>
 <div class="czy-sam"><p><strong>Gotowy plan czy sam?</strong></p><p><a href="/porownanie/biuro-podrozy/">Plan od gołębi czy biuro podróży</a></p><p><a href="/porownanie/plan-z-ai/">Plan od gołębi czy plan z AI</a></p><p><a href="/porownanie/itaka-rainbow-tui/">Itaka, Rainbow czy TUI? Porównanie biur</a></p></div>
 </section>
@@ -446,7 +455,7 @@ p.wiecej-okazji{margin:10px 0 0;font-size:.92rem}</style>
 <div><p class="tytul">Kiedy wolne</p><ul><li><a href="/majowka/">Majówka</a></li><li><a href="/wielkanoc/">Wielkanoc za granicą</a></li><li><a href="/boze-cialo/">Boże Ciało</a></li><li><a href="/ferie-zimowe/">Ferie zimowe</a></li><li><a href="/sylwester-za-granica/">Sylwester za granicą</a></li><li><a href="/swieta-w-cieple/">Święta w cieple</a></li><li><a href="/wakacje-z-dziecmi/">Wakacje z dziećmi</a></li><li><a href="/podroz-poslubna/">Podróż poślubna</a></li></ul></div>
 <div><p class="tytul">Przydatne</p><ul><li><a href="/aktualnosci/">Aktualności</a></li><li><a href="/poradniki/">Poradniki</a></li><li><a href="/porownanie/">Porównania</a></li><li><a href="/tanie-loty/">Tanie loty</a></li><li><a href="/okazje/">Okazje</a></li><li><a href="/prezent/">Voucher na podróż</a></li><li><a href="https://t.me/golebielataja" rel="noopener" target="_blank">Okazje lotnicze na Telegramie</a></li><li><a href="https://whatsapp.com/channel/0029VbDbtX0BadmVQgdIec2x" rel="noopener" target="_blank">Okazje na WhatsAppie</a></li><li><a href="/polityka-prywatnosci.html">Polityka prywatności</a></li><li><a href="/regulamin.html">Regulamin</a></li><li><a href="#zgoda" data-cookies="1">Ustawienia cookies</a></li></ul></div>
 </div>
-<p class="drobne">Strony odświeżamy codziennie, a ceny lotów odświeżają się same przy każdym wejściu. Stan na 15 listopada 2026.</p>
+<p class="drobne">Strony odświeżamy codziennie, a ceny lotów odświeżają się same przy każdym wejściu. Stan na 16 listopada 2026.</p>
 </footer>
 <div class="pasek"></div>
 <div class="plan-pasek" hidden><p>Plan podróży od 399 zł, propozycje w 48 h</p><a href="/nowy/start?kierunek=oslo&amp;z=kierunek" data-goatcounter-click="plan-pasek-kierunek">Zamów</a></div>

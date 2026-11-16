@@ -107,6 +107,7 @@ ul.lista-rzeczy li::before{content:"";position:absolute;left:0;top:.3em;width:16
 table{border-collapse:collapse;width:100%;font-size:.98rem;font-variant-numeric:tabular-nums lining-nums}
 th,td{padding:8px 10px;text-align:left;border-bottom:1px solid var(--line)}thead th{font-weight:800;font-size:.88rem;color:var(--ink-soft);border-bottom:2px solid var(--ink)}tbody th{font-weight:700;color:var(--ink)}
 tbody tr:nth-child(even){background:rgba(255,253,248,.7)}.przewin{overflow-x:auto;-webkit-overflow-scrolling:touch}
+@media(max-width:480px){.przewin th,.przewin td{padding-left:5px;padding-right:5px}table.ceny td[data-kiedy]{font-size:.92rem}table.ceny .sprawdzono{white-space:normal}}
 table.mapa td,table.mapa th{text-align:center;padding:6px 3px;font-size:.84rem}table.mapa td:first-child,table.mapa th:first-child{text-align:left;white-space:nowrap}
 table.fakty th[scope=row]{width:34%;font-family:var(--mono);font-weight:500;font-size:.8rem;color:var(--ink-soft);border-bottom:1px dashed var(--line);vertical-align:top;padding-top:11px}table.fakty td{border-bottom:1px dashed var(--line)}
 .o1{background:#F3DED8}.o2{background:#F0E3CC}.o3{background:#E6E8C8}.o4{background:#C8E0C0}.o5{background:#9ACB98}
@@ -127,7 +128,7 @@ nav.spis{position:sticky;top:0;z-index:5;background:var(--paper);margin:12px -20
 nav.spis ol{display:flex;gap:8px;list-style:none;margin:0;padding:0;overflow-x:auto;scrollbar-width:none}nav.spis li{margin:0}
 nav.spis a{display:block;white-space:nowrap;padding:6px 14px;border:1.5px solid var(--line);border-radius:999px;background:var(--white);text-decoration:none;font-size:.92rem;font-weight:700;color:var(--ink)}
 nav.spis a[aria-current]{background:var(--navy);border-color:var(--navy);color:var(--white)}
-@media(min-width:1400px){nav.spis{position:fixed;top:24px;left:calc(50% + 560px);width:200px;margin:0;padding:14px;border:0;border-radius:16px;background:var(--white)}
+@media(min-width:1560px){nav.spis{position:fixed;top:24px;left:calc(50% + 560px);width:200px;margin:0;padding:14px;border:0;border-radius:16px;background:var(--white)}
 nav.spis .spis-tytul{display:block;margin:0 0 6px 10px;font-weight:800;font-size:.85rem;color:var(--ink-soft)}
 nav.spis ol{flex-direction:column;gap:2px;overflow:visible}nav.spis a{border:0;border-radius:10px;background:none;font-weight:600;white-space:normal;padding:6px 10px}
 nav.spis a[aria-current]{background:var(--paper);color:var(--navy);font-weight:800}section[id]{scroll-margin-top:16px}}
@@ -186,7 +187,7 @@ section.pocztowka p{font-family:var(--sans);font-size:1.05rem;line-height:1.55;f
 :root{--serif:Lora,Georgia,"Times New Roman",serif}
 h1,h2,h3{font-weight:600}
 .logo{font-family:"Young Serif",Georgia,serif}</style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Куди найдешевше летіти з Лодзі?","acceptedAnswer":{"@type":"Answer","text":"У найближчі 12 місяців найдешевші знайдені квитки з Лодзі: Аліканте від 174 зл у листопаді, Дублін від 216 зл у лютому, Малага від 217 зл у грудні, Барселона від 568 зл у листопаді, Мадрид від 579 зл у грудні. Повний список у таблиці вище."}},{"@type":"Question","name":"Коли квитки з Лодзі найдешевші?","acceptedAnswer":{"@type":"Answer","text":"За даними наших пошуків найнижчі середні ціни маршрутів з Лодзі припадають на такі місяці: березень 2027, квітень 2027, лютий 2027. Кожен маршрут має свій сезон, тож дивіться на конкретний напрямок."}},{"@type":"Question","name":"Куди полетіти з Лодзі дешево і в тепло?","acceptedAnswer":{"@type":"Answer","text":"Дешево і з хорошою погодою в місяць найнижчої ціни: Аліканте у травні: від 513 зл, 23°C удень, вода 21°C, погода 5/5; Малага у травні: від 535 зл, 23°C удень, вода 19°C, погода 5/5; Дублін у червні: від 809 зл, 16°C удень, погода 4/5; Хургада у листопаді: від 1277 зл, 27°C удень, вода 27°C, погода 5/5; Афіни у листопаді: від 1304 зл, 18°C удень, погода 4/5. Оцінка 4 з 5 означає тепло без спеки і мало дощу."}},{"@type":"Question","name":"Чи ці ціни актуальні?","acceptedAnswer":{"@type":"Answer","text":"Ціни з пошуків за останні 45 днів, більшість за останню добу; біля кожної є дата вильоту. Якщо квиток уже зник, кнопка Aviasales покаже актуальну ціну на ці дати."}},{"@type":"Question","name":"Чи потрібна віза для подорожі з Польщі?","acceptedAnswer":{"@type":"Answer","text":"З біометричним паспортом громадяни України подорожують Шенгенською зоною без візи до 90 днів у будь-якому 180-денному періоді. Для країн поза Шенгеном правила різні. Якщо у вас статус UKR або карта побиту, перед поїздкою за кордон перевірте умови виїзду й повернення на gov.pl і на сайті консульства країни, куди летите."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Куди найдешевше летіти з Лодзі?","acceptedAnswer":{"@type":"Answer","text":"У найближчі 12 місяців найдешевші знайдені квитки з Лодзі: Аліканте від 174 зл у листопаді, Дублін від 216 зл у лютому, Малага від 217 зл у грудні, Барселона від 568 зл у листопаді, Мадрид від 579 зл у грудні. Повний список у таблиці вище."}},{"@type":"Question","name":"Коли квитки з Лодзі найдешевші?","acceptedAnswer":{"@type":"Answer","text":"За даними наших пошуків найнижчі середні ціни маршрутів з Лодзі припадають на такі місяці: квітень 2027, лютий 2027, червень 2027. Кожен маршрут має свій сезон, тож дивіться на конкретний напрямок."}},{"@type":"Question","name":"Куди полетіти з Лодзі дешево і в тепло?","acceptedAnswer":{"@type":"Answer","text":"Дешево і з хорошою погодою в місяць найнижчої ціни: Аліканте у травні: від 513 зл, 23°C удень, вода 21°C, погода 5/5; Малага у травні: від 535 зл, 23°C удень, вода 19°C, погода 5/5; Дублін у червні: від 805 зл, 16°C удень, погода 4/5; Афіни у листопаді: від 1304 зл, 18°C удень, погода 4/5; Дубай у листопаді: від 1843 зл, 30°C удень, вода 29°C, погода 5/5. Оцінка 4 з 5 означає тепло без спеки і мало дощу."}},{"@type":"Question","name":"Чи ці ціни актуальні?","acceptedAnswer":{"@type":"Answer","text":"Ціни з пошуків за останні 45 днів, більшість за останню добу; біля кожної є дата вильоту. Якщо квиток уже зник, кнопка Aviasales покаже актуальну ціну на ці дати."}},{"@type":"Question","name":"Чи потрібна віза для подорожі з Польщі?","acceptedAnswer":{"@type":"Answer","text":"З біометричним паспортом громадяни України подорожують Шенгенською зоною без візи до 90 днів у будь-якому 180-денному періоді. Для країн поза Шенгеном правила різні. Якщо у вас статус UKR або карта побиту, перед поїздкою за кордон перевірте умови виїзду й повернення на gov.pl і на сайті консульства країни, куди летите."}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"Дешеві авіаквитки з Лодзі","itemListElement":[{"@type":"ListItem","position":1,"name":"Лодзь → Аліканте: 174 зл"},{"@type":"ListItem","position":2,"name":"Лодзь → Дублін: 216 зл"},{"@type":"ListItem","position":3,"name":"Лодзь → Малага: 217 зл"},{"@type":"ListItem","position":4,"name":"Лодзь → Барселона: 568 зл"},{"@type":"ListItem","position":5,"name":"Лодзь → Мадрид: 579 зл"},{"@type":"ListItem","position":6,"name":"Лодзь → Сицилія: 592 зл"},{"@type":"ListItem","position":7,"name":"Лодзь → Афіни: 638 зл"},{"@type":"ListItem","position":8,"name":"Лодзь → Тоскана: 722 зл"},{"@type":"ListItem","position":9,"name":"Лодзь → Відень: 746 зл"},{"@type":"ListItem","position":10,"name":"Лодзь → Ларнака: 752 зл"},{"@type":"ListItem","position":11,"name":"Лодзь → Брюссель: 754 зл"},{"@type":"ListItem","position":12,"name":"Лодзь → Мальта: 794 зл"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Дешеві квитки з Польщі","item":"https://golebielataja.pl/uk/"},{"@type":"ListItem","position":2,"name":"Лодзь","item":"https://golebielataja.pl/uk/lodz/"}]}</script>
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "dabf88d8ecff46b9af7a1518edc3f5ee"}'></script>
@@ -208,7 +209,7 @@ h1,h2,h3{font-weight:600}
 </header>
 <main>
 <h1>Дешеві авіаквитки з Лодзі</h1>
-<p class="lead">Найдешевші квитки з Лодзі (LCJ) з пошуків Aviasales, за особу туди й назад. 28 напрямків з цінами на найближчі 12 місяців, станом на 15 листопада 2026. Нижче: що зараз найдешевше, рейси найближчими тижнями і напрямки, де дешево і тепло.</p>
+<p class="lead">Найдешевші квитки з Лодзі (LCJ) з пошуків Aviasales, за особу туди й назад. 27 напрямків з цінами на найближчі 12 місяців, станом на 16 листопада 2026. Нижче: що зараз найдешевше, рейси найближчими тижнями і напрямки, де дешево і тепло.</p>
 <section>
 <h2>Найдешевші рейси з Лодзі зараз</h2>
 <p>Найнижчі знайдені ціни, кожен напрямок один раз. Кнопка відкриває пошук Aviasales на ці самі дати; дати можна змінити після переходу.</p>
@@ -218,7 +219,7 @@ h1,h2,h3{font-weight:600}
 <tr><td><strong>Аліканте</strong> <small>3,5 год</small></td><td>з 30 листопада до 10 грудня</td><td><strong class="cena-zwykle">зазвичай від 174 зл</strong></td><td>19°C, погода 3/5</td><td></td></tr>
 <tr><td><strong>Дублін</strong> <small>3 год</small></td><td>з 26 лютого до 5 березня</td><td><strong class="cena-zwykle">зазвичай від 216 зл</strong></td><td>8°C, погода 3/5</td><td></td></tr>
 <tr><td><strong>Малага</strong> <small>4 год</small></td><td>з 13 до 18 грудня</td><td><strong class="cena-zwykle">зазвичай від 217 зл</strong></td><td>16°C, погода 1/5</td><td></td></tr>
-<tr><td><strong>Барселона</strong> <small>3 год</small></td><td>з 21 листопада до 20 грудня</td><td><strong>568 зл</strong> <small class="sprawdzono">перевірено 8 листопада</small></td><td>17°C, погода 1/5</td><td><a class="partner glowny" href="https://www.aviasales.com/search/WAW2111BCN20121?currency=pln&amp;marker=785120.uklodzbarcelona" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-uklodzbarcelona">Перевірити в Aviasales</a></td></tr>
+<tr><td><strong>Барселона</strong> <small>3 год</small></td><td>з 21 листопада до 20 грудня</td><td><strong class="cena-zwykle">зазвичай від 568 зл</strong></td><td>17°C, погода 1/5</td><td></td></tr>
 <tr><td><strong>Мадрид</strong> <small>3,5 год</small></td><td>з 11 до 13 грудня</td><td><strong class="cena-zwykle">зазвичай від 579 зл</strong></td><td>10°C, погода 3/5</td><td></td></tr>
 <tr><td><strong>Сицилія</strong> <small>2,5 год</small></td><td>з 20 до 23 листопада</td><td><strong>592 зл</strong> <small class="sprawdzono">перевірено 11 листопада</small></td><td>19°C, погода 3/5</td><td><a class="partner glowny" href="https://www.aviasales.com/search/WAW2011CTA23111?currency=pln&amp;marker=785120.uklodzsycylia" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-uklodzsycylia">Перевірити в Aviasales</a></td></tr>
 <tr><td><strong>Афіни</strong> <small>2,5 год</small></td><td>з 29 до 31 січня</td><td><strong>638 зл</strong> <small class="sprawdzono">перевірено 10 листопада</small></td><td>12°C, погода 3/5</td><td><a class="partner glowny" href="https://www.aviasales.com/search/WAW2901ATH31011?currency=pln&amp;marker=785120.uklodzateny" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-uklodzateny">Перевірити в Aviasales</a></td></tr>
@@ -234,7 +235,6 @@ h1,h2,h3{font-weight:600}
 <h2>Last minute з Лодзі: вильоти найближчими тижнями</h2>
 <p>Найдешевші рейси з вильотом протягом 30 днів, серед цін, перевірених за останній тиждень. За особу туди й назад.</p>
 <ul class="terminy">
-<li><strong>Барселона</strong>: від 568 зл, з 21 листопада до 20 грудня <a class="partner glowny" href="https://www.aviasales.com/search/WAW2111BCN20121?currency=pln&amp;marker=785120.uklodzlmbarcelona" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-uklodzlmbarcelona">Перевірити в Aviasales</a></li>
 <li><strong>Сицилія</strong>: від 592 зл, з 20 до 23 листопада <a class="partner glowny" href="https://www.aviasales.com/search/WAW2011CTA23111?currency=pln&amp;marker=785120.uklodzlmsycylia" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-uklodzlmsycylia">Перевірити в Aviasales</a></li>
 <li><strong>Тоскана</strong>: від 722 зл, з 11 до 14 грудня <a class="partner glowny" href="https://www.aviasales.com/search/WAW1112PSA14121?currency=pln&amp;marker=785120.uklodzlmtoskania" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-uklodzlmtoskania">Перевірити в Aviasales</a></li>
 <li><strong>Мюнхен</strong>: від 1184 зл, з 23 до 26 листопада <a class="partner glowny" href="https://www.aviasales.com/search/WAW2311MUC26111?currency=pln&amp;marker=785120.uklodzlmmonachium" rel="sponsored nofollow noopener" target="_blank" data-goatcounter-click="p-aviasales-uklodzlmmonachium">Перевірити в Aviasales</a></li>
@@ -262,8 +262,8 @@ h1,h2,h3{font-weight:600}
 <thead><tr><th scope="col">Напрямок</th><th scope="col">лист. 26</th><th scope="col">груд. 26</th><th scope="col">січ. 27</th><th scope="col">лют. 27</th><th scope="col">бер. 27</th><th scope="col">квіт. 27</th><th scope="col">трав. 27</th><th scope="col">черв. 27</th><th scope="col">лип. 27</th><th scope="col">серп. 27</th><th scope="col">вер. 27</th><th scope="col">жовт. 27</th></tr></thead>
 <tbody>
 <tr><td>Аліканте</td><td>174</td><td>176</td><td>195</td><td>242</td><td>253</td><td>460</td><td>513</td><td>609</td><td>845</td><td>·</td><td>·</td><td>·</td></tr>
-<tr><td>Дублін</td><td>218</td><td>235</td><td>260</td><td>216</td><td>288</td><td>473</td><td>550</td><td>809</td><td>1010</td><td>·</td><td>·</td><td>·</td></tr>
-<tr><td>Малага</td><td>228</td><td>217</td><td>218</td><td>277</td><td>295</td><td>411</td><td>535</td><td>618</td><td>616</td><td>·</td><td>·</td><td>·</td></tr>
+<tr><td>Дублін</td><td>218</td><td>235</td><td>260</td><td>216</td><td>288</td><td>473</td><td>550</td><td>805</td><td>1007</td><td>·</td><td>·</td><td>·</td></tr>
+<tr><td>Малага</td><td>244</td><td>217</td><td>218</td><td>277</td><td>295</td><td>407</td><td>535</td><td>618</td><td>616</td><td>·</td><td>·</td><td>·</td></tr>
 <tr><td>Барселона</td><td>568</td><td>1210</td><td>932</td><td>·</td><td>·</td><td>·</td><td>973</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td></tr>
 <tr><td>Мадрид</td><td>·</td><td>579</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td></tr>
 <tr><td>Сицилія</td><td>592</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td></tr>
@@ -281,13 +281,12 @@ h1,h2,h3{font-weight:600}
 <tr><td>Мюнхен</td><td>1184</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td></tr>
 <tr><td>Анталія</td><td>·</td><td>·</td><td>·</td><td>1196</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td></tr>
 <tr><td>Берлін</td><td>·</td><td>1264</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td></tr>
-<tr><td>Хургада</td><td>1277</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td></tr>
 <tr><td>Амстердам</td><td>·</td><td>1402</td><td>·</td><td>·</td><td>·</td><td>·</td><td>2195</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td></tr>
 <tr><td>Дубай</td><td>1843</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td></tr>
 <tr><td>Шарм-ель-Шейх</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>2358</td><td>·</td><td>·</td><td>·</td></tr>
 <tr><td>Гельсінкі</td><td>·</td><td>2735</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td></tr>
 <tr><td>Балі</td><td>·</td><td>·</td><td>4541</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td></tr>
-<tr><td>Занзібар</td><td>4772</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td></tr>
+<tr><td>Занзібар</td><td>4772</td><td>·</td><td>·</td><td>·</td><td>7104</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td></tr>
 <tr><td>Абу-Дабі</td><td>·</td><td>·</td><td>6718</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td></tr>
 </tbody>
 </table></div>
@@ -298,24 +297,24 @@ h1,h2,h3{font-weight:600}
 <ul>
 <li>Аліканте у травні: від 513 зл, 23°C удень, вода 21°C, погода 5/5</li>
 <li>Малага у травні: від 535 зл, 23°C удень, вода 19°C, погода 5/5</li>
-<li>Дублін у червні: від 809 зл, 16°C удень, погода 4/5</li>
-<li>Хургада у листопаді: від 1277 зл, 27°C удень, вода 27°C, погода 5/5</li>
+<li>Дублін у червні: від 805 зл, 16°C удень, погода 4/5</li>
 <li>Афіни у листопаді: від 1304 зл, 18°C удень, погода 4/5</li>
 <li>Дубай у листопаді: від 1843 зл, 30°C удень, вода 29°C, погода 5/5</li>
 <li>Амстердам у травні: від 2195 зл, 16°C удень, погода 4/5</li>
 <li>Занзібар у листопаді: від 4772 зл, 29°C удень, вода 28°C, погода 5/5</li>
+<li>Абу-Дабі у січні: від 6718 зл, 23°C удень, вода 22°C, погода 5/5</li>
 </ul>
 </section>
 <section>
 <h2>Куди можна полетіти з Лодзі</h2>
-<p>Усі 28 напрямків, для яких за останні тижні ми знайшли ціни квитків з Лодзі.</p>
-<p class="dokad">Абу-Дабі, Аліканте, Амстердам, Анталія, Афіни, Балі, Барселона, Берлін, Брюссель, Відень, Гельсінкі, Дубай, Дублін, Занзібар, Копенгаген, Ларнака, Мадрид, Малага, Мальта, Мюнхен, Прага, Рига, Сицилія, Софія, Стамбул, Тоскана, Хургада, Шарм-ель-Шейх</p>
+<p>Усі 27 напрямків, для яких за останні тижні ми знайшли ціни квитків з Лодзі.</p>
+<p class="dokad">Абу-Дабі, Аліканте, Амстердам, Анталія, Афіни, Балі, Барселона, Берлін, Брюссель, Відень, Гельсінкі, Дубай, Дублін, Занзібар, Копенгаген, Ларнака, Мадрид, Малага, Мальта, Мюнхен, Прага, Рига, Сицилія, Софія, Стамбул, Тоскана, Шарм-ель-Шейх</p>
 </section>
 <section>
 <h2>Питання і відповіді</h2>
 <details><summary>Куди найдешевше летіти з Лодзі?</summary><p>У найближчі 12 місяців найдешевші знайдені квитки з Лодзі: Аліканте від 174 зл у листопаді, Дублін від 216 зл у лютому, Малага від 217 зл у грудні, Барселона від 568 зл у листопаді, Мадрид від 579 зл у грудні. Повний список у таблиці вище.</p></details>
-<details><summary>Коли квитки з Лодзі найдешевші?</summary><p>За даними наших пошуків найнижчі середні ціни маршрутів з Лодзі припадають на такі місяці: березень 2027, квітень 2027, лютий 2027. Кожен маршрут має свій сезон, тож дивіться на конкретний напрямок.</p></details>
-<details><summary>Куди полетіти з Лодзі дешево і в тепло?</summary><p>Дешево і з хорошою погодою в місяць найнижчої ціни: Аліканте у травні: від 513 зл, 23°C удень, вода 21°C, погода 5/5; Малага у травні: від 535 зл, 23°C удень, вода 19°C, погода 5/5; Дублін у червні: від 809 зл, 16°C удень, погода 4/5; Хургада у листопаді: від 1277 зл, 27°C удень, вода 27°C, погода 5/5; Афіни у листопаді: від 1304 зл, 18°C удень, погода 4/5. Оцінка 4 з 5 означає тепло без спеки і мало дощу.</p></details>
+<details><summary>Коли квитки з Лодзі найдешевші?</summary><p>За даними наших пошуків найнижчі середні ціни маршрутів з Лодзі припадають на такі місяці: квітень 2027, лютий 2027, червень 2027. Кожен маршрут має свій сезон, тож дивіться на конкретний напрямок.</p></details>
+<details><summary>Куди полетіти з Лодзі дешево і в тепло?</summary><p>Дешево і з хорошою погодою в місяць найнижчої ціни: Аліканте у травні: від 513 зл, 23°C удень, вода 21°C, погода 5/5; Малага у травні: від 535 зл, 23°C удень, вода 19°C, погода 5/5; Дублін у червні: від 805 зл, 16°C удень, погода 4/5; Афіни у листопаді: від 1304 зл, 18°C удень, погода 4/5; Дубай у листопаді: від 1843 зл, 30°C удень, вода 29°C, погода 5/5. Оцінка 4 з 5 означає тепло без спеки і мало дощу.</p></details>
 <details><summary>Чи ці ціни актуальні?</summary><p>Ціни з пошуків за останні 45 днів, більшість за останню добу; біля кожної є дата вильоту. Якщо квиток уже зник, кнопка Aviasales покаже актуальну ціну на ці дати.</p></details>
 <details><summary>Чи потрібна віза для подорожі з Польщі?</summary><p>З біометричним паспортом громадяни України подорожують Шенгенською зоною без візи до 90 днів у будь-якому 180-денному періоді. Для країн поза Шенгеном правила різні. Якщо у вас статус UKR або карта побиту, перед поїздкою за кордон перевірте умови виїзду й повернення на gov.pl і на сайті консульства країни, куди летите.</p></details>
 </section>
@@ -341,7 +340,7 @@ h1,h2,h3{font-weight:600}
 <li><a href="/uk/olsztyn/"><strong>Ольштин-Мазури</strong></a></li>
 </ul>
 </section>
-<p class="drobne">Ціни: пошуки Aviasales (Travelpayouts) і застосунку Gołębie Latają за останні 45 днів, за особу туди й назад, без зареєстрованого багажу. Стан на 15 листопада 2026. Погода: багаторічні середні (Open-Meteo, CC BY 4.0). Це партнерські посилання: якщо купите квиток через Aviasales, ми отримаємо комісію, а ціна для вас не зміниться.</p>
+<p class="drobne">Ціни: пошуки Aviasales (Travelpayouts) і застосунку Gołębie Latają за останні 45 днів, за особу туди й назад, без зареєстрованого багажу. Стан на 16 листопада 2026. Погода: багаторічні середні (Open-Meteo, CC BY 4.0). Це партнерські посилання: якщо купите квиток через Aviasales, ми отримаємо комісію, а ціна для вас не зміниться.</p>
 </main>
 <footer>
 <div class="stopka">
@@ -349,7 +348,7 @@ h1,h2,h3{font-weight:600}
 <div><p class="tytul">Аеропорти</p><ul><li><a href="/uk/warszawa/">Варшава (Шопен)</a></li><li><a href="/uk/modlin/">Варшава-Модлін</a></li><li><a href="/uk/krakow/">Краків (Баліце)</a></li><li><a href="/uk/gdansk/">Гданськ</a></li><li><a href="/uk/wroclaw/">Вроцлав</a></li><li><a href="/uk/poznan/">Познань</a></li><li><a href="/uk/katowice/">Катовіце (Пижовіце)</a></li><li><a href="/uk/rzeszow/">Жешув</a></li><li><a href="/uk/szczecin/">Щецин</a></li><li><a href="/uk/bydgoszcz/">Бидгощ</a></li><li><a href="/uk/lublin/">Люблін</a></li><li><a href="/uk/lodz/">Лодзь</a></li><li><a href="/uk/olsztyn/">Ольштин-Мазури</a></li></ul></div>
 <div><p class="tytul">Корисне</p><ul><li><a href="/" hreflang="pl" lang="pl">Більше сторінок польською</a></li><li><a href="https://t.me/golebielataja" rel="noopener" target="_blank">Канал з пропозиціями в Telegram (польською)</a></li><li><a href="/polityka-prywatnosci.html">Політика приватності (польською)</a></li><li><a href="#zgoda" data-cookies="1">Налаштування cookies</a></li></ul></div>
 </div>
-<p class="drobne">Оновлено 15 листопада 2026.</p>
+<p class="drobne">Оновлено 16 листопада 2026.</p>
 </footer>
 <div class="pasek"></div>
 </body>
